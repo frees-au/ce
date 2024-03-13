@@ -1,0 +1,24 @@
+uuid: 5a9e9377-ff57-4410-af32-366d0c1c3403
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic
+  module:
+    - file
+    - filter
+    - media
+    - shortcut
+    - system
+_core:
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access shortcuts'
+  - 'delete own files'
+  - 'use text format basic'
+  - 'view media'

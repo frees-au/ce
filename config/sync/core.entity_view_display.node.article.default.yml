@@ -1,0 +1,36 @@
+uuid: 560f4639-e519-421d-bfac-6471833d700d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article.hero
+    - field.field.node.article.lead
+    - field.field.node.article.markup
+    - node.type.article
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk
+id: node.article.default
+targetEntityType: node
+bundle: article
+mode: default
+content:
+  lead:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  markup:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  hero: true
+  links: true

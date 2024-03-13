@@ -1,0 +1,8 @@
+#!/bin/bash
+
+npm --prefix ./cypress ci
+npx --prefix ./cypress cypress install
+npx --prefix ./cypress cypress open \
+  --config baseUrl="https://fs-web.ddev.site" \
+  --browser=electron \
+  --e2e

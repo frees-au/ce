@@ -1,0 +1,22 @@
+uuid: 00d94b51-0742-42c4-bee5-410ce0d5c3a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - fstheme
+_core:
+  default_config_hash: WvPhI8OwllG0gE69-F8qL3ai3nd5SbYD6JpmEuZcyok
+id: fstheme_messages
+theme: fstheme
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

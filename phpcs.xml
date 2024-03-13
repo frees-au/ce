@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<ruleset name="fs">
+  <description>Free Sauce PHPCS configuration</description>
+
+  <rule ref="Drupal"/>
+  <rule ref="DrupalPractice"/>
+
+  <arg name="extensions" value="inc,info.yml,install,module,php,profile,test,theme"/>
+  <arg name="colors"/>
+  <arg value="sp"/>
+
+  <file>web/modules/custom</file>
+  <file>web/themes/custom</file>
+
+  <!-- Exclude theme assets. -->
+  <exclude-pattern>web\/themes\/custom\/.*\/build\/.*</exclude-pattern>
+  <exclude-pattern>web\/themes\/custom\/.*\/fonts\/.*</exclude-pattern>
+  <exclude-pattern>web\/themes\/custom\/.*\/images\/.*</exclude-pattern>
+
+  <!-- Mostly loosening up comments - @see Si -->
+  <rule ref="Drupal.Files.LineLength.TooLong">
+    <exclude-pattern>*</exclude-pattern>
+  </rule>
+  <rule ref="Drupal.Commenting.InlineComment.SpacingBefore">
+    <exclude-pattern>*</exclude-pattern>
+  </rule>
+  <rule ref="Drupal.Commenting.InlineComment.SpacingAfter">
+    <exclude-pattern>*</exclude-pattern>
+  </rule>
+  <rule ref="DrupalPractice.Commenting.CommentEmptyLine.SpacingAfter">
+    <exclude-pattern>*</exclude-pattern>
+  </rule>
+  <rule ref="Drupal.Commenting.InlineComment.InvalidEndChar">
+    <exclude-pattern>*</exclude-pattern>
+  </rule>
+</ruleset>

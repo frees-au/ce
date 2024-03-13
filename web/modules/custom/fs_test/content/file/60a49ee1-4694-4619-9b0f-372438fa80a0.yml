@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 60a49ee1-4694-4619-9b0f-372438fa80a0
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 'screenshot 427.png'
+  uri:
+    -
+      value: 'public://2024-02/screenshot 427.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1428427
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1709115295

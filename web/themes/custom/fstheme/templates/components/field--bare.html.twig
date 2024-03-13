@@ -1,0 +1,15 @@
+{% if not label_hidden %}
+  <div{{ attributes.addClass(classes) }}>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  </div>
+{% endif %}
+
+{% if multiple %}
+  {% for item in items %}
+    <div class="field-multiple">{{ item.content }}</div>
+  {% endfor %}
+{% else %}
+  {% for item in items %}
+    {{ item.content }}
+  {% endfor %}
+{% endif %}

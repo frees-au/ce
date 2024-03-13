@@ -1,0 +1,32 @@
+uuid: 5eac0a0c-da7f-4e11-acbb-2f3842f1f8a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.stream.media_oembed_video
+    - image.style.medium
+    - media.type.stream
+  module:
+    - image
+id: media.stream.media_library
+targetEntityType: media
+bundle: stream
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  media_oembed_video: true
+  name: true
+  uid: true

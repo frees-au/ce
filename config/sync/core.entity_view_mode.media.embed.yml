@@ -1,0 +1,11 @@
+uuid: 01fa362a-c121-4f2d-8a2d-0e2234291903
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.embed
+label: Embedded
+description: "Images that don't work well are large size will sit smaller in the content and text will wrap around it."
+targetEntityType: media
+cache: true

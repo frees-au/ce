@@ -1,0 +1,22 @@
+uuid: fb6d6012-12a8-4f5a-a27e-1a5274a95b97
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+_core:
+  default_config_hash: jAps3FCxvKecABS_tgExbhCZrBLQB3bNPWw18WjE3ss
+id: block_content.basic.default
+targetEntityType: block_content
+bundle: basic
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

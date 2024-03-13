@@ -1,0 +1,11 @@
+uuid: 214fe070-88f6-41bd-8d7e-5e81c83afd0e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.url
+label: 'Raw image'
+description: 'The image URL'
+targetEntityType: media
+cache: true

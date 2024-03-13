@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: bcdaf5ca-8198-447f-b47f-775de41dfc9c
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Thank you'
+  created:
+    -
+      value: 1709426235
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /ce/thank-you
+      langcode: en
+      pathauto: 0
+  lead:
+    -
+      value: "<p>Thanks for contacting us, we'll get back to you as soon as possible.</p>"
+      format: basic

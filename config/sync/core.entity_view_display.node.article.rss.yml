@@ -1,0 +1,26 @@
+uuid: ca18592f-0c8c-4d59-87f4-3f5a5a8df1c8
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.article.hero
+    - field.field.node.article.lead
+    - field.field.node.article.markup
+    - node.type.article
+  module:
+    - user
+_core:
+  default_config_hash: 2rIr6K5Q0UQ9khg0zE_CK-PtJH76UL-BDDZcZnZzwCc
+id: node.article.rss
+targetEntityType: node
+bundle: article
+mode: rss
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  hero: true
+  lead: true
+  markup: true

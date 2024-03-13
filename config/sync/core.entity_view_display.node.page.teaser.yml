@@ -1,0 +1,26 @@
+uuid: ba4f9035-b10b-44aa-b1c6-c29fe6706c33
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page.hero
+    - field.field.node.page.lead
+    - field.field.node.page.markup
+    - node.type.page
+  module:
+    - user
+_core:
+  default_config_hash: 8BgdRtLbtQ0F__o0FHSH0Mx5fvXOra9tfT1GmNKbRYw
+id: node.page.teaser
+targetEntityType: node
+bundle: page
+mode: teaser
+content:
+  links:
+    weight: 101
+    region: content
+hidden:
+  hero: true
+  lead: true
+  markup: true

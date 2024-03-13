@@ -1,0 +1,44 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 7881e70e-7e16-49f4-a96b-9408d1e4cbaa
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Adding PHPStan to a Drupal site'
+  created:
+    -
+      value: 1709819679
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  lead:
+    -
+      value: "<p>PHPStan is a static code analysis tool that you can add to your Drupal site. It will pick up issues as you code, so they don't get to production.</p>"
+      format: basic
+  markup:
+    -
+      value: "<p>The basics covered in this video are:</p><ol><li>Follow the instructions to install it on <a href=\"https://www.drupal.org/docs/develop/development-tools/phpstan/getting-started\">Drupal.org</a></li><li>Create your phpstan.neon</li><li>Talk about some of the issues you might have</li></ol><p>A sample settings file, roughly covered in the video, is:</p><pre><code class=\"language-plaintext\">parameters:\r\n    level: 7\r\n    paths:\r\n        - web/modules/custom\r\n        - web/themes/custom\r\n\r\n    checkMissingIterableValueType: false\r\n    reportUnmatchedIgnoredErrors: true</code></pre>"
+      format: safe_html

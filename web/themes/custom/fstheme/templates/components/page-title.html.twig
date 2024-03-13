@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Overrides core/modules/system/templates/page-title.html.twig.
+ */
+#}
+
+{%
+  set tw = [
+    'text-6xl',
+    'font-mono',
+    'font-extrabold',
+  ]
+%}
+
+{{ title_prefix }}
+{% if title %}
+  <h1{{ title_attributes.addClass(tw) }}>{{ title }}</h1>
+{% endif %}
+{{ title_suffix }}

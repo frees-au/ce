@@ -1,0 +1,52 @@
+version: '2.3'
+
+x-environment: &default-environment
+  CYPRESS: "true"
+
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    environment:
+      << : *default-environment
+    volumes:
+      - ${PWD}:/app
+      - ${PWD}/cypress/docker/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ${PWD}/cypress/docker/local.settings.php:/app/web/sites/default/local.settings.php
+    depends_on:
+      - php-fpm
+    networks:
+      - default
+
+  php-fpm:
+    image: bitnami/php-fpm:8.1.27
+    environment:
+      << : *default-environment
+    volumes:
+      - ${PWD}:/app:delegated
+      - ${PWD}/web/sites/default/files:/app/web/sites/default/files
+      - ${PWD}/cypress/docker/local.settings.php:/app/web/sites/default/local.settings.php
+      - ${PWD}/cypress/docker/php.ini:/opt/bitnami/php/etc/conf.d/php.ini
+    working_dir: /app/web
+    networks:
+      - default
+
+  # mariadb:
+  #   image: gitlab-registry-production.govcms.amazee.io/nhmrc/ccnhmrc/mariadb-drupal-data
+  #   expose:
+  #     - "3306"
+  #   environment:
+  #     << : *default-environment
+  #   networks:
+  #     - default
+
+  cypress:
+    image: cypress/base
+    environment:
+      << : *default-environment
+    volumes:
+      - ${PWD}/cypress:/app
+    command: "tail -f /dev/null"
+    networks:
+      - default

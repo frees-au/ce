@@ -1,0 +1,4 @@
+# Please use prettier for formatting, eg VS Code plugin.
+# It will pick up .editorconfig
+# See @simesy to discuss any ignores here.
+composer.json

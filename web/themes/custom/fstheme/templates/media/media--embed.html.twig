@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Overrides core/modules/media/templates/media.html.twig
+ */
+#}
+{%
+  set tw = [
+    'prose-lg',
+    'prose-zinc',
+    'prose-pre:text-2xl',
+    'w-full',
+    'md:w-1/2',
+    'drop-shadow-md',
+  ]
+%}
+<div{{ attributes.addClass(tw) }}>
+  {{ title_suffix.contextual_links }}
+  {{ content }}
+</div>

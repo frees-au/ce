@@ -1,0 +1,22 @@
+uuid: c45d8335-5690-415b-b43a-535568150825
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: articles
+label: Articles
+type: 'canonical_entities:node'
+pattern: 'ce/ummm/[node:title]'
+selection_criteria:
+  582d83a4-706f-49a2-b4ac-90ec74290405:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 582d83a4-706f-49a2-b4ac-90ec74290405
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,17 @@
+prod:
+  host: ssh.au.platform.sh
+  user: fw7ucnhzydcsy-main-bvxea6i--drupal
+  uri: 'https://frees.au'
+  root: /app/web
+  paths:
+    drush-script: /app/vendor/bin/drush
+    files: sites/default/files
+
+dev:
+  host: ssh.au.platform.sh
+  user: fw7ucnhzydcsy-develop-sr3snxi--drupal
+  uri: 'https://develop-sr3snxi-fw7ucnhzydcsy.au.platformsh.site/'
+  root: /app/web
+  paths:
+    drush-script: /app/vendor/bin/drush
+    files: sites/default/files

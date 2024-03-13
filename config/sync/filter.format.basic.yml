@@ -1,0 +1,8 @@
+uuid: d7d10d41-b35f-46be-b56f-6b1dbfaba880
+langcode: en
+status: true
+dependencies: {  }
+name: Basic
+format: basic
+weight: -10
+filters: {  }

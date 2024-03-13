@@ -1,0 +1,24 @@
+uuid: 4f7e95aa-d1c5-4546-a923-d48bf9d0b1c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.markup
+    - filter.format.safe_html
+    - node.type.page
+  module:
+    - text
+id: node.page.markup
+field_name: markup
+entity_type: node
+bundle: page
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - safe_html
+field_type: text_long

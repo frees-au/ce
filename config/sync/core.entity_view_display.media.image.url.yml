@@ -1,0 +1,33 @@
+uuid: c2d98225-3b0c-466c-a77c-a6c341b92620
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.url
+    - field.field.media.image.media_image
+    - media.type.image
+  module:
+    - field_label
+    - image
+id: media.image.url
+targetEntityType: media
+bundle: image
+mode: url
+content:
+  media_image:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: medium
+    third_party_settings:
+      field_label:
+        label_class: ''
+        label_value: ''
+        label_tag: ''
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

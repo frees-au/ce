@@ -1,0 +1,114 @@
+# The name of this app. Must be unique within a project.
+name: 'drupal'
+
+type: 'php:8.2'
+
+dependencies:
+  php:
+    composer/composer: '^2.1'
+  nodejs:
+    n: '*'
+
+variables:
+  env:
+    N_PREFIX: /app/.global
+
+runtime:
+  extensions:
+    - redis
+    - sodium
+    - apcu
+
+relationships:
+  database: 'db:mysql'
+  redis: 'cache:redis'
+
+disk: 2048
+
+mounts:
+  '/web/sites/default/files':
+    source: local
+    source_path: 'files'
+  '/tmp':
+    source: local
+    source_path: 'tmp'
+  '/private':
+    source: local
+    source_path: 'private'
+  '/.drush':
+    source: local
+    source_path: 'drush'
+  '/drush-backups':
+    source: local
+    source_path: 'drush-backups'
+  '/.console':
+    source: local
+    source_path: 'console'
+
+build:
+  flavor: none
+
+hooks:
+
+  build: |
+    set -e
+    n auto
+    hash -r
+    composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
+    npm --prefix web/themes/custom/fstheme ci
+    npm --prefix web/themes/custom/fstheme run build
+
+  deploy: |
+    set -e
+    php ./drush/platformsh_generate_drush_yml.php
+    drush deploy
+
+web:
+  locations:
+    '/':
+      root: 'web'
+      expires: 1h
+      passthru: '/index.php'
+      # Deny access to all static files, except those specifically allowed below.
+      allow: false
+      rules:
+        '\.(jpe?g|png|gif|svgz?|css|js|map|ico|bmp|eot|woff2?|otf|ttf)$':
+          allow: true
+        '^/robots\.txt$':
+          allow: true
+        '^/sitemap\.xml$':
+          allow: true
+
+        # Deny direct access to configuration files.
+        '^/sites/sites\.php$':
+          scripts: false
+        '^/sites/[^/]+/settings.*?\.php$':
+          scripts: false
+
+    '/sites/default/files':
+      allow: true
+      expires: 5m
+      passthru: '/index.php'
+      root: 'web/sites/default/files'
+      scripts: false
+
+      rules:
+        '^/sites/default/files/(css|js)':
+          expires: 2d
+
+    # The files directory has its own special configuration rules.
+    # '/themes/custom/fstheme/styleguide':
+    #   allow: true
+    #   expires: 5m
+    #   index:
+    #     - 'index.html'
+
+crons:
+  drupal:
+    spec: '*/39 * * * *'
+    commands:
+      start: 'cd web ; drush core-cron'
+  check_drupal_packages_updates:
+    spec: '0 0 * * FRI'
+    commands:
+      start: './scripts/check-drupal-composer-package-updates.sh'

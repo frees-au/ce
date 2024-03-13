@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Overrides core/modules/node/templates/node.html.twig.
+ */
+#}
+{%
+  set tw = [
+    'prose',
+    'prose-zinc',
+    'text-md',
+    'md:prose-md',
+    'lg:prose-lg',
+    'lg:prose-pre:text-2xl',
+  ]
+%}
+<article{{ attributes.addClass(tw) }}>
+
+  {% if label and not page %}
+    {{ title_prefix }}
+      <h2{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {{ title_suffix }}
+    <div{{ content_attributes }}>
+      {{ content.summary }}
+    </div>
+  {% else %}
+
+    <div{{ content_attributes }}>
+      <span class="prose-2xl [&>p]:!mt-0">
+        {{ content.lead }}
+      </span>
+      {{ content|without('lead') }}
+    </div>
+  {% endif %}
+
+</article>

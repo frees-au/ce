@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: 67893125-a67c-49fe-ab82-c1e0fd0dc8f9
+name: frees.au/ce
+mail: si@frees.au
+slogan: 'Free as in …'
+page:
+  403: ''
+  404: ''
+  front: /home-route
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

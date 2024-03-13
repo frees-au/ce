@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: fe6b7593-6461-4baa-b8b6-2a3847f090d5
+  bundle: image
+  default_langcode: en
+  depends:
+    169e1f12-5132-436c-a5ff-0a0dda0114a0: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: deer-running-through-bazaar.webp
+  created:
+    -
+      value: 1709342081
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  media_image:
+    -
+      entity: 169e1f12-5132-436c-a5ff-0a0dda0114a0
+      alt: 'Deer running through bazaar'
+      title: ''
+      width: 1024
+      height: 1024

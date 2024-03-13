@@ -1,0 +1,70 @@
+name: Cypress e3e
+on:
+  push
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    services:
+      mariadb:
+        image: mariadb:latest
+        env:
+          MARIADB_ROOT_PASSWORD: root_password
+          MARIADB_DATABASE: test_db
+          MARIADB_USER: test_user
+          MARIADB_PASSWORD: test_password
+        options: >-
+          --health-cmd="healthcheck.sh --connect --innodb_initialized"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+          --name mariadb
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install a Drupal
+        uses: kohlerdominik/docker-run-action@v1
+        with:
+          image: bitnami/php-fpm:8.2
+          shell: /bin/bash
+          workdir: /app
+          volumes:
+            ${{ github.workspace }}:/app
+          run: |
+            composer install --quiet
+            cp .github/workflows/assets/local.settings.php ./web/sites/default/local.settings.php
+            vendor/bin/drush --root=web st
+            vendor/bin/drush --root=web site:install minimal --yes
+            vendor/bin/drush --root=web config:set system.site uuid '67893125-a67c-49fe-ab82-c1e0fd0dc8f9' --yes
+            vendor/bin/drush --root=web config:import --yes
+            vendor/bin/drush --root=web pm:install fs_test default_content --yes
+
+      - name: Run PHP server
+        uses: kohlerdominik/docker-run-action@v1
+        with:
+          image: bitnami/php-fpm:8.2
+          shell: /bin/bash
+          workdir: /app
+          options: |
+            --name=php
+            --detach
+          volumes:
+            ${{ github.workspace }}:/app
+          run: |
+            vendor/bin/drush --root=web runserver php:8888
+
+      - name: Build cypress and run e2e tests
+        uses: kohlerdominik/docker-run-action@v1
+        with:
+          image: cypress/base:latest
+          shell: /bin/bash
+          workdir: /app
+          volumes:
+            ${{ github.workspace }}/cypress:/app
+          run: |
+            cd /app
+              npm ci
+              npx cypress install
+              npx cypress run --config baseUrl=http://php:8888

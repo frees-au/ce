@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 874d9c51-f2fb-476f-94cb-c41861eed575
+  bundle: image
+  default_langcode: en
+  depends:
+    fc6e3c19-06e5-4317-8833-7246c27cd624: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: stock-skiier.jpeg
+  created:
+    -
+      value: 1709115444
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  media_image:
+    -
+      entity: fc6e3c19-06e5-4317-8833-7246c27cd624
+      alt: Cheers
+      title: ''
+      width: 1185
+      height: 670

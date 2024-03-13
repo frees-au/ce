@@ -1,0 +1,29 @@
+name: FS Testing
+type: module
+package: '<marquee style="width: 200px; font: normal normal bold 1.2rem inherit monospace; font-family: monospace, monospace; color: #a71f23">frees.au/ce</marquee>'
+description: 'Testing support, mainly default_content for e2e testing.'
+core_version_requirement: ^10
+dependencies:
+  - default_content:default_content
+
+default_content:
+  node:
+    - d7d83d55-dd7d-4a8e-9460-7fb9825dee44
+    - b7f09742-ec1f-4a8e-b594-59ef9980937a
+    - d0a7ab31-136f-44d5-8d68-91534bc46da6
+    - bcdaf5ca-8198-447f-b47f-775de41dfc9c
+    - 7881e70e-7e16-49f4-a96b-9408d1e4cbaa
+  file:
+    - 60a49ee1-4694-4619-9b0f-372438fa80a0
+    - a971a73c-0473-4d72-909e-b4ced94969e4
+    - fc6e3c19-06e5-4317-8833-7246c27cd624
+  media:
+    - 09019edf-47ce-4f79-b795-d2d85d714c63
+    - a25d5f6e-edef-4e17-a9fe-dfba0db89897
+    - 874d9c51-f2fb-476f-94cb-c41861eed575
+    - fe6b7593-6461-4baa-b8b6-2a3847f090d5
+    - e7de467c-73d2-43dd-9a84-8a4a1a5b3925
+  menu_link_content:
+    - 3e6b7f1a-b957-44c2-94da-79e202e214ac
+    - e78fc4f8-6de8-4fc3-8a02-5f52b1660c1a
+    - 64d6b125-7c44-4149-876b-184489a0364a

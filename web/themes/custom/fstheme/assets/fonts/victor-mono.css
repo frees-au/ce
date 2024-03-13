@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'VictorMono';
+  src: url('VictorMonoAll/EOT/VictorMonoRegular.eot');
+  src: url('VictorMonoAll/EOT/VictorMono-Regular.eot') format('embedded-opentype'),
+    url('VictorMonoAll/WOFF2/VictorMono-Regular.woff2') format('woff2'),
+    url('VictorMonoAll/WOFF/VictorMono-Regular.woff') format('woff'),
+    url('VictorMonoAll/TTF/VictorMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VictorMono';
+  src: url('VictorMonoAll/EOT/VictorMono-Italic.eot');
+  src: url('VictorMonoAll/EOT/VictorMono-Italic.eot') format('embedded-opentype'),
+    url('VictorMonoAll/WOFF2/VictorMono-Italic.woff2') format('woff2'),
+    url('VictorMonoAll/WOFF/VictorMono-Italic.woff') format('woff'),
+    url('VictorMonoAll/TTF/VictorMono-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'VictorMono';
+  src: url('VictorMonoAll/EOT/VictorMono-Oblique.eot');
+  src: url('VictorMonoAll/EOT/VictorMono-Oblique.eot') format('embedded-opentype'),
+    url('VictorMonoAll/WOFF2/VictorMono-Oblique.woff2') format('woff2'),
+    url('VictorMonoAll/WOFF/VictorMono-Oblique.woff') format('woff'),
+    url('VictorMonoAll/TTF/VictorMono-Oblique.ttf') format('truetype');
+  font-weight: normal;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: 'VictorMono';
+  src: url('VictorMonoAll/EOT/VictorMono-Bold.eot');
+  src: url('VictorMonoAll/EOT/VictorMono-Bold.eot') format('embedded-opentype'),
+    url('VictorMonoAll/WOFF2/VictorMono-Bold.woff2') format('woff2'),
+    url('VictorMonoAll/WOFF/VictorMono-Bold.woff') format('woff'),
+    url('VictorMonoAll/TTF/VictorMono-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VictorMono';
+  src: url('VictorMonoAll/EOT/VictorMono-BoldItalic.eot');
+  src: url('VictorMonoAll/EOT/VictorMono-BoldItalic.eot') format('embedded-opentype'),
+    url('VictorMonoAll/WOFF2/VictorMono-BoldItalic.woff2') format('woff2'),
+    url('VictorMonoAll/WOFF/VictorMono-BoldItalic.woff') format('woff'),
+    url('VictorMonoAll/TTF/VictorMono-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}

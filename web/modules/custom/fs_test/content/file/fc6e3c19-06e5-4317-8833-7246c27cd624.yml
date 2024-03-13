@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: fc6e3c19-06e5-4317-8833-7246c27cd624
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: stock-skiier.jpeg
+  uri:
+    -
+      value: 'public://2024-02/stock-skiier.jpeg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 302164
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1709115444

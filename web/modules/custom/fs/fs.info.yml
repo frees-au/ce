@@ -1,0 +1,5 @@
+name: FS General
+type: module
+package: '<marquee style="width: 200px; font: normal normal bold 1.2rem inherit monospace; font-family: monospace, monospace; color: #a71f23">frees.au/ce</marquee>'
+description: General purpose with no other good place.
+core_version_requirement: ^10

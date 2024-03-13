@@ -1,0 +1,11 @@
+uuid: 7402334d-4c9a-4f70-9e34-b14d591938ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.full
+label: 'Full width'
+description: 'Fill the available area'
+targetEntityType: media
+cache: true

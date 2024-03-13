@@ -1,0 +1,16 @@
+uuid: 328cb0ff-5244-4fd1-bd04-9ef0ebb83dd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+  enforced:
+    module:
+      - media_library
+_core:
+  default_config_hash: 04_dAqpWYP1WmsXZ7IXJ7-yarCvNddD10EUkBDtIFy4
+id: media.media_library
+label: 'Media library'
+description: 'Use in the backend.'
+targetEntityType: media
+cache: true

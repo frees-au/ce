@@ -1,0 +1,12 @@
+parameters:
+    level: 9
+    paths:
+        - web/modules/custom
+        - web/themes/custom
+
+    checkMissingIterableValueType: false
+    reportUnmatchedIgnoredErrors: true
+
+    # ignoreErrors:
+        # @see https://www.drupal.org/docs/develop/development-tools/phpstan/handling-unsafe-usage-of-new-static
+        # - "#^Unsafe usage of new static#"

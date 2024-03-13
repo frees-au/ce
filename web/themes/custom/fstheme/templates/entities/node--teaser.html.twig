@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Overrides core/modules/node/templates/node.html.twig.
+ */
+#}
+{%
+  set tw = [
+    'relative',
+    'shadow',
+    'h-20',
+    'p-4',
+    'prose-xl',
+    'font-mono',
+    'font-semibold',
+    'rounded-lg',
+    'hover:text-fs-red',
+    'md:text-fs-dark-gray',
+    'md:bg-cover',
+    'md:bg-fs-light-grey',
+    'md:h-auto',
+    'md:aspect-square',
+    'md:prose-2xl',
+    'md:rounded-2xl',
+  ]
+%}
+
+<article{{ attributes.addClass(tw) }} style="background-image:linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4)), url({{ hero_background_url }})">
+  <a class="inline-block inset-0" href="{{ url }}">
+    {{ label }}
+  </a>
+</article>

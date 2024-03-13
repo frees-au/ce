@@ -1,0 +1,185 @@
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Typography */
+
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --fs-sauce-red: #a71f23;
+  --fs-sauce-red-tint: #e5bcbd;
+  --fs-dark-grey: #333;
+  --fs-light-grey: #ccc;
+}
+
+.form-textarea-wrapper .ck-reset {
+  font-family: 'Open Sans', Sans-Serif;
+  font-weight: 400;
+  font: 1em/1.5 'Open Sans', Sans-Serif;
+}
+
+/* Things for tailwind to scan that ckeditor injects. */
+img.align-right, pre {
+}
+
+/* Victor Mono for headings h2 to h5 and code elements */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Cutive Mono', Sans-Serif;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  em {
+    color: var(--fs-sauce-red);
+  }
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+h3 {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 1.6rem;
+  font-family: 'Open Sans', Sans-Serif;
+}
+h5 {
+  font-size: 1.4rem;
+  font-family: 'Open Sans', Sans-Serif;
+}
+
+code,
+pre {
+  font-family: 'Cutive Mono', Consolas, monospace;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+pre {
+  width: 40rem;
+}
+
+/* This is not recommended on client projects. Imagine you needed to fix 1000 nodes? */
+/* Interesting experiment though. */
+pre.lg:\-mr-36 {
+  width: 90%;
+}
+
+p,
+dl,
+ul,
+ol,
+blockquote,
+fieldset,
+textarea {
+  margin-bottom: 1.5rem;
+}
+
+p,
+blockquote {
+  font-size: 1.4rem;
+}
+
+ul,
+ol,
+dd,
+th,
+td,
+pre {
+  font-size: 1.3rem;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+th,
+td {
+  text-align: left;
+  border: 1px solid var(--fs-light-grey);
+  padding: 0.2rem 0 0.2rem 1rem;
+}
+
+thead {
+  background-color: var(--fs-light-grey);
+  font-family: 'Cutive Mono', monospace;
+}
+
+tbody tr:hover {
+  background-color: var(--fs-sauce-red-tint); /* Sauce red for row hover background */
+  color: var(--fs-dark-grey); /* Light grey text for readability */
+}
+
+dl {
+  display: grid;
+  grid-gap: 4px 16px;
+  grid-template-columns: max-content;
+}
+
+dt {
+  font-family: 'Cutive Mono', monospace;
+  font-style: oblique;
+  font-weight: normal;
+  font-size: 1.2rem;
+  p {
+    margin: 0;
+  }
+}
+
+dd {
+  margin: 0;
+  grid-column-start: 2;
+  p {
+    margin: 0;
+  }
+}
+
+blockquote,
+pre {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+hr {
+  margin-bottom: 2rem;
+  border-color: var(--fs-sauce-red);
+  background-color: var(--fs-sauce-red);
+  opacity: 20%;
+}

@@ -1,0 +1,40 @@
+# Composer / Drupal scaffold.
+/drush/contrib/
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+/.ht.router.php
+/.htaccess
+/INSTALL.txt
+/README.txt
+/autoload.php
+/example.gitignore
+/index.php
+/update.php
+/web.config
+default.services.yml
+default.settings.php
+
+# Assets.
+web/sites/default/files
+
+# Development or per platform.
+env.settings.php
+env.services.yml
+node_modules
+local
+tmp
+private
+.drush
+drush-backups
+.console
+/web/sites/simpletest
+/.idea/
+/.env
+.DS_Store
+.phpunit.result.cache
+*.sql
+*.zip

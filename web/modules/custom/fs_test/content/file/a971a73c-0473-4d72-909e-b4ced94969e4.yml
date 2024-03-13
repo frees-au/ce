@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: a971a73c-0473-4d72-909e-b4ced94969e4
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: gippity-sauce-factory.jpeg
+  uri:
+    -
+      value: 'public://2024-02/gippity-sauce-factory.jpeg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 583299
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1708371865

@@ -1,0 +1,32 @@
+uuid: 893b191f-ba74-48c9-8a15-3463d2e22c1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.media_image
+    - media.type.image
+  module:
+    - field_label
+    - image
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
+content:
+  media_image:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: medium
+    third_party_settings:
+      field_label:
+        label_class: ''
+        label_value: ''
+        label_tag: ''
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

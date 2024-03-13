@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Overrides core/modules/system/templates/page.html.twig.
+ */
+#}
+<div class="site-layout">
+  <header role="banner" class="layout-banner p-4 md:p-8">
+    <!-- Todo logo convert to component -->
+    <div class="flex flex-row justify-between items-center md:flex-none">
+      <a class="fs-toggle-menu block md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"/></svg>
+      </a>
+      <img class="w-[8rem] md:w-full md:max-w-[14rem] lg:w-full lg:max-w-full" src="/themes/custom/fstheme/logo.png">
+    </div>
+    {{ page.header }}
+  </header>
+
+  <aside role="nav" class="
+    layout-nav opacity-0 hidden
+    text-2xl [&_li]:mb-4 mb-4 font-semibold
+    md:animate-none md:opacity-100 md:block p-4 md:p-8 md:text-lg
+    lg:text-xl
+    ">
+    {{ page.sidebar }}
+  </aside>
+
+  <div class="layout-title p-4 md:p-8">
+    {{ page.title }}
+  </div>
+
+  <main class="layout-main p-4 md:p-8">
+    {{ page.breadcrumb }}
+    {{ page.highlighted }}
+    {{ page.help }}
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    {{ page.content_above }}
+    {{ page.content }}
+    {{ page.content_below }}
+  </main>
+
+  <footer class="layout-footer">
+    {{ page.footer }}
+  </footer>
+</div>

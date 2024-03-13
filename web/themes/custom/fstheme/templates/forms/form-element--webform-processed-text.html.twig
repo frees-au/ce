@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Overrides core/modules/system/templates/form-element.html.twig
+ */
+#}
+{%
+  set tw = [
+    '[&>p]:!mt-0',
+  ]
+%}
+<div{{ attributes.addClass(classes).addClass(tw) }}>
+  {{ children }}
+</div>

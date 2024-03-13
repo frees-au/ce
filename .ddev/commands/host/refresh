@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ddev drush sql:sync @prod @self --yes
+ddev drush cr

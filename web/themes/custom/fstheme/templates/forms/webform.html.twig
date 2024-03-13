@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Overrides modules/contrib/webform/templates/webform-form.html.twig.
+#}
+{%
+  set tw = [
+    'prose',
+    'prose-xl',
+    'prose-zinc',
+    'grid',
+    'grid-cols-1',
+    'gap-4',
+  ]
+%}
+<form{{ attributes.addClass(tw) }}>
+  {{ title_prefix }}
+  {{ children }}
+  {{ title_suffix }}
+</form>

@@ -1,0 +1,25 @@
+name: Static
+
+on: push
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Composer install
+        run: composer install
+
+      - name: PHPStan
+        run: php vendor/bin/phpstan.phar --memory-limit=256M
+
+      - name: PHPCS
+        run: php vendor/bin/phpcs -s ./web/*/custom

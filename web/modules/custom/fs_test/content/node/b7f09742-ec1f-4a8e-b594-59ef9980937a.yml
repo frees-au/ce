@@ -1,0 +1,41 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: b7f09742-ec1f-4a8e-b594-59ef9980937a
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Free Sauce'
+  created:
+    -
+      value: 1708370311
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /ce
+      langcode: en
+      pathauto: 0
+  lead:
+    -
+      value: '<p>Free Sauce is a purpose driven agency, free as in source, with a passion for the Drupal project. Our purpose is to support other ethical businesses and enjoy our work.</p>'
+      format: basic
+  markup:
+    -
+      value: '<p>This website is still in development so be gentle, we''re a small team busy on client work.&nbsp;</p><p>In the meantime here are some links to partners and other things we like.</p><ul><li>We help out on the <a href="https://www.drevops.com/">DrevOps project</a>, which is a Drupal template that incorporates all aspects of CI and testing. We are passionate about this project because <a href="https://www.linkedin.com/in/alexskrypnyk/">Alex Skrypnyk</a> maintains a &nbsp;strong open source and testing practice to his tooling (it''s all public and CI tested). He provides consulting and support packages for Drupal development and Continuous Integration.</li><li>We are supporting <a href="https://www.designoutlook.com.au/">Design Outlook</a> which is a fresh young design conference and workshop event running in Melbourne in June. It''s a great way to spend training budget on your most valuable humans.</li><li>We are hosting partners with <a href="https://platform.sh/">Platform.sh</a>. We''ve been using this service for years - it''s Netlify for Drupal with a serious footprint in enterprise hosting in Australia. We like to do light support contracts for clients who are using Platform.sh, (but we also have a soft spot for <a href="https://www.amazee.io/lagoon-as-a-service/">Amazee Lagoon</a>).</li></ul>'
+      format: safe_html

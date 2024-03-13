@@ -1,0 +1,35 @@
+uuid: da4f35d1-4a0f-4cd6-953f-630818aa3562
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.stream.media_oembed_video
+    - media.type.stream
+  module:
+    - field_label
+    - media
+id: media.stream.default
+targetEntityType: media
+bundle: stream
+mode: default
+content:
+  media_oembed_video:
+    type: oembed
+    label: hidden
+    settings:
+      max_width: 0
+      max_height: 0
+      loading:
+        attribute: lazy
+    third_party_settings:
+      field_label:
+        label_class: ''
+        label_value: ''
+        label_tag: ''
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

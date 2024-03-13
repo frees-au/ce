@@ -1,0 +1,6 @@
+#!/bin/bash
+
+ddev drush site:install minimal --yes
+ddev drush config:set system.site uuid '67893125-a67c-49fe-ab82-c1e0fd0dc8f9' --yes
+ddev drush config:import --yes
+ddev drush pm:install fs_test default_content --yes
