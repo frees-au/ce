@@ -11,6 +11,18 @@ The Free Sauce logo, brand and assets which ship in this repository are Copyrigh
 Free Sauce 2024. (Copy the theme if you want, but replace the logo and
 company name please!).
 
+## Philosophy
+
+The goal of this project is to build Drupal as simple and elegantly as possible while
+also being an actual production codebase. There is a mix of best practice, personal
+preference and practicality.
+
+There is zero intention to package this up as a product or distribution. This is because
+Drupal moves fast, and we want this project to keep up with it.
+
+Please feel free to [discuss](https://github.com/frees-au/ce/discussions) anything you
+like. You can be critical too!
+
 ## Backend
 
 Everything is ready to run locally on [DDEV](https://drupal.org/project/default_content).
