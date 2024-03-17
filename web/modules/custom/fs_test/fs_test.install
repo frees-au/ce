@@ -19,7 +19,7 @@ function fs_test_requirements(string $phase): array {
         throw new \Exception($error);
       }
 
-      $requirements['cc_test_no_production'] = [
+      $requirements['fs_test_no_production'] = [
         'severity' => REQUIREMENT_ERROR,
         'description' => $error,
       ];
