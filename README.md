@@ -21,7 +21,10 @@ There is zero intention to package this up as a product or distribution. This is
 Drupal moves fast, and we want this project to keep up with it.
 
 Please feel free to [discuss](https://github.com/frees-au/ce/discussions) anything you
-like. You can be critical too!
+like. You can be critical too. If you like a conversational approach to reviewing this
+code, check out the video below.
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/qUJpx5w0avM/0.jpg)](https://www.youtube.com/watch?v=qUJpx5w0avM)
 
 ## Backend
 
@@ -33,6 +36,7 @@ But for now if you have DDEV you can build the site without a copy of the databa
 
 ```
 ddev start
+ddev composer install
 ddev scratch    # Build the site with content captured in fs_test module.
 ddev drush uli
 ```
