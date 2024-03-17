@@ -8,7 +8,7 @@
 /**
  * Implements hook_requirements().
  */
-function cc_test_requirements(string $phase): array {
+function fs_test_requirements(string $phase): array {
   $requirements = [];
   if ($phase === 'install') {
     $error = t('FS Test module can not be installed on production and config is excluded in "config_exclude_modules" setting in settings.php');
