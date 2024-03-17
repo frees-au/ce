@@ -33,6 +33,7 @@ But for now if you have DDEV you can build the site without a copy of the databa
 
 ```
 ddev start
+ddev composer install
 ddev scratch    # Build the site with content captured in fs_test module.
 ddev drush uli
 ```
