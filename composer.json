@@ -63,6 +63,11 @@
         },
         "sort-packages": true
     },
+    "scripts": {
+        "phpstan": "vendor/bin/phpstan --memory-limit=256M --no-progress",
+        "phpcs": "vendor/bin/phpcs --standard=phpcs.xml ./web/*/custom",
+        "phpcbf": "vendor/bin/phpcbf --standard=phpcs.xml ./web/*/custom"
+    },
     "extra": {
         "drupal-scaffold": {
             "locations": {

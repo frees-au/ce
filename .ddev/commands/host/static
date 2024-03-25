@@ -1,6 +1,4 @@
 #!/bin/bash
 
-ddev php vendor/bin/phpstan.phar --memory-limit=256M
-
-ddev php vendor/bin/phpcs -s ./web/*/custom
-
+ddev composer run phpcs
+ddev composer run phpstan

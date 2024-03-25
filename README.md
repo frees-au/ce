@@ -26,19 +26,21 @@ code, check out the video below.
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/qUJpx5w0avM/0.jpg)](https://www.youtube.com/watch?v=qUJpx5w0avM)
 
+## DDEV or Lando?
+
+¿Por qué no los dos?
+
+You should be able to install locally with [DDEV](https://ddev.com/)
+or [Lando](https://lando.dev/). Anhy instructions with `ddev|lando ...` you should modify
+to use your preferred. If it only shows `ddev` we are still working on the lando bit.
+
 ## Backend
 
-Everything is ready to run locally on [DDEV](https://drupal.org/project/default_content).
-We intend to add Lando added (see docker.settings.php) and will duplicate the
-DDEV utility commands for Lando.
-
-But for now if you have DDEV you can build the site without a copy of the database.
-
 ```
-ddev start
-ddev composer install
-ddev scratch    # Build the site with content captured in fs_test module.
-ddev drush uli
+ddev|lando start
+ddev|lando composer install
+ddev|lando scratch    # Build the site with content captured in fs_test module.
+ddev|lando drush uli
 ```
 
 If you are an employee with access to the hosting environment you can do
@@ -50,10 +52,10 @@ This is a very simple and somewhat unfinished Tailwind theme with no base theme
 dependencies. It's intended for learning and copying rather than being something
 we expect you to use as a base theme. Please don't ask for support if you do 😬.
 
+Install the css with the following command, just to get you started.
+
 ```
-cd web/themes/custom/fstheme
-npm ci
-npm run watch
+ddev|lando frontend
 ```
 
 ## Testing

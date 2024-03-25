@@ -1,4 +1,0 @@
-#!/bin/bash
-
-npm --prefix web/themes/custom/fstheme ci
-npm --prefix web/themes/custom/fstheme run build
