@@ -28,11 +28,10 @@ $settings['file_temp_path'] = '/tmp';
 
 // These modules' config will never be imported/exported.
 $settings['config_exclude_modules'] = [
-  'fs_test', // @see cc_test_requirements() where it is also prevented to install on production.
+  'fs_test', // @see fs_test_requirements() where it is also prevented to install on production.
   'default_content',
   'devel',
 ];
-
 
 // Platform.sh. The code check is a copypasta catch-all.
 if (getenv('PLATFORM_PROJECT') == 'fw7ucnhzydcsy') {
