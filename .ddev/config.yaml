@@ -1,10 +1,10 @@
 name: fs-web
 type: drupal10
 docroot: web
-php_version: "8.1"
+php_version: "8.3"
 webserver_type: nginx-fpm
 
 # I am opinionated about settings.php and friends.
 disable_settings_management: true
 web_environment:
-- DRUSH_OPTIONS_URI=http://fs-web.ddev.site:8083
+- DRUSH_OPTIONS_URI=http://fs-web.ddev.site
