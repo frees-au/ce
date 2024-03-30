@@ -5,4 +5,4 @@ php_version: "8.3"
 webserver_type: nginx-fpm
 disable_settings_management: true # @see web/sites/default/docker.settings.php
 web_environment:
-- DRUSH_OPTIONS_URI=http://fs-web.ddev.site
+- DRUSH_OPTIONS_URI=https://fs-web.ddev.site
