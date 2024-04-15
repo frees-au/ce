@@ -24,7 +24,6 @@
         "drupal/gin": "^3.0@rc",
         "drupal/gin_login": "^2.0",
         "drupal/gin_toolbar": "^1.0@rc",
-        "drupal/group_member_role": "*",
         "drupal/honeypot": "^2.1",
         "drupal/layout_section_classes": "^1.5",
         "drupal/linkit": "^6.1",
