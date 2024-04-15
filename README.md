@@ -32,7 +32,7 @@ code, check out the video below.
 
 You should be able to install locally with [DDEV](https://ddev.com/)
 or [Lando](https://lando.dev/). Anhy instructions with `ddev|lando ...` you should modify
-to use your preferred. If it only shows `ddev` we are still working on the lando bit.
+to use your preferred. If it only shows `ddev` we are waiting the next version of Lando.
 
 ## Backend
 
@@ -71,6 +71,18 @@ Note that for Cypress E2E testing, the `ddev cypress` command works for us on
 OSX, but note these are optimised for our local cypress experience and if we
 can't predict if it will run for you on your machine. Read the code here
  `./ddev/commands/host/cypress`.
+
+# Contrib
+
+You can work on contrib modules in this repo. For example if you check out a
+contrib module repo, you could run tests on the module.
+
+```
+ddev composer run-script phpcs -- ./web/modules/contrib/foo_module
+ddev composer run-script phpcbf -- ./web/modules/contrib/foo_module
+ddev composer run-script phpstan -- ./web/modules/contrib/foo_module
+# phpunit tba
+```
 
 ## Building from scratch
 

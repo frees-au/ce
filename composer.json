@@ -24,6 +24,7 @@
         "drupal/gin": "^3.0@rc",
         "drupal/gin_login": "^2.0",
         "drupal/gin_toolbar": "^1.0@rc",
+        "drupal/group_member_role": "*",
         "drupal/honeypot": "^2.1",
         "drupal/layout_section_classes": "^1.5",
         "drupal/linkit": "^6.1",
@@ -35,7 +36,8 @@
         "drupal/twig_remove_html_comments": "^1.0@beta",
         "drupal/webform": "^6.2",
         "drush/drush": "^12",
-        "platformsh/config-reader": "^2.4"
+        "platformsh/config-reader": "^2.4",
+        "weitzman/drupal-test-traits": "^2.2"
     },
     "require-dev": {
         "drupal/coder": "^8.3",
@@ -64,9 +66,10 @@
         "sort-packages": true
     },
     "scripts": {
-        "phpstan": "vendor/bin/phpstan --memory-limit=256M --no-progress",
-        "phpcs": "vendor/bin/phpcs --standard=phpcs.xml ./web/*/custom",
-        "phpcbf": "vendor/bin/phpcbf --standard=phpcs.xml ./web/*/custom"
+        "phpstan": "vendor/bin/phpstan analyse --memory-limit=256M",
+        "phpcs": "vendor/bin/phpcs --standard=phpcs.xml",
+        "phpcbf": "vendor/bin/phpcbf --standard=phpcs.xml",
+        "phpunit": "vendor/bin/phpunit"
     },
     "extra": {
         "drupal-scaffold": {
