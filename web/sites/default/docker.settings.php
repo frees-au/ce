@@ -34,7 +34,7 @@ $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/docker.services.y
 $settings['twig_debug'] = FALSE;
 $config['system.performance']['css']['preprocess'] = FALSE;
 $config['system.performance']['js']['preprocess'] = FALSE;
-$config['system.logging']['error_level'] = 'verbose';
+$config['system.logging']['error_level'] = ERROR_REPORTING_DISPLAY_VERBOSE;
 
 // Beware of xdebug slowness.
 $settings['cache']['bins']['render'] = 'cache.backend.null';
