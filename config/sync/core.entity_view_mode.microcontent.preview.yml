@@ -1,0 +1,13 @@
+uuid: 8aba5360-4497-4f86-9b26-808cac07de22
+langcode: en
+status: true
+dependencies:
+  module:
+    - microcontent
+_core:
+  default_config_hash: fwUaM9IS-xAo0ddElWLZXyZCqbynFlBuHZpEpBuMhe0
+id: microcontent.preview
+label: Preview
+description: ''
+targetEntityType: microcontent
+cache: true

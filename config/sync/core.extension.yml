@@ -1,61 +1,191 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
+  address: 0
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
+  advanced_email_validation: 0
+  anchor_link: 0
+  auto_entitylabel: 0
+  backfill_formatter: 0
+  better_exposed_filters: 0
+  better_social_sharing_buttons: 0
   big_pipe: 0
   block: 0
   block_content: 0
+  block_field: 0
   breakpoint: 0
+  captcha: 0
+  ckeditor: 0
   ckeditor5: 0
   ckeditor5_template: 0
+  coffee: 0
+  computed_field: 0
+  computed_token_field: 0
+  conditional_fields: 0
   config: 0
+  config_entity_reference_selection: 0
+  config_ignore: 0
+  config_pages: 0
+  config_split: 0
+  content_access: 0
+  content_connected: 0
+  content_lock: 0
+  content_moderation: 0
   contextual: 0
+  css_grid: 0
+  csv_serialization: 0
+  ctools: 0
   datetime: 0
+  dbal: 0
+  diff: 0
+  dropzonejs: 0
+  druplicon: 0
+  dynamic_entity_reference: 0
   dynamic_page_cache: 0
+  easy_breadcrumb: 0
   editor: 0
+  editor_advanced_link: 0
+  editoria11y: 0
+  embed: 0
+  entity_browser: 0
+  entity_embed: 0
+  entity_hierarchy: 0
+  entity_print: 0
+  entityqueue: 0
+  environment_indicator: 0
+  exclude_node_title: 0
+  fakeobjects: 0
+  fallback_media: 0
+  fast404: 0
+  feeds: 0
+  fences: 0
   field: 0
+  field_formatter: 0
   field_group: 0
+  field_group_markup: 0
   field_label: 0
+  field_limiter: 0
+  field_permissions: 0
   field_ui: 0
   file: 0
+  filefield_paths: 0
   filter: 0
+  filter_format_audit: 0
+  filtered_text_wrapper: 0
+  flood_control: 0
+  friendlycaptcha: 0
   fs: 0
+  geofield: 0
   gin_login: 0
   gin_toolbar: 0
+  google_analytics: 0
+  gtm: 0
   honeypot: 0
   image: 0
+  imageapi_optimize: 0
+  inline_entity_form: 0
+  jquery_ui: 0
+  jquery_ui_datepicker: 0
+  jquery_ui_slider: 0
+  jquery_ui_touch_punch: 0
+  layout_builder: 0
+  layout_builder_restrictions: 0
+  layout_discovery: 0
   link: 0
   linkit: 0
+  login_destination: 0
+  login_emailusername: 0
+  masquerade: 0
+  maxlength: 0
   media: 0
+  media_bulk_upload: 0
+  media_bulk_zip_upload: 0
+  media_entity_file_replace: 0
+  media_file_delete: 0
   media_library: 0
+  menu_block: 0
+  menu_breadcrumb: 0
+  menu_item_extras: 0
   menu_link_content: 0
+  menu_per_role: 0
   menu_ui: 0
+  metatag: 0
+  microcontent: 0
+  modifiers: 0
+  multivalue_form_element: 0
   mysql: 0
   node: 0
   oembed_providers: 0
+  one_time_login_link_admin: 0
   options: 0
   page_cache: 0
+  page_manager: 0
+  pagerange404: 0
   path: 0
   path_alias: 0
+  preview_link: 0
+  r4032login: 0
+  rabbit_hole: 0
   redirect: 0
+  replicate: 0
+  replicate_ui: 0
+  reroute_email: 0
+  rest: 0
+  robotstxt: 0
+  role_delegation: 0
+  same_page_preview: 0
+  scheduled_transitions: 0
+  sdc: 0
+  serialization: 0
+  shield: 0
   shortcut: 0
+  shs: 0
+  simple_gmap: 0
   simple_sitemap: 0
+  site_settings: 0
+  soft_length_limit: 0
+  stage_file_proxy: 0
+  standalone: 0
+  svg_image: 0
+  symfony_mailer: 0
   system: 0
   taxonomy: 0
+  taxonomy_entity_index: 0
   text: 0
   token: 0
+  token_filter: 0
   toolbar: 0
   twig_remove_html_comments: 0
+  twig_tweak: 0
+  update: 0
+  upgrade_status: 0
+  uploaded_file_filename_randomizer: 0
   user: 0
+  user_password_randomizer: 0
+  username_enumeration_prevention: 0
+  video_embed_field: 0
+  viewfield: 0
+  views_data_export: 0
+  views_delimited_list: 0
+  views_infinite_scroll: 0
   views_ui: 0
+  views_year_filter: 0
+  viewsreference: 0
   webform: 0
   webform_ui: 0
+  workbench_email: 0
+  workflow_buttons: 0
+  workflows: 0
   pathauto: 1
+  image_style_warmer: 10
+  password_policy: 10
   views: 10
+  linked_field: 100
   minimal: 1000
+  agreement: 9999
 theme:
   claro: 0
   gin: 0

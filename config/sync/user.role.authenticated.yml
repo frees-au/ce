@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - filter.format.basic
+    - filter.format.webform_default
   module:
+    - exclude_node_title
     - file
     - filter
+    - google_analytics
     - media
     - shortcut
     - system
@@ -20,5 +23,8 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'delete own files'
+  - 'opt-in or out of google analytics tracking'
+  - 'use exclude node title'
   - 'use text format basic'
+  - 'use text format webform_default'
   - 'view media'

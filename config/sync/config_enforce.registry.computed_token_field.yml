@@ -1,0 +1,8 @@
+_core:
+  default_config_hash: YzcR5HoCy8cZY5a4LLt3n4TB427E6JI5-XBV0Q419e8
+enforced_configs:
+  'config_enforce:registry:computed_token_field':
+    config_directory: config/install
+    enforcement_level: 20
+    config_form_uri: /en/admin/config/development/config_enforce/enforced_configs
+    hash: intentionally_invalid

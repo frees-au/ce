@@ -1,0 +1,13 @@
+uuid: dfe5ad72-b225-42c2-bb9d-7b89af00288e
+langcode: en
+status: true
+dependencies:
+  module:
+    - microcontent
+_core:
+  default_config_hash: XgAGDRd5pJrfMM8yXCsEXZSovLj130V4ZYvREwt2LHY
+id: microcontent.entity_browser
+label: 'Entity browser'
+description: ''
+targetEntityType: microcontent
+cache: true

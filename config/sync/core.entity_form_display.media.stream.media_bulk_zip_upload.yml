@@ -1,0 +1,47 @@
+uuid: e0ef88c7-296b-4dc9-9020-263e3975e7d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_bulk_zip_upload
+    - field.field.media.stream.media_oembed_video
+    - media.type.stream
+  module:
+    - path
+id: media.stream.media_bulk_zip_upload
+targetEntityType: media
+bundle: stream
+mode: media_bulk_zip_upload
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  media_oembed_video: true
+  name: true

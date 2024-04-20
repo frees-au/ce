@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_last_password_reset
+    - field.field.user.user.field_password_expiration
+    - field.field.user.user.field_pending_expire_sent
   module:
     - user
 _core:
@@ -12,6 +15,17 @@ id: user.user.compact
 targetEntityType: user
 bundle: user
 mode: compact
-content: {  }
+content:
+  masquerade:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 50
+    region: content
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_last_password_reset: true
+  field_password_expiration: true
+  field_pending_expire_sent: true
   member_for: true

@@ -9,6 +9,8 @@ dependencies:
     - taxonomy.vocabulary.tags
   module:
     - contextual
+    - editoria11y
+    - exclude_node_title
     - file
     - filter
     - node
@@ -41,8 +43,11 @@ permissions:
   - 'edit own article content'
   - 'edit own page content'
   - 'edit terms in tags'
+  - 'mark as hidden in editoria11y'
   - 'revert all revisions'
+  - 'use exclude node title'
   - 'use text format safe_html'
   - 'view all revisions'
+  - 'view editoria11y checker'
   - 'view own unpublished content'
   - 'view the administration theme'

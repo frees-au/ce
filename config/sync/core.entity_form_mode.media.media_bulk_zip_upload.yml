@@ -1,0 +1,16 @@
+uuid: 7bc07ff1-31b6-45e0-b880-fbfcf8ac895a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+  enforced:
+    module:
+      - media_bulk_zip_upload
+_core:
+  default_config_hash: QYXlfbHZqSlnh2fTJZO6mApMPfsu6X1xxdoAHV5pbC0
+id: media.media_bulk_zip_upload
+label: 'Media bulk Zip upload'
+description: ''
+targetEntityType: media
+cache: true

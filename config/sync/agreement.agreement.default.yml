@@ -1,0 +1,27 @@
+uuid: 3b1aa775-8d41-4bf2-ada3-ad7e228cee0e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: b9V-TfIcFkLZ2SWV0j065bU8Ud6x3ca5slH5AJzuQC4
+id: default
+label: 'Default agreement'
+path: /agreement
+settings:
+  visibility:
+    settings: 0
+    pages: {  }
+  roles:
+    - authenticated
+  frequency: -1
+  title: 'Our Agreement'
+  checkbox: 'I agree.'
+  submit: Submit
+  success: 'Thank you for accepting our agreement.'
+  revoked: 'You have successfully revoked your acceptance of our agreement.'
+  failure: 'You must accept our agreement to continue.'
+  destination: ''
+  recipient: ''
+  reset_date: 0
+  format: plain_text
+agreement: ''

@@ -1,0 +1,27 @@
+_core:
+  default_config_hash: nke0xtf0Bniy1x3wcPMOu7vhaSFPO9mc-s0Qm7QSqTA
+override_site_defaults: false
+rules:
+  mx_lookup: mx_lookup
+  disposable: '0'
+  free: '0'
+  banned: '0'
+error_messages:
+  basic: 'Not a valid email address'
+  mx_lookup: 'Not a valid email address'
+  disposable: 'Disposable emails are not allowed'
+  free: 'Free public email providers are not allowed'
+  banned: 'Emails using this domain are not allowed'
+domain_lists:
+  disposable:
+    - ''
+  free:
+    - ''
+  banned:
+    - ''
+local_list_only:
+  disposable: false
+  free: false
+validate_account_on:
+  created: true
+  updated: false

@@ -5,6 +5,7 @@ dependencies:
   config:
     - filter.format.basic
   module:
+    - exclude_node_title
     - filter
     - media
     - system
@@ -16,5 +17,6 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'use exclude node title'
   - 'use text format basic'
   - 'view media'

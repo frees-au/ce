@@ -1,0 +1,47 @@
+uuid: 5a464be9-4447-4c3f-b01d-f1484a5bc590
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_bulk_zip_upload
+    - field.field.media.image.media_image
+    - media.type.image
+  module:
+    - path
+id: media.image.media_bulk_zip_upload
+targetEntityType: media
+bundle: image
+mode: media_bulk_zip_upload
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  media_image: true
+  name: true
