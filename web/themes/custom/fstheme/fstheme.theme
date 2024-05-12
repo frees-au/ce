@@ -46,12 +46,12 @@ function fstheme_preprocess_page(array &$vars): void {
  */
 function fstheme_preprocess_region(array &$vars): void {
   try {
-    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+    $vars['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
   }
   catch (Exception $e) {
-    $variables['is_front'] = FALSE;
+    $vars['is_front'] = FALSE;
   }
-  $variables['#cache']['contexts'][] = 'url.path';
+  $vars['#cache']['contexts'][] = 'url.path';
 }
 
 /**
