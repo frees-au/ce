@@ -27,7 +27,7 @@ class HomePageController extends ControllerBase {
    */
   public function redirectThatSauce(string $node_uuid) {
     $nodes = $this->entityTypeManager()->getStorage('node')->loadByProperties(['uuid' => $node_uuid]);
-    if (!count($nodes)) {
+    if (count($nodes) === 0) {
       throw new \Exception('Node route UUID doesn\'t appear to match any nodes: ' . $node_uuid);
     }
     $redirect_url = Url::fromRoute('entity.node.canonical', ['node' => reset($nodes)->id()]);

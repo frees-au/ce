@@ -13,7 +13,7 @@ function fs_test_requirements(string $phase): array {
   if ($phase === 'install') {
     $error = t('FS Test module can not be installed on production and config is excluded in "config_exclude_modules" setting in settings.php');
 
-    if (getenv('PLATFORM_ENVIRONMENT_TYPE') && getenv('PLATFORM_ENVIRONMENT_TYPE') == 'production') {
+    if (getenv('PLATFORM_ENVIRONMENT_TYPE') === 'production') {
       if (php_sapi_name() == 'cli') {
         // Prevent user from bypassing with Drush.
         throw new \Exception($error);
