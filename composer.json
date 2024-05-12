@@ -42,6 +42,7 @@
         "drupal/coder": "^8.3",
         "drupal/core-dev": "^10.1",
         "mglaman/phpstan-drupal": "^1.2",
+        "palantirnet/drupal-rector": "^0.20.1",
         "phpstan/extension-installer": "^1.3",
         "phpstan/phpstan": "^1.10",
         "phpstan/phpstan-deprecation-rules": "^1.1",
@@ -68,7 +69,8 @@
         "phpstan": "vendor/bin/phpstan analyse --memory-limit=256M",
         "phpcs": "vendor/bin/phpcs --standard=phpcs.xml",
         "phpcbf": "vendor/bin/phpcbf --standard=phpcs.xml",
-        "phpunit": "vendor/bin/phpunit"
+        "phpunit": "vendor/bin/phpunit",
+        "rector": "vendor/bin/rector --clear-cache --dry-run"
     },
     "extra": {
         "drupal-scaffold": {
