@@ -33,6 +33,8 @@ jobs:
           volumes:
             ${{ github.workspace }}:/app
           run: |
+            apt-get update -qq
+            apt-get install -y --no-install-recommends git
             composer install --quiet
             cp .github/workflows/assets/local.settings.php ./web/sites/default/local.settings.php
             vendor/bin/drush --root=web st
