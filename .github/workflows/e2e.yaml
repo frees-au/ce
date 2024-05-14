@@ -33,8 +33,7 @@ jobs:
           volumes:
             ${{ github.workspace }}:/app
           run: |
-            echo "testing"
-            composer install --quiet
+            composer install --quiet --prefer-dist
             cp .github/workflows/assets/local.settings.php ./web/sites/default/local.settings.php
             vendor/bin/drush --root=web st
             vendor/bin/drush --root=web site:install minimal --yes
