@@ -34,7 +34,7 @@ jobs:
           volumes:
             ${{ github.workspace }}:/app
           run: |
-            composer install
+            composer install --ignore-platform-reqs
             cp .github/workflows/assets/local.settings.php ./web/sites/default/local.settings.php
             vendor/bin/drush --root=web st
             vendor/bin/drush --root=web site:install minimal --yes
