@@ -19,6 +19,7 @@
         "drupal/core-recommended": "^10.0",
         "drupal/default_content": "^2.0@alpha",
         "drupal/embed": "^1.7",
+        "drupal/entity_browser": "^2.10",
         "drupal/field_group": "^3.4",
         "drupal/field_label": "^1.4",
         "drupal/gin": "^3.0@rc",
