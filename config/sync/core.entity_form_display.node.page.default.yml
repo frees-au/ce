@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.hero
-    - field.field.node.article.lead
-    - field.field.node.article.markup
-    - node.type.article
+    - field.field.node.page.hero
+    - field.field.node.page.lead
+    - field.field.node.page.markup
+    - node.type.page
   module:
     - field_group
     - media_library
@@ -27,7 +27,7 @@ third_party_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        direction: vertical
+        direction: horizontal
         width_breakpoint: 640
     group_media:
       children:
@@ -145,5 +145,10 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }
