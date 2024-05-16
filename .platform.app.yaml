@@ -108,7 +108,3 @@ crons:
     spec: '*/39 * * * *'
     commands:
       start: 'cd web ; drush core-cron'
-  check_drupal_packages_updates:
-    spec: '0 0 * * FRI'
-    commands:
-      start: './scripts/check-drupal-composer-package-updates.sh'
