@@ -47,3 +47,5 @@ if (getenv('LANDO') == 'ON' || getenv('IS_DDEV_PROJECT') == 'true') {
 if (file_exists($app_root . '/' . $site_path . '/local.settings.php')) {
   include_once $app_root . '/' . $site_path . '/local.settings.php';
 }
+
+print_r('test');
