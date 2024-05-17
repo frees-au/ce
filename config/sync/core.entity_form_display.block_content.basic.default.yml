@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.basic
-    - field.field.block_content.basic.body
+    - field.field.block_content.basic.markup
   module:
     - text
 _core:
