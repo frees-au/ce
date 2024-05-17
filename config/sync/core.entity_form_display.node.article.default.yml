@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.article.hero
     - field.field.node.article.lead
     - field.field.node.article.markup
+    - field.field.node.article.tags
     - node.type.article
   module:
     - field_group
@@ -48,6 +49,7 @@ third_party_settings:
       children:
         - lead
         - markup
+        - tags
       label: Content
       region: content
       parent_name: group_tabs
@@ -127,6 +129,16 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  tags:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   title:
     type: string_textfield
