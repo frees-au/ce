@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.article.hero
     - field.field.node.article.lead
     - field.field.node.article.markup
+    - field.field.node.article.tags
     - node.type.article
   module:
     - text
@@ -30,6 +31,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   hero: true
