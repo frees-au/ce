@@ -5,8 +5,8 @@ dependencies:
   module:
     - block_content
     - text
-id: block_content.body
-field_name: body
+id: block_content.markup
+field_name: markup
 entity_type: block_content
 type: text_long
 settings: {  }

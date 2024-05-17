@@ -14,7 +14,7 @@ targetEntityType: block_content
 bundle: basic
 mode: default
 content:
-  body:
+  markup:
     type: text_textarea
     weight: 26
     region: content

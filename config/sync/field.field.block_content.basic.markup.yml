@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - block_content.type.basic
-    - field.storage.block_content.body
+    - field.storage.block_content.markup
   module:
     - text
-id: block_content.basic.body
-field_name: body
+id: block_content.basic.markup
+field_name: markup
 entity_type: block_content
 bundle: basic
 label: Content
