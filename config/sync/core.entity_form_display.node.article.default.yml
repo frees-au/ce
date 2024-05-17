@@ -131,7 +131,7 @@ content:
       display_label: true
     third_party_settings: {  }
   tags:
-    type: entity_reference_autocomplete
+    type: entity_reference_autocomplete_tags
     weight: 5
     region: content
     settings:
