@@ -8,15 +8,20 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/frees-au/ce-recipes"
         }
     ],
     "require": {
+        "frees-au/ce-recipes": "dev-main",
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.4",
         "drupal/ckeditor5_template": "^1.0",
         "drupal/config_ignore": "^3.2",
         "drupal/core-composer-scaffold": "^10.0",
-        "drupal/core-recommended": "^10.0",
+        "drupal/core-recommended": "^10.2",
         "drupal/default_content": "^2.0@alpha",
         "drupal/embed": "^1.7",
         "drupal/field_group": "^3.4",
@@ -35,8 +40,8 @@
         "drupal/twig_remove_html_comments": "^1.0@beta",
         "drupal/webform": "^6.2",
         "drush/drush": "^12",
-        "platformsh/config-reader": "^2.4",
-        "weitzman/drupal-test-traits": "^2.2"
+        "oomphinc/composer-installers-extender": "^2",
+        "platformsh/config-reader": "^2.4"
     },
     "require-dev": {
         "drupal/coder": "^8.3",
@@ -53,17 +58,18 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "beta",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {
             "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
             "php-http/discovery": true,
-            "cweagans/composer-patches": true
+            "phpstan/extension-installer": true,
+            "oomphinc/composer-installers-extender": true
         },
         "sort-packages": true
     },
@@ -98,15 +104,17 @@
                 "[web-root]/themes/README.txt": false
             }
         },
+        "installer-types": ["drupal-recipe"],
         "installer-paths": {
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "web/recipes/{$vendor}{$name}": ["type:drupal-recipe"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
         },
         "composer-exit-on-patch-failure": true,
