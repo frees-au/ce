@@ -1,0 +1,13 @@
+name: 'CE Base Content Type'
+description: 'Provides content types'
+type: 'Content type'
+install:
+  - image
+  - node
+  - path
+  - field_group
+  - media_library
+  - user
+  - text
+  - taxonomy
+
