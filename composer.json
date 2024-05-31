@@ -15,7 +15,6 @@
         }
     ],
     "require": {
-        "frees-au/ce-recipes": "dev-main",
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.4",
         "drupal/ckeditor5_template": "^1.0",
@@ -38,8 +37,10 @@
         "drupal/redis": "^1.6",
         "drupal/simple_sitemap": "^4.1",
         "drupal/twig_remove_html_comments": "^1.0@beta",
+        "drupal/upgrade_status": "^4.3",
         "drupal/webform": "^6.2",
         "drush/drush": "^12",
+        "frees-au/ce-recipes": "dev-main",
         "oomphinc/composer-installers-extender": "^2",
         "platformsh/config-reader": "^2.4"
     },
