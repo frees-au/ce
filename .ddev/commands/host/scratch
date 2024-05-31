@@ -1,6 +1,7 @@
 #!/bin/bash
 
-ddev drush site:install minimal --yes
-ddev drush config:set system.site uuid '67893125-a67c-49fe-ab82-c1e0fd0dc8f9' --yes
-ddev drush config:import --yes
+# Install the site directly from the config.
+ddev drush si minimal --existing-config -y
+
+# Install additional functionality which is not part of the captured config.
 ddev drush pm:install fs_test default_content --yes
