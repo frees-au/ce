@@ -46,11 +46,8 @@ jobs:
           volumes:
             ${{ github.workspace }}:/app
           run: |
-            vendor/bin/drush --root=web st
-            vendor/bin/drush --root=web site:install minimal --yes
-            vendor/bin/drush --root=web config:set system.site uuid '67893125-a67c-49fe-ab82-c1e0fd0dc8f9' --yes
-            vendor/bin/drush --root=web config:import --yes
-            vendor/bin/drush --root=web pm:install fs_test default_content --yes
+            vendor/bin/drush si minimal --existing-config -y
+            vendor/bin/drush pm:install fs_test default_content --yes
 
       - name: Run PHP server
         uses: kohlerdominik/docker-run-action@v1
