@@ -5,7 +5,7 @@
 ddev delete -O -y
 rm web/sites/default/settings.php
 rm -rf web/sites/default/files
-rm -rf vendor composer.lock
+rm -rf vendor
 ddev start
 ddev composer install
 cd web && php -d memory_limit=512M core/scripts/drupal install ../recipes/ce
