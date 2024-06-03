@@ -15,13 +15,13 @@
         }
     ],
     "require": {
-        "frees-au/ce-recipes": "dev-main",
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "~2.0",
         "drupal/admin_toolbar": "^3.4",
         "drupal/ckeditor5_template": "^1.0",
         "drupal/config_ignore": "^3.2",
         "drupal/core-composer-scaffold": "^10.0",
-        "drupal/core-recommended": "^10.2",
+        "drupal/core-recommended": "^10.3",
         "drupal/default_content": "^2.0@alpha",
         "drupal/embed": "^1.7",
         "drupal/field_group": "^3.4",
@@ -39,7 +39,8 @@
         "drupal/simple_sitemap": "^4.1",
         "drupal/twig_remove_html_comments": "^1.0@beta",
         "drupal/webform": "^6.2",
-        "drush/drush": "^12",
+        "drush/drush": "^13",
+        "frees-au/ce-recipes": "dev-main",
         "oomphinc/composer-installers-extender": "^2",
         "platformsh/config-reader": "^2.4"
     },
@@ -97,8 +98,6 @@
                 "[web-root]/sites/development.services.yml": false,
                 "[web-root]/sites/example.settings.local.php": false,
                 "[web-root]/sites/example.sites.php": false,
-                "[web-root]/sites/default/default.services.yml": false,
-                "[web-root]/sites/default/default.settings.php": false,
                 "[web-root]/modules/README.txt": false,
                 "[web-root]/profiles/README.txt": false,
                 "[web-root]/themes/README.txt": false
@@ -121,6 +120,10 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "patches": {}
+        "patches": {
+            "drupal/webform": {
+                "[#3345590] Drush 12 moved the namespace": "./config/patches/webform_3345590_3.patch"
+            }
+        }
     }
 }

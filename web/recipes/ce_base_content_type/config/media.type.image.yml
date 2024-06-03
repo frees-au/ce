@@ -1,0 +1,13 @@
+uuid: e6e81726-a752-4874-9cb7-9ff07916ec6f
+langcode: en
+status: true
+dependencies: {  }
+id: image
+label: Image
+description: 'Only nice images. Otherwise you can inline images using the wysiwyg.'
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: media_image
+field_map: {  }

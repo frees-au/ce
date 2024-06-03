@@ -1,0 +1,54 @@
+name: 'CE Base'
+description: 'A test recipe.'
+type: 'Site'
+install:
+  - admin_toolbar
+  - field_group
+  - linkit
+  - config
+  - node
+  - user
+  - text
+  - link
+  - filter
+  - block
+  - block_content
+  - ckeditor5
+  - contextual
+  - menu_link_content
+  - datetime
+  - block_content
+  - editor
+  - image
+  - menu_ui
+  - options
+  - path
+  - dynamic_page_cache
+  - big_pipe
+  - taxonomy
+  - dblog
+  - toolbar
+  - field_ui
+  - media
+  - media_library
+  - views
+  - views_ui
+  - claro
+  - gin
+  - gin_login
+  - gin_toolbar
+  - config_ignore
+  - pathauto
+  - redirect
+  - simple_sitemap
+recipes:
+  - ce_basic_block_type
+config:
+  actions:
+    node.settings:
+      simple_config_update:
+        use_admin_theme: true
+    system.theme:
+      simple_config_update:
+        admin: 'gin'
+        default: 'stark'

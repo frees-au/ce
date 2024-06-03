@@ -1,0 +1,17 @@
+{
+    "_hash": "ea346eeeedcaab70908859ee2839e9cf92cd26ba1f3d73731e887dfb6c56fb56",
+    "patches": {
+        "drupal/webform": [
+            {
+                "package": "drupal/webform",
+                "description": "[#3345590] Drush 12 moved the namespace",
+                "url": "./config/patches/webform_3345590_3.patch",
+                "sha256": "5742d76928b8b2ddcd4a3acdda52661f03b40207a9afd2835fd7ccd711bd9ca9",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
+}
