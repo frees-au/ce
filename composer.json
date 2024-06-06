@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "~2.0",
         "drupal/admin_toolbar": "^3.4",
         "drupal/ckeditor5_template": "^1.0",
         "drupal/config_ignore": "^3.2",
@@ -121,6 +122,10 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "patches": {}
+        "patches": {
+            "drupal/webform": {
+                "[#3345590] Drush 12 moved the namespace": "./config/patches/webform_3345590_3.patch"
+            }
+        }
     }
 }
