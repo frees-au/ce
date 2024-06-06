@@ -1,0 +1,13 @@
+#!/bin/bash
+
+## Description: Installs CE recipe and opens it in a browser.
+
+ddev delete -O -y
+chmod -R 777 web/sites/default
+rm web/sites/default/settings.php
+rm -rf web/sites/default/files
+rm -rf vendor
+ddev start
+ddev composer install
+cd web && php -d memory_limit=512M core/scripts/drupal install ../recipes/ce/ce_base
+ddev drush uli
