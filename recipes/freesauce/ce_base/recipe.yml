@@ -2,39 +2,23 @@ name: 'CE Base'
 description: 'A CE Recipe Base.'
 type: 'Site'
 install:
-  - admin_toolbar
-  - admin_toolbar_tools
-  - admin_toolbar_search
-  - field_group
-  - linkit
+  # Core
+  - block_content
   - config
-  - node
-  - user
-  - text
-  - link
-  - filter
-  - block
-  - block_content
-  - ckeditor5
-  - contextual
-  - menu_link_content
-  - datetime
-  - block_content
-  - editor
-  - image
-  - menu_ui
-  - options
-  - path
   - dynamic_page_cache
-  - big_pipe
-  - taxonomy
-  - dblog
-  - toolbar
   - field_ui
-  - media
-  - media_library
-  - views
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - page_cache
+  - path
+  - path_alias
+  - taxonomy
   - views_ui
+  # Contrib
+  - admin_toolbar_search
+  - linkit
   - fstheme
   - gin
   - gin_login
