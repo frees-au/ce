@@ -9,5 +9,5 @@ rm -rf web/sites/default/files
 rm -rf vendor
 ddev start
 ddev composer install
-cd web && php -d memory_limit=512M core/scripts/drupal install ../recipes/ce/ce_base
+cd web && php -d memory_limit=512M core/scripts/drupal install ../recipes/freesauce/ce
 ddev drush uli
