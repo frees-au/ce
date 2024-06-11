@@ -15,7 +15,6 @@
         }
     ],
     "require": {
-        "frees-au/ce-recipes": "dev-main",
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.4",
         "drupal/ckeditor5_template": "^1.0",
@@ -32,6 +31,7 @@
         "drupal/honeypot": "^2.1",
         "drupal/layout_section_classes": "^1.5",
         "drupal/linkit": "^6.1",
+        "drupal/metatag": "^2.0",
         "drupal/oembed_providers": "^2.1",
         "drupal/pathauto": "^1.12",
         "drupal/redirect": "^1.9",
@@ -40,6 +40,7 @@
         "drupal/twig_remove_html_comments": "^1.0@beta",
         "drupal/webform": "^6.2",
         "drush/drush": "^12",
+        "frees-au/ce-recipes": "dev-main",
         "oomphinc/composer-installers-extender": "^2",
         "platformsh/config-reader": "^2.4"
     },
