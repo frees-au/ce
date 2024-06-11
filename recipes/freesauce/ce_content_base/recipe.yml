@@ -1,0 +1,9 @@
+name: 'CE Content Base'
+description: 'Base configuration for CE content types.'
+type: 'Site'
+recipes:
+  - ce_media
+install:
+  - node
+  - taxonomy
+  - text
