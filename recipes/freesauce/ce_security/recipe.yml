@@ -1,0 +1,12 @@
+name: 'CE Security'
+description: 'Provide best practice for Security configuration.'
+install:
+  # Contrib
+  - security_review
+  - password_policy
+  - autologout
+config:
+  import:
+    security_review: '*'
+    password_policy: '*'
+    autologout: '*'
