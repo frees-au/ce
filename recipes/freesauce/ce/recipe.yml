@@ -4,3 +4,4 @@ type: 'Site'
 recipes:
   - ce_base
   - ce_content_types
+  - ce_seo
