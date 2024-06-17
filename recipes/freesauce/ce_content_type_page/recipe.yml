@@ -1,0 +1,15 @@
+name: 'CE Content Types'
+description: 'Provide CE content types'
+type: 'Site'
+recipes:
+  - ce_content_base
+  - ce_editorial
+install:
+  # Core
+  - menu_ui
+  - user
+  # Contrib
+  - field_group
+config:
+  import:
+    menu_ui: '*'
