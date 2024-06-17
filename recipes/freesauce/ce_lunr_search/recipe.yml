@@ -1,0 +1,13 @@
+name: 'CE Lunr Search'
+description: 'Lunr Search best practice configuration.'
+type: 'Site'
+install:
+  - node
+  - search_api_lunr
+config:
+  import:
+    # Core.
+    node: '*'
+    # Contrib
+    search_api_lunr: '*'
+    search_api: '*'
