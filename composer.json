@@ -36,6 +36,7 @@
         "drupal/pathauto": "^1.12",
         "drupal/redirect": "^1.9",
         "drupal/redis": "^1.6",
+        "drupal/search_api_lunr": "^3.0",
         "drupal/simple_sitemap": "^4.1",
         "drupal/twig_remove_html_comments": "^1.0@beta",
         "drupal/webform": "^6.2",
