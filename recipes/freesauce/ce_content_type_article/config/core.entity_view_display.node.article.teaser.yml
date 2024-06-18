@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.hero
+    - field.field.node.article.lead
+    - field.field.node.article.markup
+    - field.field.node.article.tags
+    - node.type.article
+  module:
+    - text
+    - user
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  hero:
+    type: entity_reference_entity_id
+    label: hidden
+    settings: {  }
+    third_party_settings: {}
+    weight: 1
+    region: content
+  lead:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  links: true
+  markup: true
+  tags: true

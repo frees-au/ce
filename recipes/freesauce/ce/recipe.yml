@@ -1,0 +1,8 @@
+name: 'CE Recipe'
+description: 'Drupal starter recipe.'
+type: 'Site'
+recipes:
+  - ce_base
+  - ce_content_types
+  - ce_seo
+  - ce_lunr_search

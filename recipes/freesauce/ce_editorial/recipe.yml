@@ -1,0 +1,13 @@
+name: 'CE Editorial'
+description: 'A rich editing experience for Drupal.'
+type: 'Site'
+install:
+  - filter
+  - ckeditor5
+  - linkit
+  - media
+
+config:
+  import:
+    filter: '*'
+    linkit: '*'

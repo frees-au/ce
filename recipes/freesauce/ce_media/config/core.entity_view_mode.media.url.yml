@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.url
+label: 'Raw image'
+description: 'The image URL'
+targetEntityType: media
+cache: true

@@ -1,0 +1,6 @@
+name: 'CE Content Types'
+description: 'Provide CE content types'
+type: 'Site'
+recipes:
+  - ce_content_type_article
+  - ce_content_type_page

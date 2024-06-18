@@ -1,0 +1,75 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - editor
+    - linkit
+    - media
+name: Formatted
+format: safe_html
+weight: -9
+filters:
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 0
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p class role aria-level id> <h2 class id> <h3 class id> <h4> <a class target title id href data-entity-type data-entity-uuid data-entity-substitution> <span role aria-level> <ul class role aria-level> <ol class role aria-level reversed start> <table class cellpadding cellspacing> <th class scope valign rowspan colspan> <td class valign nowrap="nowrap" rowspan colspan> <div class id aria-expanded> <dl class> <dt class> <dd class> <b class> <i class> <figure class> <figcaption class> <small> <cite> <time> <abbr> <legend> <path class> <polygon class> <svg> <pre class> <strong> <em> <u> <code class="language-*"> <s> <sub> <sup> <blockquote> <li> <hr> <tr> <thead> <tbody> <tfoot> <caption> <img src alt height width data-entity-uuid data-entity-type data-caption data-align> <drupal-media data-entity-type data-entity-uuid alt data-view-mode data-caption data-align>'
+      filter_html_help: true
+      filter_html_nofollow: true
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: true
+    weight: 9
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: false
+    weight: 0
+    settings:
+      filter_url_length: 200
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: 0
+    settings:
+      title: true
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: embed
+      allowed_view_modes:
+        embed: embed
+        full: full
+      allowed_media_types: { }

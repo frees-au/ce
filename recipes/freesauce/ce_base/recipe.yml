@@ -1,0 +1,37 @@
+name: 'CE Base'
+description: 'A CE Recipe Base.'
+type: 'Site'
+install:
+  # Core
+  - block_content
+  - config
+  - dynamic_page_cache
+  - field_ui
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - page_cache
+  - path
+  - path_alias
+  - taxonomy
+  - views_ui
+  # Contrib
+  - admin_toolbar_search
+  - linkit
+  - fstheme
+  - gin
+  - gin_login
+  - gin_toolbar
+  - config_ignore
+  - pathauto
+  - redirect
+config:
+  actions:
+    node.settings:
+      simple_config_update:
+        use_admin_theme: true
+    system.theme:
+      simple_config_update:
+        admin: 'gin'
+        default: 'fstheme'

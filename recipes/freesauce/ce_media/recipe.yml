@@ -1,0 +1,20 @@
+name: 'CE Media'
+description: 'Media best practice configuration.'
+type: 'Site'
+install:
+  - media_library
+  - oembed_providers
+config:
+  import:
+    # Core.
+    image: '*'
+    media: '*'
+    media_library: '*'
+    views: '*'
+    # Contrib
+    oembed_providers: '*'
+
+  actions:
+    media_library.settings:
+      simple_config_update:
+        advanced_ui: true

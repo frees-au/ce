@@ -1,0 +1,16 @@
+name: 'CE SEO'
+description: 'Provide best practice for SEO configuration.'
+install:
+  # Core
+  - node
+  - taxonomy
+  - menu_link_content
+  # Contrib
+  - pathauto
+  - redirect
+  - simple_sitemap
+config:
+  import:
+    pathauto: '*'
+    redirect: '*'
+    simple_sitemap: '*'

@@ -1,0 +1,140 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.safe_html
+  module:
+    - ckeditor5
+format: safe_html
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - underline
+      - strikethrough
+      - removeFormat
+      - outdent
+      - indent
+      - horizontalLine
+      - blockQuote
+      - insertTable
+      - sourceEditing
+      - undo
+      - redo
+      - showBlocks
+      - superscript
+      - subscript
+      - '-'
+      - heading
+      - bold
+      - italic
+      - link
+      - code
+      - codeBlock
+      - bulletedList
+      - numberedList
+      - drupalInsertImage
+      - drupalMedia
+  plugins:
+    ckeditor5_codeBlock:
+      languages:
+        -
+          label: 'Plain text'
+          language: plaintext
+        -
+          label: C
+          language: c
+        -
+          label: 'C#'
+          language: cs
+        -
+          label: C++
+          language: cpp
+        -
+          label: CSS
+          language: css
+        -
+          label: Diff
+          language: diff
+        -
+          label: HTML
+          language: html
+        -
+          label: Java
+          language: java
+        -
+          label: JavaScript
+          language: javascript
+        -
+          label: PHP
+          language: php
+        -
+          label: Python
+          language: python
+        -
+          label: Ruby
+          language: ruby
+        -
+          label: TypeScript
+          language: typescript
+        -
+          label: XML
+          language: xml
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+    ckeditor5_imageResize:
+      allow_resize: false
+    ckeditor5_list:
+      properties:
+        reversed: true
+        startIndex: true
+      multiBlock: true
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<a class target title id>'
+        - '<h2 class id>'
+        - '<h3 class id>'
+        - '<span role aria-level>'
+        - '<p class role aria-level id>'
+        - '<ul class role aria-level>'
+        - '<ol class role aria-level>'
+        - '<table class cellpadding cellspacing>'
+        - '<th class scope valign>'
+        - '<td class valign nowrap="nowrap">'
+        - '<div class id aria-expanded>'
+        - '<dl class>'
+        - '<dt class>'
+        - '<dd class>'
+        - '<b class>'
+        - '<i class>'
+        - '<figure class>'
+        - '<figcaption class>'
+        - '<small>'
+        - '<cite>'
+        - '<time>'
+        - '<abbr>'
+        - '<legend>'
+        - '<path class>'
+        - '<polygon class>'
+        - '<svg>'
+        - '<pre class>'
+    ckeditor5_template_template:
+      file_path: /themes/custom/fstheme/src/ckeditor5_templates.json
+      custom_toolbar_text: Template
+      show_toolbar_text: 0
+    linkit_extension:
+      linkit_enabled: true
+      linkit_profile: default
+    media_media:
+      allow_view_mode_override: true
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: '10 MB'
+  max_dimensions:
+    width: 1200
+    height: 1200
