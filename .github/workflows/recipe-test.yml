@@ -4,6 +4,20 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    services:
+      mariadb:
+        image: mariadb:latest
+        env:
+          MARIADB_ROOT_PASSWORD: root_password
+          MARIADB_DATABASE: test_db
+          MARIADB_USER: test_user
+          MARIADB_PASSWORD: test_password
+        options: >-
+          --health-cmd="healthcheck.sh --connect --innodb_initialized"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+          --name mariadb
 
     steps:
       - name: Checkout
@@ -21,8 +35,9 @@ jobs:
             ${{ github.workspace }}:/app
           run: |
             composer install --ignore-platform-reqs
+            cp .github/workflows/assets/local.settings.php ./web/sites/default/local.settings.php
 
-      - name: Recipe install
+      - name: Drupal install from recipe
         uses: kohlerdominik/docker-run-action@v1
         with:
           image: bitnami/php-fpm:8.2
@@ -31,4 +46,5 @@ jobs:
           volumes:
             ${{ github.workspace }}:/app
           run: |
-            cd web && php -d memory_limit=512M core/scripts/drupal install ../recipes/freesauce/ce
+            vendor/bin/drush si recipes/frees-au/ce
+            vendor/bin/drush status
