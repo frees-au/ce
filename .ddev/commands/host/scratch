@@ -3,5 +3,5 @@
 # Install the site directly from the config.
 ddev drush si minimal --existing-config -y
 
-# Install additional functionality which is not part of the captured config.
+=# Install additional functionality which is not part of the captured config.
 ddev drush pm:install fs_test default_content --yes
