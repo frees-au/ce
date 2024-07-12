@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a3ebb02f5165345a4e49c5cb67aa9cc",
+    "content-hash": "f4019abebc98cdf999415938003ac404",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -13773,11 +13773,11 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
-        "frees-au/ce-recipes": 20,
         "drupal/default_content": 15,
         "drupal/gin": 5,
         "drupal/gin_toolbar": 5,
-        "drupal/twig_remove_html_comments": 10
+        "drupal/twig_remove_html_comments": 10,
+        "frees-au/ce-recipes": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
