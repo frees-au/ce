@@ -38,3 +38,6 @@ drush-backups
 .phpunit.result.cache
 *.sql
 *.zip
+
+# Recipes
+web/recipes/contrib
