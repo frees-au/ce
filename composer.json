@@ -32,6 +32,7 @@
         "drupal/honeypot": "^2.1",
         "drupal/layout_section_classes": "^1.5",
         "drupal/linkit": "^6.1",
+        "drupal/metatag": "^2.0",
         "drupal/oembed_providers": "^2.1",
         "drupal/pathauto": "^1.12",
         "drupal/redirect": "^1.9",
