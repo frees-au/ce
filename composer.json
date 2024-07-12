@@ -114,7 +114,7 @@
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
-            "web/recipes/{$vendor}{$name}": ["type:drupal-recipe"],
+            "web/recipes/{$vendor}": ["type:drupal-recipe"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
         },
