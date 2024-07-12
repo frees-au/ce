@@ -26,21 +26,24 @@ code, check out the video below.
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/qUJpx5w0avM/0.jpg)](https://www.youtube.com/watch?v=qUJpx5w0avM)
 
-## DDEV or Lando?
-
-¿Por qué no los dos?
-
-You should be able to install locally with [DDEV](https://ddev.com/)
-or [Lando](https://lando.dev/). Anhy instructions with `ddev|lando ...` you should modify
-to use your preferred. If it only shows `ddev` we are waiting the next version of Lando.
-
 ## Backend
 
 ```
-ddev|lando start
-ddev|lando composer install
-ddev|lando scratch    # Build the site with content captured in fs_test module.
-ddev|lando drush uli
+ddev start
+ddev composer install
+# Build the site with content captured in fs_test module.
+ddev scratch
+ddev drush uli
+```
+
+Install from recipes, this work in progress.
+
+```
+ddev start
+ddev composer install
+# Build the site full from recipes... wip.
+ddev scratch-from-recipes-wip
+ddev drush uli
 ```
 
 If you are an employee with access to the hosting environment you can do
