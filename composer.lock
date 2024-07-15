@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a2751ef31ea2a108d49943577bdc308",
+    "content-hash": "c5957bb9518880d1f3281bcde6ebf8f5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3645,16 +3645,16 @@
         },
         {
             "name": "frees-au/ce-recipes",
-            "version": "dev-main",
+            "version": "dev-default-content",
             "source": {
                 "type": "git",
                 "url": "https://github.com/frees-au/ce-recipes.git",
-                "reference": "011bc247a5254784ececd54c688fc68db4fd3cd7"
+                "reference": "ffc2f6dc84f7e614c76e9f06f202683e015ed3c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/frees-au/ce-recipes/zipball/011bc247a5254784ececd54c688fc68db4fd3cd7",
-                "reference": "011bc247a5254784ececd54c688fc68db4fd3cd7",
+                "url": "https://api.github.com/repos/frees-au/ce-recipes/zipball/ffc2f6dc84f7e614c76e9f06f202683e015ed3c2",
+                "reference": "ffc2f6dc84f7e614c76e9f06f202683e015ed3c2",
                 "shasum": ""
             },
             "require": {
@@ -3673,17 +3673,16 @@
                 "drupal/simple_sitemap": "^4.1",
                 "drush/drush": "^13"
             },
-            "default-branch": true,
             "type": "drupal-recipe",
             "license": [
                 "GPL-2.0-or-later"
             ],
             "description": "Free Sauce recipes.",
             "support": {
-                "source": "https://github.com/frees-au/ce-recipes/tree/main",
+                "source": "https://github.com/frees-au/ce-recipes/tree/default-content",
                 "issues": "https://github.com/frees-au/ce-recipes/issues"
             },
-            "time": "2024-07-10T02:27:04+00:00"
+            "time": "2024-07-15T04:13:47+00:00"
         },
         {
             "name": "grasmash/expander",
