@@ -1,0 +1,20 @@
+#!/bin/bash
+
+export_entities() {
+  local entity=$1
+  local table=$2
+  local id_field=$3
+  local folder=$4
+
+  ids=$(ddev drush sql:query "select $id_field from $table order by $id_field ASC")
+
+  for id in $ids; do
+    ddev drush dcer $entity $id --folder=$folder
+  done
+}
+
+# Export nodes
+export_entities "node" "node_field_data" "nid" "../default-content"
+
+# Export block content
+export_entities "block_content" "block_content_field_data" "id" "../default-content"
