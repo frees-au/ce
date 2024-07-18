@@ -3,6 +3,15 @@ type: drupal10
 docroot: web
 php_version: "8.3"
 webserver_type: nginx-fpm
-disable_settings_management: true # @see web/sites/default/docker.settings.php
+xdebug_enabled: false
+additional_hostnames: []
+additional_fqdns: []
+database:
+    type: mariadb
+    version: "10.4"
+use_dns_when_possible: true
+composer_version: "2"
+disable_settings_management: true
 web_environment:
-- DRUSH_OPTIONS_URI=https://fs-web.ddev.site
+    - DRUSH_OPTIONS_URI=https://fs-web.ddev.site
+corepack_enable: false
