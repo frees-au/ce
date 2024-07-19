@@ -1,4 +1,5 @@
 #!/bin/bash
 
+ddev drush dcer media --folder=../default-content
 ddev drush dcer node --folder=../default-content
 ddev drush dcer block_content --folder=../default-content
