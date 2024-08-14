@@ -3539,16 +3539,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "13.0.0-beta5",
+            "version": "13.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "8389f62c17dee1e9212c97e69410e126989f211a"
+                "reference": "ebbd1302d6beaa945e268e7958d285c9fa8630e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/8389f62c17dee1e9212c97e69410e126989f211a",
-                "reference": "8389f62c17dee1e9212c97e69410e126989f211a",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/ebbd1302d6beaa945e268e7958d285c9fa8630e2",
+                "reference": "ebbd1302d6beaa945e268e7958d285c9fa8630e2",
                 "shasum": ""
             },
             "require": {
@@ -3674,7 +3674,7 @@
                 "issues": "https://github.com/drush-ops/drush/issues",
                 "security": "https://github.com/drush-ops/drush/security/advisories",
                 "slack": "https://drupal.slack.com/messages/C62H9CWQM",
-                "source": "https://github.com/drush-ops/drush/tree/13.0.0-beta5"
+                "source": "https://github.com/drush-ops/drush/tree/13.0.1"
             },
             "funding": [
                 {
@@ -3682,7 +3682,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-06-22T17:22:18+00:00"
+            "time": "2024-08-06T12:48:24+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -4228,16 +4228,16 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v11.15.0",
+            "version": "v11.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "9bf68f03bbe05d38c9bd99bac8798c0de61f8478"
+                "reference": "dc68a7ccad93f3c2baa0bc8f559431c06391aa75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/9bf68f03bbe05d38c9bd99bac8798c0de61f8478",
-                "reference": "9bf68f03bbe05d38c9bd99bac8798c0de61f8478",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/dc68a7ccad93f3c2baa0bc8f559431c06391aa75",
+                "reference": "dc68a7ccad93f3c2baa0bc8f559431c06391aa75",
                 "shasum": ""
             },
             "require": {
@@ -4279,11 +4279,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-07-02T20:54:37+00:00"
+            "time": "2024-08-01T18:54:27+00:00"
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v11.15.0",
+            "version": "v11.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -4329,16 +4329,16 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v11.15.0",
+            "version": "v11.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "be935e9d9115a57be74d20176f43fa8a207029f3"
+                "reference": "34ead9385e0eab7e947807d77da66faf9bdf95ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/be935e9d9115a57be74d20176f43fa8a207029f3",
-                "reference": "be935e9d9115a57be74d20176f43fa8a207029f3",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/34ead9385e0eab7e947807d77da66faf9bdf95ff",
+                "reference": "34ead9385e0eab7e947807d77da66faf9bdf95ff",
                 "shasum": ""
             },
             "require": {
@@ -4373,11 +4373,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-07-09T13:57:38+00:00"
+            "time": "2024-08-01T19:08:33+00:00"
         },
         {
             "name": "illuminate/macroable",
-            "version": "v11.15.0",
+            "version": "v11.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
