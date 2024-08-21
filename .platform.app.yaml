@@ -21,7 +21,7 @@ runtime:
 
 relationships:
   database: 'db:mysql'
-  redis: 'cache:redis'
+  # redis: 'cache:redis'
 
 disk: 2048
 
