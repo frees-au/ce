@@ -1,0 +1,102 @@
+uuid: 01b4a3c8-719f-4a05-8afd-a159d54f20a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.lead
+    - search_api.server.lunr
+  module:
+    - search_api_lunr
+    - node
+    - search_api
+id: content
+name: Content
+description: ''
+read_only: false
+field_settings:
+  lead:
+    label: 'Lead or summary'
+    datasource_id: 'entity:node'
+    property_path: lead
+    type: search_api_lunr_summary
+    dependencies:
+      config:
+        - field.storage.node.lead
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  status:
+    label: Boolean
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: search_api_lunr_label
+    boost: 21.0
+    dependencies:
+      module:
+        - node
+  uid:
+    label: 'Entity reference'
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  url:
+    label: URI
+    property_path: search_api_url
+    type: search_api_lunr_url
+    configuration:
+      absolute: false
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  custom_value: {  }
+  entity_status: {  }
+  entity_type: {  }
+  ignorecase:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: false
+    fields:
+      - lead
+      - title
+      - url
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: lunr
