@@ -8,6 +8,7 @@ module:
   big_pipe: 0
   block: 0
   block_content: 0
+  bpmn_io: 0
   breakpoint: 0
   ckeditor5: 0
   ckeditor5_template: 0
@@ -15,6 +16,11 @@ module:
   contextual: 0
   datetime: 0
   dynamic_page_cache: 0
+  eca: 0
+  eca_base: 0
+  eca_modeller_bpmn: 0
+  eca_ui: 0
+  eca_user: 0
   editor: 0
   field: 0
   field_group: 0

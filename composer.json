@@ -19,6 +19,7 @@
         "cweagans/composer-patches": "~2.0",
         "drupal/admin_toolbar": "^3.4",
         "drupal/better_exposed_filters": "^7.0",
+        "drupal/bpmn_io": "^2.0",
         "drupal/ckeditor5_template": "^1.0",
         "drupal/config_ignore": "^3.2",
         "drupal/core-composer-scaffold": "^10.0",

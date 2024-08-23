@@ -1,0 +1,117 @@
+uuid: 72842a23-88e5-4974-9b8b-27f23dfbdce9
+langcode: en
+status: true
+dependencies:
+  config:
+    - eca.eca.process_nckrkpz
+id: process_nckrkpz
+label: 'Redirect user when user login'
+tags:
+  - untagged
+documentation: ''
+filename: ''
+modeldata: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="Process_ncKrkpz" name="Redirect user when user login" isExecutable="true">
+      <bpmn2:startEvent id="Event_14zhhu1" name="User login" camunda:modelerTemplate="org.drupal.event.user:login">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="user:login" />
+          </camunda:properties>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_09wsph3</bpmn2:outgoing>
+        <bpmn2:outgoing>Flow_19bgwhl</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:task id="Activity_0iqdnav" name="Redirect to manage people page" camunda:modelerTemplate="org.drupal.action.action_goto_action">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="action_goto_action" />
+          </camunda:properties>
+          <camunda:field name="url">
+            <camunda:string>/admin/people</camunda:string>
+          </camunda:field>
+          <camunda:field name="replace_tokens">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_09wsph3</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_09wsph3" name="Has admin role" camunda:modelerTemplate="org.drupal.condition.eca_current_user_role" sourceRef="Event_14zhhu1" targetRef="Activity_0iqdnav">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_current_user_role" />
+          </camunda:properties>
+          <camunda:field name="role">
+            <camunda:string>administrator</camunda:string>
+          </camunda:field>
+          <camunda:field name="negate">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+      </bpmn2:sequenceFlow>
+      <bpmn2:task id="Activity_1ghiwrg" name="Redirect to front page" camunda:modelerTemplate="org.drupal.action.action_goto_action">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="action_goto_action" />
+          </camunda:properties>
+          <camunda:field name="url">
+            <camunda:string>/</camunda:string>
+          </camunda:field>
+          <camunda:field name="replace_tokens">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_19bgwhl</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_19bgwhl" name="Has no admin role" camunda:modelerTemplate="org.drupal.condition.eca_current_user_role" sourceRef="Event_14zhhu1" targetRef="Activity_1ghiwrg">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_current_user_role" />
+          </camunda:properties>
+          <camunda:field name="role">
+            <camunda:string>administrator</camunda:string>
+          </camunda:field>
+          <camunda:field name="negate">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+      </bpmn2:sequenceFlow>
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="sid-3a2f15ad-e105-4344-b806-24043a29d48c">
+      <bpmndi:BPMNPlane id="sid-5a192c78-4646-4a22-90c1-9a3a03032f4c" bpmnElement="Process_ncKrkpz">
+        <bpmndi:BPMNShape id="Event_14zhhu1_di" bpmnElement="Event_14zhhu1">
+          <dc:Bounds x="292" y="122" width="36" height="36" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="285" y="165" width="50" height="14" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_0iqdnav_di" bpmnElement="Activity_0iqdnav">
+          <dc:Bounds x="770" y="10" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_1ghiwrg_di" bpmnElement="Activity_1ghiwrg">
+          <dc:Bounds x="770" y="300" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="Flow_09wsph3_di" bpmnElement="Flow_09wsph3">
+          <di:waypoint x="328" y="140" />
+          <di:waypoint x="549" y="140" />
+          <di:waypoint x="549" y="50" />
+          <di:waypoint x="770" y="50" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="623" y="32" width="74" height="14" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_19bgwhl_di" bpmnElement="Flow_19bgwhl">
+          <di:waypoint x="328" y="140" />
+          <di:waypoint x="484" y="140" />
+          <di:waypoint x="484" y="340" />
+          <di:waypoint x="770" y="340" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="545" y="363" width="90" height="14" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+  </bpmn2:definitions>
