@@ -78,7 +78,8 @@ jobs:
               npx cypress install
               npx cypress run --config baseUrl=http://php:8888
               
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v3
+        if: always()
         with:
           name: cypress-artifact
           path: ${{ github.workspace }}/cypress
