@@ -48,7 +48,6 @@ jobs:
           run: |
             vendor/bin/drush si minimal --existing-config -y
             vendor/bin/drush pm:install fs_test default_content --yes
-            vendor/bin/drush sapi-i
 
       - name: Run PHP server
         uses: kohlerdominik/docker-run-action@v1
@@ -74,20 +73,6 @@ jobs:
             ${{ github.workspace }}/cypress:/app
           run: |
             cd /app
-              npm ci
-              npx cypress install
-              npx cypress run --config baseUrl=http://php:8888
-              
-      - name: Upload Cypress screenshots
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: cypress-screenshots
-          path: ${{ github.workspace }}/cypress/screenshots
-      
-      - name: Upload Cypress videos
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: cypress-videos
-          path: ${{ github.workspace }}/cypress/videos
+            npm ci
+            npx cypress install
+            npx cypress run --config baseUrl=http://php:8888
