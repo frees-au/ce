@@ -3129,29 +3129,29 @@
         },
         {
             "name": "drupal/search_api_lunr",
-            "version": "3.0.1",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api_lunr.git",
-                "reference": "3.0.1"
+                "reference": "3.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_lunr-3.0.1.zip",
-                "reference": "3.0.1",
-                "shasum": "7593af1e0a07cba987ad685ce3009046bbd49589"
+                "url": "https://ftp.drupal.org/files/projects/search_api_lunr-3.1.0.zip",
+                "reference": "3.1.0",
+                "shasum": "cadbf15649ba72a81fc1c5ff32305206f57713a9"
             },
             "require": {
-                "drupal/core": "^9 || ^10",
-                "drupal/jquery_ui_autocomplete": "^2.0",
-                "drupal/search_api": "^1.31",
-                "php": "^8"
+                "drupal/core": "^10.2 || ^11",
+                "drupal/jquery_ui_autocomplete": "^2.1.0",
+                "drupal/search_api": "^1.35",
+                "php": "^8.3"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.1",
-                    "datestamp": "1702507619",
+                    "version": "3.1.0",
+                    "datestamp": "1723417025",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
