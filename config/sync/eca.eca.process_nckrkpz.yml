@@ -1,0 +1,50 @@
+uuid: fb529544-e142-4c33-91a7-5c04b6ddca0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - eca_user
+id: process_nckrkpz
+modeller: bpmn_io
+label: 'Redirect user when user login'
+version: ''
+weight: 0
+events:
+  Event_14zhhu1:
+    plugin: 'user:login'
+    label: 'User login'
+    configuration: {  }
+    successors:
+      -
+        id: Activity_0iqdnav
+        condition: Flow_09wsph3
+      -
+        id: Activity_1ghiwrg
+        condition: Flow_19bgwhl
+conditions:
+  Flow_09wsph3:
+    plugin: eca_current_user_role
+    configuration:
+      negate: false
+      role: administrator
+  Flow_19bgwhl:
+    plugin: eca_current_user_role
+    configuration:
+      role: administrator
+      negate: true
+gateways: {  }
+actions:
+  Activity_0iqdnav:
+    plugin: action_goto_action
+    label: 'Redirect to manage people page'
+    configuration:
+      replace_tokens: false
+      url: /admin/people
+    successors: {  }
+  Activity_1ghiwrg:
+    plugin: action_goto_action
+    label: 'Redirect to front page'
+    configuration:
+      replace_tokens: false
+      url: /
+    successors: {  }

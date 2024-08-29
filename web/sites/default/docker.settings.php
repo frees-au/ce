@@ -51,3 +51,10 @@ ini_set('display_startup_errors', TRUE);
 
 $settings['update_free_access'] = FALSE;
 $settings['rebuild_access'] = FALSE;
+
+// Stage file proxy. Please enable only stage_file_proxy module on non-prod env.
+$config['stage_file_proxy.settings']['origin'] = 'https://frees.au';
+$config['stage_file_proxy.settings']['verify'] = TRUE;
+$config['stage_file_proxy.settings']['use_imagecache_root'] = TRUE;
+$config['stage_file_proxy.settings']['hotlink'] = FALSE;
+$config['stage_file_proxy.settings']['origin_dir'] = 'sites/default/files';

@@ -73,6 +73,6 @@ jobs:
             ${{ github.workspace }}/cypress:/app
           run: |
             cd /app
-              npm ci
-              npx cypress install
-              npx cypress run --config baseUrl=http://php:8888
+            npm ci
+            npx cypress install
+            npx cypress run --config baseUrl=http://php:8888

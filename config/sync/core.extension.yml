@@ -5,9 +5,11 @@ module:
   admin_toolbar_links_access_filter: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
+  antibot: 0
   big_pipe: 0
   block: 0
   block_content: 0
+  bpmn_io: 0
   breakpoint: 0
   ckeditor5: 0
   ckeditor5_template: 0
@@ -15,7 +17,14 @@ module:
   contextual: 0
   datetime: 0
   dynamic_page_cache: 0
+  easy_breadcrumb: 0
+  eca: 0
+  eca_base: 0
+  eca_modeller_bpmn: 0
+  eca_ui: 0
+  eca_user: 0
   editor: 0
+  editoria11y: 0
   field: 0
   field_group: 0
   field_label: 0
@@ -27,6 +36,9 @@ module:
   gin_toolbar: 0
   honeypot: 0
   image: 0
+  jquery_ui: 0
+  jquery_ui_autocomplete: 0
+  jquery_ui_menu: 0
   link: 0
   linkit: 0
   media: 0
@@ -43,6 +55,8 @@ module:
   path: 0
   path_alias: 0
   redirect: 0
+  search_api: 0
+  search_api_lunr: 0
   shortcut: 0
   simple_sitemap: 0
   system: 0
