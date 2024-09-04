@@ -1,8 +1,9 @@
 #!/bin/bash
 
 rm -rf /var/www/html/static-site
-if [[ "$1" == "--production" ]]; then
-  GENERATE_STATIC_SITE=1 drush tome:static --uri=https://frees.au
-else
-  GENERATE_STATIC_SITE=1 drush tome:static --uri=https://fs-web-static-site.ddev.site
-fi
+
+GENERATE_STATIC_SITE=1 drush tome:static --uri=https://frees.au
+
+# Need this one to make search api lunr works.
+# Make sure Drupal site is fully index first.
+cp -R "/var/www/html/web/sites/default/files/search-api-js" "/var/www/html/static-site/sites/default/files"
