@@ -1,0 +1,19 @@
+name: Deploy to S3
+on:
+  push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          role-to-assume: arn:aws:iam::527615795827:role/github-actions@frees-au
+          aws-region: ap-southeast-2
+          
+      - name: Deploy to S3
+        run: aws s3 cp index-test.html s3://frees-au-static/
