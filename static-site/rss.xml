@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://fs-web-static-site.ddev.site/">
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://frees.au/">
   <channel>
     <title>frees.au/ce - Free as in …</title>
-    <link>https://fs-web-static-site.ddev.site/</link>
+    <link>https://frees.au/</link>
     <description/>
     <language>en</language>
     
     <item>
   <title>Mastering machine names inside your views</title>
-  <link>https://fs-web-static-site.ddev.site/ce/ummm/mastering-machine-names-inside-your-views</link>
+  <link>https://frees.au/ce/ummm/mastering-machine-names-inside-your-views</link>
   <description>
       Mastering machine names inside your views
   
@@ -27,11 +27,11 @@ views-view--mycontentview--newest-articles.html.twig&lt;/code&gt;&lt;/pre&gt;&lt
   </description>
   <pubDate>Thu, 29 Feb 2024 11:08:21 +0000</pubDate>
     <dc:creator>si</dc:creator>
-    <guid isPermaLink="false">4 at https://fs-web-static-site.ddev.site</guid>
+    <guid isPermaLink="false">4 at https://frees.au</guid>
     </item>
 <item>
   <title>Typography check</title>
-  <link>https://fs-web-static-site.ddev.site/ce/ummm/typography-check</link>
+  <link>https://frees.au/ce/ummm/typography-check</link>
   <description>
       Typography check
   
@@ -48,7 +48,7 @@ npm ci&lt;/pre&gt;&lt;p&gt;Quote&lt;/p&gt;&lt;p&gt;"Oh, how I miss the Earth's f
   </description>
   <pubDate>Tue, 05 Dec 2023 10:24:52 +0000</pubDate>
     <dc:creator>si</dc:creator>
-    <guid isPermaLink="false">1 at https://fs-web-static-site.ddev.site</guid>
+    <guid isPermaLink="false">1 at https://frees.au</guid>
     </item>
 
   </channel>
