@@ -97,3 +97,6 @@ in the `fs_test` module to create a fully functioning site.
 This type of build is great for e2e integration testing since it doesn't need
 access to production database sync or database stubs. It is supported by the
 excellent [Default Content](https://drupal.org/project/default_content) module.
+
+## Generate static site using Tome
+ddev generate-static-site
