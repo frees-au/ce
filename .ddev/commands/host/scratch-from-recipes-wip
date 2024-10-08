@@ -1,6 +1,0 @@
-#!/bin/bash
-
-## Description: Installs CE recipe and opens it in a browser.
-
-ddev drush si recipes/frees-au/ce
-ddev drush uli

@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Install the site directly from the config.
-ddev drush si minimal --existing-config -y
+ddev drush si minimal --existing-config --yes
 
 # Install additional functionality which is not part of the captured config.
 ddev drush pm:install fs_test default_content --yes
+
+ddev drush uli
