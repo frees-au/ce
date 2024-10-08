@@ -12,7 +12,7 @@ default:
       value: stock-skiier.jpeg
   uri:
     -
-      value: 'public://2024-02/stock-skiier_50.jpeg'
+      value: 'public://2024-02/stock-skiier_50_0.jpeg'
   filemime:
     -
       value: image/jpeg

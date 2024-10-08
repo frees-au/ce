@@ -12,7 +12,7 @@ default:
       value: gippity-sauce-factory.jpeg
   uri:
     -
-      value: 'public://2024-02/gippity-sauce-factory_50.jpeg'
+      value: 'public://2024-02/gippity-sauce-factory_50_0.jpeg'
   filemime:
     -
       value: image/jpeg

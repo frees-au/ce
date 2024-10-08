@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: file
-  uuid: 60a49ee1-4694-4619-9b0f-372438fa80a0
+  uuid: a26b4a0e-ddb4-4913-a892-75a2c25e5026
   default_langcode: en
 default:
   uid:
@@ -9,19 +9,19 @@ default:
       target_id: 1
   filename:
     -
-      value: 'screenshot 427.png'
+      value: no-thumbnail.png
   uri:
     -
-      value: 'public://2024-02/screenshot 427_50_0.png'
+      value: 'public://media-icons/generic/no-thumbnail.png'
   filemime:
     -
       value: image/png
   filesize:
     -
-      value: 1428427
+      value: 7318
   status:
     -
       value: true
   created:
     -
-      value: 1709115295
+      value: 1728389716
