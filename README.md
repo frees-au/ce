@@ -31,7 +31,7 @@ code, check out the video below.
 ```
 ddev start
 ddev composer install
-# Build the site with content captured in fs_test module.
+# Build the site with content captured in fs_content module.
 ddev scratch
 ddev drush uli
 ```
@@ -58,7 +58,7 @@ we expect you to use as a base theme. Please don't ask for support if you do ðŸ˜
 Install the css with the following command, just to get you started.
 
 ```
-ddev|lando frontend
+ddev frontend
 ```
 
 ## Testing
@@ -92,7 +92,7 @@ ddev composer run-script phpstan -- ./web/modules/contrib/foo_module
 This site is open source but our production database isn't, so we provide the
 ability to build it from scratch using `ddev scratch`. This installs a minmal
 Drupal site, imports the config, and adds some baseline content that is captured
-in the `fs_test` module to create a fully functioning site.
+in the `fs_content_` module to create a fully functioning site.
 
 This type of build is great for e2e integration testing since it doesn't need
 access to production database sync or database stubs. It is supported by the

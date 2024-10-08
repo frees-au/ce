@@ -26,6 +26,20 @@ default:
   sticky:
     -
       value: false
+  revision_translation_affected:
+    -
+      value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Thank you | frees.au/ce'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://fs-web.ddev.site:8443/ce/thank-you'
   path:
     -
       alias: /ce/thank-you

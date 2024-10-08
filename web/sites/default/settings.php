@@ -28,8 +28,6 @@ $settings['file_temp_path'] = '/tmp';
 
 // These modules' config will never be imported/exported.
 $settings['config_exclude_modules'] = [
-  'fs_test', // @see fs_test_requirements() where it is also prevented to install on production.
-  'default_content',
   'devel',
 ];
 

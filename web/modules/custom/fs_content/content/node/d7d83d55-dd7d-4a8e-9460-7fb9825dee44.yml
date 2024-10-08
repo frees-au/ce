@@ -6,6 +6,7 @@ _meta:
   default_langcode: en
   depends:
     e7de467c-73d2-43dd-9a84-8a4a1a5b3925: media
+    550f86ad-aa11-4047-953f-636d42889f84: taxonomy_term
 default:
   revision_uid:
     -
@@ -31,6 +32,17 @@ default:
   revision_translation_affected:
     -
       value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Typography check | frees.au/ce'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://fs-web.ddev.site:8443/ce/ummm/typography-check'
   path:
     -
       alias: /ce/ummm/typography-check
@@ -49,4 +61,4 @@ default:
       format: safe_html
   tags:
     -
-      target_id: 2
+      entity: 550f86ad-aa11-4047-953f-636d42889f84

@@ -1,4 +1,4 @@
-name: FS Testing
+name: FS Content
 type: module
 package: '<marquee style="width: 200px; font: normal normal bold 1.2rem inherit monospace; font-family: monospace, monospace; color: #a71f23">frees.au/ce</marquee>'
 description: 'Testing support, mainly default_content for e2e testing.'

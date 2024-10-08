@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: file
-  uuid: 60a49ee1-4694-4619-9b0f-372438fa80a0
+  uuid: fc6e3c19-06e5-4317-8833-7246c27cd624
   default_langcode: en
 default:
   uid:
@@ -9,19 +9,19 @@ default:
       target_id: 1
   filename:
     -
-      value: 'screenshot 427.png'
+      value: stock-skiier.jpeg
   uri:
     -
-      value: 'public://2024-02/screenshot 427.png'
+      value: 'public://2024-02/stock-skiier_50.jpeg'
   filemime:
     -
-      value: image/png
+      value: image/jpeg
   filesize:
     -
-      value: 1428427
+      value: 302164
   status:
     -
       value: true
   created:
     -
-      value: 1709115295
+      value: 1709115444

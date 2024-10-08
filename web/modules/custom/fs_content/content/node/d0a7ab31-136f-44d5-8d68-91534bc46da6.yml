@@ -6,6 +6,8 @@ _meta:
   default_langcode: en
   depends:
     fe6b7593-6461-4baa-b8b6-2a3847f090d5: media
+    440f86ad-aa11-4047-953f-636d42889f84: taxonomy_term
+    550f86ad-aa11-4047-953f-636d42889f84: taxonomy_term
 default:
   revision_uid:
     -
@@ -31,6 +33,17 @@ default:
   revision_translation_affected:
     -
       value: true
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Mastering machine names inside your views | frees.au/ce'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://fs-web.ddev.site:8443/ce/ummm/mastering-machine-names-inside-your-views'
   path:
     -
       alias: /ce/ummm/mastering-machine-names-inside-your-views
@@ -49,7 +62,6 @@ default:
       format: safe_html
   tags:
     -
-      target_id: 1
+      entity: 440f86ad-aa11-4047-953f-636d42889f84
     -
-      target_id: 2
-
+      entity: 550f86ad-aa11-4047-953f-636d42889f84

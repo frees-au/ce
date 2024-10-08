@@ -20,7 +20,7 @@ class HomePageController extends ControllerBase {
    * Redirect the home page to /ce (well, whichever alias set on $node_uuid).
    *
    * @param string $node_uuid
-   *   A node UUID to redirect to, which should be one exported in fs_test.info.yml.
+   *   A node UUID to redirect to, which should be one exported in fs_content.info.yml.
    *
    * @return \Symfony\Component\HttpFoundation\RedirectResponse
    *   A redirect to the page to use instead of the home page.

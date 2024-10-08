@@ -47,7 +47,7 @@ jobs:
             ${{ github.workspace }}:/app
           run: |
             vendor/bin/drush si minimal --existing-config -y
-            vendor/bin/drush pm:install fs_test default_content --yes
+            vendor/bin/drush pm:install fs_content default_content --yes
 
       - name: Run PHP server
         uses: kohlerdominik/docker-run-action@v1
