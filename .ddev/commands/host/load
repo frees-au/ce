@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Install the site directly from the config.
+# ddev drush si minimal --existing-config --yes
+
+ddev import-db --file=_db_main.sql.gz
+
+ddev drush config:status
+
+ddev drush updb -y
+
+ddev drush uli

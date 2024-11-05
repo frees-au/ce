@@ -1,12 +1,10 @@
 uuid: 01b4a3c8-719f-4a05-8afd-a159d54f20a2
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.node.lead
-    - search_api.server.lunr
   module:
-    - search_api_lunr
     - node
     - search_api
 id: content
@@ -18,7 +16,7 @@ field_settings:
     label: 'Lead or summary'
     datasource_id: 'entity:node'
     property_path: lead
-    type: search_api_lunr_summary
+    type: text
     dependencies:
       config:
         - field.storage.node.lead
@@ -43,7 +41,7 @@ field_settings:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
-    type: search_api_lunr_label
+    type: text
     boost: 21.0
     dependencies:
       module:
@@ -61,7 +59,7 @@ field_settings:
   url:
     label: URI
     property_path: search_api_url
-    type: search_api_lunr_url
+    type: text
     configuration:
       absolute: false
 datasource_settings:
@@ -99,4 +97,4 @@ options:
   cron_limit: 50
   index_directly: true
   track_changes_in_references: true
-server: lunr
+server: null

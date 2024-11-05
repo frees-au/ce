@@ -8,7 +8,6 @@ dependencies:
     - file
     - filter
     - media
-    - shortcut
     - system
 _core:
   default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
@@ -18,7 +17,6 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
-  - 'access shortcuts'
   - 'delete own files'
   - 'use text format basic'
   - 'view media'

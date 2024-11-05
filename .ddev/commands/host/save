@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "Removing cache data."
+ddev drush sqlq " \
+  TRUNCATE cache_access_policy; \
+  TRUNCATE cache_bootstrap; \
+  TRUNCATE cache_config; \
+  TRUNCATE cache_container; \
+  TRUNCATE cache_data; \
+  TRUNCATE cache_default; \
+  TRUNCATE cache_discovery; \
+  TRUNCATE cache_dynamic_page_cache; \
+  TRUNCATE cache_tome_static; \
+  TRUNCATE cache_toolbar; \
+  TRUNCATE queue; \
+  TRUNCATE router; \
+  TRUNCATE sessions; \
+"
+
+ddev export-db --file=_db_main.sql.gz

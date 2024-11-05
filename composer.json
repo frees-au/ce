@@ -8,19 +8,13 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/frees-au/ce-recipes"
         }
     ],
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "~2.0",
         "drupal/admin_toolbar": "^3.4",
-        "drupal/antibot": "^2.0",
         "drupal/better_exposed_filters": "^7.0",
-        "drupal/bpmn_io": "^2.0",
         "drupal/ckeditor5_template": "^1.0",
         "drupal/config_ignore": "^3.2",
         "drupal/core-composer-scaffold": "^10.0",
@@ -34,24 +28,17 @@
         "drupal/gin": "^3.0@rc",
         "drupal/gin_login": "^2.0",
         "drupal/gin_toolbar": "^1.0@rc",
-        "drupal/honeypot": "^2.1",
         "drupal/layout_section_classes": "^1.5",
         "drupal/linkit": "^6.1",
         "drupal/metatag": "^2.0",
         "drupal/oembed_providers": "^2.1",
         "drupal/pathauto": "^1.12",
         "drupal/redirect": "^1.9",
-        "drupal/redis": "^1.6",
         "drupal/search_api_lunr": "^3.0",
         "drupal/simple_sitemap": "^4.1",
-        "drupal/stage_file_proxy": "^3.1",
-        "drupal/twig_remove_html_comments": "^1.0@beta",
-        "drupal/upgrade_status": "^4.3",
-        "drupal/webform": "^6.2",
+        "drupal/upgrade_status": "*",
         "drush/drush": "^13",
-        "frees-au/ce-recipes": "dev-main",
-        "oomphinc/composer-installers-extender": "^2",
-        "platformsh/config-reader": "^2.4"
+        "oomphinc/composer-installers-extender": "^2"
     },
     "require-dev": {
         "drupal/coder": "^8.3",
@@ -78,9 +65,10 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
+            "oomphinc/composer-installers-extender": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
-            "oomphinc/composer-installers-extender": true
+            "tbachert/spi": true
         },
         "sort-packages": true
     },
