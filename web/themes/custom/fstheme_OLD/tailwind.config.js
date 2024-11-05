@@ -22,6 +22,7 @@ export const theme = {
       'fs-red-tint': '#e5bcbd',
       'fs-dark-grey': '#333',
       'fs-light-grey': '#ddd',
+      'background-opacity': 'rgb(var(#FFFFF / 0.9)',
     },
     boxShadow: {
       popped: '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
@@ -39,6 +40,7 @@ export const theme = {
       DEFAULT: {
         css: {
           a: {
+            color: '#a71f23',
             textDecoration: `none`,
             '&:hover': {
               textDecoration: `underline`,

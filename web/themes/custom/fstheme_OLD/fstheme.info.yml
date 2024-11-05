@@ -1,0 +1,22 @@
+name: 'Free Sauce'
+type: theme
+base theme: false
+description: 'Tailwind based theme'
+core: 10.x
+core_version_requirement: ^10
+logo: logo.png
+libraries:
+  - fstheme/global-js
+  - fstheme/global-css
+ckeditor5-stylesheets:
+  - src/css/ckeditor5.css
+regions:
+  header: Header
+  sidebar: 'Main nav'
+  title: 'Title area'
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content_above: 'Content Above'
+  content: Content
+  content_below: 'Content Below'
+  footer: 'Footer'

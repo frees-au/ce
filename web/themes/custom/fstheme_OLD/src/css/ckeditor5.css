@@ -35,10 +35,10 @@ h6 {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-  --fs-sauce-red: #B11F24;
-  --white: #FFFFFF;
-  --fs-grey: #BFBFBF;
-  --fs-light-grey: #F5F5F5;
+  --fs-sauce-red: #a71f23;
+  --fs-sauce-red-tint: #e5bcbd;
+  --fs-dark-grey: #333;
+  --fs-light-grey: #ccc;
 }
 
 .form-textarea-wrapper .ck-reset {
@@ -143,8 +143,8 @@ thead {
 }
 
 tbody tr:hover {
-  background-color: var(--fs-grey); /* Sauce red for row hover background */
-  color: var(--fs-grey); /* Light grey text for readability */
+  background-color: var(--fs-sauce-red-tint); /* Sauce red for row hover background */
+  color: var(--fs-dark-grey); /* Light grey text for readability */
 }
 
 dl {

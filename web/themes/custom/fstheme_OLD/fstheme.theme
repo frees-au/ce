@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Free Sauce theme.
+ */
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function fstheme_theme_suggestions_field_alter(array &$hooks, array $vars): void {
+  switch ($vars['element']['#field_type'] ?? NULL) {
+    case 'string':
+    case 'text_long':
+    case 'link':
+    case 'created':
+    case 'boolean':
+    case 'image':
+    case 'entity_reference':
+    case 'entity_reference_revisions':
+    case 'block_field':
+      $hooks[] = 'field__bare';
+      return;
+
+    default:
+      \Drupal::messenger()->addError('Unexpected field type ' . $vars['element']['#field_type'] . ' not sure if to wrap it in a bare template.');
+      break;
+  }
+}
