@@ -1,0 +1,25 @@
+uuid: 140a7612-f8fd-4c77-aef1-11c11c2f51d2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4c8634cb-6e87-47cf-9f4b-ae25bda076d2'
+  module:
+    - block_content
+  theme:
+    - fstheme
+id: fstheme_acknowledgement
+theme: fstheme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:4c8634cb-6e87-47cf-9f4b-ae25bda076d2'
+settings:
+  id: 'block_content:4c8634cb-6e87-47cf-9f4b-ae25bda076d2'
+  label: Acknowledgement
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -122,10 +122,7 @@ settings:
         - '<polygon class>'
         - '<svg>'
         - '<pre class>'
-    ckeditor5_template_template:
-      file_path: /themes/custom/fstheme/src/ckeditor5_templates.json
-      custom_toolbar_text: Template
-      show_toolbar_text: 0
+        - '<script type src>'
     linkit_extension:
       linkit_enabled: true
       linkit_profile: default

@@ -34,7 +34,6 @@
         "drupal/oembed_providers": "^2.1",
         "drupal/pathauto": "^1.12",
         "drupal/redirect": "^1.9",
-        "drupal/s3fs": "^3.6",
         "drupal/search_api_lunr": "^3.0",
         "drupal/simple_sitemap": "^4.1",
         "drupal/upgrade_status": "*",

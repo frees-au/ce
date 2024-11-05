@@ -28,6 +28,8 @@ module:
   gin_login: 0
   gin_toolbar: 0
   image: 0
+  layout_builder: 0
+  layout_discovery: 0
   link: 0
   linkit: 0
   media: 0
@@ -37,6 +39,7 @@ module:
   metatag: 0
   metatag_open_graph: 0
   mysql: 0
+  navigation: 0
   node: 0
   oembed_providers: 0
   options: 0

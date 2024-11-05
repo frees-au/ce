@@ -1,22 +1,22 @@
-uuid: 315454f2-da22-49f3-a7d0-16d1eee43bab
+uuid: 1829ef9a-25ec-4e71-b935-bd8338dc1205
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:8ba11090-75b3-49c9-aadf-d8abb47fecf3'
+    - 'block_content:basic:9d3bf94f-9f38-4013-a2b6-6209311d428e'
   module:
     - block_content
   theme:
     - fstheme
-id: fstheme_footer
+id: fstheme_slogan
 theme: fstheme
 region: footer
 weight: 0
 provider: null
-plugin: 'block_content:8ba11090-75b3-49c9-aadf-d8abb47fecf3'
+plugin: 'block_content:9d3bf94f-9f38-4013-a2b6-6209311d428e'
 settings:
-  id: 'block_content:8ba11090-75b3-49c9-aadf-d8abb47fecf3'
-  label: Footer
+  id: 'block_content:9d3bf94f-9f38-4013-a2b6-6209311d428e'
+  label: Slogan
   label_display: '0'
   provider: block_content
   status: true
