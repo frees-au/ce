@@ -2,10 +2,8 @@
 
 /**
  * @file
- * Free Sauce theme module.
+ * Free Sauce theme.
  */
-
-use Drupal\Component\Utility\Xss;
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
@@ -27,43 +25,5 @@ function fstheme_theme_suggestions_field_alter(array &$hooks, array $vars): void
     default:
       \Drupal::messenger()->addError('Unexpected field type ' . $vars['element']['#field_type'] . ' not sure if to wrap it in a bare template.');
       break;
-  }
-}
-
-/**
- * Implements hook_preprocess_page().
- */
-function fstheme_preprocess_page(array &$vars): void {
-  $site_config = \Drupal::config('system.site');
-  $vars['site_name'] = $site_config->get('name');
-  $slogan = $site_config->get('slogan');
-  assert(is_string($slogan));
-  $vars['site_slogan'] = Xss::filter($slogan);
-}
-
-/**
- * Implements hook_preprocess_region().
- */
-function fstheme_preprocess_region(array &$vars): void {
-  try {
-    $vars['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
-  }
-  catch (Exception $e) {
-    $vars['is_front'] = FALSE;
-  }
-  $vars['#cache']['contexts'][] = 'url.path';
-}
-
-/**
- * Implements hook_preprocess_node().
- */
-function fstheme_preprocess_node(array &$vars): void {
-  $vars['hero_background_url'] = 'false';
-  $node = $vars['node'];
-  if (!$node->get('hero')->isEmpty()) {
-    $file = $node->get('hero')->entity->get('media_image')->entity;
-    if ($file) {
-      $vars['hero_background_url'] = $file->createFileUrl();
-    }
   }
 }

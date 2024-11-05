@@ -1,8 +1,0 @@
-fs.home:
-  path: '/home-route'
-  defaults:
-    _controller: '\Drupal\fs\Controller\HomePageController::redirectThatSauce'
-    # For testing this should have a match in ./web/modules/custom/fs_content/content/node.
-    node_uuid: 'b7f09742-ec1f-4a8e-b594-59ef9980937a'
-  requirements:
-    _access: 'TRUE'

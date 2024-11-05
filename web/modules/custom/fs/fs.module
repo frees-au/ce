@@ -11,6 +11,6 @@ declare(strict_types=1);
  * Implements hook_requirements_alter().
  */
 function fs_requirements_alter(array &$requirements): void {
-  // Decrease the 'update status' requirement severity from warning to informational. Platform.sh hosting makes this all read-only.
+  // Decrease the 'update status' requirement severity from warning to informational.
   $requirements['update status']['severity'] = REQUIREMENT_INFO;
 }

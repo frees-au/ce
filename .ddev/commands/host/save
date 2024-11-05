@@ -18,3 +18,7 @@ ddev drush sqlq " \
 "
 
 ddev export-db --file=_db_main.sql.gz
+
+# So we can keep working.
+ddev drush cr
+ddev drush uli
