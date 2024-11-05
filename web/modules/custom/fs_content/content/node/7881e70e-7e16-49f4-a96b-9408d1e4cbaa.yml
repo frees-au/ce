@@ -26,6 +26,9 @@ default:
   sticky:
     -
       value: false
+  revision_translation_affected:
+    -
+      value: true
   metatag:
     -
       tag: meta
@@ -44,7 +47,7 @@ default:
       pathauto: 0
   lead:
     -
-      value: "<p>PHPStan is a static code analysis tool that you can add to your Drupal site. It will pick up issues as you code, so they don't get to production. Parmesan cheese.</p>"
+      value: "<p>PHPStan is a static code analysis tool that you can add to your Drupal site. It will pick up issues as you code, so they don't get to production. Parmesan cheese. Zombie.</p>"
       format: basic
   markup:
     -

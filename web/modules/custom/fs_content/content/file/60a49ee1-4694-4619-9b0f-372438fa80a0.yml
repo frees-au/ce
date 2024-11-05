@@ -12,7 +12,7 @@ default:
       value: 'screenshot 427.png'
   uri:
     -
-      value: 'public://2024-02/screenshot 427_50_0.png'
+      value: 'public://2024-02/screenshot 427_50_0_0.png'
   filemime:
     -
       value: image/png
