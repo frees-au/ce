@@ -18,10 +18,10 @@ export const theme = {
   },
   extend: {
     colors: {
-      'fs-red': '#a71f23',
-      'fs-red-tint': '#e5bcbd',
-      'fs-dark-grey': '#333',
-      'fs-light-grey': '#ddd',
+      'fs-red': '#851520',
+      'fs-red-tint': '#B11F24',
+      'fs-dark-grey': '#BFBFBF',
+      'fs-light-grey': '#F5F5F5',
     },
     boxShadow: {
       popped: '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
