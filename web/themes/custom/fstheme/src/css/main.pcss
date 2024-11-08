@@ -4,6 +4,99 @@
 
 @layer base {
 
-  /* @note Some typography can go into tailwind.config.js. */
+  h1 {
+    @apply text-[46px] leading-[46px];
+  }
 
+  h2 {
+    @apply text-[34px] leading-[41px];
+  }
+
+  h3 {
+    @apply text-[28px] leading-[39px];
+  }
+
+  h4 {
+    @apply text-[24px] leading-[37px];
+  }
+
+  h5 {
+    @apply text-[22px] leading-[33px];
+  }
+
+  @media screen(md) {
+    h1 {
+      @apply text-[56px] leading-[54px];
+    }
+
+    h2 {
+      @apply text-[38px] leading-[41px];
+    }
+
+    h3 {
+      @apply text-[30px] leading-[39px];
+    }
+
+    h4 {
+      @apply text-[24px] leading-[37px];
+    }
+
+    h5 {
+      @apply text-[22px] leading-[33px];
+    }
+  }
+
+  @media screen(lg) {
+    h1 {
+      @apply text-[90px] leading-[73px];
+    }
+
+    h2 {
+      @apply text-[60px] leading-[70px];
+    }
+
+    h3 {
+      @apply text-[46px] leading-[73px];
+    }
+
+    h4 {
+      @apply text-[36px] leading-[35px];
+    }
+
+    h5 {
+      @apply text-[22px] leading-[33px];
+    }
+  }
+
+  @media screen(xl) {
+    h1 {
+      @apply text-[100px] leading-[102px];
+    }
+
+    h2 {
+      @apply text-[60px] leading-[70px];
+    }
+
+    h3 {
+      @apply text-[46px] leading-[73px];
+    }
+
+    h4 {
+      @apply text-[36px] leading-[35px];
+    }
+
+    h5 {
+      @apply text-[22px] leading-[33px];
+    }
+  }
+
+  *+p {
+    @apply mt-[16px] lg:mt-[30px];
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply px-[30px] md:px-[40px] lg:px-[110px] lg:max-w-[1440px] xl:px-[200px] xl:max-w-[1940px];
+  }
 }
