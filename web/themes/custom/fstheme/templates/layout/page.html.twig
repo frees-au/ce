@@ -46,17 +46,23 @@
 <div class="layout-container">
 
   <header role="banner">
-    <div class="container">
-      <div class="py-[47px] md:py-[50px] lg:py-[62px] xl:py-[50px] h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
-        <div class="relative h-full">
-          <div class="flex justify-between items-center">
-            <div><img src="/themes/custom/fstheme/logo.png" width="68px" height="68px" /></div>
-            <div>Menu Humbeger</div>
+    <div class="relative text-white">
+      <div class="absolute w-full h-full bg-black/[.8]"></div>
+      <div class="container">
+        <div class="py-[47px] md:py-[50px] lg:py-[62px] xl:py-[50px] h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
+          <div class="relative h-full">
+            <div class="flex justify-between items-center">
+              <div><img src="/themes/custom/fstheme/logo.png" width="68px" height="68px" /></div>
+              <div>Menu Humbeger</div>
+            </div>
+            <div class="absolute bottom-0 left-0">
+              {{ page.title }}
+            </div>
           </div>
-          <h1 class="absolute bottom-0 left-0">About us</h1>
         </div>
       </div>
     </div>
+    
   </header>
 
   {{ page.primary_menu }}
