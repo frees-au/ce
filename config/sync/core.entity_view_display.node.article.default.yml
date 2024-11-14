@@ -3,12 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.article.article_type
+    - field.field.node.article.duration
     - field.field.node.article.hero
     - field.field.node.article.lead
     - field.field.node.article.markup
+    - field.field.node.article.media_video
     - field.field.node.article.tags
     - node.type.article
   module:
+    - options
     - text
     - user
 _core:
@@ -18,6 +22,21 @@ targetEntityType: node
 bundle: article
 mode: default
 content:
+  article_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  duration:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
   lead:
     type: text_default
     label: hidden
@@ -31,6 +50,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  media_video:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
     region: content
   tags:
     type: entity_reference_label

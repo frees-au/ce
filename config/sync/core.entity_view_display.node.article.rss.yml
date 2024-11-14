@@ -4,9 +4,12 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.rss
+    - field.field.node.article.article_type
+    - field.field.node.article.duration
     - field.field.node.article.hero
     - field.field.node.article.lead
     - field.field.node.article.markup
+    - field.field.node.article.media_video
     - field.field.node.article.tags
     - node.type.article
   module:
@@ -22,8 +25,11 @@ content:
     weight: 100
     region: content
 hidden:
+  article_type: true
+  duration: true
   hero: true
   lead: true
   markup: true
+  media_video: true
   search_api_excerpt: true
   tags: true

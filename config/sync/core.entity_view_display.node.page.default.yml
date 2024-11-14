@@ -4,12 +4,56 @@ status: true
 dependencies:
   config:
     - field.field.node.page.hero
+    - field.field.node.page.layout_builder__layout
     - field.field.node.page.lead
     - field.field.node.page.markup
     - node.type.page
   module:
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          5f6607c6-f329-4e65-b23c-79b0ff8f8237:
+            uuid: 5f6607c6-f329-4e65-b23c-79b0ff8f8237
+            region: content
+            configuration:
+              id: 'field_block:node:page:lead'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          707a2ebc-4a32-400a-87a3-d45390b2b88a:
+            uuid: 707a2ebc-4a32-400a-87a3-d45390b2b88a
+            region: content
+            configuration:
+              id: 'field_block:node:page:markup'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
 id: node.page.default
@@ -33,5 +77,6 @@ content:
     region: content
 hidden:
   hero: true
+  layout_builder__layout: true
   links: true
   search_api_excerpt: true

@@ -1,12 +1,15 @@
-import { resolve } from 'path';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-export default {
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
   build: {
     manifest: true,
     emptyOutDir: true,
     rollupOptions: {
       input: [
-        "/src/js/main.js",
+        "/src/js/main.tsx",
       ],
       // Remove the [hash] since Drupal will take care of that.
       output: {
@@ -16,9 +19,4 @@ export default {
       },
     },
   },
-  resolve: {
-    alias: {
-      $images: resolve('./images')
-    }
-  },
-}
+})

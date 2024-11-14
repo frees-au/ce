@@ -3,10 +3,11 @@ export const plugins = [require(
   '@tailwindcss/form',
 )];
 export const content = [
-  'templates/**/*.twig',
+  './templates/**/*.twig',
   '../../../../config/sync/editor.editor.safe_html.yml',
-  'src/css/ckeditor5.css',
-  'src/ckeditor5_templates.json',
+  './src/css/ckeditor5.css',
+  './src/ckeditor5_templates.json',
+  './src/js/**/*.{js,ts,tsx}',
 ];
 export const variants = {
   extend: {},

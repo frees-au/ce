@@ -6,6 +6,7 @@ global-css:
 
 global-js:
   js:
-    dist/main.js: {}
+    dist/main.js: { attributes: {type: module} }
   dependencies:
     - core/drupal
+    - core/jquery

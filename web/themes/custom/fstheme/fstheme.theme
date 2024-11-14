@@ -5,12 +5,16 @@
  * Free Sauce theme module.
  */
 
+use Drupal\media\MediaInterface;
+use Drupal\node\NodeInterface;
+
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function fstheme_theme_suggestions_field_alter(array &$hooks, array $vars): void {
   switch ($vars['element']['#field_type'] ?? NULL) {
     case 'string':
+    case 'list_string':
     case 'text_long':
     case 'link':
     case 'created':
@@ -25,5 +29,22 @@ function fstheme_theme_suggestions_field_alter(array &$hooks, array $vars): void
     default:
       \Drupal::messenger()->addError('Unexpected field type ' . $vars['element']['#field_type'] . ' not sure if to wrap it in a bare template.');
       break;
+  }
+}
+
+/**
+ * Implements hook_theme_preprocess_page().
+ */
+function fstheme_preprocess_node(&$vars) {
+  $node = $vars['node'];
+  if ($node instanceof NodeInterface && $node->bundle() === 'article') {
+    $article_type = $node->article_type->value;
+    if ($article_type == 'video') {
+      $media_video = $node->media_video->entity;
+      if ($media_video instanceof MediaInterface) {
+        $vars['url'] = $media_video->media_oembed_video->value;
+      }
+    }
+    $vars['article_type'] = $article_type;
   }
 }
