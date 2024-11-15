@@ -1,6 +1,6 @@
-uuid: 6d33843f-9f10-45f5-8891-d3b1fb50484e
+uuid: 40baf552-7482-4b4d-9d2e-9242beaf4dba
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.main
@@ -8,10 +8,10 @@ dependencies:
     - system
   theme:
     - fstheme
-id: fstheme_mainnav
+id: fstheme_mainnavigation
 theme: fstheme
-region: sidebar
-weight: -2
+region: primary_menu
+weight: 0
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -20,6 +20,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 0
+  depth: 1
   expand_all_items: false
 visibility: {  }

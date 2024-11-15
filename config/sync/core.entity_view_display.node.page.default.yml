@@ -10,47 +10,63 @@ dependencies:
     - node.type.page
   module:
     - layout_builder
-    - layout_discovery
     - text
     - user
+  theme:
+    - fstheme
 third_party_settings:
   layout_builder:
     enabled: true
     allow_custom: true
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: onecol_container_content
         layout_settings:
           label: ''
+          context_mapping: {  }
         components:
-          5f6607c6-f329-4e65-b23c-79b0ff8f8237:
-            uuid: 5f6607c6-f329-4e65-b23c-79b0ff8f8237
+          0626c0ae-afcc-4e75-9f95-dbdc61a483d5:
+            uuid: 0626c0ae-afcc-4e75-9f95-dbdc61a483d5
             region: content
             configuration:
               id: 'field_block:node:page:lead'
+              label: 'Lead or summary'
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: text_default
                 label: hidden
                 settings: {  }
-                third_party_settings: {  }
+                third_party_settings:
+                  field_label:
+                    label_class: ''
+                    label_value: ''
+                    label_tag: ''
             weight: 0
             additional: {  }
-          707a2ebc-4a32-400a-87a3-d45390b2b88a:
-            uuid: 707a2ebc-4a32-400a-87a3-d45390b2b88a
+          c0834258-bd3f-437b-b7f1-9f894fe52556:
+            uuid: c0834258-bd3f-437b-b7f1-9f894fe52556
             region: content
             configuration:
               id: 'field_block:node:page:markup'
+              label: Content
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: text_default
                 label: hidden
                 settings: {  }
-                third_party_settings: {  }
+                third_party_settings:
+                  field_label:
+                    label_class: ''
+                    label_value: ''
+                    label_tag: ''
             weight: 1
             additional: {  }
         third_party_settings: {  }
