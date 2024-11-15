@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a one-column layout.
+ *
+ * Available variables:
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    <div {{ region_attributes.content }}>
+      <div class="container">
+        <div class="container-content">
+          {{ content.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

@@ -96,7 +96,15 @@
 }
 
 @layer utilities {
-  .container {
-    @apply px-[30px] md:px-[40px] lg:px-[110px] lg:max-w-[1440px] xl:px-[200px] xl:max-w-[1940px] my-0 mx-auto;
+  .container-content {
+    @apply md:px-[90px] lg:px-[208px] xl:px-[258px] mx-auto;
+  }
+
+  .main-menu {
+    @apply flex;
+  }
+
+  .main-menu li a {
+    @apply p-[25px] text-[46px] leading-[46px] md:text-[56px] md:leading-[54px] lg:text-[22px] lg:leading-[45px] xl:text-[24px]; 
   }
 }

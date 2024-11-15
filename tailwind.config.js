@@ -3,11 +3,10 @@ export const plugins = [require(
   '@tailwindcss/form',
 )];
 export const content = [
-  './templates/**/*.twig',
-  '../../../../config/sync/editor.editor.safe_html.yml',
-  './src/css/ckeditor5.css',
-  './src/ckeditor5_templates.json',
-  './src/js/**/*.{js,ts,tsx}',
+  'web/themes/custom/**/*.{ts,tsx,twig,js}',
+  'web/modules/custom/**/*.{ts,tsx,twig,js}',
+  'web/themes/custom/fstheme/components/ckeditor/ckeditor5_templates.json',
+  'web/config/sync/editor.editor.safe_html.yml',
 ];
 export const variants = {
   extend: {},
@@ -16,6 +15,21 @@ export const theme = {
   fontFamily: {
     'mono': ['Cutive Mono', 'Sans-Serif'],
     'sans': ['Open Sans', 'Sans-Serif'],
+  },
+  screens: {
+    sm: '640px',
+    md: '768px',
+    lg: '1440px',
+    xl: '1920px'
+  },
+  container: {
+    center: true,
+    padding: {
+      DEFAULT: '30px',
+      md: '40px',
+      lg: '112px',
+      xl: '250px',
+    }
   },
   extend: {
     colors: {

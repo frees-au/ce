@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 
-const search_api = window.searchApiJs;
-const article_index = search_api.getServer('lunr').getIndex('article');
-
 interface IndexItem {
   fields: Array<{id: String, settings: {boost: number}}>,
   id: String,
@@ -15,6 +12,15 @@ interface IndexItem {
     created: String,
   }
 }
+
+declare global {
+  interface Window { searchApiJs: any; }
+}
+
+window.searchApiJs = window.searchApiJs || {};
+
+const search_api = window.searchApiJs;
+const article_index = search_api.getServer('lunr').getIndex('article');
 
 export default function ArticleList() {
   const [items, setItems] = useState<IndexItem[]>([]);

@@ -46,16 +46,15 @@
 <div class="layout-container">
 
   <header role="banner">
-    <div style="background-image: url('{{ node.hero_banner ? node.hero_banner : '' }}')" class="relative text-white bg-center bg-cover">
-      <div class="absolute w-full h-full bg-black/[.8]"></div>
+    <div style="background-image: url('{{ node.hero_banner ? node.hero_banner : '' }}'); box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);" class="text-white bg-center bg-cover">
       <div class="container">
         <div class="py-[47px] md:py-[50px] lg:py-[62px] xl:py-[50px] h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
-          <div class="relative h-full">
+          <div class="h-full flex flex-col justify-between">
             <div class="flex justify-between items-center">
               <div><a href="/"><img src="/themes/custom/fstheme/logo.png" width="68px" height="68px" /></a></div>
-              <div>Menu Humbeger</div>
+              <div>{{ page.primary_menu }}</div>
             </div>
-            <div class="absolute bottom-0 left-0">
+            <div>
               {{ page.title }}
             </div>
           </div>
@@ -64,8 +63,6 @@
     </div>
     
   </header>
-
-  {{ page.primary_menu }}
   {{ page.secondary_menu }}
 
   {{ page.breadcrumb }}

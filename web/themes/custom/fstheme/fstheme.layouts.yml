@@ -1,0 +1,35 @@
+onecol:
+  label: 'Fstheme: One column'
+  path: layouts
+  template: onecol
+  category: 'Columns: 1'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: Content
+
+onecol_container:
+  label: 'Fstheme: One column - Container'
+  path: 'layouts'
+  template: onecol-container
+  category: 'Columns: 1'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: Content
+
+onecol_container_content:
+  label: 'Fstheme: One column - Container - Content'
+  path: 'layouts'
+  template: onecol-container-content
+  category: 'Columns: 1'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: Content

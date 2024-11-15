@@ -1,12 +1,6 @@
-global-css:
-  version: 2
+global:
   css:
     theme:
-      dist/main.css: {}
-
-global-js:
+      /libraries/main.css: {}
   js:
-    dist/main.js: { attributes: {type: module} }
-  dependencies:
-    - core/drupal
-    - core/jquery
+    /libraries/main.js: { attributes: {type: module} }

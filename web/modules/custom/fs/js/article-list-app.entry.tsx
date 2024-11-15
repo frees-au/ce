@@ -1,10 +1,10 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import '../css/main.pcss';
 import ArticleList from './components/ArticleList';
 
-const element = document.getElementById('article-listing');
-if (element) {
+const elements = document.querySelectorAll('.article-list');
+
+elements.forEach((element) => {
   const root = createRoot(element);
   root.render(
     <StrictMode>
@@ -13,5 +13,4 @@ if (element) {
       </>
     </StrictMode>
   );
-}
-
+})
