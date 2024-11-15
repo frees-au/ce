@@ -1,14 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://frees.au/">
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="http://fs-web-static-site.ddev.site:8080/">
   <channel>
     <title>frees.au/ce - Free as in …</title>
-    <link>https://frees.au/</link>
+    <link>http://fs-web-static-site.ddev.site:8080/</link>
     <description/>
     <language>en</language>
     
     <item>
+  <title>Lorem ipsum dolor sit amet, consectetur adipiscing elit</title>
+  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit</link>
+  <description>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  
+      &lt;p&gt;orem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel ex metus. Aliquam a urna volutpat, commodo elit ut, blandit lacus. Morbi blandit sollicitudin odio, viverra semper odio lacinia at. Curabitur pharetra pharetra sapien, suscipit tincidunt nunc malesuada sit amet. Etiam nec vulputate ipsum. Maecenas id gravida mi.&lt;/p&gt;
+  
+      &lt;span&gt;admin&lt;/span&gt;
+  
+      &lt;time datetime="2024-11-11T13:22:19+11:00" title="Monday, November 11, 2024 - 13:22"&gt;Mon, 11/11/2024 - 13:22&lt;/time&gt;
+
+  
+      &lt;h2&gt;This is H2 - Heading&lt;/h2&gt;&lt;div class="align-center"&gt;
+  
+  
+        &lt;img loading="lazy" src="http://fs-web-static-site.ddev.site:8080/sites/default/files/styles/medium/public/media-images/2024-11/img_3853.JPG?itok=VeKsYQgZ" width="338" height="600" alt="sad sad"&gt;
+
+
+
+  
+&lt;/div&gt;
+&lt;p&gt;this is paragraph abc&lt;/p&gt;&lt;h3&gt;This is H3 - Heading&lt;/h3&gt;&lt;p&gt;this is paragraph&lt;/p&gt;&lt;h4&gt;This is h4 heading&lt;/h4&gt;
+    &lt;div&gt;
+    &lt;div&gt;Type&lt;/div&gt;
+  &lt;/div&gt;
+
+      Blog
+    &lt;div&gt;
+    &lt;div&gt;Duration&lt;/div&gt;
+  &lt;/div&gt;
+
+      15 mins
+  </description>
+  <pubDate>Mon, 11 Nov 2024 02:22:19 +0000</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">13 at http://fs-web-static-site.ddev.site:8080</guid>
+    </item>
+<item>
+  <title>ARTCIEL 5</title>
+  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/artciel-5</link>
+  <description>
+      ARTCIEL 5
+  
+      &lt;p&gt;SADASD&lt;/p&gt;
+  
+      &lt;span&gt;admin&lt;/span&gt;
+  
+      &lt;time datetime="2024-11-11T13:22:09+11:00" title="Monday, November 11, 2024 - 13:22"&gt;Mon, 11/11/2024 - 13:22&lt;/time&gt;
+
+    &lt;div&gt;
+    &lt;div&gt;Type&lt;/div&gt;
+  &lt;/div&gt;
+
+      Video
+    &lt;div&gt;
+    &lt;div&gt;Media video&lt;/div&gt;
+  &lt;/div&gt;
+
+      &lt;div&gt;
+  
+  
+      &lt;iframe src="http://fs-web-static-site.ddev.site:8080/media/oembed?url=https%3A//www.youtube.com/watch%3Fv%3DJAhdeizXpaQ&amp;amp;max_width=0&amp;amp;max_height=0&amp;amp;hash=MfvhOxFJe5o7JCY9ojf3C5JOltwnnqPgmvA1q5ol0R8" width="200" height="113" class="media-oembed-content" loading="lazy" title="Hoàng Thuỳ Linh - Để Mị Nói Cho Mà Nghe (Let Mi tell) | Official Music Video"&gt;&lt;/iframe&gt;
+
+  
+&lt;/div&gt;
+
+    &lt;div&gt;
+    &lt;div&gt;Duration&lt;/div&gt;
+  &lt;/div&gt;
+
+      20 mins
+  </description>
+  <pubDate>Mon, 11 Nov 2024 02:22:09 +0000</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">12 at http://fs-web-static-site.ddev.site:8080</guid>
+    </item>
+<item>
+  <title>ARTICLE 4</title>
+  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/article-4</link>
+  <description>
+      ARTICLE 4
+  
+      &lt;p&gt;SADASD&lt;/p&gt;
+  
+      &lt;span&gt;admin&lt;/span&gt;
+  
+      &lt;time datetime="2024-11-11T13:21:59+11:00" title="Monday, November 11, 2024 - 13:21"&gt;Mon, 11/11/2024 - 13:21&lt;/time&gt;
+
+  </description>
+  <pubDate>Mon, 11 Nov 2024 02:21:59 +0000</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">11 at http://fs-web-static-site.ddev.site:8080</guid>
+    </item>
+<item>
+  <title>ARTICLE 3</title>
+  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/article-3</link>
+  <description>
+      ARTICLE 3
+  
+      &lt;p&gt;ASASD&lt;/p&gt;
+  
+      &lt;span&gt;admin&lt;/span&gt;
+  
+      &lt;time datetime="2024-11-11T13:21:48+11:00" title="Monday, November 11, 2024 - 13:21"&gt;Mon, 11/11/2024 - 13:21&lt;/time&gt;
+
+  </description>
+  <pubDate>Mon, 11 Nov 2024 02:21:48 +0000</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">10 at http://fs-web-static-site.ddev.site:8080</guid>
+    </item>
+<item>
+  <title>ARTICLE 2</title>
+  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/article-2</link>
+  <description>
+      ARTICLE 2
+  
+      &lt;p&gt;ASDASD&lt;/p&gt;
+  
+      &lt;span&gt;admin&lt;/span&gt;
+  
+      &lt;time datetime="2024-11-11T13:21:36+11:00" title="Monday, November 11, 2024 - 13:21"&gt;Mon, 11/11/2024 - 13:21&lt;/time&gt;
+
+  </description>
+  <pubDate>Mon, 11 Nov 2024 02:21:36 +0000</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">9 at http://fs-web-static-site.ddev.site:8080</guid>
+    </item>
+<item>
+  <title>Article 1</title>
+  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/article-1</link>
+  <description>
+      Article 1
+  
+      &lt;p&gt;aSDas&lt;/p&gt;
+  
+      &lt;span&gt;admin&lt;/span&gt;
+  
+      &lt;time datetime="2024-11-11T13:21:19+11:00" title="Monday, November 11, 2024 - 13:21"&gt;Mon, 11/11/2024 - 13:21&lt;/time&gt;
+
+  
+      &lt;p&gt;saS&lt;/p&gt;
+  </description>
+  <pubDate>Mon, 11 Nov 2024 02:21:19 +0000</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">8 at http://fs-web-static-site.ddev.site:8080</guid>
+    </item>
+<item>
   <title>Mastering machine names inside your views</title>
-  <link>https://frees.au/ce/ummm/mastering-machine-names-inside-your-views</link>
+  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/mastering-machine-names-inside-your-views</link>
   <description>
       Mastering machine names inside your views
   
@@ -28,16 +175,16 @@ views-view--mycontentview--newest-articles.html.twig&lt;/code&gt;&lt;/pre&gt;&lt
     &lt;div&gt;Tags&lt;/div&gt;
   &lt;/div&gt;
 
-      &lt;div class="field-multiple"&gt;&lt;a href="https://frees.au/taxonomy/term/2" hreflang="en"&gt;Site Building&lt;/a&gt;&lt;/div&gt;
-      &lt;div class="field-multiple"&gt;&lt;a href="https://frees.au/taxonomy/term/1" hreflang="en"&gt;Testing&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="field-multiple"&gt;&lt;a href="http://fs-web-static-site.ddev.site:8080/taxonomy/term/2" hreflang="en"&gt;Site Building&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="field-multiple"&gt;&lt;a href="http://fs-web-static-site.ddev.site:8080/taxonomy/term/1" hreflang="en"&gt;Testing&lt;/a&gt;&lt;/div&gt;
   </description>
   <pubDate>Thu, 29 Feb 2024 11:08:21 +0000</pubDate>
     <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">5 at https://frees.au</guid>
+    <guid isPermaLink="false">5 at http://fs-web-static-site.ddev.site:8080</guid>
     </item>
 <item>
   <title>Typography check</title>
-  <link>https://frees.au/ce/ummm/typography-check</link>
+  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/typography-check</link>
   <description>
       Typography check
   
@@ -55,11 +202,11 @@ npm ci&lt;/pre&gt;&lt;p&gt;Quote&lt;/p&gt;&lt;p&gt;"Oh, how I miss the Earth's f
     &lt;div&gt;Tags&lt;/div&gt;
   &lt;/div&gt;
 
-      &lt;div class="field-multiple"&gt;&lt;a href="https://frees.au/taxonomy/term/1" hreflang="en"&gt;Testing&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="field-multiple"&gt;&lt;a href="http://fs-web-static-site.ddev.site:8080/taxonomy/term/1" hreflang="en"&gt;Testing&lt;/a&gt;&lt;/div&gt;
   </description>
   <pubDate>Tue, 05 Dec 2023 10:24:52 +0000</pubDate>
     <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">4 at https://frees.au</guid>
+    <guid isPermaLink="false">4 at http://fs-web-static-site.ddev.site:8080</guid>
     </item>
 
   </channel>

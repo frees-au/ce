@@ -1,5 +1,8 @@
 #!/bin/bash
 
+drush search-api:clear article
+drush search-api:index article
+
 rm -rf /var/www/html/static-site
 
 if [ "$1" == "--production" ]; then
