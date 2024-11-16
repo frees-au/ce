@@ -4,12 +4,72 @@ status: true
 dependencies:
   config:
     - field.field.node.page.hero
+    - field.field.node.page.layout_builder__layout
     - field.field.node.page.lead
     - field.field.node.page.markup
     - node.type.page
   module:
+    - layout_builder
     - text
     - user
+  theme:
+    - fstheme
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: onecol_container_content
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          0626c0ae-afcc-4e75-9f95-dbdc61a483d5:
+            uuid: 0626c0ae-afcc-4e75-9f95-dbdc61a483d5
+            region: content
+            configuration:
+              id: 'field_block:node:page:lead'
+              label: 'Lead or summary'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_label:
+                    label_class: ''
+                    label_value: ''
+                    label_tag: ''
+            weight: 0
+            additional: {  }
+          c0834258-bd3f-437b-b7f1-9f894fe52556:
+            uuid: c0834258-bd3f-437b-b7f1-9f894fe52556
+            region: content
+            configuration:
+              id: 'field_block:node:page:markup'
+              label: Content
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_label:
+                    label_class: ''
+                    label_value: ''
+                    label_tag: ''
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
 id: node.page.default
@@ -33,5 +93,6 @@ content:
     region: content
 hidden:
   hero: true
+  layout_builder__layout: true
   links: true
   search_api_excerpt: true

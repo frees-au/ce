@@ -28,6 +28,9 @@ module:
   gin_login: 0
   gin_toolbar: 0
   image: 0
+  jquery_ui: 0
+  jquery_ui_autocomplete: 0
+  jquery_ui_menu: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
@@ -47,6 +50,8 @@ module:
   path_alias: 0
   redirect: 0
   search_api: 0
+  search_api_lunr: 0
+  serialization: 0
   simple_sitemap: 0
   system: 0
   taxonomy: 0

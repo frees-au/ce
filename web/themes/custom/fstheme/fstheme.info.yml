@@ -6,13 +6,13 @@ core: 10.x
 core_version_requirement: ^10
 logo: logo.png
 libraries:
-  - fstheme/global-js
-  - fstheme/global-css
+  - fstheme/global
 ckeditor5-stylesheets:
-  - src/css/ckeditor5.css
+  - components/ckeditor/ckeditor5.css
 regions:
   header: Header
-  sidebar: 'Main nav'
+  primary_menu: 'Primary Menu'
+  sidebar: 'Sidebar'
   title: 'Title area'
   highlighted: Highlighted
   breadcrumb: Breadcrumb

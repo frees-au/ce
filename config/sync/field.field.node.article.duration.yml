@@ -1,0 +1,19 @@
+uuid: 7f88dd37-d3ef-49a7-8f71-3d0600fe9003
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.duration
+    - node.type.article
+id: node.article.duration
+field_name: duration
+entity_type: node
+bundle: article
+label: Duration
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
