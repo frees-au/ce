@@ -1,5 +1,0 @@
-article-list-app:
-  js:
-    /libraries/article-list-app.entry.js: { attributes: {type: module} }
-  dependencies:
-    - search_api_lunr/api

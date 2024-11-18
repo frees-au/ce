@@ -1,18 +1,18 @@
-import './main.pcss';
+import '../css/main.pcss'
 
 class PrimaryMenu {
 
-  primary_menu_wrapper_element: HTMLElement;
-  primary_menu_element: HTMLElement;
-  primary_menu_container: HTMLElement;
-  open_menu_element: HTMLElement | null;
-  close_menu_element: HTMLElement | null;
+  primary_menu_wrapper_element;
+  primary_menu_element;
+  primary_menu_container;
+  open_menu_element;
+  close_menu_element;
   
 
-  constructor(element: HTMLElement) {
+  constructor(element) {
     this.primary_menu_wrapper_element = element;
-    this.primary_menu_element = element.querySelector('.primary-menu') as HTMLElement;
-    this.primary_menu_container = element.querySelector('.primary-menu-container') as HTMLElement;
+    this.primary_menu_element = element.querySelector('.primary-menu');
+    this.primary_menu_container = element.querySelector('.primary-menu-container');
     this.open_menu_element = element.querySelector('.js-open-menu');
     this.close_menu_element = element.querySelector('.js-close-menu');
 
@@ -32,7 +32,7 @@ class PrimaryMenu {
   }
 }
 
-const primary_menu_element = document.querySelector<HTMLElement>('.primary-menu-wrapper');
+const primary_menu_element = document.querySelector('.primary-menu-wrapper');
 if (primary_menu_element) {
   new PrimaryMenu(primary_menu_element);
 }

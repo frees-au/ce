@@ -1,7 +1,7 @@
 #!/bin/bash
 
-drush search-api:clear article
-drush search-api:index article
+#drush search-api:clear article
+#drush search-api:index article
 
 rm -rf /var/www/html/static-site
 
@@ -13,5 +13,5 @@ fi
 
 # Need this one to make search api lunr works.
 # Make sure Drupal site is fully index first.
-cp -R "/var/www/html/web/sites/default/files/search-api-js" "/var/www/html/static-site/sites/default/files"
+#cp -R "/var/www/html/web/sites/default/files/search-api-js" "/var/www/html/static-site/sites/default/files"
 cp -R "/var/www/html/web/themes/custom/fstheme/stockart" "/var/www/html/static-site/themes/custom/fstheme"

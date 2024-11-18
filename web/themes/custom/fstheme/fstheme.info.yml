@@ -6,9 +6,10 @@ core: 10.x
 core_version_requirement: ^10
 logo: logo.png
 libraries:
-  - fstheme/global
+  - fstheme/global-js
+  - fstheme/global-css
 ckeditor5-stylesheets:
-  - components/ckeditor/ckeditor5.css
+  - src/css/ckeditor5.css
 regions:
   header: Header
   primary_menu: 'Primary Menu'

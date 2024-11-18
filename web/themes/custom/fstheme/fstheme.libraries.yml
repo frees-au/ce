@@ -1,6 +1,10 @@
-global:
+global-css:
   css:
     theme:
-      /libraries/main.css: {}
+      dist/main.css: {}
+
+global-js:
   js:
-    /libraries/main.js: { attributes: {type: module} }
+    dist/main.js: {}
+  dependencies:
+    - core/drupal
