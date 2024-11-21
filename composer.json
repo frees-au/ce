@@ -119,11 +119,6 @@
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
-        },
-        "patches": {
-            "drupal/webform": {
-                "[#3345590] Drush 12 moved the namespace": "./config/patches/webform_3345590_3.patch"
-            }
         }
     }
 }
