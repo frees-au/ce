@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58b15b59f0720d9f403f2e2b3a021357",
+    "content-hash": "3c8c96be556c098e5b6bd037b4571eb1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1312,91 +1312,6 @@
                 }
             ],
             "time": "2024-02-05T11:35:39+00:00"
-        },
-        {
-            "name": "drupal/admin_toolbar",
-            "version": "3.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "3.5.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.5.1.zip",
-                "reference": "3.5.1",
-                "shasum": "b5215109836f7fade374fef531231e36c1c9b945"
-            },
-            "require": {
-                "drupal/core": "^9.5 || ^10 || ^11"
-            },
-            "require-dev": {
-                "drupal/admin_toolbar_tools": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "3.5.1",
-                    "datestamp": "1730409973",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Wilfrid Roze (eme)",
-                    "homepage": "https://www.drupal.org/u/eme",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Romain Jarraud (romainj)",
-                    "homepage": "https://www.drupal.org/u/romainj",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Adrian Cid Almaguer (adriancid)",
-                    "homepage": "https://www.drupal.org/u/adriancid",
-                    "email": "adriancid@gmail.com",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Mohamed Anis Taktak (matio89)",
-                    "homepage": "https://www.drupal.org/u/matio89",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "matio89",
-                    "homepage": "https://www.drupal.org/user/2320090"
-                },
-                {
-                    "name": "musa.thomas",
-                    "homepage": "https://www.drupal.org/user/1213824"
-                },
-                {
-                    "name": "romainj",
-                    "homepage": "https://www.drupal.org/user/370706"
-                }
-            ],
-            "description": "Provides a drop-down menu interface to the core Drupal Toolbar.",
-            "homepage": "http://drupal.org/project/admin_toolbar",
-            "keywords": [
-                "Drupal",
-                "Toolbar"
-            ],
-            "support": {
-                "source": "https://git.drupalcode.org/project/admin_toolbar",
-                "issues": "https://www.drupal.org/project/issues/admin_toolbar"
-            }
         },
         {
             "name": "drupal/better_exposed_filters",
