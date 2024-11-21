@@ -1,0 +1,7 @@
+<ul class="lg:flex">
+  {% for item in items %}
+    <li>
+      <a href="{{ item.url }}" class="inline-block py-[25px] lg:p-[25px] text-[46px] leading-[54px] md:text-[56px] md:leading-[54px] lg:text-[22px] lg:leading-[45px] xl:text-[24px]">{{ item.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

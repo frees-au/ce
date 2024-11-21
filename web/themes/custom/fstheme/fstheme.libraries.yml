@@ -1,5 +1,4 @@
 global-css:
-  version: 2
   css:
     theme:
       dist/main.css: {}

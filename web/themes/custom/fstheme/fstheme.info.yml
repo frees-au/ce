@@ -12,7 +12,8 @@ ckeditor5-stylesheets:
   - src/css/ckeditor5.css
 regions:
   header: Header
-  sidebar: 'Main nav'
+  primary_menu: 'Primary Menu'
+  sidebar: 'Sidebar'
   title: 'Title area'
   highlighted: Highlighted
   breadcrumb: Breadcrumb

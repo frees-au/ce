@@ -1,0 +1,29 @@
+uuid: 575c41f7-8d8e-4334-b9cc-5a3fce03b019
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.youtube
+    - media.type.stream
+    - node.type.article
+id: node.article.youtube
+field_name: youtube
+entity_type: node
+bundle: article
+label: Youtube
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      stream: stream
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -7,10 +7,25 @@
 
 declare(strict_types=1);
 
+use Drupal\node\NodeInterface;
+
 /**
  * Implements hook_requirements_alter().
  */
 function fs_requirements_alter(array &$requirements): void {
   // Decrease the 'update status' requirement severity from warning to informational.
   $requirements['update status']['severity'] = REQUIREMENT_INFO;
+}
+
+/**
+ * Implements hook_entity_type_storage_load().
+ */
+function fs_node_storage_load(array $nodes) {
+  foreach ($nodes as $node) {
+    if ($node instanceof NodeInterface) {
+      // Random image from 001 - 105.
+      $hero_banner_image = '/themes/custom/fstheme/stockart/stock-' . str_pad((string) rand(1, 105), 3, '0', STR_PAD_LEFT) . '.jpg';
+      $node->hero_banner = $hero_banner_image;
+    }
+  }
 }

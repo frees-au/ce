@@ -3,10 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.article.duration
     - field.field.node.article.hero
     - field.field.node.article.lead
     - field.field.node.article.markup
     - field.field.node.article.tags
+    - field.field.node.article.youtube
     - node.type.article
   module:
     - field_group
@@ -19,6 +21,7 @@ third_party_settings:
       children:
         - group_content
         - group_media
+        - group_meta
       label: 'Form tabs'
       region: content
       parent_name: ''
@@ -32,6 +35,7 @@ third_party_settings:
         width_breakpoint: 640
     group_media:
       children:
+        - youtube
         - hero
       label: Media
       region: content
@@ -49,7 +53,6 @@ third_party_settings:
       children:
         - lead
         - markup
-        - tags
       label: Content
       region: content
       parent_name: group_tabs
@@ -62,6 +65,23 @@ third_party_settings:
         formatter: open
         description: ''
         required_fields: true
+    group_meta:
+      children:
+        - tags
+        - duration
+      label: Meta
+      region: hidden
+      parent_name: group_tabs
+      weight: 11
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: false
 _core:
   default_config_hash: ewbd6G2uX456-bgwseM2Q-KQG3RkASoyHmTh-XR3oLU
 id: node.article.default
@@ -71,13 +91,21 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
+  duration:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   hero:
     type: media_library_widget
-    weight: 2
+    weight: 6
     region: content
     settings:
       media_types: {  }
@@ -87,7 +115,7 @@ content:
     weight: 3
     region: content
     settings:
-      rows: 5
+      rows: 3
       placeholder: ''
     third_party_settings: {  }
   markup:
@@ -100,32 +128,32 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 7
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   simple_sitemap:
-    weight: 6
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 10
+    weight: 9
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 8
+    weight: 7
     region: content
     settings:
       display_label: true
@@ -150,7 +178,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 2
     region: content
     settings:
       match_operator: CONTAINS
@@ -159,8 +187,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  youtube:
+    type: media_library_widget
+    weight: 5
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
 hidden: {  }

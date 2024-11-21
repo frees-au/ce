@@ -1,20 +1,38 @@
 import '../css/main.pcss'
 
-// A very simple and poorly written placeholder for opening the menu on mobile.
+class PrimaryMenu {
 
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('.fs-toggle-menu').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default anchor action
-    const menu = document.querySelector('.layout-nav');
+  primary_menu_wrapper_element;
+  primary_menu_element;
+  primary_menu_container;
+  open_menu_element;
+  close_menu_element;
+  
 
-    if (menu.classList.contains('hidden')) {
-      menu.classList.remove('hidden', 'opacity-0');
-      menu.classList.add('animate-slideIn');
+  constructor(element) {
+    this.primary_menu_wrapper_element = element;
+    this.primary_menu_element = element.querySelector('.primary-menu');
+    this.primary_menu_container = element.querySelector('.primary-menu-container');
+    this.open_menu_element = element.querySelector('.js-open-menu');
+    this.close_menu_element = element.querySelector('.js-close-menu');
+
+    if (!this.close_menu_element || !this.primary_menu_element || !this.open_menu_element || !this.primary_menu_container) {
+      return;
     }
-    else {
-      menu.classList.add('hidden', 'opacity-0');
-      menu.classList.remove('animate-slideIn');
 
-    }
-  });
-});
+    this.close_menu_element.addEventListener('click', () => {
+      this.primary_menu_element.classList.add('hidden');
+      this.primary_menu_container.classList.remove('container');
+    });
+
+    this.open_menu_element.addEventListener('click', () => {
+      this.primary_menu_element.classList.remove('hidden');
+      this.primary_menu_container.classList.add('container');
+    });
+  }
+}
+
+const primary_menu_element = document.querySelector('.primary-menu-wrapper');
+if (primary_menu_element) {
+  new PrimaryMenu(primary_menu_element);
+}

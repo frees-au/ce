@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Any site building changes should be captured.
+ddev drush cex -y
+
+# Trim unneeded table data.
 echo "Removing cache data."
 ddev drush sqlq " \
   TRUNCATE cache_access_policy; \
@@ -17,6 +21,7 @@ ddev drush sqlq " \
   TRUNCATE sessions; \
 "
 
+# Store the database on disc while it is small.
 ddev export-db --file=_db_main.sql.gz
 
 # So we can keep working.

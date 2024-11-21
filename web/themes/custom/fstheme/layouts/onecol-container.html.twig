@@ -1,0 +1,9 @@
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    <div {{ region_attributes.content }}>
+      <div class="container">
+        {{ content.content }}
+      </div>
+    </div>
+  </div>
+{% endif %}
