@@ -46,8 +46,8 @@ ddev frontend
 Static tests run easily in the container.
 
 ```
-ddev static   # PHPStan and PHPCS.
-ddev cypress  # Currently hangs locally, working in Github Actions.
+ddev test-static   # PHPStan and PHPCS.
+ddev test-cypress  # Currently hangs locally, working in Github Actions.
 ```
 
 Note that for Cypress E2E testing, the `ddev cypress` command works for us on

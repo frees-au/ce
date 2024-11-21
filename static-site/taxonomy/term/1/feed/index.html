@@ -7,35 +7,6 @@
     <language>en</language>
     
     <item>
-  <title>Mastering machine names inside your views</title>
-  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/mastering-machine-names-inside-your-views</link>
-  <description>
-      Mastering machine names inside your views
-  
-      &lt;p&gt;Drupal views providers an advanced UI, but sometimes the auto-generated machine names within your views are not ideal. There are ways to improve this.&lt;/p&gt;
-  
-      &lt;span&gt;admin&lt;/span&gt;
-  
-      &lt;time datetime="2024-02-29T22:08:21+11:00" title="Thursday, February 29, 2024 - 22:08"&gt;Thu, 02/29/2024 - 22:08&lt;/time&gt;
-
-  
-      &lt;p&gt;&lt;strong&gt;This site is under development and this article is not complete.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;I have been creating some content for the new website and thinking about random tips that I have never found time to share.&lt;/p&gt;&lt;p&gt;When you create a view there are a few areas where I like to control generated "machine name" values that will lead to cleaner output in the long run.&lt;/p&gt;&lt;p&gt;I wouldn't do this after a site is built, it's too risky to overlook other things that depend on these machine names. I would only use these techniques when I initially create the view.&lt;/p&gt;&lt;h2&gt;The view itself&lt;/h2&gt;&lt;p&gt;It's common to find that your view wasn't named well, and you're unhappy with the name of the twig file to override.&lt;/p&gt;&lt;p&gt;The easiest way to fix this is to clone the view and customise the machine as you do it, then delete the old view. This is completely safe as views YAML is usually self-contained.&lt;/p&gt;&lt;p&gt;As said above, you usually do this when you are building the view and you realise you gave it a bad name. After a while there are other parts of your site which will be couple to this name, and easy to miss. If you clone a view and change the machine name you &lt;strong&gt;will&lt;/strong&gt; break the following and plenty of other things:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Entity reference fields (when you configure the options list) can use a View.&lt;/li&gt;&lt;li&gt;Your layouts builder page, where you have embedded a Views block.&lt;/li&gt;&lt;li&gt;Your block layout, where you have added a Views block.&lt;/li&gt;&lt;li&gt;Twig templates reference the Views machine name&lt;/li&gt;&lt;li&gt;Custom code can programmatically load and render a view.&lt;/li&gt;&lt;li&gt;Probably a dozen more if you count your contrib module.&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;h2&gt;Display names&lt;/h2&gt;&lt;p&gt;Below we have a view with multiple displays and they have been neatly named. If you want to control the twig for this view, you can add a template views-view--VIEWNAME--DISPLAYNAME.html.twig. After a site has been built it's common to see templates like this:&lt;/p&gt;&lt;p&gt;[PICTURE]&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;views-view--mycontentview--page-1.html.twig
-views-view--mycontentview--page-2.html.twig
-views-view--mycontentview--page-3.html.twig&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For another developer looking at this code, and trawling through dozens of templates, it's not immediately clear what these views are being used for. This is a DX issue for you and your colleagues. The effort to change this later may not be worth it.&lt;/p&gt;&lt;p&gt;Get into the habit of setting your display machine names as soon as you create them. You will appreciate the resulting systax for creating your twig templates.&lt;/p&gt;&lt;p&gt;[PICTURE]&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;views-view--mycontentview--all.html.twig
-views-view--mycontentview--articles.html.twig
-views-view--mycontentview--newest-articles.html.twig&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Renaming fields&lt;/h2&gt;&lt;p&gt;When adding fields, it's common to add the same field twice, you might render a field in different ways or hide one of the fields and use it in a field rewrite later.&lt;/p&gt;&lt;p&gt;The views UI does not allow you to rename the field's machine name. However there is a technique I've been using for a while that works very well. It will allow you to have well named twig tokens. It invokes hacking the views yaml and reimporting it.&lt;/p&gt;&lt;p&gt;Let's say we want to re-use a &lt;strong&gt;uid&lt;/strong&gt; (User ID) field, hide it and, reuse it in a field rewrite in another field.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Create your view, and add your fields.&lt;/li&gt;&lt;li&gt;Create a second UID field.&lt;/li&gt;&lt;li&gt;Add a "Global: custom text" field&lt;/li&gt;&lt;li&gt;In the rewrite of this field, you will note that to express this field you will enter {{ uid_2 }} - How can we change this.&lt;/li&gt;&lt;li&gt;Export your site config with Drush, open the new view yaml, and find and replace the instances of &lt;strong&gt;uid_2&lt;/strong&gt; with &lt;strong&gt;you_say_tomatoe&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;Reimport your site config&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;Now in your view you can use {{ you_say_tomatoe }} in your rewriting.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Disclaimer #1&lt;/strong&gt;: I've been told that I hack yaml too much. I like to explore the boundaries of Drupal's config system, it's a masterpiece. However, I'm also aware that I will get no love in the issue queue if I hose my site. That said, I have been using this technique with Views since Drupal 8 and it has never failed me.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Disclaimers #2&lt;/strong&gt;: I only do fancy twig re-writing in administration views in the backend, especially when I'm using a vanilla uncustomised backend theme. It's a great smart way to make backend tables more user-friendly. On the frontend, you should bring this complexity into the theme layer and keep your views nice and sane.&lt;/p&gt;&lt;p&gt;[VIDEO]&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-    &lt;div&gt;
-    &lt;div&gt;Tags&lt;/div&gt;
-  &lt;/div&gt;
-
-      &lt;div class="field-multiple"&gt;&lt;a href="http://fs-web-static-site.ddev.site:8080/taxonomy/term/2" hreflang="en"&gt;Site Building&lt;/a&gt;&lt;/div&gt;
-      &lt;div class="field-multiple"&gt;&lt;a href="http://fs-web-static-site.ddev.site:8080/taxonomy/term/1" hreflang="en"&gt;Testing&lt;/a&gt;&lt;/div&gt;
-  </description>
-  <pubDate>Thu, 29 Feb 2024 11:08:21 +0000</pubDate>
-    <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">5 at http://fs-web-static-site.ddev.site:8080</guid>
-    </item>
-<item>
   <title>Typography check</title>
   <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/typography-check</link>
   <description>
