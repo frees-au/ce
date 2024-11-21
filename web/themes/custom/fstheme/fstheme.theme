@@ -38,13 +38,12 @@ function fstheme_theme_suggestions_field_alter(array &$hooks, array $vars): void
 function fstheme_preprocess_node(&$vars) {
   $node = $vars['node'];
   if ($node instanceof NodeInterface && $node->bundle() === 'article') {
-    $article_type = $node->article_type->value;
-    if ($article_type == 'video') {
-      $media_video = $node->media_video->entity;
+    if ($node->hasField('youtube') && !$node->get('youtube')->isEmpty()) {
+      $vars['article_type'] = 'video';
+      $media_video = $node->get('youtube')->entity;
       if ($media_video instanceof MediaInterface) {
         $vars['url'] = $media_video->media_oembed_video->value;
       }
     }
-    $vars['article_type'] = $article_type;
   }
 }

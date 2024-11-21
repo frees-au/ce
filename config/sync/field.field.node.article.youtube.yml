@@ -1,16 +1,16 @@
-uuid: 77876924-48e7-48db-b0fc-c2ffd95dccb6
+uuid: 575c41f7-8d8e-4334-b9cc-5a3fce03b019
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.media_video
+    - field.storage.node.youtube
     - media.type.stream
     - node.type.article
-id: node.article.media_video
-field_name: media_video
+id: node.article.youtube
+field_name: youtube
 entity_type: node
 bundle: article
-label: 'Media video'
+label: Youtube
 description: ''
 required: false
 translatable: false

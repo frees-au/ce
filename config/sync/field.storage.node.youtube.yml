@@ -1,12 +1,12 @@
-uuid: d84289d8-aa0e-45d1-8b48-fc50a5954510
+uuid: a520c464-09c1-429c-bac4-b72c9c1c0e00
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - node
-id: node.media_video
-field_name: media_video
+id: node.youtube
+field_name: youtube
 entity_type: node
 type: entity_reference
 settings:

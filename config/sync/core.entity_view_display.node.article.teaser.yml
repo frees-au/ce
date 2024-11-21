@@ -4,13 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.article.article_type
     - field.field.node.article.duration
     - field.field.node.article.hero
     - field.field.node.article.lead
     - field.field.node.article.markup
-    - field.field.node.article.media_video
     - field.field.node.article.tags
+    - field.field.node.article.youtube
     - node.type.article
   module:
     - field_label
@@ -42,10 +41,9 @@ content:
     weight: 0
     region: content
 hidden:
-  article_type: true
   duration: true
   links: true
   markup: true
-  media_video: true
   search_api_excerpt: true
   tags: true
+  youtube: true
