@@ -23,7 +23,7 @@ When you're done.
 
 ```
 # Tome build.
-ddev generate-static-site
+ddev tome
 
 # Captures the database.
 ddev save
