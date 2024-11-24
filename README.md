@@ -66,14 +66,3 @@ ddev composer run-script phpcbf -- ./web/modules/contrib/foo_module
 ddev composer run-script phpstan -- ./web/modules/contrib/foo_module
 # phpunit tba
 ```
-
-## Building from scratch
-
-This site is open source but our production database isn't, so we provide the
-ability to build it from scratch using `ddev scratch`. This installs a minmal
-Drupal site, imports the config, and adds some baseline content that is captured
-in the `fs_content_` module to create a fully functioning site.
-
-This type of build is great for e2e integration testing since it doesn't need
-access to production database sync or database stubs. It is supported by the
-excellent [Default Content](https://drupal.org/project/default_content) module.
