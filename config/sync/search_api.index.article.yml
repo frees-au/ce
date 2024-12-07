@@ -3,13 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - field.storage.node.lead
     - search_api.server.lunr
-    - core.entity_view_mode.node.teaser
   module:
-    - search_api_lunr
     - node
-    - search_api
+    - search_api_lunr
 id: article
 name: Article
 description: ''

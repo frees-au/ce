@@ -25,6 +25,9 @@ When you're done.
 # Tome build.
 ddev tome
 
+# Deploy to S3 (Skips repushing stockart).
+aws s3 cp static-site s3://frees-au-static/ --recursive --exclude "themes/custom/fstheme/stockart/*"
+
 # Captures the database.
 ddev save
 ```
@@ -35,10 +38,12 @@ This is a very simple and somewhat unfinished Tailwind theme with no base theme
 dependencies. It's intended for learning and copying rather than being something
 we expect you to use as a base theme. Please don't ask for support if you do 😬.
 
-Install the css with the following command, just to get you started.
+Normally you'd just work out of the theme directory, but these commands will run
+build and watch from the root.
 
 ```
-ddev frontend
+ddev fe-build
+ddev fe-watch
 ```
 
 ## Testing

@@ -13,6 +13,7 @@
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "~2.0",
+        "drupal/admin_toolbar": "^3",
         "drupal/better_exposed_filters": "^7.0",
         "drupal/ckeditor5_template": "^1.0",
         "drupal/config_ignore": "^3.2",

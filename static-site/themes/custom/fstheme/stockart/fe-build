@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ddev npm --prefix web/themes/custom/fstheme ci
+ddev npm --prefix web/themes/custom/fstheme run build

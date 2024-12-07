@@ -5,10 +5,10 @@
 
 rm -rf /var/www/html/static-site
 
-if [ "$1" == "--production" ]; then
-  GENERATE_STATIC_SITE=1 drush tome:static -vv --uri=https://frees.au
-else
+if [ "$1" == "--local" ]; then
   GENERATE_STATIC_SITE=1 drush tome:static -vv --uri=fs-web-static-site.ddev.site:8080
+else
+  GENERATE_STATIC_SITE=1 drush tome:static -vv --uri=https://www.frees.au
 fi
 
 # Need this one to make search api lunr works.

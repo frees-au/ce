@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="http://fs-web-static-site.ddev.site:8080/">
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://www.frees.au/">
   <channel>
     <title>frees.au/ce - Free as in …</title>
-    <link>http://fs-web-static-site.ddev.site:8080/</link>
+    <link>https://www.frees.au/</link>
     <description/>
     <language>en</language>
     
     <item>
   <title>Ten topics with Matt Glaman</title>
-  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/ten-topics-matt-glaman</link>
+  <link>https://www.frees.au/ce/ummm/ten-topics-matt-glaman</link>
   <description>
       Ten topics with Matt Glaman
   
@@ -30,7 +30,7 @@
       &lt;div&gt;
   
   
-      &lt;iframe src="http://fs-web-static-site.ddev.site:8080/media/oembed?url=https%3A//youtu.be/zsRF3Lb6L38&amp;amp;max_width=0&amp;amp;max_height=0&amp;amp;hash=vLE-tTJ9FlPQ9lT9ZPOQgyiBUZ-NjMq--VydvvGCxh4" width="200" height="113" class="media-oembed-content" loading="lazy" title="Talking PHPStan with Matt Glaman"&gt;&lt;/iframe&gt;
+      &lt;iframe src="https://www.frees.au/media/oembed?url=https%3A//youtu.be/zsRF3Lb6L38&amp;amp;max_width=0&amp;amp;max_height=0&amp;amp;hash=vLE-tTJ9FlPQ9lT9ZPOQgyiBUZ-NjMq--VydvvGCxh4" width="200" height="113" class="media-oembed-content" loading="lazy" title="Talking PHPStan with Matt Glaman"&gt;&lt;/iframe&gt;
 
   
 &lt;/div&gt;
@@ -38,11 +38,11 @@
   </description>
   <pubDate>Mon, 11 Nov 2024 02:22:09 +0000</pubDate>
     <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">12 at http://fs-web-static-site.ddev.site:8080</guid>
+    <guid isPermaLink="false">12 at https://www.frees.au</guid>
     </item>
 <item>
   <title>Setting up the DDEV plugin, tyler36/ddev-xhgui</title>
-  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/setting-ddev-plugin-tyler36ddev-xhgui</link>
+  <link>https://www.frees.au/ce/ummm/setting-ddev-plugin-tyler36ddev-xhgui</link>
   <description>
       Setting up the DDEV plugin, tyler36/ddev-xhgui
   
@@ -64,7 +64,7 @@
       &lt;div&gt;
   
   
-      &lt;iframe src="http://fs-web-static-site.ddev.site:8080/media/oembed?url=https%3A//www.youtube.com/watch%3Fv%3DKnrhfwbop2w&amp;amp;max_width=0&amp;amp;max_height=0&amp;amp;hash=_IA9RSq6xPX-Zp_BoLnbvvZKmeVDr8mqII9YbD0zGcE" width="200" height="113" class="media-oembed-content" loading="lazy" title="Setting up the DDEV plugin, tyler36/ddev-xhgui"&gt;&lt;/iframe&gt;
+      &lt;iframe src="https://www.frees.au/media/oembed?url=https%3A//www.youtube.com/watch%3Fv%3DKnrhfwbop2w&amp;amp;max_width=0&amp;amp;max_height=0&amp;amp;hash=_IA9RSq6xPX-Zp_BoLnbvvZKmeVDr8mqII9YbD0zGcE" width="200" height="113" class="media-oembed-content" loading="lazy" title="Setting up the DDEV plugin, tyler36/ddev-xhgui"&gt;&lt;/iframe&gt;
 
   
 &lt;/div&gt;
@@ -72,11 +72,11 @@
   </description>
   <pubDate>Mon, 03 Jun 2024 03:22:19 +0000</pubDate>
     <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">13 at http://fs-web-static-site.ddev.site:8080</guid>
+    <guid isPermaLink="false">13 at https://www.frees.au</guid>
     </item>
 <item>
   <title>Local starshot dev - project_browser</title>
-  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/local-starshot-dev-projectbrowser</link>
+  <link>https://www.frees.au/ce/ummm/local-starshot-dev-projectbrowser</link>
   <description>
       Local starshot dev - project_browser
   
@@ -98,7 +98,7 @@
       &lt;div&gt;
   
   
-      &lt;iframe src="http://fs-web-static-site.ddev.site:8080/media/oembed?url=https%3A//www.youtube.com/watch%3Fv%3DMlbjSiDEzP4&amp;amp;max_width=0&amp;amp;max_height=0&amp;amp;hash=bC4q-7aH4mim8c3TI36j0s_n6Zn2zQGShbR1Msh7UHo" width="200" height="113" class="media-oembed-content" loading="lazy" title="Local starshot dev - project_browser"&gt;&lt;/iframe&gt;
+      &lt;iframe src="https://www.frees.au/media/oembed?url=https%3A//www.youtube.com/watch%3Fv%3DMlbjSiDEzP4&amp;amp;max_width=0&amp;amp;max_height=0&amp;amp;hash=bC4q-7aH4mim8c3TI36j0s_n6Zn2zQGShbR1Msh7UHo" width="200" height="113" class="media-oembed-content" loading="lazy" title="Local starshot dev - project_browser"&gt;&lt;/iframe&gt;
 
   
 &lt;/div&gt;
@@ -106,11 +106,11 @@
   </description>
   <pubDate>Wed, 22 May 2024 03:21:59 +0000</pubDate>
     <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">11 at http://fs-web-static-site.ddev.site:8080</guid>
+    <guid isPermaLink="false">11 at https://www.frees.au</guid>
     </item>
 <item>
   <title>Drupal modules that provide "repeating field groups"</title>
-  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/drupal-modules-provide-repeating-field-groups</link>
+  <link>https://www.frees.au/ce/ummm/drupal-modules-provide-repeating-field-groups</link>
   <description>
       Drupal modules that provide "repeating field groups"
   
@@ -132,7 +132,7 @@
       &lt;div&gt;
   
   
-      &lt;iframe src="http://fs-web-static-site.ddev.site:8080/media/oembed?url=https%3A//www.youtube.com/watch%3Fv%3DZorUUuC8oxc&amp;amp;max_width=0&amp;amp;max_height=0&amp;amp;hash=wtzAWCRqhBPxQMmPjwNC6GeusQB8uNd8qTk58pSes-k" width="200" height="113" class="media-oembed-content" loading="lazy" title="Drupal modules that provide &amp;quot;repeating field groups&amp;quot;"&gt;&lt;/iframe&gt;
+      &lt;iframe src="https://www.frees.au/media/oembed?url=https%3A//www.youtube.com/watch%3Fv%3DZorUUuC8oxc&amp;amp;max_width=0&amp;amp;max_height=0&amp;amp;hash=wtzAWCRqhBPxQMmPjwNC6GeusQB8uNd8qTk58pSes-k" width="200" height="113" class="media-oembed-content" loading="lazy" title="Drupal modules that provide &amp;quot;repeating field groups&amp;quot;"&gt;&lt;/iframe&gt;
 
   
 &lt;/div&gt;
@@ -140,11 +140,11 @@
   </description>
   <pubDate>Tue, 16 Apr 2024 03:21:48 +0000</pubDate>
     <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">10 at http://fs-web-static-site.ddev.site:8080</guid>
+    <guid isPermaLink="false">10 at https://www.frees.au</guid>
     </item>
 <item>
   <title>Add your first Drupal gitlab-ci.yml thru the web UI</title>
-  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/add-your-first-drupal-gitlab-ciyml-thru-web-ui</link>
+  <link>https://www.frees.au/ce/ummm/add-your-first-drupal-gitlab-ciyml-thru-web-ui</link>
   <description>
       Add your first Drupal gitlab-ci.yml thru the web UI
   
@@ -162,11 +162,11 @@
   </description>
   <pubDate>Thu, 11 Apr 2024 03:21:36 +0000</pubDate>
     <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">9 at http://fs-web-static-site.ddev.site:8080</guid>
+    <guid isPermaLink="false">9 at https://www.frees.au</guid>
     </item>
 <item>
   <title>Time to config:export ‘field_’ to pasture</title>
-  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/time-configexport-field-pasture</link>
+  <link>https://www.frees.au/ce/ummm/time-configexport-field-pasture</link>
   <description>
       Time to config:export ‘field_’ to pasture
   
@@ -188,7 +188,7 @@
       &lt;div&gt;
   
   
-      &lt;iframe src="http://fs-web-static-site.ddev.site:8080/media/oembed?url=https%3A//www.youtube.com/watch%3Fv%3D2495KafRZAg&amp;amp;max_width=0&amp;amp;max_height=0&amp;amp;hash=YdnPTryylck3td06cIf9LKAx5IEtH3CcWw3uCM_agps" width="200" height="113" class="media-oembed-content" loading="lazy" title="Time to config:export ‘field_’ to pasture"&gt;&lt;/iframe&gt;
+      &lt;iframe src="https://www.frees.au/media/oembed?url=https%3A//www.youtube.com/watch%3Fv%3D2495KafRZAg&amp;amp;max_width=0&amp;amp;max_height=0&amp;amp;hash=YdnPTryylck3td06cIf9LKAx5IEtH3CcWw3uCM_agps" width="200" height="113" class="media-oembed-content" loading="lazy" title="Time to config:export ‘field_’ to pasture"&gt;&lt;/iframe&gt;
 
   
 &lt;/div&gt;
@@ -196,11 +196,11 @@
   </description>
   <pubDate>Fri, 29 Mar 2024 02:21:19 +0000</pubDate>
     <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">8 at http://fs-web-static-site.ddev.site:8080</guid>
+    <guid isPermaLink="false">8 at https://www.frees.au</guid>
     </item>
 <item>
   <title>Typography check</title>
-  <link>http://fs-web-static-site.ddev.site:8080/ce/ummm/typography-check</link>
+  <link>https://www.frees.au/ce/ummm/typography-check</link>
   <description>
       Typography check
   
@@ -218,11 +218,11 @@ npm ci&lt;/pre&gt;&lt;p&gt;Quote&lt;/p&gt;&lt;p&gt;"Oh, how I miss the Earth's f
     &lt;div&gt;Tags&lt;/div&gt;
   &lt;/div&gt;
 
-      &lt;div class="field-multiple"&gt;&lt;a href="http://fs-web-static-site.ddev.site:8080/taxonomy/term/1" hreflang="en"&gt;Testing&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="field-multiple"&gt;&lt;a href="https://www.frees.au/taxonomy/term/1" hreflang="en"&gt;Testing&lt;/a&gt;&lt;/div&gt;
   </description>
   <pubDate>Tue, 05 Dec 2023 10:24:52 +0000</pubDate>
     <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">4 at http://fs-web-static-site.ddev.site:8080</guid>
+    <guid isPermaLink="false">4 at https://www.frees.au</guid>
     </item>
 
   </channel>
