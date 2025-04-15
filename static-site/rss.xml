@@ -46,7 +46,7 @@
   <description>
       Setting up the DDEV plugin, tyler36/ddev-xhgui
   
-      &lt;p&gt;&lt;span style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);color:rgb(13, 13, 13);display:inline !important;float:none;font-family:Roboto, Noto, sans-serif;font-size:15px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:pre-wrap;widows:2;word-spacing:0px;"&gt;I wanted a quick call-graph, for a drupal.org issue, to highlight where there was some expensive code blocking the page load. This plugin is very easy to set up. (The sound quality is poor, sorry about that!)&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;span&gt;I wanted a quick call-graph, for a drupal.org issue, to highlight where there was some expensive code blocking the page load. This plugin is very easy to set up. (The sound quality is poor, sorry about that!)&lt;/span&gt;&lt;/p&gt;
   
       &lt;span&gt;admin&lt;/span&gt;
   

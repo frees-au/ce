@@ -33,7 +33,7 @@ function fstheme_theme_suggestions_field_alter(array &$hooks, array $vars): void
 }
 
 /**
- * Implements hook_theme_preprocess_page().
+ * Implements hook_theme_preprocess_node().
  */
 function fstheme_preprocess_node(&$vars) {
   $node = $vars['node'];
@@ -46,4 +46,13 @@ function fstheme_preprocess_node(&$vars) {
       }
     }
   }
+}
+
+/**
+ * Implements hook_theme_preprocess_page().
+ */
+function fstheme_preprocess_page(&$vars) {
+  $current_path = \Drupal::service('path.current')->getPath();
+  $alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+  $vars['fs_home_page'] = $vars['is_front'] || $alias === '/ce';
 }
