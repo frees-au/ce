@@ -19,11 +19,6 @@
       <a class="after:absolute after:inset-x-0 after:inset-y-0 z-50" href="{{ url }}" target="{{ article_type == 'video' ? '_blank' : '_self' }}">{{ label }}</a>
       {{ title_suffix }}
     </div>
-    <div{{ attributes }}>
-      <div{{ content_attributes }}>
-        {{ content|without('hero') }}
-      </div>
-    </div>
     {% if node.duration.value is not empty %}
       <div class="mt-[16px] text-[14px] leading-[27px]">
         {{ article_type == 'video' ? 'Video • ' ~ node.duration.value ~ ' watch' :  'Blog • ' ~ node.duration.value ~ ' read'  }}

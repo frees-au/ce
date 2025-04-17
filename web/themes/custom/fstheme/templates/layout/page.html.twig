@@ -2,7 +2,7 @@
   <header role="banner" class="font-mono">
     <div style="background-image: url('{{ node.hero_banner ? node.hero_banner : '' }}'); box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);" class="text-white bg-center bg-cover">
       <div class="container">
-        <div class="py-[47px] md:py-[50px] lg:py-[62px] xl:py-[50px] min-h-[400px] md:min-h-[500px] lg:min-h-[600px]{% if fs_home_page %} xl:min-h-[700px]{% endif %}">
+        <div class="py-[47px] md:py-[50px] lg:py-[62px] xl:py-[50px] min-h-[400px] md:min-h-[500px] lg:min-h-[600px]{% if fs_home_page %} h-screen{% endif %}">
           <div class="min-h-[inherit] flex flex-col justify-between">
             <div class="flex justify-between items-center">
               <div><a href="/"><img src="/themes/custom/fstheme/logo.png" width="68px" height="68px" /></a></div>
@@ -83,7 +83,7 @@
   <footer role="contentinfo" class="font-mono bg-fs-red-tint text-white pt-[80px] pb-[30px] md:pb-[35px] lg:pt[90px] lg:pb-[45px]">
     <div class="container">
       <div class="lg:flex md:px-[90px] lg:px-0">
-        <div class="text-[30px] leading-[39px] lg:text-[36px] leading-[48px] lg:w-1/2 mb-[60px] lg:mb-0">
+        <div class="text-[30px] leading-[40px] lg:text-[36px] md:leading-[48px] lg:w-1/2 mb-[60px] lg:mb-0">
           {{ drupal_entity('block_content', 1) }}
         </div>
         <div class="font-sans lg:w-1/2 lg:pl-[5%]">
