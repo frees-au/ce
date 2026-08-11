@@ -38,5 +38,9 @@ drush-backups
 .DS_Store
 .phpunit.result.cache
 .ci.sqlite
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
 *.sql
+!_snapshot.sql
 *.zip
