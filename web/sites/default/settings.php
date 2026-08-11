@@ -13,7 +13,10 @@
  * @codingStandardsIgnoreFile
  */
 
-$databases = [];
+$databases['default']['default'] = [
+  'driver' => 'sqlite',
+  'database' => $app_root . '/../_db_main.sqlite',
+];
 $settings['hash_salt'] = 'n/a'; // Overridden on Platform.sh
 $settings['update_free_access'] = FALSE;
 $settings['file_scan_ignore_directories'] = ['node_modules', 'bower_components',];

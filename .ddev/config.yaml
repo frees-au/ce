@@ -9,9 +9,8 @@ xdebug_enabled: false
 additional_hostnames:
     - fs-web-static-site
 additional_fqdns: []
-database:
-    type: mariadb
-    version: "10.11"
+omit_containers:
+    - db
 use_dns_when_possible: true
 composer_version: "2"
 disable_settings_management: true

@@ -37,5 +37,6 @@ drush-backups
 /.env
 .DS_Store
 .phpunit.result.cache
+.ci.sqlite
 *.sql
 *.zip

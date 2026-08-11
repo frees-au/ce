@@ -19,6 +19,9 @@ ddev composer install
 ddev load
 ```
 
+Local development uses SQLite only. The database is stored in `_db_main.sqlite`;
+there is no DDEV database container to import into.
+
 When you're done.
 
 ```
@@ -28,7 +31,7 @@ ddev tome
 # Deploy to S3 (Skips repushing stockart).
 aws s3 cp static-site s3://frees-au-static/ --recursive --exclude "themes/custom/fstheme/stockart/*"
 
-# Captures the database.
+# Captures config and trims transient SQLite table data.
 ddev save
 ```
 

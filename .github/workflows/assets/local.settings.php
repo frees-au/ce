@@ -13,10 +13,6 @@ $settings['rebuild_access'] = FALSE;
 $settings['skip_permissions_hardening'] = TRUE;
 
 $databases['default']['default'] = [
-  'driver' => 'mysql',
-  'database' => 'test_db',
-  'username' => 'test_user',
-  'password' => 'test_password',
-  'host' => 'mariadb',
-  'port' => 3306,
+  'driver' => 'sqlite',
+  'database' => $app_root . '/../.ci.sqlite',
 ];

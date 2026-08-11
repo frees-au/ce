@@ -14,7 +14,7 @@
     <ini name="error_reporting" value="32767"/>
     <ini name="memory_limit" value="-1"/>
     <env name="SIMPLETEST_BASE_URL" value="http://web:80"/>
-    <env name="SIMPLETEST_DB" value="mysql://db:db@db/db"/>
+    <env name="SIMPLETEST_DB" value="sqlite://localhost//var/www/html/.phpunit.sqlite"/>
     <env name="XDEBUG_SESSION" value="ANY"/>
     <env name="DDEV_XDEBUG_ENABLED" value="true"/>
     <env name="BROWSERTEST_OUTPUT_DIRECTORY" value=""/>

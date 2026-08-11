@@ -3,7 +3,10 @@
 # Install the site directly from the config.
 # ddev drush si minimal --existing-config --yes
 
-ddev import-db --file=_db_main.sql.gz
+if [ ! -f _db_main.sqlite ]; then
+  echo "Missing _db_main.sqlite."
+  exit 1
+fi
 
 ddev drush cr
 
