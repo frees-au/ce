@@ -38,7 +38,8 @@ function fstheme_theme_suggestions_field_alter(array &$hooks, array $vars): void
  *
  * For article nodes:
  *  - sets $article_type to 'video' if a YouTube (media:stream) ref is present
- *  - sets $url to the YouTube watch URL (used by the teaser to link out)
+ *  - leaves $url as the Drupal node path so the teaser links to the article,
+ *    not the YouTube watch page (target stays _self)
  *  - sets $youtube_thumbnail to a renderable thumbnail built from the
  *    referenced media's oEmbed-derived `thumbnail` image field. The teaser
  *    template uses this as the cover image instead of a stock fallback.
@@ -59,7 +60,6 @@ function fstheme_preprocess_node(&$vars) {
   }
 
   $vars['article_type'] = 'video';
-  $vars['url'] = $media->get('media_oembed_video')->value;
 
   // Build a renderable thumbnail from the YouTube media's thumbnail field.
   // oEmbed populates this on save with the YouTube `hqdefault` jpg.
