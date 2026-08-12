@@ -1,5 +1,0 @@
-#!/bin/bash
-
-ddev composer run phpcs -- ./web/*/custom
-ddev composer run phpstan -- ./web/*/custom
-ddev composer run rector
