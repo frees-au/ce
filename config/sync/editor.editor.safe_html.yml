@@ -13,6 +13,7 @@ settings:
     items:
       - underline
       - strikethrough
+      - link
       - removeFormat
       - outdent
       - indent
@@ -29,7 +30,6 @@ settings:
       - heading
       - bold
       - italic
-      - link
       - code
       - codeBlock
       - bulletedList
@@ -123,9 +123,6 @@ settings:
         - '<svg>'
         - '<pre class>'
         - '<script type src>'
-    linkit_extension:
-      linkit_enabled: true
-      linkit_profile: default
     media_media:
       allow_view_mode_override: true
 image_upload:

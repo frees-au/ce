@@ -8,21 +8,14 @@ This code is licensed GPL-2.0-or-later. This code is provided for you to
 examine and mock (in all senses of the term).
 
 The Free Sauce logo, brand and assets which ship in this repository are Copyright
-Free Sauce 2024. (Copy the theme if you want, but replace the logo and
+Free Sauce 2024-2026. (Copy the theme if you want, but replace the logo and
 company name please!).
 
 ## Backend
 
-```
-ddev start
-ddev composer install
-ddev load
-```
+Setup uses SQLite only. The database is stored in `database/live.sqlite`;
 
-Local development uses SQLite only. The database is stored in `_db_main.sqlite`;
-there is no DDEV database container to import into.
-
-When you're done.
+## Static Site generation (@todo fix)
 
 ```
 # Tome build.
@@ -35,21 +28,26 @@ aws s3 cp static-site s3://frees-au-static/ --recursive --exclude "themes/custom
 ddev save
 ```
 
-## Frontend
+## Frontend (@todo fix)
 
 This is a very simple and somewhat unfinished Tailwind theme with no base theme
 dependencies. It's intended for learning and copying rather than being something
 we expect you to use as a base theme. Please don't ask for support if you do 😬.
 
 Normally you'd just work out of the theme directory, but these commands will run
-build and watch from the root.
+build and watch from the repo root.
+
+The theme uses [pnpm](https://pnpm.io/) for frontend dependencies. Install it
+once (e.g. via [corepack](https://nodejs.org/api/corepack.html): `corepack enable`)
+then run the build.
 
 ```
-ddev fe-build
-ddev fe-watch
+pnpm --dir web/themes/custom/fstheme install
+pnpm --dir web/themes/custom/fstheme run build
+pnpm --dir web/themes/custom/fstheme run watch
 ```
 
-## Testing
+## Testing (@todo fix)
 
 Static tests run easily in the container.
 
@@ -63,7 +61,7 @@ OSX, but note these are optimised for our local cypress experience and if we
 can't predict if it will run for you on your machine. Read the code here
  `./ddev/commands/host/cypress`.
 
-# Contrib
+# Contrib (@todo fix)
 
 You can work on contrib modules in this repo. For example if you check out a
 contrib module repo, you could run tests on the module.

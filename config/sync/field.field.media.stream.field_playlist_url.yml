@@ -1,0 +1,23 @@
+uuid: 1d8c2f7e-3e2c-4c2a-9b1c-2a7f5e1a0002
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_playlist_url
+    - media.type.stream
+  module:
+    - link
+id: media.stream.field_playlist_url
+field_name: field_playlist_url
+entity_type: media
+bundle: stream
+label: 'YouTube playlist'
+description: 'Optional. When this video belongs to a YouTube playlist, store the playlist URL (e.g. https://www.youtube.com/playlist?list=PLxxxxx). Rendered as a link below the embed on article pages.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link
