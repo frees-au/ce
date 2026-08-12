@@ -3,22 +3,22 @@
 # Install the site directly from the config.
 # ddev drush si minimal --existing-config --yes
 
-if [ ! -f _snapshot.sql ]; then
+if [ ! -f database/snapshot.sql ]; then
   echo "Missing _snapshot.sql."
   exit 1
 fi
 
-rm -f _db_main.sqlite _db_main.sqlite-shm _db_main.sqlite-wal
-sqlite3 _db_main.sqlite "PRAGMA auto_vacuum = FULL;"
-sqlite3 _db_main.sqlite < _snapshot.sql
-sqlite3 _db_main.sqlite "VACUUM; PRAGMA journal_mode = DELETE;" > /dev/null
+# # rm -f ./database/live.sqlite ./database/live.sqlite-shm ./database/live.sqlite-wal
+# # sqlite3 _db_main.sqlite "PRAGMA auto_vacuum = FULL;"
+# # sqlite3 _db_main.sqlite < _snapshot.sql
+# # sqlite3 _db_main.sqlite "VACUUM; PRAGMA journal_mode = DELETE;" > /dev/null
 
-ddev drush cr
+# ddev drush cr
 
-ddev drush updb -y
+# ddev drush updb -y
 
-ddev drush cr
+# ddev drush cr
 
-ddev drush config:status
+# ddev drush config:status
 
-ddev drush uli
+# ddev drush uli

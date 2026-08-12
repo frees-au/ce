@@ -27,7 +27,9 @@ sqlite3 "$DB" "DELETE FROM cache_toolbar; PRAGMA auto_vacuum = FULL; VACUUM;"
 sqlite3 "$DB" "DELETE FROM router; PRAGMA auto_vacuum = FULL; VACUUM;"
 sqlite3 "$DB" "PRAGMA wal_checkpoint(TRUNCATE);" > /dev/null
 sqlite3 "$DB" "PRAGMA journal_mode = DELETE;" > /dev/null
-php scripts/sqlite-dump.php "$DB" "$SNAPSHOT"
+
+
+# php scripts/sqlite-dump.php "$DB" "$SNAPSHOT"
 rm -f "$SNAPSHOT_CHECK" "$SNAPSHOT_CHECK-shm" "$SNAPSHOT_CHECK-wal"
 sqlite3 _live.sqlite < _snapshot.sql
 

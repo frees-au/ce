@@ -15,7 +15,7 @@
 
 $databases['default']['default'] = [
   'driver' => 'sqlite',
-  'database' => $app_root . '/../_live.sqlite',
+  'database' => $app_root . '/../database/live.sqlite',
 ];
 $settings['hash_salt'] = 'n/a'; // Overridden on Platform.sh
 $settings['update_free_access'] = FALSE;
