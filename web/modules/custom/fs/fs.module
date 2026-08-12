@@ -19,13 +19,37 @@ function fs_requirements_alter(array &$requirements): void {
 
 /**
  * Implements hook_entity_type_storage_load().
+ *
+ * Stamps every loaded node with a random stockart hero URL so templates can
+ * always render a background image. Cards/teasers use it as the fallback
+ * cover; page.html.twig uses it on node routes.
  */
 function fs_node_storage_load(array $nodes) {
   foreach ($nodes as $node) {
     if ($node instanceof NodeInterface) {
-      // Random image from 001 - 105.
-      $hero_banner_image = '/themes/custom/fstheme/stockart/stock-' . str_pad((string) rand(1, 105), 3, '0', STR_PAD_LEFT) . '.jpg';
-      $node->hero_banner = $hero_banner_image;
+      $node->hero_banner = _fs_random_stockart();
     }
   }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ *
+ * Exposes a `$page_header_image` for every page route, even those without a
+ * node (view pages like /from-the-pen, taxonomy term pages, the homepage
+ * redirect). Without this, `node.hero_banner` is null on view routes and the
+ * header `<div>` renders with an empty `background-image: url('')` —
+ * effectively missing the banner.
+ */
+function fs_preprocess_page(array &$vars): void {
+  $vars['page_header_image'] = $vars['node']->hero_banner ?? _fs_random_stockart();
+}
+
+/**
+ * Returns a random URL to one of the stockart JPGs in the fstheme.
+ */
+function _fs_random_stockart(): string {
+  return '/themes/custom/fstheme/stockart/stock-'
+    . str_pad((string) rand(1, 105), 3, '0', STR_PAD_LEFT)
+    . '.jpg';
 }

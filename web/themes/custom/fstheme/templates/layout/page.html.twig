@@ -1,7 +1,7 @@
 <div class="layout-container">
 
   <header role="banner" class="font-mono">
-    <div style="background-image: url('{{ node.hero_banner ? node.hero_banner : '' }}'); box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);" class="text-white bg-center bg-cover">
+    <div style="background-image: url('{{ page_header_image ?: '/themes/custom/fstheme/stockart/stock-005.jpg' }}'); box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);" class="text-white bg-center bg-cover">
       <div class="container">
         <div class="py-[47px] md:py-[50px] lg:py-[62px] xl:py-[50px] min-h-[200px] lg:min-h-[360px]">
           <div class="min-h-[inherit] flex flex-col justify-between">
@@ -83,7 +83,7 @@
     <div class="container">
       <div class="lg:flex md:px-[90px] lg:px-0">
         <div class="text-[30px] leading-[39px] lg:text-[36px] leading-[48px] lg:w-2/3 lg:pr-[10%] mb-[60px] lg:mb-0">
-          {{ drupal_entity('block_content', 1) }}
+          <p><span style="white-space:pre-wrap;"><a href="https://frees.au/ce" class="underline">frees.au/ce</a> acknowledges the </span><span lang="en">Wurundjeri people of the Kulin Nation, and pay respects to their Elders past, present and emerging.</span></p>
         </div>
         <div class="font-sans lg:w-1/3">
           <div class="mb-[55px]">
@@ -108,9 +108,6 @@
                 </a>
               </li>
             </ul>
-          </div>
-          <div>
-            {{ drupal_entity('block_content', 2) }}
           </div>
         </div>
       </div>
