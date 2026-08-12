@@ -7,7 +7,7 @@
         <div class="text-[24px] leading-[33px] mb-[30px]">
           {{ content.lead }}
         </div>
-        <div class="[&_iframe]:w-full [&_iframe]:aspect-video">
+        <div class="[&_iframe]:w-full mt-10 mb-10 [&_iframe]:aspect-video">
           {{
             content|without(
               'lead',
@@ -17,7 +17,7 @@
           }}
         </div>
         {% if youtube_playlist_url %}
-          <div class="mt-[16px] text-center">
+          <div class="mt-10 mb-10 text-center">
             <a href="{{ youtube_playlist_url.uri }}"
                target="_blank"
                rel="noopener"

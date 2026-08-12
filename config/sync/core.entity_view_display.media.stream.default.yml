@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.stream.field_playlist_url
     - field.field.media.stream.media_oembed_video
     - media.type.stream
   module:
