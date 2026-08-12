@@ -15,8 +15,10 @@ sqlite3 _db_main.sqlite "VACUUM; PRAGMA journal_mode = DELETE;" > /dev/null
 
 ddev drush cr
 
-ddev drush config:status
-
 ddev drush updb -y
+
+ddev drush cr
+
+ddev drush config:status
 
 ddev drush uli

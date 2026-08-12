@@ -1,27 +1,37 @@
 #!/bin/bash
 
-# Any site building changes should be captured.
+set -euo pipefail
+
+DB="_db_main.sqlite"
+SNAPSHOT="_snapshot.sql"
+SNAPSHOT_CHECK="_db_main.sqlite.sqlite"
+
+if [ ! -f "$DB" ]; then
+  echo "Missing $DB."
+  exit 1
+fi
+
+# Any site building changes should be captured first.
 ddev drush cex -y
 
-# Trim unneeded table data.
-echo "Removing cache data."
-ddev drush sqlq " \
-  DELETE FROM cache_access_policy; \
-  DELETE FROM cache_bootstrap; \
-  DELETE FROM cache_config; \
-  DELETE FROM cache_container; \
-  DELETE FROM cache_data; \
-  DELETE FROM cache_default; \
-  DELETE FROM cache_discovery; \
-  DELETE FROM cache_dynamic_page_cache; \
-  DELETE FROM cache_tome_static; \
-  DELETE FROM cache_toolbar; \
-  DELETE FROM queue; \
-  DELETE FROM router; \
-  DELETE FROM sessions; \
-"
+sqlite3 "$DB" "DELETE FROM cache_access_policy; PRAGMA auto_vacuum = FULL; VACUUM;"
+sqlite3 "$DB" "DELETE FROM cache_bootstrap; PRAGMA auto_vacuum = FULL; VACUUM;"
+sqlite3 "$DB" "DELETE FROM cache_config; PRAGMA auto_vacuum = FULL; VACUUM;"
+sqlite3 "$DB" "DELETE FROM cache_container; PRAGMA auto_vacuum = FULL; VACUUM;"
+sqlite3 "$DB" "DELETE FROM cache_data; PRAGMA auto_vacuum = FULL; VACUUM;"
+sqlite3 "$DB" "DELETE FROM cache_default; PRAGMA auto_vacuum = FULL; VACUUM;"
+sqlite3 "$DB" "DELETE FROM cache_discovery; PRAGMA auto_vacuum = FULL; VACUUM;"
+sqlite3 "$DB" "DELETE FROM cache_dynamic_page_cache; PRAGMA auto_vacuum = FULL; VACUUM;"
+sqlite3 "$DB" "DELETE FROM cache_tome_static; PRAGMA auto_vacuum = FULL; VACUUM;"
+sqlite3 "$DB" "DELETE FROM cache_toolbar; PRAGMA auto_vacuum = FULL; VACUUM;"
+sqlite3 "$DB" "DELETE FROM router; PRAGMA auto_vacuum = FULL; VACUUM;"
+sqlite3 "$DB" "PRAGMA wal_checkpoint(TRUNCATE);" > /dev/null
+sqlite3 "$DB" "PRAGMA journal_mode = DELETE;" > /dev/null
+php scripts/sqlite-dump.php "$DB" "$SNAPSHOT"
+rm -f "$SNAPSHOT_CHECK" "$SNAPSHOT_CHECK-shm" "$SNAPSHOT_CHECK-wal"
+sqlite3 _live.sqlite < _snapshot.sql
 
-# The SQLite database is already stored on disk at _db_main.sqlite.
+echo "Site saved to _snapshot.sql."
 
 # So we can keep working.
 ddev drush cr
