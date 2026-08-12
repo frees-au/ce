@@ -7,7 +7,7 @@ dependencies:
 id: articles
 label: Articles
 type: 'canonical_entities:node'
-pattern: 'ce/ummm/[node:title]'
+pattern: '/ce/ummm/[node:title]'
 selection_criteria:
   582d83a4-706f-49a2-b4ac-90ec74290405:
     id: 'entity_bundle:node'
