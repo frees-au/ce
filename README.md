@@ -35,11 +35,16 @@ dependencies. It's intended for learning and copying rather than being something
 we expect you to use as a base theme. Please don't ask for support if you do 😬.
 
 Normally you'd just work out of the theme directory, but these commands will run
-build and watch from the root.
+build and watch from the repo root.
+
+The theme uses [pnpm](https://pnpm.io/) for frontend dependencies. Install it
+once (e.g. via [corepack](https://nodejs.org/api/corepack.html): `corepack enable`)
+then run the build.
 
 ```
-ddev fe-build
-ddev fe-watch
+pnpm --dir web/themes/custom/fstheme install
+pnpm --dir web/themes/custom/fstheme run build
+pnpm --dir web/themes/custom/fstheme run watch
 ```
 
 ## Testing (@todo fix)
