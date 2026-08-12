@@ -6,6 +6,7 @@ namespace FreeSauce\Ce\Scripts;
 
 use Drupal\block\Entity\Block;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\media\Entity\Media;
 use Drupal\node\Entity\Node;
 
 /**
@@ -58,6 +59,42 @@ final class ContentHelpers {
     }
 
     return $node;
+  }
+
+  /**
+   * Creates a Media entity with sensible defaults, mirroring createNode().
+   *
+   * The bundle's source plugin populates derived fields (name, thumbnail)
+   * on save. For `oembed:video` source, you supply the source URL via the
+   * field configured as `source_field` on the bundle (e.g.
+   * `media_oembed_video` for the `stream` bundle on this site).
+   *
+   * @param string $bundle
+   *   Media bundle machine name (e.g. 'stream', 'image').
+   * @param array $values
+   *   Field values keyed by field name. At minimum: the source field.
+   *   Optional 'name' / 'status' / 'uid' are merged in defaults.
+   * @param bool $save
+   *   When FALSE, returns the unsaved entity (handy for builder chains).
+   *
+   * @return \Drupal\media\Entity\Media
+   */
+  public function createMedia(string $bundle, array $values, bool $save = TRUE): Media {
+    $values += [
+      'bundle'   => $bundle,
+      'name'     => $values['name'] ?? '',
+      'status'   => 1,
+      'uid'      => 1,
+      'langcode' => \Drupal::languageManager()->getDefaultLanguage()->getId(),
+    ];
+
+    $media = Media::create($values);
+
+    if ($save) {
+      $media->save();
+    }
+
+    return $media;
   }
 
   /**
