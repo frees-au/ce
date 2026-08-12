@@ -1,0 +1,19 @@
+uuid: 1d8c2f7e-3e2c-4c2a-9b1c-2a7f5e1a0001
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - media
+id: media.field_playlist_url
+field_name: field_playlist_url
+entity_type: media
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

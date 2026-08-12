@@ -75,4 +75,10 @@ function fstheme_preprocess_node(&$vars) {
       ];
     }
   }
+
+  // Expose the YouTube playlist URL (if any) so the article template can
+  // render a "Watch the playlist on YouTube" link below the embed.
+  if ($media->hasField('field_playlist_url') && !$media->get('field_playlist_url')->isEmpty()) {
+    $vars['youtube_playlist_url'] = $media->get('field_playlist_url')->getValue()[0];
+  }
 }
