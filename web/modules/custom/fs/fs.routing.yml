@@ -1,0 +1,6 @@
+fs.home_route:
+  path: '/home-route'
+  defaults:
+    _controller: '\Drupal\fs\Controller\HomeRouteController::__invoke'
+  requirements:
+    _access: 'TRUE'
