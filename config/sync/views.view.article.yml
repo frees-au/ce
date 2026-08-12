@@ -9,7 +9,7 @@ dependencies:
     - node
     - user
 id: article
-label: Article
+label: Articles
 module: views
 description: ''
 tag: ''
