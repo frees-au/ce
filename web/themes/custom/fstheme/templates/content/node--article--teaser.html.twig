@@ -1,5 +1,5 @@
-<div class="flex flex-col h-full shadow-md hover:text-fs-red-tint relative grayscale duration-300 ease-in-out hover:grayscale-0 font-sans">
-  <div class="px-[21px] pt-[16px] relative md:h-[330px] lg:h-[390px]">
+<div class="flex flex-col h-full shadow-md hover:text-fs-red-tint relative grayscale-0 duration-300 ease-in-out hover:grayscale font-sans">
+  <div class="px-[21px] pt-[16px] relative">
     {% if youtube_thumbnail %}
       {{ youtube_thumbnail }}
     {% elseif node.hero_banner %}
@@ -18,15 +18,10 @@
     </div>
   </div>
   <div class="px-[21px] py-[16px] grow flex flex-col justify-between">
-    <div class="mb-[16px] font-mono text-[24px] leading-[27px]">
+    <div class="mt-[16px] mb-[16px] font-mono text-[24px] leading-[27px]">
       {{ title_prefix }}
       <a class="after:absolute after:inset-x-0 after:inset-y-0 z-50" href="{{ url }}">{{ label }}</a>
       {{ title_suffix }}
-    </div>
-    <div{{ attributes }}>
-      <div{{ content_attributes }}>
-        {{ content|without('hero') }}
-      </div>
     </div>
     {% if node.duration.value is not empty %}
       <div class="mt-[16px] text-[14px] leading-[27px]">
