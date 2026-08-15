@@ -4,6 +4,8 @@ This code runs the https://frees.au/ce website. This site is a very simple
 blog site, and used to support the creation of training videos which you can
 find on the [Free Sauce youtube channel](https://www.youtube.com/@FreeTheSauce).
 
+This is hosted on an internal repo on Forgejo, and the Github repo is a mirror.
+
 This code is licensed GPL-2.0-or-later. This code is provided for you to
 examine and mock (in all senses of the term).
 
