@@ -19,15 +19,15 @@ Setup uses SQLite only. The database is stored in `database/live.sqlite`;
 
 ## Static Site generation (@todo fix)
 
+Generates the static export into `_static-build/` at the repo root (gitignored).
+
 ```
-# Tome build.
-ddev tome
+# Build the static site.
+./scripts/build-static.sh
 
-# Deploy to S3 (Skips repushing stockart).
-aws s3 cp static-site s3://frees-au-static/ --recursive --exclude "themes/custom/fstheme/stockart/*"
-
-# Captures config and trims transient SQLite table data.
-ddev save
+# Or directly:
+rm -Rf _static-build
+GENERATE_STATIC_SITE=1 vendor/bin/drush tome:static -vv --uri=https://www.frees.au
 ```
 
 ## Frontend (@todo fix)

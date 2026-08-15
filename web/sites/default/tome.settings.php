@@ -12,4 +12,4 @@ $config['system.performance']['js']['preprocess'] = TRUE;
 
 $config['system.logging']['error_level'] = 'hide';
 
-$settings['tome_static_directory'] = '../static-site';
+$settings['tome_static_directory'] = '../_static-build';
