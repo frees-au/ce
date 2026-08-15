@@ -54,17 +54,22 @@ Browser-based QA happens on `royal-albert.frees.au`, not on this host.
 3. **Drush must be run from the repo root**, not from `web/`. The DB path
    in settings.php is relative.
 4. **One branch: `hermes`.** Commit and push there. Don't create feature
-   branches unless Si asks.
-5. **Don't edit `web/core/`, `web/modules/contrib/`, `web/themes/contrib/`**
+   branches unless Si asks. (Exception: feature branches for PR review
+   on the local Forgejo — see `forgejo` skill.)
+5. **Remote layout** (changed 2026-08-15):
+   - `origin` → `http://git-local.frees.au:3000/frees-au/ce.git` (internal Forgejo, canonical)
+   - `github` → `git@github.com:frees-au/ce.git` (mirror, manual push only)
+   - Never force-push. `git pull --rebase` for reconciliation.
+6. **Don't edit `web/core/`, `web/modules/contrib/`, `web/themes/contrib/`**
    — they are scaffolded and ignored. Use Composer for contrib updates.
-6. **Definition of done** for any change that touches the live site:
+7. **Definition of done** for any change that touches the live site:
    - Si has eyeballed the change on `royal-albert.frees.au`
    - `./vendor/bin/drush config:export` ran clean
    - Committed and pushed to `hermes`
    - DB + `web/sites/default/files` snapshot in
      `~/backups/frees-au-ce/YYYY-MM-DD--HH-MM/`
    - The `./scripts/fs-done.sh` helper does steps 2–4 in one shot.
-7. **Drush subcommands that touch the DB must declare a FULL bootstrap.**
+8. **Drush subcommands that touch the DB must declare a FULL bootstrap.**
    The custom `fs:*` commands use
    `#[BootstrapAttr(level: DrupalBootLevels::FULL)]` at the class level.
    Any new command file in `drush/Commands/` must do the same or it will
