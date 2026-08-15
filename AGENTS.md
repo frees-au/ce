@@ -53,19 +53,21 @@ Browser-based QA happens on `royal-albert.frees.au`, not on this host.
    are aspirational and do not run on this host.
 3. **Drush must be run from the repo root**, not from `web/`. The DB path
    in settings.php is relative.
-4. **One branch: `hermes`.** Commit and push there. Don't create feature
+4. **One branch: `nash-local`.** Commit and push there. Don't create feature
    branches unless Si asks. (Exception: feature branches for PR review
    on the local Forgejo — see `forgejo` skill.)
-5. **Remote layout** (changed 2026-08-15):
-   - `origin` → `http://git-local.frees.au:3000/frees-au/ce.git` (internal Forgejo, canonical)
+5. **Remote layout** (changed 2026-08-15; switched to SSH 2026-08-15):
+   - `origin` → `ssh://git@git-local.frees.au/frees-au/ce.git` (internal Forgejo, canonical)
+   - `forgejo` → `ssh://git@git-local.frees.au/frees-au/ce.git` (duplicate of origin; kept for branch-name compat with earlier conventions)
    - `github` → `git@github.com:frees-au/ce.git` (mirror, manual push only)
    - Never force-push. `git pull --rebase` for reconciliation.
+   - Note: `.git/config` may still hold a stale `[credential] helper = store --file=…` entry from the prior HTTPS layout — harmless under SSH but can be removed if Si prefers a tidy config.
 6. **Don't edit `web/core/`, `web/modules/contrib/`, `web/themes/contrib/`**
    — they are scaffolded and ignored. Use Composer for contrib updates.
 7. **Definition of done** for any change that touches the live site:
    - Si has eyeballed the change on `royal-albert.frees.au`
    - `./vendor/bin/drush config:export` ran clean
-   - Committed and pushed to `hermes`
+   - Committed and pushed to `nash-local`
    - DB + `web/sites/default/files` snapshot in
      `~/backups/frees-au-ce/YYYY-MM-DD--HH-MM/`
    - The `./scripts/fs-done.sh` helper does steps 2–4 in one shot.

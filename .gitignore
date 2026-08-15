@@ -22,6 +22,10 @@ default.settings.php
 # Assets.
 web/sites/default/files
 
+# Tome static-site generator output (legacy + new build dir).
+/static-site
+/_static-build
+
 # Development or per platform.
 env.settings.php
 env.services.yml

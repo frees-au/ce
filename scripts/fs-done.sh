@@ -4,7 +4,7 @@
 #
 # Runs the standard "definition of done" pipeline:
 #   1. drush config:export
-#   2. commit + push to the hermes branch
+#   2. commit + push to the nash-local branch
 #   3. snapshot the live SQLite DB and sites/default/files into
 #      ~/backups/frees-au-ce/YYYY-MM-DD--HH-MM/
 #
@@ -43,7 +43,7 @@ if git diff --cached --quiet; then
   echo "No config changes to commit."
 else
   git commit -m "$msg"
-  git push origin hermes
+  git push origin nash-local
 fi
 
 if [ -e "$backup_dir" ] && [ "$force" -ne 1 ]; then
