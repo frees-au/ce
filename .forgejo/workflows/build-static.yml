@@ -92,12 +92,14 @@ jobs:
             echo "sqlite ok\n";
           '
 
-      - name: Install Drupal (minimal profile, no demo content)
+      - name: Install Drupal (minimal profile)
         run: |
+          # minimal profile deliberately does not install demo content
+          # (no --no-demo flag exists on this drush; minimal is already lean).
+          # Default shortcut set is still installed; the next step strips it.
           vendor/bin/drush site:install minimal -y \
             --site-name="frees.au (CI build)" \
-            --account-name=ci --account-pass=ci \
-            --no-demo
+            --account_name=ci --account-pass=ci
 
       - name: Strip demo-content conflicts before config import
         run: |
