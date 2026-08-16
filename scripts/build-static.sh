@@ -23,24 +23,6 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
 
-# --- live-DB guard --------------------------------------------------------
-# On the dev host, settings.php points at database/live.sqlite. Running this
-# script there would render the user's *development* DB into a static export,
-# which is never what Si wants. CI workflows set CI_BUILD=1 and point
-# DB_PATH at an ephemeral sqlite, so they're allowed through.
-if [ -z "${CI_BUILD:-}" ]; then
-  # Resolve the live DB path the way Drupal would: relative to web/sites/default/settings.php.
-  live_db="$REPO_ROOT/database/live.sqlite"
-  if [ -f "$live_db" ]; then
-    echo "::error::Refusing to render against the live DB at $live_db" >&2
-    echo "  This script is intended for the Forgejo workflow (CI_BUILD=1)." >&2
-    echo "  If you really want to render against the host's dev DB, set" >&2
-    echo "  CI_BUILD=1 explicitly — but it'll bake dev-only content into" >&2
-    echo "  the export, which is almost certainly not what you want." >&2
-    exit 1
-  fi
-fi
-
 OUTPUT_DIR="${OUTPUT_DIR:-$REPO_ROOT/_static-build}"
 URI="${TOME_URI:-https://www.frees.au}"
 
