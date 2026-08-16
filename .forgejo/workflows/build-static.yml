@@ -92,41 +92,19 @@ jobs:
             echo "sqlite ok\n";
           '
 
-      - name: Install Drupal (minimal profile)
+      - name: Install Drupal + import committed config in one step
+        # Use drush's --existing-config flag: site:install minimal will
+        # import every committed config/sync/* file during install, so we
+        # don't need a separate config:import. DB_PATH points at an
+        # ephemeral sqlite that lives only for this job.
+        env:
+          CI_BUILD: '1'
         run: |
-          # minimal profile deliberately does not install demo content
-          # (no --no-demo flag exists on this drush; minimal is already lean).
-          # Default shortcut set is still installed; the next step strips it.
           vendor/bin/drush site:install minimal -y \
+            --db-url="sqlite://$DB_PATH" \
+            --existing-config \
             --site-name="frees.au (CI build)" \
-            --account_name=ci --account-pass=ci
-
-      - name: Strip demo-content conflicts before config import
-        run: |
-          # The minimal profile still creates a Default shortcut set with stock
-          # shortcut links. config/sync wants to uninstall the Shortcut module,
-          # which Drupal refuses while shortcut entities exist. Removing them
-          # up-front is the documented escape hatch.
-          vendor/bin/drush php:eval '
-            $ids = \Drupal::entityTypeManager()
-              ->getStorage("shortcut")
-              ->getQuery()
-              ->accessCheck(FALSE)
-              ->execute();
-            if ($ids) {
-              $storage = \Drupal::entityTypeManager()->getStorage("shortcut");
-              $entities = $storage->loadMultiple($ids);
-              $storage->delete($entities);
-              echo "Deleted " . count($entities) . " shortcut entities.\n";
-            } else {
-              echo "No shortcut entities to delete.\n";
-            }
-            \Drupal::service("shortcut.all_sets")->resetCache();
-          '
-
-      - name: Import config from config/sync
-        run: |
-          vendor/bin/drush config:import -y
+            --account-name=ci --account-pass=ci
           vendor/bin/drush cache:rebuild
 
       - name: Render static export
