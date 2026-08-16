@@ -12,5 +12,5 @@ jobs:
 
       - name: Test
         run: |
-          echo "Ref:    ${{ FORGEJO_SHA }}"
-          echo "Commit: ${{ FORGEJO_REF_NAME }}"
+          echo "Ref:    ${{ env.FORGEJO_SHA }}"
+          echo "Commit: ${{ env.FORGEJO_REF_NAME }}"
