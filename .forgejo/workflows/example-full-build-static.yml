@@ -1,6 +1,16 @@
-# /home/hermes/repos/frees-au-ce/.forgejo/workflows/build-static.yml
-# Forgejo Actions workflow: build the Tome static export on every push to the
-# active working branch, and upload _static-build/ as a downloadable artefact.
+# /home/hermes/repos/frees-au-ce/.forgejo/workflows/example-full-build-static.yml
+#
+# DISABLED — kept as a working reference for the full 12-step Drupal static
+# build pipeline. Do NOT enable by simply restoring the branch name below:
+# review the workflow against `build-tome.yml` and the current state of
+# scripts/build-static.sh first.
+#
+# Disabled by pointing on.push / on.pull_request at a branch that does not
+# exist on this repo, so the workflow can never fire on push. workflow_dispatch
+# is removed entirely; the UI's "Run workflow" button will refuse to show it.
+#
+# Original purpose: build the Tome static export on every push to the active
+# working branch, and upload _static-build/ as a downloadable artefact.
 #
 # Design notes:
 #   - Self-hosted runner (same instance as hello-world.yml).
@@ -13,16 +23,17 @@
 #   - No webserver needed: drush tome:static walks the container in-process.
 #   - Cache: composer + pnpm caches keyed on lockfiles to keep runs snappy.
 #   - Artefact retention: 7 days (Tome output is regenerable).
-name: Build static site
+name: "Example: full 12-step static build (DISABLED)"
 
 on:
   push:
     branches:
-      - nash-local
+      - nonexistent-branch-this-workflow-is-disabled  # do not change without review
   pull_request:
     branches:
-      - nash-local
-  workflow_dispatch:
+      - nonexistent-branch-this-workflow-is-disabled  # do not change without review
+# workflow_dispatch: intentionally omitted so the web UI's "Run workflow"
+# button does not surface this disabled reference.
 
 # Avoid two workflows racing on the same push.
 concurrency:

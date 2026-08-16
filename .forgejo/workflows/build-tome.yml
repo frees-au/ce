@@ -1,0 +1,32 @@
+# /home/hermes/repos/frees-au-ce/.forgejo/workflows/build-tome.yml
+#
+# Minimal Forgejo Actions workflow: run scripts/build-static.sh on every push
+# to nash-local (and on manual dispatch from the web UI).
+#
+# This is the "Pattern A" shape from the forgejo-actions skill — run a host
+# script at its canonical path. The runner is self-hosted and shares the
+# filesystem with /home/hermes/repos/, so we invoke the script directly at
+# its known location instead of checking out a copy.
+name: Build Tome static export
+
+on:
+  push:
+    branches:
+      - nash-local
+  pull_request:
+    branches:
+      - nash-local
+  workflow_dispatch:
+
+# Cancel any in-flight build if a new push arrives on the same ref.
+concurrency:
+  group: build-tome-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-tome:
+    runs-on: self-hosted
+
+    steps:
+      - name: Run build-static.sh
+        run: bash /home/hermes/repos/frees-au-ce/scripts/build-static.sh
