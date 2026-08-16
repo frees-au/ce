@@ -1,0 +1,17 @@
+name: "hello world"
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Test
+        run: |
+          whoami
+          pwd
+          git status
