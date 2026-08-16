@@ -23,6 +23,10 @@ on:
       - nash-local
   workflow_dispatch:
 
+env:
+  REPO_ROOT: /home/hermes/repos/frees-au-ce
+  BUILD_TARGET: /home/runner/artifacts/frees-au-ce
+
 # Cancel any in-flight build if a new push arrives on the same ref.
 concurrency:
   group: build-tome-${{ github.ref }}
@@ -33,5 +37,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Run build-static.sh
-        run: bash /home/hermes/repos/frees-au-ce/scripts/build-static.sh frees.au /home/hermes/repos/frees-au-ce/_static-build
+      - name: Build with prod domain
+        run: bash "$REPO_ROOT/scripts/build-static.sh" www.frees.au "$BUILD_TARGET/prod"
+      - name: Build with local domain
+        run: bash "$REPO_ROOT/scripts/build-static.sh" www-local.frees.au "$BUILD_TARGET/local"
