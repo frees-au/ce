@@ -1,5 +1,3 @@
-# /home/hermes/repos/frees-au-ce/.forgejo/workflows/build-tome.yml
-#
 # Minimal Forgejo Actions workflow: run scripts/build-static.sh on every push
 # to nash-local (and on manual dispatch from the web UI).
 #
