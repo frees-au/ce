@@ -5,6 +5,13 @@
 # script at its canonical path. The runner is self-hosted and shares the
 # filesystem with /home/hermes/repos/, so we invoke the script directly at
 # its known location instead of checking out a copy.
+#
+# build-static.sh now takes two positional args:
+#   $1 = DOMAIN      bare host (default: frees.au) — script builds https://$DOMAIN
+#   $2 = OUTPUT_DIR  where Tome writes output (default: $REPO_ROOT/_static-build)
+#
+# We pass them explicitly so the workflow declares its targets rather than
+# relying on the script's defaults — easier to spot a drift in PR review.
 name: Build Tome static export
 
 on:
@@ -27,4 +34,4 @@ jobs:
 
     steps:
       - name: Run build-static.sh
-        run: bash /home/hermes/repos/frees-au-ce/scripts/build-static.sh
+        run: bash /home/hermes/repos/frees-au-ce/scripts/build-static.sh frees.au /home/hermes/repos/frees-au-ce/_static-build
