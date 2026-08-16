@@ -101,7 +101,7 @@ jobs:
           CI_BUILD: '1'
         run: |
           vendor/bin/drush site:install minimal -y \
-            --db-url="sqlite://$DB_PATH" \
+            --db-url="sqlite://localhost/$DB_PATH" \
             --existing-config \
             --site-name="frees.au (CI build)" \
             --account-name=ci --account-pass=ci
