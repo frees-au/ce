@@ -12,6 +12,5 @@ jobs:
 
       - name: Test
         run: |
-          whoami
-          pwd
-          git status
+          echo "Ref:    ${{ FORGEJO_SHA }}"
+          echo "Commit: ${{ FORGEJO_REF_NAME }}"
