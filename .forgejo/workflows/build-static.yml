@@ -1,0 +1,123 @@
+# Forgejo Actions workflow: build the Tome static export on every push to the
+# active working branch, and upload _static-build/ as a downloadable artefact.
+#
+# Design notes:
+#   - Self-hosted runner (same instance as hello-world.yml).
+#   - DB is NOT committed (.gitignore excludes *.sqlite). The runner builds an
+#     ephemeral SQLite via `drush site:install` with the standard profile, then
+#     imports config/sync so the export reflects the committed configuration.
+#   - No webserver needed: drush tome:static walks the container in-process.
+#   - Cache: composer + pnpm caches keyed on lockfiles to keep runs snappy.
+#   - Artefact retention: 7 days (Tome output is regenerable).
+name: Build static site
+
+on:
+  push:
+    branches:
+      - nash-local
+  pull_request:
+    branches:
+      - nash-local
+  workflow_dispatch:
+
+# Avoid two workflows racing on the same push.
+concurrency:
+  group: build-static-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    env:
+      REPO_ROOT: ${{ github.workspace }}
+      OUTPUT_DIR: ${{ github.workspace }}/_static-build
+      DB_PATH: ${{ github.workspace }}/database/live.sqlite
+      TOME_URI: https://www.frees.au
+      COMPOSER_ALLOW_SUPERUSER: 1
+
+    steps:
+      - name: Show runner context
+        run: |
+          echo "Runner: $(uname -a)"
+          echo "PHP:    $(php --version | head -1)"
+          echo "Composer: $(composer --version)"
+          echo "pnpm:   $(pnpm --version)"
+          echo "Node:   $(node --version)"
+
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          # Full history helps `drush config:import` resolve UUIDs cleanly.
+          fetch-depth: 0
+
+      - name: Cache Composer vendor
+        uses: actions/cache@v4
+        with:
+          path: vendor
+          key: composer-${{ runner.os }}-${{ hashFiles('composer.lock') }}
+          restore-keys: |
+            composer-${{ runner.os }}-
+
+      - name: Cache pnpm store + theme node_modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.local/share/pnpm/store
+            web/themes/custom/fstheme/node_modules
+          key: pnpm-${{ runner.os }}-${{ hashFiles('web/themes/custom/fstheme/pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-${{ runner.os }}-
+
+      - name: Composer install
+        run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: pnpm install (fstheme)
+        run: pnpm --dir web/themes/custom/fstheme install --frozen-lockfile
+
+      - name: Build fstheme assets (Tailwind + Vite)
+        run: pnpm --dir web/themes/custom/fstheme run build
+
+      - name: Bootstrap ephemeral SQLite
+        run: |
+          mkdir -p database
+          : > "$DB_PATH"
+          php -r '
+            $pdo = new PDO("sqlite:" . getenv("DB_PATH"));
+            $pdo->exec("PRAGMA journal_mode = WAL;");
+            $pdo->exec("PRAGMA synchronous = NORMAL;");
+            echo "sqlite ok\n";
+          '
+
+      - name: Install Drupal (standard profile) + import config
+        run: |
+          vendor/bin/drush site:install standard -y \
+            --site-name="frees.au (CI build)" \
+            --account-name=ci --account-pass=ci
+          vendor/bin/drush config:import -y
+          vendor/bin/drush cache:rebuild
+
+      - name: Render static export
+        run: ./scripts/build-static.sh
+
+      - name: Verify static export
+        run: |
+          if [ ! -d "$OUTPUT_DIR" ]; then
+            echo "::error::Output directory $OUTPUT_DIR was not created"
+            exit 1
+          fi
+          html_count=$(find "$OUTPUT_DIR" -type f -name '*.html' | wc -l)
+          echo "Built $html_count HTML files in $OUTPUT_DIR"
+          if [ "$html_count" -lt 1 ]; then
+            echo "::error::Static export produced no HTML files"
+            exit 1
+          fi
+          ls -la "$OUTPUT_DIR" | head -30
+
+      - name: Upload static site artefact
+        uses: actions/upload-artifact@v4
+        with:
+          name: static-site
+          path: _static-build
+          if-no-files-found: error
+          retention-days: 7
