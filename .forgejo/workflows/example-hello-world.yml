@@ -2,7 +2,11 @@ name: "hello world"
 
 on:
   push:
-
+    branches:
+      - nonexistent-branch-this-workflow-is-disabled  # do not change without review
+  pull_request:
+    branches:
+      - nonexistent-branch-this-workflow-is-disabled  # do not change without review
 jobs:
   test:
     runs-on: self-hosted
