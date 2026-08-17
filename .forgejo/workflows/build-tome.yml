@@ -41,8 +41,8 @@ jobs:
         run: cp "$REPO_ROOT/database/live.sqlite" /home/runner/frees-au-ce.sqlite
       - name: Clean output directories
         run: |
-          rm -Rf /home/runner/artifacts/frees-au-ce/prod/*
-          rm -Rf /home/runner/artifacts/frees-au-ce/local/*
+          rm -Rf /home/runner/artifacts/frees-au-ce/prod
+          rm -Rf /home/runner/artifacts/frees-au-ce/local
       - name: Build with prod domain
         run: bash "$REPO_ROOT/scripts/build-static.sh" www.frees.au
       - name: Build with local domain
