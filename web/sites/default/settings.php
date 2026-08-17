@@ -50,6 +50,8 @@ if (file_exists($app_root . '/' . $site_path . '/local.settings.php')) {
   include_once $app_root . '/' . $site_path . '/local.settings.php';
 }
 
+print 'xxxxxxx';
+
 if (getenv('GENERATE_STATIC_SITE')) {
   include_once $app_root . '/' . $site_path . '/tome.settings.php';
 }
