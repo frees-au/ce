@@ -37,6 +37,8 @@ jobs:
     runs-on: self-hosted
 
     steps:
+      - name: Copy the db to somewhere that `runner` can write it.
+        run: cp "$REPO_ROOT/database/live.sqlite" /home/runner/frees-au-ce.sqlite
       - name: Build with prod domain
         run: bash "$REPO_ROOT/scripts/build-static.sh" www.frees.au "$BUILD_TARGET/prod"
       - name: Build with local domain

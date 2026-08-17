@@ -10,6 +10,12 @@ $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/tome.services.yml
 $config['system.performance']['css']['preprocess'] = TRUE;
 $config['system.performance']['js']['preprocess'] = TRUE;
 
+
+$databases['default']['default'] = [
+  'driver' => 'sqlite',
+  'database' => '/home/runner/frees-au-ce.sqlite',
+];
+
 $config['system.logging']['error_level'] = 'hide';
 
-$settings['tome_static_directory'] = '../_static-build';
+// $settings['tome_static_directory'] = '../_static-build';
