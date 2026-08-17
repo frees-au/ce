@@ -12,7 +12,7 @@
 #
 # We pass them explicitly so the workflow declares its targets rather than
 # relying on the script's defaults — easier to spot a drift in PR review.
-name: Build Tome static export
+name: Tome static exports
 
 on:
   push:
@@ -37,8 +37,12 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Copy the db to somewhere that `runner` can write it.
+      - name: Make Drupal sqlite db writable.
         run: cp "$REPO_ROOT/database/live.sqlite" /home/runner/frees-au-ce.sqlite
+      - name: Clean output directories
+        run: |
+          rm -Rf /home/runner/artifacts/frees-au-ce/prod/*
+          rm -Rf /home/runner/artifacts/frees-au-ce/local/*
       - name: Build with prod domain
         run: bash "$REPO_ROOT/scripts/build-static.sh" www.frees.au
       - name: Build with local domain
