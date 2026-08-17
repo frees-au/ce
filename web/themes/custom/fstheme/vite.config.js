@@ -1,6 +1,8 @@
 import { resolve } from 'path';
+import tailwindcss from '@tailwindcss/vite';
 
 export default {
+  plugins: [tailwindcss()],
   build: {
     manifest: true,
     emptyOutDir: true,
@@ -21,4 +23,4 @@ export default {
       $images: resolve('./images')
     }
   },
-}
+};

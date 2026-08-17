@@ -1,4 +1,4 @@
-import '../css/main.pcss'
+import '../css/main.css'
 
 class PrimaryMenu {
 

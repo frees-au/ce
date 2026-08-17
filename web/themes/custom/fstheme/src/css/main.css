@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/* Source globs — replaces tailwind.config.js `content` */
+@source "../../templates/**/*.twig";
+@source "../../../../../config/sync/editor.editor.safe_html.yml";
+@source "../ckeditor5.css";
+@source "../ckeditor5_templates.json";
+
+/* Plugins */
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+/* Theme — replaces tailwind.config.js `theme` + `theme.extend` */
+@theme {
+  /* Colours */
+  --color-fs-red: #851520;
+  --color-fs-red-tint: #B11F24;
+  --color-fs-dark-grey: #BFBFBF;
+  --color-fs-light-grey: #F5F5F5;
+
+  /* Typography */
+  --font-mono: 'Cutive Mono', 'Sans-Serif';
+  --font-sans: 'Open Sans', 'Sans-Serif';
+
+  /* Breakpoints — rem units for Tailwind 4 */
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 90rem;
+  --breakpoint-xl: 120rem;
+
+  /* Container padding */
+  --container-padding: 1.875rem;
+  --container-padding-md: 2.5rem;
+  --container-padding-lg: 7rem;
+  --container-padding-xl: 15.625rem;
+
+  /* Shadow */
+  --shadow-popped: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+
+  /* Animation */
+  --animate-slideIn: slideIn 1s ease-in-out forwards var(--delay, 0);
+}
+
+@keyframes slideIn {
+  0%   { opacity: 0; transform: translateY(100%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@layer base {
+  h1 {
+    @apply font-mono text-[46px] leading-[46px] mt-[30px];
+  }
+
+  h2 {
+    @apply font-mono text-[34px] leading-[41px] mt-[30px];
+  }
+
+  h3 {
+    @apply font-mono text-[28px] leading-[39px] mt-[30px];
+  }
+
+  h4 {
+    @apply font-mono text-[24px] leading-[37px] mt-[30px];
+  }
+
+  h5 {
+    @apply font-mono text-[22px] leading-[33px] mt-[30px];
+  }
+
+  @media (width >= 48rem) {
+    h1 { @apply text-[56px] leading-[54px]; }
+    h2 { @apply text-[38px] leading-[41px]; }
+    h3 { @apply text-[30px] leading-[39px]; }
+    h4 { @apply text-[24px] leading-[37px]; }
+    h5 { @apply text-[22px] leading-[33px]; }
+  }
+
+  @media (width >= 90rem) {
+    h1 { @apply text-[90px] leading-[73px]; }
+    h2 { @apply text-[60px] leading-[70px]; }
+    h3 { @apply text-[46px] leading-[73px]; }
+    h4 { @apply text-[36px] leading-[35px]; }
+    h5 { @apply text-[22px] leading-[33px]; }
+  }
+
+  @media (width >= 120rem) {
+    h1 { @apply text-[100px] leading-[102px]; }
+    h2 { @apply text-[60px] leading-[70px]; }
+    h3 { @apply text-[46px] leading-[73px]; }
+    h4 { @apply text-[36px] leading-[35px]; }
+    h5 { @apply text-[22px] leading-[33px]; }
+  }
+
+  *+p {
+    @apply mt-[16px] lg:mt-[30px];
+  }
+}
+
+@layer utilities {
+  .container-content {
+    @apply md:px-[90px] lg:px-[208px] xl:px-[258px] mx-auto;
+  }
+}
