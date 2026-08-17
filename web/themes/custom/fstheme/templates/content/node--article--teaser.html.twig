@@ -1,11 +1,11 @@
 <div class="flex flex-col h-full shadow-md hover:text-fs-red-tint relative grayscale-0 duration-300 ease-in-out hover:grayscale font-sans">
-  <div class="px-[21px] pt-[16px] relative">
+  <div class="px-5 pt-4 relative">
     {% if youtube_thumbnail %}
       {{ youtube_thumbnail }}
     {% elseif node.hero_banner %}
       <img class="w-full h-full object-cover" src="{{ node.hero_banner }}" />
     {% endif %}
-    <div class="absolute bottom-[16px] right-[37px]">
+    <div class="absolute bottom-4 right-9">
       {% if article_type == 'video' %}
         <svg width="23" height="27" viewBox="0 0 23 27" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M-0.00600582 26.4805L-0.00600444 0.499705L22.494 13.4901L-0.00600582 26.4805Z" fill="white"></path>
@@ -17,14 +17,14 @@
       {% endif %}
     </div>
   </div>
-  <div class="px-[21px] py-[16px] grow flex flex-col justify-between">
-    <div class="mt-[16px] mb-[16px] font-mono text-[24px] leading-[27px]">
+  <div class="px-5 py-4 grow flex flex-col justify-between">
+    <div class="mt-4 mb-4 font-mono text-2xl leading-7">
       {{ title_prefix }}
       <a class="after:absolute after:inset-x-0 after:inset-y-0 z-50" href="{{ url }}">{{ label }}</a>
       {{ title_suffix }}
     </div>
     {% if node.duration.value is not empty %}
-      <div class="mt-[16px] text-[14px] leading-[27px]">
+      <div class="mt-4 text-sm leading-7">
         {{ article_type == 'video' ? 'Video • ' ~ node.duration.value ~ ' watch' :  'Blog • ' ~ node.duration.value ~ ' read'  }}
       </div>
     {% endif %}
