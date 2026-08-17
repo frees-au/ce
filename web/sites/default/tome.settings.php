@@ -10,7 +10,6 @@ $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/tome.services.yml
 $config['system.performance']['css']['preprocess'] = TRUE;
 $config['system.performance']['js']['preprocess'] = TRUE;
 
-
 $databases['default']['default'] = [
   'driver' => 'sqlite',
   'database' => '/home/runner/frees-au-ce.sqlite',
@@ -18,4 +17,9 @@ $databases['default']['default'] = [
 
 $config['system.logging']['error_level'] = 'hide';
 
-// $settings['tome_static_directory'] = '../_static-build';
+$host = \Drupal::request()->getHost();
+$settings['tome_static_directory'] = match ($host) {
+  'www.frees.au' => '/home/runner/artifacts/frees-au-ce/prod',
+  'www.freesau.cy' => '/home/runner/artifacts/frees-au-ce/local',
+  default => throw new \RuntimeException("Unknown Tome host: $host"),
+};
