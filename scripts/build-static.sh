@@ -10,9 +10,7 @@
 # Positional args:
 #   DOMAIN       bare host Tome uses as the base URL for absolute links.
 #                The script builds the URI as `https://$DOMAIN` — pass the
-#                host only (e.g. `frees.au`). To use a different scheme or
-#                full URL, set TOME_URI in the env instead.
-#                Default: frees.au
+#                host only (e.g. `www.frees.au` or `www.freesau.cy`).
 #
 
 set -euo pipefail
@@ -31,9 +29,6 @@ if ! command -v vendor/bin/drush >/dev/null 2>&1; then
   echo "::error::vendor/bin/drush not found at $REPO_ROOT" >&2
   exit 1
 fi
-
-rm -Rf /home/runner/artifacts/frees-au-ce/prod/*
-rm -Rf /home/runner/artifacts/frees-au-ce/local/*
 
 GENERATE_STATIC_SITE=1 vendor/bin/drush tome:static -vv --uri="$URI"
 

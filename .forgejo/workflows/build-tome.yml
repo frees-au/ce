@@ -45,5 +45,5 @@ jobs:
           rm -Rf /home/runner/artifacts/frees-au-ce/local
       - name: Build with prod domain
         run: bash "$REPO_ROOT/scripts/build-static.sh" www.frees.au
-      # - name: Build with local domain
-      #   run: bash "$REPO_ROOT/scripts/build-static.sh" www.freesau.cy
+      - name: Build with local domain
+        run: bash "$REPO_ROOT/scripts/build-static.sh" www.freesau.cy
