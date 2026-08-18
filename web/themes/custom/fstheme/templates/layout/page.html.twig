@@ -2,7 +2,7 @@
 
   <header role="banner" class="font-mono">
     <div style="background-image: url('{{ page_header_image ?: '/themes/custom/fstheme/stockart/stock-005.jpg' }}'); box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);" class="text-white bg-center bg-cover">
-      <div class="container">
+      <div class="container px-6" data-region="header">
         <div class="py-12 md:py-12 lg:py-16 xl:py-12 min-h-52 lg:min-h-96">
           <div class="min-h-[inherit] flex flex-col justify-between">
             <div class="flex justify-between items-center">
@@ -57,7 +57,7 @@
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="py-20 lg:py-36">
+    <div class="py-12 lg:py-36">
       <div class="container">
         {{ page.content_above }}
       </div>
@@ -80,9 +80,9 @@
   </main>
 
   <footer role="contentinfo" class="font-mono bg-fs-red-tint text-white pt-20 pb-8 md:pb-8 lg:pt-24 lg:pb-12">
-    <div class="container">
+    <div class="container px-6" data-region="footer">
       <div class="lg:flex md:px-24 lg:px-0">
-        <div class="text-3xl leading-10 lg:text-4xl leading-12 lg:w-2/3 lg:pr-[10%] mb-14 lg:mb-0">
+        <div class="text-3xl leading-8 mb-14 lg:mb-0 lg:text-4xl lg:w-2/3 lg:pr-10">
           <p><span style="white-space:pre-wrap;"><a href="https://frees.au/ce" class="underline">frees.au/ce</a> acknowledges the </span><span lang="en">Wurundjeri people of the Kulin Nation, and pay respects to their Elders past, present and emerging.</span></p>
         </div>
         <div class="font-sans lg:w-1/3">

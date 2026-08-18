@@ -28,12 +28,6 @@
   --breakpoint-lg: 90rem;
   --breakpoint-xl: 120rem;
 
-  /* Container padding */
-  --container-padding: 1.875rem;
-  --container-padding-md: 2.5rem;
-  --container-padding-lg: 7rem;
-  --container-padding-xl: 15.625rem;
-
   /* Shadow */
   --shadow-popped: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
 
