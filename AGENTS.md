@@ -42,13 +42,13 @@ All commands run from the **repo root**.
 ./vendor/bin/drush fs:create-node article "Title"
 ```
 
-Browser-based QA happens on `royal-albert.frees.au`, not on this host.
+Browser-based QA happens on `www-edit.frees.au`, not on this host.
 
 ## Hard rules
 
 1. **The host has no working webserver.** Do not curl `http://localhost:*`
    expecting the site to respond. Edit → `drush` → confirm with Si on
-   `royal-albert.frees.au`.
+   `www-edit.frees.au`.
 2. **There is no DDEV.** Use Drush directly. The README's `ddev …` snippets
    are aspirational and do not run on this host.
 3. **Drush must be run from the repo root**, not from `web/`. The DB path
@@ -65,7 +65,7 @@ Browser-based QA happens on `royal-albert.frees.au`, not on this host.
 6. **Don't edit `web/core/`, `web/modules/contrib/`, `web/themes/contrib/`**
    — they are scaffolded and ignored. Use Composer for contrib updates.
 7. **Definition of done** for any change that touches the live site:
-   - Si has eyeballed the change on `royal-albert.frees.au`
+   - Si has eyeballed the change on `www-edit.frees.au`
    - `./vendor/bin/drush config:export` ran clean
    - Committed and pushed to `nash-local`
    - DB + `web/sites/default/files` snapshot in
