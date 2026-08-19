@@ -30,9 +30,9 @@ if ! command -v vendor/bin/drush >/dev/null 2>&1; then
   exit 1
 fi
 
-GENERATE_STATIC_SITE=1 vendor/bin/drush theme:dev off
-GENERATE_STATIC_SITE=1 vendor/bin/drush cache:rebuild
-GENERATE_STATIC_SITE=1 vendor/bin/drush tome:static -vv --uri="$URI"
+vendor/bin/drush theme:dev off -vv --uri="$URI"
+vendor/bin/drush cache:rebuild -vv --uri="$URI"
+vendor/bin/drush tome:static -vv --uri="$URI"
 
 echo
 echo "✓ Static export written"

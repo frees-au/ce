@@ -45,8 +45,9 @@ if (file_exists($app_root . '/' . $site_path . '/local.settings.php')) {
   include_once $app_root . '/' . $site_path . '/local.settings.php';
 }
 
-if (getenv('GENERATE_STATIC_SITE')) {
-  include_once $app_root . '/' . $site_path . '/tome.settings.php';
+// Drush commands from Forgejo runner require a writable sqlite database.
+if ($_SERVER['USER'] == 'runner') {
+  include_once $app_root . '/' . $site_path . '/runner.settings.php';
 }
 else {
   include_once $app_root . '/' . $site_path . '/editing.settings.php';
