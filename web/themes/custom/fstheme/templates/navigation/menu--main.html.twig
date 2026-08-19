@@ -1,7 +1,7 @@
-<ul class="lg:flex">
+<ul class="lg:flex lg:justify-end lg:gap-8">
   {% for item in items %}
     <li>
-      <a href="{{ item.url }}" class="inline-block py-2 lg:p-6 text-4xl leading-8 lg:text-2xl lg:leading-12 xl:text-2xl">{{ item.title }}</a>
+      <a href="{{ item.url }}" class="inline-block py-2 text-3xl leading-8">{{ item.title }}</a>
     </li>
   {% endfor %}
 </ul>

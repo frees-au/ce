@@ -23,10 +23,11 @@
   --font-sans: 'Open Sans', 'Sans-Serif';
 
   /* Breakpoints — rem units for Tailwind 4 */
-  --breakpoint-sm: 40rem;
+  --breakpoint-sm: 32rem;
   --breakpoint-md: 48rem;
-  --breakpoint-lg: 90rem;
+  --breakpoint-lg: 64rem;
   --breakpoint-xl: 120rem;
+  --breakpoint-2xl: 120rem;
 
   /* Shadow */
   --shadow-popped: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
@@ -62,26 +63,10 @@
   }
 
   @media (width >= 48rem) {
-    h1 { @apply text-6xl leading-14; }
+    h1 { @apply text-5xl leading-10; }
     h2 { @apply text-4xl leading-10; }
-    h3 { @apply text-3xl leading-10; }
-    h4 { @apply text-2xl leading-9; }
-    h5 { @apply text-xl leading-8; }
-  }
-
-  @media (width >= 90rem) {
-    h1 { @apply text-8xl leading-18; }
-    h2 { @apply text-6xl leading-18; }
-    h3 { @apply text-5xl leading-18; }
-    h4 { @apply text-4xl leading-9; }
-    h5 { @apply text-xl leading-8; }
-  }
-
-  @media (width >= 120rem) {
-    h1 { @apply text-8xl leading-26; }
-    h2 { @apply text-6xl leading-18; }
-    h3 { @apply text-5xl leading-18; }
-    h4 { @apply text-4xl leading-9; }
+    h3 { @apply text-3xl leading-9; }
+    h4 { @apply text-2xl leading-8; }
     h5 { @apply text-xl leading-8; }
   }
 
@@ -92,11 +77,11 @@
 
 @layer utilities {
   .container-content {
-    @apply md:px-22 lg:px-52 xl:px-64 mx-auto;
+    @apply w-auto lg:max-w-220;
   }
 
   /* Used on content in header/main/footer to control content gutter and alignment down the page. */
   .page-default-container-span {
-    @apply px-6 w-auto sm:mx-auto sm:w-150 md:mx-0 md:w-200 md:pl-24 ;
+    @apply px-6 w-auto sm:mx-auto sm:w-150 md:mx-0 md:w-200 md:pl-24 lg:w-400 lg:pl-48;
   }
 }
