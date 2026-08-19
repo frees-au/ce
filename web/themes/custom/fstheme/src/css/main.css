@@ -86,12 +86,17 @@
   }
 
   *+p {
-    @apply mt-4 lg:mt-8;
+    @apply text-lg mt-4 lg:mt-8;
   }
 }
 
 @layer utilities {
   .container-content {
     @apply md:px-22 lg:px-52 xl:px-64 mx-auto;
+  }
+
+  /* Used on content in header/main/footer to control content gutter and alignment down the page. */
+  .page-default-container-span {
+    @apply px-6 w-auto sm:mx-auto sm:w-150 md:mx-0 md:w-200 md:pl-24 ;
   }
 }

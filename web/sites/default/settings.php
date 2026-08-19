@@ -35,11 +35,6 @@ $settings['config_exclude_modules'] = [
   'devel',
 ];
 
-// Platform.sh. The code check is a copypasta catch-all.
-if (getenv('PLATFORM_PROJECT') == 'fw7ucnhzydcsy') {
-  include_once $app_root . '/' . $site_path . '/platformsh.settings.php';
-}
-
 // Pick your local poison. You're welcome to add others if they fit neatly into that file.
 if (getenv('LANDO') == 'ON' || getenv('IS_DDEV_PROJECT') == 'true') {
   include_once $app_root . '/' . $site_path . '/docker.settings.php';
@@ -52,4 +47,7 @@ if (file_exists($app_root . '/' . $site_path . '/local.settings.php')) {
 
 if (getenv('GENERATE_STATIC_SITE')) {
   include_once $app_root . '/' . $site_path . '/tome.settings.php';
+}
+else {
+  include_once $app_root . '/' . $site_path . '/editing.settings.php';
 }

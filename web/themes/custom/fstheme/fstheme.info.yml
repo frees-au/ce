@@ -21,3 +21,11 @@ regions:
   content: Content
   content_below: 'Content Below'
   footer: 'Footer'
+
+# Conflicts with Tailwind. This means some of the hidden styles
+# are reproduced in theme, like visually-hidden.
+libraries-override:
+  system/base:
+    css:
+      component:
+        css/components/hidden.module.css: false
