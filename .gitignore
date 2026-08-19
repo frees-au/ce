@@ -46,5 +46,6 @@ drush-backups
 *.sqlite-shm
 *.sqlite-wal
 *.sql
+!live.sqlite
 !_snapshot.sql
 *.zip
