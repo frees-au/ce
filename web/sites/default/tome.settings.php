@@ -12,7 +12,7 @@ $config['system.performance']['js']['preprocess'] = TRUE;
 
 $databases['default']['default'] = [
   'driver' => 'sqlite',
-  'database' => '/home/runner/frees-au-ce.sqlite',
+  'database' => '/home/runner/frees-au-tome.sqlite',
 ];
 
 $config['system.logging']['error_level'] = 'hide';

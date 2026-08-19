@@ -38,7 +38,7 @@ jobs:
 
     steps:
       - name: Make Drupal sqlite db writable.
-        run: cp "$REPO_ROOT/database/live.sqlite" /home/runner/frees-au-ce.sqlite
+        run: cp "$REPO_ROOT/database/live.sqlite" /home/runner/frees-au-tome.sqlite
       - name: Clean output directories
         run: |
           rm -Rf /home/runner/artifacts/frees-au-ce/prod
