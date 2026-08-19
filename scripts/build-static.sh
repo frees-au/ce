@@ -38,7 +38,7 @@ vendor/bin/drush tome:static -vv --uri="$URI"
 
 mkdir -p "$DEST/themes/custom"
 rsync -a --delete \
-  "$REPO_ROOT/web/themes/custom/" \
+  "$REPO_ROOT/web/themes/custom" \
   "$DEST/themes/custom/"
 
 mkdir -p "$DEST/sites/default/files"
