@@ -30,6 +30,7 @@ if ! command -v vendor/bin/drush >/dev/null 2>&1; then
   exit 1
 fi
 
+vendor/bin/drush thdev st
 vendor/bin/drush thdev off
 vendor/bin/drush cr
 GENERATE_STATIC_SITE=1 vendor/bin/drush tome:static -vv --uri="$URI"
