@@ -1,4 +1,5 @@
-import '../css/main.css'
+import '../css/tailwind.css'
+import '../css/core-fixes.css'
 
 class PrimaryMenu {
 
@@ -7,12 +8,12 @@ class PrimaryMenu {
   primary_menu_container;
   open_menu_element;
   close_menu_element;
-  
+
 
   constructor(element) {
     this.primary_menu_wrapper_element = element;
     this.primary_menu_element = element.querySelector('.primary-menu');
-    this.primary_menu_container = element.querySelector('.primary-menu-container');
+    this.primary_menu_container = element.querySelector('.primary-menu__content');
     this.open_menu_element = element.querySelector('.js-open-menu');
     this.close_menu_element = element.querySelector('.js-close-menu');
 
@@ -22,12 +23,12 @@ class PrimaryMenu {
 
     this.close_menu_element.addEventListener('click', () => {
       this.primary_menu_element.classList.add('hidden');
-      this.primary_menu_container.classList.remove('container');
+      this.primary_menu_container.classList.remove('page-default-container-span');
     });
 
     this.open_menu_element.addEventListener('click', () => {
       this.primary_menu_element.classList.remove('hidden');
-      this.primary_menu_container.classList.add('container');
+      this.primary_menu_container.classList.add('page-default-container-span');
     });
   }
 }

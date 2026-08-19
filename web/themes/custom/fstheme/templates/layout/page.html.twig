@@ -1,22 +1,27 @@
 <div class="layout-container">
 
-  <header role="banner" class="font-mono">
+  <header role="banner" class="font-mono" data-region="header">
     <div style="background-image: url('{{ page_header_image ?: '/themes/custom/fstheme/stockart/stock-005.jpg' }}'); box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);" class="text-white bg-center bg-cover">
-      <div class="container page-default-container-span" data-region="header">
+      <div class="container page-default-container-span">
         <div class="py-12 md:py-12 lg:py-16 xl:py-12 min-h-52 lg:min-h-96">
           <div class="min-h-[inherit] flex flex-col justify-between">
             <div class="flex justify-between items-center" style="border: 1px solid red">
-              <div><a href="/"><img src="/themes/custom/fstheme/logo.png" width="68" height="68" alt="Free Sauce logo"></a></div>
+              <div style="border: 1px solid blue">
+                <a href="/" ><img src="/themes/custom/fstheme/logo.png" class="md:w-32" width="68" height="68" alt="Free Sauce logo"></a>
+              </div>
               <div class="primary-menu-wrapper" style="border: 1px solid green">
                 <div class="md:hidden js-open-menu">
                   <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3.25 19.5V17.3333H22.75V19.5H3.25ZM3.25 14.0833V11.9167H22.75V14.0833H3.25ZM3.25 8.66667V6.5H22.75V8.66667H3.25Z" fill="white"/>
                   </svg>
                 </div>
-                <div class="primary-menu hidden md:block absolute md:static h-screen md:h-auto py-12 md:py-12 md:py-0 top-0 left-0 w-full z-[9999] bg-black md:bg-transparent">
-                  <div class="page-default-container-span primary-menu-container flex flex-col">
-                    <div class="primary-menu__header flex md:hidden justify-between items-center">
-                      <div><a href="/"><img src="/themes/custom/fstheme/logo.png" width="68" height="68" alt="Free Sauce logo"></a></div>
+                <!--Hamburger, menu needs to show on both. -->
+                <div class="primary-menu hidden absolute py-12 h-screen top-0 left-0 w-full z-[9999] bg-black md:block md:static md:h-auto md:w-48 md:py-12 md:py-0 md:bg-transparent">
+                  <div class="primary-menu-container flex flex-col">
+                    <div class="primary-menu__header page-default-container-span flex md:hidden justify-between items-center">
+                      <div class="" style="border: 1px solid white">
+                         <a href="/"><img src="/themes/custom/fstheme/logo.png" width="68" height="68" alt="Free Sauce logo"></a>
+                      </div>
                       <div class="js-close-menu">
                         <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g clip-path="url(#clip0_31_232)">
@@ -30,7 +35,7 @@
                         </svg>
                       </div>
                     </div>
-                    <div class="primary-menu__content text-right">
+                    <div class="primary-menu__content text-right ">
                       {{ page.primary_menu }}
                     </div>
                   </div>
