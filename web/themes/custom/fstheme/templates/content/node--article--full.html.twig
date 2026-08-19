@@ -7,10 +7,14 @@
         <div class="text-2xl leading-9 mb-8">
           {{ content.lead }}
         </div>
+        <div class="text-lg text-right">
+          Duration: {{ content.duration }}
+        </div>
         <div class="[&_iframe]:w-full mt-10 mb-10 [&_iframe]:aspect-video">
           {{
             content|without(
               'lead',
+              'markup',
               'duration',
               'article_type',
             )
@@ -27,6 +31,9 @@
             </a>
           </div>
         {% endif %}
+        <div class="text-lg">
+          {{ content.markup }}
+        </div>
         <div class="text-center mt-20">
           <a href="/from-the-pen" class="inline-block text-xl leading-6 text-fs-red-tint py-2 px-6 font-mono border border-fs-red-tint border-solid">< back to articles</a>
         </div>
