@@ -23,6 +23,8 @@ cd "$REPO_ROOT"
 # unless TOME_URI is explicitly set in the env (allows http:// for local dev).
 DOMAIN="${1:-www.frees.au}"
 URI="${TOME_URI:-https://$DOMAIN}"
+ENV=$([[ "$DOMAIN" == "www.frees.au" ]] && echo "prod" || echo "local")
+DEST="/home/runner/artifacts/frees-au-ce/$ENV"
 
 # Sanity: drush must be present and the site must bootstrap.
 if ! command -v vendor/bin/drush >/dev/null 2>&1; then
@@ -33,6 +35,13 @@ fi
 vendor/bin/drush theme:dev off -vv --uri="$URI"
 vendor/bin/drush cache:rebuild -vv --uri="$URI"
 vendor/bin/drush tome:static -vv --uri="$URI"
+
+rsync -a --delete \
+  "$REPO_ROOT/web/themes/custom/" \
+  "$DEST/themes/custom/"
+rsync -a --delete \
+  "$REPO_ROOT/web/sites/default/files" \
+  "$DEST/sites/default/files/"
 
 echo
 echo "✓ Static export written"
