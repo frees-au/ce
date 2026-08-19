@@ -2,7 +2,7 @@
   {{ title_prefix }}
   {{ title_suffix }}
   <div{{ content_attributes }}>
-    <div class="container">
+    <div class="container page-default-container-span">
       <div class="container-content max-w-7xl mx-auto">
         <div class="text-2xl leading-9 mb-8">
           {{ content.lead }}
@@ -17,7 +17,7 @@
           }}
         </div>
         {% if youtube_playlist_url %}
-          <div class="mt-10 mb-10 text-center">
+          <div class="mt-10 mb-10 aspect-video text-center">
             <a href="{{ youtube_playlist_url.uri }}"
                target="_blank"
                rel="noopener"
