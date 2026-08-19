@@ -165,7 +165,7 @@ display:
     display_plugin: page
     position: 2
     display_options:
-      title: 'Articles and videos'
+      title: 'videos and articles'
       pager:
         type: full
         options:
