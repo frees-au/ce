@@ -9,7 +9,7 @@ dependencies:
     - node
     - user
 id: article
-label: Articles
+label: 'Videos and articles'
 module: views
 description: ''
 tag: ''
@@ -22,7 +22,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Videos and articles'
+      title: 'videos and articles'
       fields:
         title:
           id: title
