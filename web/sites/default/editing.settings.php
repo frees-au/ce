@@ -6,7 +6,7 @@
  */
 
 $settings['skip_permissions_hardening'] = TRUE;
-$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/docker.services.yml';
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/editing.services.yml';
 
 $settings['twig_debug'] = FALSE;
 $config['system.performance']['css']['preprocess'] = FALSE;
