@@ -19,7 +19,7 @@ $config['system.logging']['error_level'] = 'hide';
 
 $host = $_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? '';
 $settings['tome_static_directory'] = match ($host) {
-'www.frees.au' => '/home/runner/artifacts/frees-au-ce/prod',
-'www.freesau.cy' => '/home/runner/artifacts/frees-au-ce/local',
-default => '/dev/null',
+  'www.frees.au' => '/home/runner/artifacts/frees-au-ce/prod',
+  'www-test-local.frees.au' => '/home/runner/artifacts/frees-au-ce/local',
+  default => '/dev/null',
 };
