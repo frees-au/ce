@@ -36,6 +36,9 @@ vendor/bin/drush theme:dev off -vv --uri="$URI"
 vendor/bin/drush cache:rebuild -vv --uri="$URI"
 vendor/bin/drush tome:static -vv --uri="$URI"
 
+# Force drupal to generate aggregated css.
+# curl -s "https://www-edit.frees.au" > /dev/null
+
 mkdir -p "$DEST/themes/custom"
 rsync -a --delete \
   "$REPO_ROOT/web/themes/custom/" \
