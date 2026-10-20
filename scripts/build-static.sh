@@ -1,17 +1,5 @@
 #!/usr/bin/env bash
 # Build the Tome static export.
-#
-# Must be run from the repo root. Reads site config from web/sites/default/
-# including tome.settings.php (which sets $settings['tome_static_directory']).
-#
-# Usage:
-#   ./scripts/build-static.sh [DOMAIN] [OUTPUT_DIR]
-#
-# Positional args:
-#   DOMAIN       bare host Tome uses as the base URL for absolute links.
-#                The script builds the URI as `https://$DOMAIN` — pass the
-#                host only (e.g. `www.frees.au` or `www.freesau.cy`).
-#
 
 set -euo pipefail
 
@@ -38,16 +26,6 @@ vendor/bin/drush tome:static -vv --uri="$URI"
 
 # Force drupal to generate aggregated css.
 # curl -s "https://www-edit.frees.au" > /dev/null
-
-# mkdir -p "$DEST/themes/custom"
-# rsync -a --delete \
-#   "$REPO_ROOT/web/themes/custom/" \
-#   "$DEST/themes/custom/"
-
-# mkdir -p "$DEST/sites/default/files"
-# rsync -a --delete \
-#   "$REPO_ROOT/web/sites/default/files/" \
-#   "$DEST/sites/default/files/"
 
 echo
 echo "✓ Static export written"

@@ -9,13 +9,6 @@ Operating instructions for AI coding agents working in this repository
 > [`projects/frees-au-ce`](https://github.com/frees-au/hermes-config/blob/main/skills/projects/frees-au-ce/SKILL.md).
 > Load it before doing any non-trivial work.
 
-## What this repo is
-
-A Drupal 10 site (Tome-compatible) on a single SQLite database, themed with
-`fstheme` (Tailwind, no base theme). Originally built to host training videos
-from the Free Sauce YouTube channel. No commerce, no users beyond uid 1 in
-practice.
-
 ## Layout cheatsheet
 
 ```
@@ -27,6 +20,7 @@ database/live.sqlite    The live database — single SQLite file, committed-frie
 drush/                  Drush config (self.site.yml) + custom Commands/fs/
 scripts/                Hermes-managed helper scripts (see scripts/README.md)
 scripts/includes/       PHP helpers — start with ContentHelpers.php
+.html                   Static site generation.
 ```
 
 ## Day-to-day commands
@@ -42,7 +36,7 @@ All commands run from the **repo root**.
 ./vendor/bin/drush fs:create-node article "Title"
 ```
 
-Browser-based QA happens on `http://127.0.0.1:8888` (this host).
+Browser-based QA happens on `http://127.0.0.1:8888` (this host, port might change).
 
 ## Hard rules
 
@@ -55,29 +49,15 @@ Browser-based QA happens on `http://127.0.0.1:8888` (this host).
 4. **One branch: `nash-local`.** Commit and push there. Don't create feature
    branches unless Si asks. (Exception: feature branches for PR review
    on the local Forgejo — see `forgejo` skill.)
-5. **Remote layout** (changed 2026-08-15; switched to SSH 2026-08-15):
-   - `origin` → `ssh://git@git-local.frees.au/frees-au/ce.git` (internal Forgejo, canonical)
-   - `forgejo` → `ssh://git@git-local.frees.au/frees-au/ce.git` (duplicate of origin; kept for branch-name compat with earlier conventions)
-   - `github` → `git@github.com:frees-au/ce.git` (mirror, manual push only)
-   - Never force-push. `git pull --rebase` for reconciliation.
-   - Note: `.git/config` may still hold a stale `[credential] helper = store --file=…` entry from the prior HTTPS layout — harmless under SSH but can be removed if Si prefers a tidy config.
-6. **Don't edit `web/core/`, `web/modules/contrib/`, `web/themes/contrib/`**
+5. **Don't edit `web/core/`, `web/modules/contrib/`, `web/themes/contrib/`**
    — they are scaffolded and ignored. Use Composer for contrib updates.
-7. **Definition of done** for any change that touches the live site:
-   - Si has eyeballed the change on `http://127.0.0.1:8888`
-   - `./vendor/bin/drush config:export` ran clean
-   - Committed and pushed to `nash-local`
-   - DB + `web/sites/default/files` snapshot in
-     `~/backups/frees-au-ce/YYYY-MM-DD--HH-MM/`
-   - The `./scripts/fs-done.sh` helper does steps 2–4 in one shot.
-8. **Drush subcommands that touch the DB must declare a FULL bootstrap.**
+7. **Drush subcommands that touch the DB must declare a FULL bootstrap.**
    The custom `fs:*` commands use
    `#[BootstrapAttr(level: DrupalBootLevels::FULL)]` at the class level.
    Any new command file in `drush/Commands/` must do the same or it will
    blow up with `\Drupal::$container is not initialized yet`.
 
-## When in doubt
+## Proving work and debugging
 
-Prefer adding a Drush helper (`drush/Commands/fs/`) + a method on
-`ContentHelpers` over one-off shell scripts. They survive across sessions
-and are testable.
+Prefer to add procedural php scripts into drush/agent to bootstrap Drupal
+and debug problems.

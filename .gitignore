@@ -23,8 +23,7 @@ default.settings.php
 web/sites/default/files
 
 # Tome static-site generator output (legacy + new build dir).
-/static-site
-/_static-build
+/.html
 
 # Development or per platform.
 env.settings.php
@@ -47,5 +46,4 @@ drush-backups
 *.sqlite-wal
 *.sql
 !live.sqlite
-!_snapshot.sql
 *.zip
