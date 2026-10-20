@@ -567,7 +567,7 @@ display:
             offset_label: Offset
           quantity: 9
       display_extenders: {  }
-      path: from-the-pen
+      path: ce/articles
     cache_metadata:
       max-age: -1
       contexts:
