@@ -17,17 +17,13 @@ company name please!).
 
 Setup uses SQLite only. The database is stored in `database/live.sqlite`;
 
-## Static Site generation (@todo fix)
+## Static Site generation
 
 Generates the static export into `_static-build/` at the repo root (gitignored).
 
 ```
 # Build the static site.
 ./scripts/build-static.sh
-
-# Or directly:
-rm -Rf _static-build
-GENERATE_STATIC_SITE=1 vendor/bin/drush tome:static -vv --uri=https://www.frees.au
 ```
 
 ## Frontend (@todo fix)
@@ -73,4 +69,12 @@ ddev composer run-script phpcs -- ./web/modules/contrib/foo_module
 ddev composer run-script phpcbf -- ./web/modules/contrib/foo_module
 ddev composer run-script phpstan -- ./web/modules/contrib/foo_module
 # phpunit tba
+```
+
+New notes: Using opcode cache now
+```
+opcache.enable=1
+opcache.enable_cli=1
+opcache.validate_timestamps=1
+opcache.revalidate_freq=0
 ```

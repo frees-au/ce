@@ -25,9 +25,9 @@
         "drupal/embed": "^1.7",
         "drupal/field_group": "^3.4",
         "drupal/field_label": "^1.4",
-        "drupal/gin": "^3.0@rc",
+        "drupal/gin": "^4",
         "drupal/gin_login": "^2.0",
-        "drupal/gin_toolbar": "^1.0@rc",
+        "drupal/gin_toolbar": "^2",
         "drupal/layout_section_classes": "^1.5",
         "drupal/metatag": "^2.0",
         "drupal/oembed_providers": "^2.1",
@@ -115,6 +115,11 @@
             "web/recipes/{$vendor}": ["type:drupal-recipe"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "patches": {
+            "drupal/tome": {
+                "Clear Tome static cache after completing an export": "config/patches/tome-clear-cache-after-export.patch"
+            }
         },
         "composer-exit-on-patch-failure": true,
         "patchLevel": {

@@ -53,3 +53,53 @@ function _fs_random_stockart(): string {
     . str_pad((string) rand(1, 105), 3, '0', STR_PAD_LEFT)
     . '.jpg';
 }
+
+/**
+ * Implements hook_views_pre_view().
+ *
+ * On the `playlists` view, override the page title with the resolved
+ * taxonomy term name when a tid is supplied via the URL — the default
+ * contextual-filter title token resolves to the raw ID, not the label.
+ *
+ * Example: /playlists/1/videos  →  page title becomes "Vibecoding a
+ * Firebase App", not "1".
+ */
+function fs_views_pre_view(\Drupal\views\ViewExecutable $view, $display_id, array &$args): void {
+  if ($view->id() !== 'playlists') {
+    return;
+  }
+  // At pre-view time the contextual-filter argument hasn't been bound yet
+  // ($view->argument is still null) — read directly from $view->args, which
+  // is the array set by the page display when resolving the URL.
+  if (!$view->args) {
+    return;
+  }
+  $tid = (int) ($view->args[0] ?? 0);
+  if (!$tid) {
+    return;
+  }
+  $term = \Drupal::entityTypeManager()
+    ->getStorage('taxonomy_term')
+    ->load($tid);
+  if ($term && $term->bundle() === 'playlist') {
+    // Stash the desired title on the view object itself — NOT build_info,
+    // because execute() rebuilds build_info from scratch. The view object
+    // survives across build()/execute()/render().
+    $view->fs_playlist_title = $term->label();
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ *
+ * Counterpart to fs_views_pre_view() — execute() resets the title to the
+ * default at runtime, so the override has to land in pre_render.
+ */
+function fs_views_pre_render(\Drupal\views\ViewExecutable $view): void {
+  if ($view->id() !== 'playlists') {
+    return;
+  }
+  if (!empty($view->fs_playlist_title)) {
+    $view->setTitle($view->fs_playlist_title);
+  }
+}

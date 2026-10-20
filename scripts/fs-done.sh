@@ -3,7 +3,7 @@
 # fs-done — finalise a Free Sauce / frees.au build.
 #
 # Runs the standard "definition of done" pipeline:
-#   1. drush config:export
+#   1. drush cache:rebuild (config is already written to config/active)
 #   2. commit + push to the nash-local branch
 #   3. snapshot the live SQLite DB and sites/default/files into
 #      ~/backups/frees-au-ce/YYYY-MM-DD--HH-MM/
@@ -33,8 +33,8 @@ stamp="$(date +%Y-%m-%d--%H-%M)"
 backup_root="${HOME}/backups/frees-au-ce"
 backup_dir="${backup_root}/${stamp}"
 
-echo "==> Exporting config"
-./vendor/bin/drush config:export -y
+echo "==> Rebuilding caches (active config is already on disk)"
+./vendor/bin/drush cache:rebuild
 
 echo "==> Staging changes"
 git add -A

@@ -18,7 +18,6 @@ module:
   field: 0
   field_group: 0
   field_label: 0
-  field_ui: 0
   file: 0
   filter: 0
   fs: 0
@@ -56,8 +55,6 @@ module:
   tome_static: 0
   toolbar: 0
   twig_tweak: 0
-  update: 0
-  upgrade_status: 0
   user: 0
   views_ui: 0
   pathauto: 1

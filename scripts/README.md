@@ -6,7 +6,7 @@ Local build helpers for the Free Sauce / frees.au Drupal site.
 
 ```
 scripts/
-├── fs-done.sh             # "Definition of done" pipeline (config export + commit + backup)
+├── fs-done.sh             # "Definition of done" pipeline (cache rebuild + commit + backup)
 ├── README.md              # You are here
 └── includes/
     ├── ContentHelpers.php       # Reusable entity/config helpers (BlockCreationTrait style)
@@ -27,6 +27,10 @@ Available:
 - `drush fs:set-config <name> <key> <value>`
 
 ## Conventions
+
+- Active configuration lives in `config/active` and is written directly to YAML.
+  Commit those files with site changes. No configuration import/export is needed;
+  the sync directory points to the same directory, so do not export over it.
 
 - New helpers go in `includes/ContentHelpers.php` (or a new class in the same
   namespace) following the pattern of `BlockCreationTrait`: merge defaults

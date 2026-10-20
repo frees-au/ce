@@ -1,0 +1,25 @@
+--- a/modules/tome_static/src/Commands/StaticCommand.php
++++ b/modules/tome_static/src/Commands/StaticCommand.php
+@@ -124,6 +124,9 @@
+ 
+     $this->io->writeln('Generating static HTML...');
+     $this->exportPaths($paths, [], $options['process-count'], $options['path-count'], TRUE, $options['retry-count'], $options['uri']);
++    // Discard export records only after all paths and assets are processed.
++    \Drupal::database()->truncate('cache_tome_static')->execute();
++
+     $this->io->success('Exported static HTML and related assets.');
+ 
+     $this->state->set(StaticGeneratorInterface::STATE_KEY_BUILDING, FALSE);
+--- a/modules/tome_static/src/Form/StaticGeneratorForm.php
++++ b/modules/tome_static/src/Form/StaticGeneratorForm.php
+@@ -229,6 +229,10 @@
+         $this->messenger()->addError($error);
+       }
+     }
++    if (empty($results['errors'])) {
++      // Discard export records after the complete batch succeeds.
++      \Drupal::database()->truncate('cache_tome_static')->execute();
++    }
+     $this->messenger()->addStatus($this->t('Static build complete! To download the build, <a href=":download">click here.</a>', [
+       '@dir' => $this->static->getStaticDirectory(),
+       ':download' => Url::fromRoute('tome_static.download_page')->toString(),

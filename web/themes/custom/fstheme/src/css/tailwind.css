@@ -2,7 +2,7 @@
 
 /* Source globs — replaces tailwind.config.js `content` */
 @source "../../templates/**/*.twig";
-@source "../../../../../config/sync/editor.editor.safe_html.yml";
+@source "../../../../../config/active/editor.editor.safe_html.yml";
 @source "../ckeditor5.css";
 @source "../ckeditor5_templates.json";
 

@@ -1,4 +1,17 @@
 {
-    "_hash": "6142bfcb78f54dfbf5247ae5e463f25bdb8fff1890806e2e45aa81a59c211653",
-    "patches": []
+    "_hash": "2ea08e2128f57bc4f33d7d58d7e6ae0e970ed33a82b1b00460f2203d9c859f3c",
+    "patches": {
+        "drupal/tome": [
+            {
+                "package": "drupal/tome",
+                "description": "Clear Tome static cache after completing an export",
+                "url": "config/patches/tome-clear-cache-after-export.patch",
+                "sha256": "1d450d8734fef6ea689dc1322e325ccb29cde8bd48853c0016fb3c6a8e873421",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
 }

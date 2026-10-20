@@ -1,0 +1,9 @@
+uuid: b73c80d6-bdf2-44ed-8f45-f84cef5c9f16
+langcode: en
+status: true
+dependencies: {  }
+name: Playlist
+vid: playlist
+description: 'YouTube playlists that group articles.'
+weight: 0
+new_revision: false

@@ -81,4 +81,27 @@ function fstheme_preprocess_node(&$vars) {
   if ($media->hasField('field_playlist_url') && !$media->get('field_playlist_url')->isEmpty()) {
     $vars['youtube_playlist_url'] = $media->get('field_playlist_url')->getValue()[0];
   }
+
+  // Expose any local Playlists-view links so the article (full + teaser)
+  // can show a "Part of: <playlist>" link to /playlists/<tid>. Only articles
+  // that have at least one taxonomy term in the 'playlist' vocabulary get
+  // this — empty otherwise.
+  if ($node->hasField('playlist') && !$node->get('playlist')->isEmpty()) {
+    $terms = \Drupal::entityTypeManager()
+      ->getStorage('taxonomy_term')
+      ->loadMultiple(array_column($node->get('playlist')->getValue(), 'target_id'));
+    $links = [];
+    foreach ($terms as $term) {
+      if ($term->bundle() !== 'playlist') {
+        continue;
+      }
+      $links[] = [
+        'label' => $term->label(),
+        'url'   => '/playlists/' . $term->id(),
+      ];
+    }
+    if ($links) {
+      $vars['article_playlists'] = $links;
+    }
+  }
 }

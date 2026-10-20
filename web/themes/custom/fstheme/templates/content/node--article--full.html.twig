@@ -31,6 +31,14 @@
             </a>
           </div>
         {% endif %}
+        {% if article_playlists %}
+          <div class="mt-10 mb-10 text-center text-sm leading-6 font-mono">
+            Part of this site:
+            {% for p in article_playlists %}
+              <a class="text-fs-red-tint hover:underline" href="{{ p.url }}">{{ p.label }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
         <div class="text-lg">
           {{ content.markup }}
         </div>

@@ -37,7 +37,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Make Drupal sqlite db writable.
+      - name: Setup database
         run: cp "$REPO_ROOT/database/live.sqlite" /home/runner/frees-au-tome.sqlite
       - name: Clean output directories
         run: |
@@ -46,4 +46,4 @@ jobs:
       - name: Build with prod domain
         run: bash "$REPO_ROOT/scripts/build-static.sh" www.frees.au
       - name: Build with local domain
-        run: bash "$REPO_ROOT/scripts/build-static.sh" www.freesau.cy
+        run: bash "$REPO_ROOT/scripts/build-static.sh" www-test-local.frees.au
