@@ -29,9 +29,6 @@ All commands run from the **repo root**.
 
 ```bash
 ./vendor/bin/drush status                    # confirm DB is reachable
-./vendor/bin/drush config:export              # write config/ changes
-./vendor/bin/drush config:import              # apply config/ to the DB
-./scripts/fs-done.sh "Short message"         # full "done" pipeline
 ./vendor/bin/drush fs:doctor                 # confirm ContentHelpers loads
 ./vendor/bin/drush fs:create-node article "Title"
 ```
