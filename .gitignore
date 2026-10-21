@@ -33,6 +33,7 @@ local
 tmp
 private
 .drush
+drush/agent
 drush-backups
 .console
 /web/sites/simpletest
