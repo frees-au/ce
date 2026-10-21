@@ -9,6 +9,11 @@ Operating instructions for AI coding agents working in this repository
 > [`projects/frees-au-ce`](https://github.com/frees-au/hermes-config/blob/main/skills/projects/frees-au-ce/SKILL.md).
 > Load it before doing any non-trivial work.
 
+For adding a YouTube video article, use the repo-local
+[`publish-video` skill](.agents/skills/publish-video/SKILL.md). It contains the
+focused publishing workflow for this checkout and supersedes the external
+guide's video-publishing and host-specific instructions.
+
 ## Layout cheatsheet
 
 ```
