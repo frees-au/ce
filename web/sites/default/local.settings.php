@@ -28,6 +28,9 @@ ini_set('display_startup_errors', TRUE);
 $settings['update_free_access'] = FALSE;
 $settings['rebuild_access'] = FALSE;
 
+// --uri from Drush.
+$settings['tome_static_directory'] = '../html/' . ($_SERVER['SERVER_NAME'] ?? 'www.frees.au');
+
 // Replace cache_container in the db.
 $settings['bootstrap_container_definition'] = [
   'parameters' => [],

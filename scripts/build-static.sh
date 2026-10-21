@@ -1,24 +1,14 @@
 #!/usr/bin/env bash
-# Build the Tome static export.
-
 set -euo pipefail
+
+# Build the Tome static export using the first argument as the domain.
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
 
-# --- args / defaults -----------------------------------------------------
-# DOMAIN is the first positional arg; bare host. We build `https://$DOMAIN`
-# unless TOME_URI is explicitly set in the env (allows http:// for local dev).
 DOMAIN="${1:-www.frees.au}"
 URI="${TOME_URI:-https://$DOMAIN}"
-ENV=$([[ "$DOMAIN" == "www.frees.au" ]] && echo "prod" || echo "local")
-DEST="/home/runner/artifacts/frees-au-ce/$ENV"
-
-# Sanity: drush must be present and the site must bootstrap.
-if ! command -v vendor/bin/drush >/dev/null 2>&1; then
-  echo "::error::vendor/bin/drush not found at $REPO_ROOT" >&2
-  exit 1
-fi
+ENV=$([[ "$DOMAIN" == "www.frees.au" ]] && echo "www.frees.au" || echo "static-locat-test.frees.au")
 
 vendor/bin/drush theme:dev off -vv --uri="$URI"
 vendor/bin/drush cache:rebuild -vv --uri="$URI"

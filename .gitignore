@@ -23,7 +23,7 @@ default.settings.php
 web/sites/default/files
 
 # Tome static-site generator output (legacy + new build dir).
-/.html
+/html
 
 # Development or per platform.
 env.settings.php
