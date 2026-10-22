@@ -39,7 +39,7 @@ drush serve
 drush uli
 ```
 
-## Frontend
+## Build Frontend
 
 This is a very simple Tailwind theme with no Drupal "base theme" dependencies. 
 
