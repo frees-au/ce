@@ -72,10 +72,8 @@
     },
     "scripts": {
         "build-fe": [
-            "Composer\\Config::disableProcessTimeout",
             "pnpm --dir web/themes/custom/fstheme install",
-            "pnpm --dir web/themes/custom/fstheme run build",
-            "pnpm --dir web/themes/custom/fstheme run watch"
+            "pnpm --dir web/themes/custom/fstheme run build"
         ],
         "site-import": "./scripts/site-import.sh",
         "build-static": "./scripts/build-static.sh",
