@@ -1,0 +1,5 @@
+This site doesn't store config in the database. So this directory is for
+"live" config and is excluded from Git.
+
+If you "import" config it will come from the ./config/sync directory and if you
+export it will go to the ./config/sync directory
