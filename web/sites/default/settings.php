@@ -28,7 +28,7 @@ $settings['entity_update_backup'] = TRUE;
 $settings['skip_permissions_hardening'] = TRUE;
 $settings['file_public_path'] = 'sites/default/files';
 $settings['file_private_path'] = 'sites/default/files/private';
-$settings['file_temp_path'] = 'sites/default/files/tmp';
+$settings['file_temp_path'] = '/tmp';
 $settings['container_yamls'][] = "{$here}/services.yml";
 
 // Config runs off disk.

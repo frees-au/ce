@@ -1,35 +1,44 @@
 # Free Sauce website
 
-This code runs the https://frees.au/ce website. This site is a very simple
-blog site, and used to support sharing of training videos which you can
-find on the [Free Sauce youtube channel](https://www.youtube.com/@FreeTheSauce)
-and business information.
+**Warning** This site is weird. It has experimental stuff.
 
-Github is hosted on an internal repo on Forgejo, and the Github repo is a mirror.
-
-This code is licensed GPL-2.0-or-later. This code is provided for you to
-examine and mock.
+This code runs the https://www.frees.au/ce website. This site is a very simple
+business site. I also use it as a scratch pad for videos on the [Free Sauce youtube channel](https://www.youtube.com/@FreeTheSauce).
 
 The Free Sauce logo, brand and assets which ship in this repository are Copyright
 Free Sauce 2024-2026. (Copy the theme if you want, but replace the logo and
 company name please!).
 
+## Philosophy
+
+This code base tries to answer the questions:
+
+* How small can Drupal be?
+* Is Drupal fast with just PHP and SQLite?
+* What if we put the database in git?
+* How good is static site generation?
+
 ## Requirements
 
-* SQLite only @see `database/live.sqlite`
-* PHP 8.3 (suggest opcache.enable_cli)
-* pnpm
+* SQLite
+* PHP 8.3 (with opcache.enable_cli)
+* php composer
+* node/pnpm to build frontend
 
-## Static Site generation
-
-Generates the static export into `.html/` at the repo root (gitignored).
+## Build backend
 
 ```
-# Build the static site.
-./scripts/build-static.sh
+# Build drupal
+composer up
+# Reset config.
+rm config/live/*.yml && cp config/sync/*.yml config/live/
+# Run in foreground
+drush serve
+# Login (switch to different tab)
+drush uli
 ```
 
-## Frontend (@todo fix)
+## Frontend
 
 This is a very simple Tailwind theme with no Drupal "base theme" dependencies. 
 
@@ -41,6 +50,15 @@ then run the build.
 pnpm --dir web/themes/custom/fstheme install
 pnpm --dir web/themes/custom/fstheme run build
 pnpm --dir web/themes/custom/fstheme run watch
+```
+
+## Static Site generation
+
+Generates the static export into `html/` at the repo root (gitignored).
+
+```
+# Build the static site into ./html/www.foo.com
+./scripts/build-static.sh www.foo.com
 ```
 
 ## Testing
