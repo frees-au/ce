@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 8132311e-fa51-4a56-9cc2-e0c85ad5625f
+  bundle: article
+  default_langcode: en
+  depends:
+    82072b22-6b6d-4597-baf0-b3fc1a32e7f2: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Drupal 10+ project setup - an introduction'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/drupal-10-project-setup-introduction
+      langcode: en
+  lead:
+    -
+      value: 'Free Sauce tutorial.'
+      format: basic
+  markup:
+    -
+      value: '<p>Watch on YouTube: <a href="https://www.youtube.com/watch?v=uToDLeRRLxY">Drupal 10+ project setup - an introduction</a></p>'
+      format: safe_html
+  youtube:
+    -
+      entity: 82072b22-6b6d-4597-baf0-b3fc1a32e7f2

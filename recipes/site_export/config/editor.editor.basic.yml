@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic
+  module:
+    - ckeditor5
+format: basic
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - bold
+      - italic
+      - link
+  plugins:
+    linkit_extension:
+      linkit_enabled: false
+image_upload:
+  status: false

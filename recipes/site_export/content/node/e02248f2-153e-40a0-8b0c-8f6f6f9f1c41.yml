@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: e02248f2-153e-40a0-8b0c-8f6f6f9f1c41
+  bundle: article
+  default_langcode: en
+  depends:
+    4746bb38-9325-4c79-a813-fe90089c48ab: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Xdebug with VS Code'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/xdebug-vs-code
+      langcode: en
+  lead:
+    -
+      value: 'Free Sauce tutorial.'
+      format: basic
+  markup:
+    -
+      value: '<p>Watch on YouTube: <a href="https://www.youtube.com/watch?v=coLqZ3Ogg7U">Xdebug with VS Code</a></p>'
+      format: safe_html
+  youtube:
+    -
+      entity: 4746bb38-9325-4c79-a813-fe90089c48ab

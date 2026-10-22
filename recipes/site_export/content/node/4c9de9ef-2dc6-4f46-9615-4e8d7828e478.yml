@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 4c9de9ef-2dc6-4f46-9615-4e8d7828e478
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'UX and UI Design'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/services/ux-and-ui-design
+      langcode: en
+  lead:
+    -
+      value: '<p>Research-informed wireframes, desktop/mobile prototypes, interaction and visual design, usability validation and design-to-build handover.</p>'
+      format: basic
+  markup:
+    -
+      value: '<h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/user-research-and-service-design">User Research and Service Design</a></li><li><a href="/ce/services/govcms">GovCMS</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      format: safe_html

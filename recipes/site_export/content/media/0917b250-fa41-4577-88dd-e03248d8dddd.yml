@@ -1,0 +1,29 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 0917b250-fa41-4577-88dd-e03248d8dddd
+  bundle: stream
+  default_langcode: en
+default:
+  revision_log_message:
+    -
+      value: 'Refreshed YouTube oEmbed thumbnail via /tmp/refresh-youtube-thumbnails.php'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Local starshot dev - project_browser'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  media_oembed_video:
+    -
+      value: 'https://www.youtube.com/watch?v=MlbjSiDEzP4'

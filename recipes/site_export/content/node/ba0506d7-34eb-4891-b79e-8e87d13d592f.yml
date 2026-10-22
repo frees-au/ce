@@ -1,0 +1,44 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ba0506d7-34eb-4891-b79e-8e87d13d592f
+  bundle: article
+  default_langcode: en
+  depends:
+    bc798e51-c640-42af-bbcb-0e44dd6d60e2: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Live theming Shopify with LLM support'
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/live-theming-shopify-llm-support
+      langcode: en
+  duration:
+    -
+      value: '50 mins'
+  lead:
+    -
+      value: '<p>Shopify has powerful live theming tools. So what does that look like hooked up to ChatGPT/Codex?&nbsp;</p>'
+      format: basic
+  youtube:
+    -
+      entity: bc798e51-c640-42af-bbcb-0e44dd6d60e2

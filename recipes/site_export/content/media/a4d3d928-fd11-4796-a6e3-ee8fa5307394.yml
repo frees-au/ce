@@ -1,0 +1,26 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: a4d3d928-fd11-4796-a6e3-ee8fa5307394
+  bundle: stream
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Rebuild a vibe coded app in Firebase #4'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  media_oembed_video:
+    -
+      value: 'https://www.youtube.com/watch?v=g54AM80pC3M'

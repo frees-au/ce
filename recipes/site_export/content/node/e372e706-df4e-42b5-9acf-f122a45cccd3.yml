@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: e372e706-df4e-42b5-9acf-f122a45cccd3
+  bundle: article
+  default_langcode: en
+  depends:
+    e5201a47-0bfb-4e11-b1cd-d26be7f77d99: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Setting up the DDEV plugin, tyler36/ddev-xhgui'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/setting-ddev-plugin-tyler36ddev-xhgui
+      langcode: en
+  lead:
+    -
+      value: 'Free Sauce tutorial.'
+      format: basic
+  markup:
+    -
+      value: '<p>Watch on YouTube: <a href="https://www.youtube.com/watch?v=Knrhfwbop2w">Setting up the DDEV plugin, tyler36/ddev-xhgui</a></p>'
+      format: safe_html
+  youtube:
+    -
+      entity: e5201a47-0bfb-4e11-b1cd-d26be7f77d99

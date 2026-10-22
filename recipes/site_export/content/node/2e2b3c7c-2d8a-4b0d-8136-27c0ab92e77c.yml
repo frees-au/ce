@@ -1,0 +1,48 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 2e2b3c7c-2d8a-4b0d-8136-27c0ab92e77c
+  bundle: article
+  default_langcode: en
+  depends:
+    aff8d46a-eaf1-4aac-bc23-80f92154d551: taxonomy_term
+    05fb7649-83cc-462b-9238-d409e906b024: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Rebuild a vibe coded app in Firebase #5'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/rebuild-vibe-coded-app-firebase-5
+      langcode: en
+  duration:
+    -
+      value: '1 hour 17 mins'
+  lead:
+    -
+      value: '<p>Episode #5 of the Vibecoding a Firebase App playlist.</p>'
+      format: basic
+  playlist:
+    -
+      entity: aff8d46a-eaf1-4aac-bc23-80f92154d551
+  youtube:
+    -
+      entity: 05fb7649-83cc-462b-9238-d409e906b024

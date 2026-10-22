@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: b3975cf6-09bd-4f97-8598-ede163daceda
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Open Source'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/services/open-source
+      langcode: en
+  lead:
+    -
+      value: '<p>Open-source contribution and stewardship across Drupal, AI tooling and related projects. Develop and maintain reusable tools and support collaborative software delivery.</p>'
+      format: basic
+  markup:
+    -
+      value: '<h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/drupal-cms">Drupal CMS</a></li><li><a href="/ce/services/agent-harness-design">Agent Harness Design</a></li><li><a href="/ce/services/druxt">Druxt</a></li><li><a href="/ce/services/drupal-devops">Drupal DevOps</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      format: safe_html

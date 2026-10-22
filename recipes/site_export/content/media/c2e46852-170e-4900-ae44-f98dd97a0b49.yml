@@ -1,0 +1,26 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: c2e46852-170e-4900-ae44-f98dd97a0b49
+  bundle: stream
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Can engineering STOP A 1000FT TSUNAMI in Cities Skylines?'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  media_oembed_video:
+    -
+      value: 'https://www.youtube.com/watch?v=8JcRx2rE6gA'

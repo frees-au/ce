@@ -1,0 +1,48 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 98ba0ae6-9fcb-4b8f-850e-30a58a98e09a
+  bundle: article
+  default_langcode: en
+  depends:
+    3d5ff924-4bfb-4e2a-9ff5-b32b8e78e353: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'ChatGPT vs Minimax on some new Drupal skills'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/chatgpt-vs-minimax-some-new-drupal-skills
+      langcode: en
+  duration:
+    -
+      value: '21 mins'
+  lead:
+    -
+      value: 'Testing new Drupal skills and comparing the quality of Minimax and ChatGPT.'
+      format: basic
+  markup:
+    -
+      value: '<p>A few things in this run: I have some new skills I want to test, and I wanted to explore my perception of the quality of Minimax vs ChatGPT.</p><p>The skills are available in <a href="https://github.com/frees-au/ce-skills">frees-au/ce-skills</a>: <code>drupal-content-modeling</code>, <code>drupal-auto-dev</code> and <code>css-with-tac-components</code>.</p>'
+      format: safe_html
+  youtube:
+    -
+      entity: 3d5ff924-4bfb-4e2a-9ff5-b32b8e78e353

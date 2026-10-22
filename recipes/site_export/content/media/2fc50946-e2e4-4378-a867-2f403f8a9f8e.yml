@@ -1,0 +1,26 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 2fc50946-e2e4-4378-a867-2f403f8a9f8e
+  bundle: stream
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'When the customer wants to vibe code your Firebase app'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  media_oembed_video:
+    -
+      value: 'https://www.youtube.com/watch?v=55YRTIKuExs'

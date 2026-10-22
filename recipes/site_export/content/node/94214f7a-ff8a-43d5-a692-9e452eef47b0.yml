@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 94214f7a-ff8a-43d5-a692-9e452eef47b0
+  bundle: article
+  default_langcode: en
+  depends:
+    ca4cd711-3d68-46c5-8d65-a6bde2a393d7: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Drupal modules that provide "repeating field groups"'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/drupal-modules-provide-repeating-field-groups
+      langcode: en
+  lead:
+    -
+      value: 'Free Sauce tutorial.'
+      format: basic
+  markup:
+    -
+      value: '<p>Watch on YouTube: <a href="https://www.youtube.com/watch?v=ZorUUuC8oxc">Drupal modules that provide &quot;repeating field groups&quot;</a></p>'
+      format: safe_html
+  youtube:
+    -
+      entity: ca4cd711-3d68-46c5-8d65-a6bde2a393d7

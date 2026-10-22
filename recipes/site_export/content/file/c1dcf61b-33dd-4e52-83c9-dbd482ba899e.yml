@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c1dcf61b-33dd-4e52-83c9-dbd482ba899e
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: '-ORRirMQebJ1UcZYB0xzCdVT3C46mt8w5XLFdj8BE-g.jpg'
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-08/-ORRirMQebJ1UcZYB0xzCdVT3C46mt8w5XLFdj8BE-g.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 23306
+  status:
+    -
+      value: true

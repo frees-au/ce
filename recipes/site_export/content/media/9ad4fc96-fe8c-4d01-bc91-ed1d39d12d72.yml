@@ -1,0 +1,29 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 9ad4fc96-fe8c-4d01-bc91-ed1d39d12d72
+  bundle: stream
+  default_langcode: en
+default:
+  revision_log_message:
+    -
+      value: 'Refreshed YouTube oEmbed thumbnail via /tmp/refresh-youtube-thumbnails.php'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Building out an initial Drupal composer.ison'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  media_oembed_video:
+    -
+      value: 'https://www.youtube.com/watch?v=6XHy3cJv4Ho'

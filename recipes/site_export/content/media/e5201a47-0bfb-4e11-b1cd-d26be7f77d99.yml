@@ -1,0 +1,29 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: e5201a47-0bfb-4e11-b1cd-d26be7f77d99
+  bundle: stream
+  default_langcode: en
+default:
+  revision_log_message:
+    -
+      value: 'Refreshed YouTube oEmbed thumbnail via /tmp/refresh-youtube-thumbnails.php'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Setting up the DDEV plugin, tyler36/ddev-xhgui'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  media_oembed_video:
+    -
+      value: 'https://www.youtube.com/watch?v=Knrhfwbop2w'

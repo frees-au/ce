@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 36bb66f2-3939-42a4-b953-449217eb4ebe
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Drupal CMS'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/services/drupal-cms
+      langcode: en
+  lead:
+    -
+      value: '<p>Drupal consulting, site building, custom modules, themes and architecture. Build structured content, editorial workflows and maintainable websites around your organisation’s needs.</p>'
+      format: basic
+  markup:
+    -
+      value: '<h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/open-source">Open Source</a></li><li><a href="/ce/services/cloud-platforms">Cloud Platforms</a></li><li><a href="/ce/services/druxt">Druxt</a></li><li><a href="/ce/services/decoupled-cms">Decoupled CMS</a></li><li><a href="/ce/services/govcms">GovCMS</a></li><li><a href="/ce/services/drupal-devops">Drupal DevOps</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      format: safe_html

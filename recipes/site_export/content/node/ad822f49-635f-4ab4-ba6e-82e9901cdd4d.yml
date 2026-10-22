@@ -1,0 +1,48 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ad822f49-635f-4ab4-ba6e-82e9901cdd4d
+  bundle: article
+  default_langcode: en
+  depends:
+    aff8d46a-eaf1-4aac-bc23-80f92154d551: taxonomy_term
+    2fc50946-e2e4-4378-a867-2f403f8a9f8e: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'When the customer wants to vibe code your Firebase app'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/when-customer-wants-vibe-code-your-firebase-app
+      langcode: en
+  duration:
+    -
+      value: '9 mins'
+  lead:
+    -
+      value: '<p>Follow-up to the Vibecoding a Firebase App playlist — a 9-minute snapshot of when a customer wanted to vibe code their own app.</p>'
+      format: basic
+  playlist:
+    -
+      entity: aff8d46a-eaf1-4aac-bc23-80f92154d551
+  youtube:
+    -
+      entity: 2fc50946-e2e4-4378-a867-2f403f8a9f8e

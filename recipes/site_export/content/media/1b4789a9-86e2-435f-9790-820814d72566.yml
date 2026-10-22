@@ -1,0 +1,29 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 1b4789a9-86e2-435f-9790-820814d72566
+  bundle: stream
+  default_langcode: en
+default:
+  revision_log_message:
+    -
+      value: 'Refreshed YouTube oEmbed thumbnail via /tmp/refresh-youtube-thumbnails.php'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Manually load some Airtable data from your Google Apps Script'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  media_oembed_video:
+    -
+      value: 'https://www.youtube.com/watch?v=6bT8GU2ZwAs'

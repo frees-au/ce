@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 80e1ba62-a77d-471e-a9ba-6eca00eaa053
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: nsY-Xj-2PnzdsY9fiZHaSpMpq3CP6UyWvqUeHQ_hjjY.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-08/nsY-Xj-2PnzdsY9fiZHaSpMpq3CP6UyWvqUeHQ_hjjY.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 33295
+  status:
+    -
+      value: true

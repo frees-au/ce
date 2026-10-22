@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 0d25dc9b-3ece-41bd-b398-79318b4e9aa8
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: v-6_WwytXKMdebTJEvkCNd56avS8HpORKo0ie5iWTFA.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/v-6_WwytXKMdebTJEvkCNd56avS8HpORKo0ie5iWTFA.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 22888
+  status:
+    -
+      value: true

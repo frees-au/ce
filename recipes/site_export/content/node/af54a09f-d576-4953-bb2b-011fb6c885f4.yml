@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: af54a09f-d576-4953-bb2b-011fb6c885f4
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: Druxt
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/services/druxt
+      langcode: en
+  lead:
+    -
+      value: '<p>Decoupled Drupal and Nuxt.js development using Druxt. Connect Drupal JSON:API content to Vue components, with support for shared content, multiple sites and consumer-specific branding.</p>'
+      format: basic
+  markup:
+    -
+      value: '<h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/drupal-cms">Drupal CMS</a></li><li><a href="/ce/services/open-source">Open Source</a></li><li><a href="/ce/services/cloud-platforms">Cloud Platforms</a></li><li><a href="/ce/services/process-automation">Process Automation</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      format: safe_html

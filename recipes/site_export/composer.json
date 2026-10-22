@@ -1,0 +1,33 @@
+{
+    "name": "drupal/site_export",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/core": "^11.4.11",
+        "drupal/admin_toolbar": "^3.6.3",
+        "drupal/ckeditor5_template": "^1.0.10",
+        "drupal/drupal_cms_helper": "^2.2.6",
+        "drupal/easy_breadcrumb": "^2.0.11",
+        "drupal/editoria11y": "^2.2.24",
+        "drupal/field_group": "^3.6.0",
+        "drupal/field_label": "^1.5.0",
+        "drupal/gin_login": "^2.1.4",
+        "drupal/gin_toolbar": "^3.0.3",
+        "drupal/jquery_ui": "^1.8.0",
+        "drupal/jquery_ui_autocomplete": "^2.1.0",
+        "drupal/jquery_ui_menu": "^2.1.0",
+        "drupal/metatag": "^2.2.0",
+        "drupal/oembed_providers": "^2.2.4",
+        "drupal/pathauto": "^1.15.0",
+        "drupal/redirect": "^1.13.0",
+        "drupal/search_api": "^1.42.0",
+        "drupal/search_api_lunr": "^3.1.0",
+        "drupal/simple_sitemap": "^4.2.3",
+        "drupal/token": "^1.17.0",
+        "drupal/tome": "^1.16.0",
+        "drupal/twig_tweak": "^3.4.2",
+        "drupal/fs": "*",
+        "drupal/gin": "^5.0.16",
+        "drupal/fstheme": "*"
+    }
+}

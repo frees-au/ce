@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: b7b8d384-89bf-472f-8bfd-1efe2482626d
+  bundle: article
+  default_langcode: en
+  depends:
+    306ae450-3016-4634-88f7-256d1ab8f992: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Store a Google Apps Script in Git with Clasp'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/store-google-apps-script-git-clasp
+      langcode: en
+  lead:
+    -
+      value: 'Free Sauce tutorial.'
+      format: basic
+  markup:
+    -
+      value: '<p>Watch on YouTube: <a href="https://www.youtube.com/watch?v=ds5LAIWku-E">Store a Google Apps Script in Git with Clasp</a></p>'
+      format: safe_html
+  youtube:
+    -
+      entity: 306ae450-3016-4634-88f7-256d1ab8f992

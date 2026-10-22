@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: a3f740e1-6897-49f3-9454-d2eb9ba8c0d0
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 0
+  filename:
+    -
+      value: bbQ6j8t9_lypfpttFgPQc6BU3Gs2WM2D1SR8wndLFEo.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2024-03/bbQ6j8t9_lypfpttFgPQc6BU3Gs2WM2D1SR8wndLFEo.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 31789
+  status:
+    -
+      value: true

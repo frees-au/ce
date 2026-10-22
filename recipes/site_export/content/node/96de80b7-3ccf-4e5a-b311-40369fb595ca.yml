@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 96de80b7-3ccf-4e5a-b311-40369fb595ca
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Digital Analytics and Optimisation'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/services/digital-analytics-and-optimisation
+      langcode: en
+  lead:
+    -
+      value: '<p>Measurement strategy, KPIs, event schemas, GA4/GTM/Snowplow instrumentation, data validation, dashboards, experimentation, cohort/funnel analysis and improvement prioritisation.</p>'
+      format: basic
+  markup:
+    -
+      value: '<h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/data-engineering">Data Engineering</a></li><li><a href="/ce/services/govcms">GovCMS</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      format: safe_html

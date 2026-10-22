@@ -1,0 +1,48 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: a68709a7-6820-4fb7-bf1e-91ea928924a6
+  bundle: article
+  default_langcode: en
+  depends:
+    aff8d46a-eaf1-4aac-bc23-80f92154d551: taxonomy_term
+    044d9d9a-9379-4102-b837-af58dcf8c030: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Rebuilding a vibe code app #2'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/rebuilding-vibe-code-app-2
+      langcode: en
+  duration:
+    -
+      value: '35 mins'
+  lead:
+    -
+      value: '<p>Reviewing the code base of the vibe coded app.</p>'
+      format: basic
+  playlist:
+    -
+      entity: aff8d46a-eaf1-4aac-bc23-80f92154d551
+  youtube:
+    -
+      entity: 044d9d9a-9379-4102-b837-af58dcf8c030

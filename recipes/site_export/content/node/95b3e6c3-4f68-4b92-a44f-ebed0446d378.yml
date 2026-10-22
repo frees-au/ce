@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 95b3e6c3-4f68-4b92-a44f-ebed0446d378
+  bundle: article
+  default_langcode: en
+  depends:
+    1b4789a9-86e2-435f-9790-820814d72566: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Manually load some Airtable data from your Google Apps Script'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/manually-load-some-airtable-data-your-google-apps-script
+      langcode: en
+  lead:
+    -
+      value: 'Free Sauce tutorial.'
+      format: basic
+  markup:
+    -
+      value: '<p>Watch on YouTube: <a href="https://www.youtube.com/watch?v=6bT8GU2ZwAs">Manually load some Airtable data from your Google Apps Script</a></p>'
+      format: safe_html
+  youtube:
+    -
+      entity: 1b4789a9-86e2-435f-9790-820814d72566

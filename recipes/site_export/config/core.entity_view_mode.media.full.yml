@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.full
+label: 'Full width'
+description: 'Fill the available area'
+targetEntityType: media
+cache: true

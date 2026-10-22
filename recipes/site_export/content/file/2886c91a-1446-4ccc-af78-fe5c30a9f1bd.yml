@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 2886c91a-1446-4ccc-af78-fe5c30a9f1bd
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 0
+  filename:
+    -
+      value: z-RIKAhNyzKVWxhOt54GerjkIJ3eduAHKcn3SSsO8Gg.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2023-09/z-RIKAhNyzKVWxhOt54GerjkIJ3eduAHKcn3SSsO8Gg.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 11225
+  status:
+    -
+      value: true

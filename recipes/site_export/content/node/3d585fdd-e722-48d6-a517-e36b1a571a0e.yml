@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3d585fdd-e722-48d6-a517-e36b1a571a0e
+  bundle: article
+  default_langcode: en
+  depends:
+    5fea1d32-aae4-427e-a259-3aa631af0925: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'BONUS: Docker Compose following the Docker4Drupal setup'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/bonus-docker-compose-following-docker4drupal-setup
+      langcode: en
+  lead:
+    -
+      value: 'Free Sauce tutorial.'
+      format: basic
+  markup:
+    -
+      value: '<p>Watch on YouTube: <a href="https://www.youtube.com/watch?v=wihnEBTKGQc">BONUS: Docker Compose following the Docker4Drupal setup</a></p>'
+      format: safe_html
+  youtube:
+    -
+      entity: 5fea1d32-aae4-427e-a259-3aa631af0925

@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: a59e7c66-4c9f-486f-914b-7c400a92d569
+  bundle: article
+  default_langcode: en
+  depends:
+    b49dc419-1581-4f75-9b06-2b8bee0906f8: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: "Time to config:export 'field_' to pasture"
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/time-configexport-field-pasture
+      langcode: en
+  lead:
+    -
+      value: 'Free Sauce tutorial.'
+      format: basic
+  markup:
+    -
+      value: '<p>Watch on YouTube: <a href="https://www.youtube.com/watch?v=2495KafRZAg">Time to config:export &#039;field_&#039; to pasture</a></p>'
+      format: safe_html
+  youtube:
+    -
+      entity: b49dc419-1581-4f75-9b06-2b8bee0906f8

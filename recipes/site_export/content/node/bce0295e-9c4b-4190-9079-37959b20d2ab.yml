@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: bce0295e-9c4b-4190-9079-37959b20d2ab
+  bundle: article
+  default_langcode: en
+  depends:
+    a0745fbd-7be1-482e-8327-72d47f071e84: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Reviewing our website codebase, which was open sourced.'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/reviewing-our-website-codebase-which-was-open-sourced
+      langcode: en
+  lead:
+    -
+      value: 'Free Sauce tutorial.'
+      format: basic
+  markup:
+    -
+      value: '<p>Watch on YouTube: <a href="https://www.youtube.com/watch?v=qUJpx5w0avM">Reviewing our website codebase, which was open sourced.</a></p>'
+      format: safe_html
+  youtube:
+    -
+      entity: a0745fbd-7be1-482e-8327-72d47f071e84

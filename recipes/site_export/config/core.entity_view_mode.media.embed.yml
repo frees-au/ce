@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.embed
+label: Embedded
+description: "Images that don't work well are large size will sit smaller in the content and text will wrap around it."
+targetEntityType: media
+cache: true

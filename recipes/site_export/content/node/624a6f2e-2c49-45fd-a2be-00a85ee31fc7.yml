@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 624a6f2e-2c49-45fd-a2be-00a85ee31fc7
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Agent Harness Design'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/services/agent-harness-design
+      langcode: en
+  lead:
+    -
+      value: '<p>Design AI agent harnesses and orchestration, with practical tooling, LLM integration, local AI infrastructure and connections to existing software.</p>'
+      format: basic
+  markup:
+    -
+      value: '<h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/open-source">Open Source</a></li><li><a href="/ce/services/process-automation">Process Automation</a></li><li><a href="/ce/services/cloud-platforms">Cloud Platforms</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      format: safe_html

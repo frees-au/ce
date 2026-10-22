@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: f4377c79-3725-4cac-9c52-0053327c59d5
+  bundle: article
+  default_langcode: en
+  depends:
+    aa70777f-b6a2-484d-9455-5e3b346a26f0: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Adding DDEV and installing Drupal (again)'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/adding-ddev-and-installing-drupal-again
+      langcode: en
+  lead:
+    -
+      value: 'Free Sauce tutorial.'
+      format: basic
+  markup:
+    -
+      value: '<p>Watch on YouTube: <a href="https://www.youtube.com/watch?v=aqEhYOWaxZc">Adding DDEV and installing Drupal (again)</a></p>'
+      format: safe_html
+  youtube:
+    -
+      entity: aa70777f-b6a2-484d-9455-5e3b346a26f0

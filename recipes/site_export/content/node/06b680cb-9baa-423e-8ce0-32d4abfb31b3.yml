@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 06b680cb-9baa-423e-8ce0-32d4abfb31b3
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 0
+  title:
+    -
+      value: frees.au/ce
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce
+      langcode: en
+  lead:
+    -
+      value: '<p>Great marketing slogans can happen in the pursuit of content.</p>'
+      format: basic
+  markup:
+    -
+      value: '<p>Free Sauce has n+1 people interested in open source, cloud, process automation, agent harness design. There''s a lot of Drupal CMS and some random stuff, like a large Netsuite rescue job.</p><p>The owner and lead consultant is <a href="https://au.linkedin.com/in/simehobbs">Simon Hobbs</a>. We are interested in working with other people who are specialists in their field, or who want to pursue interesting things.</p><p>Some of our work is government focused, and you can invite us to opportunities via the <a href="https://www.buyict.gov.au/sp?id=seller_details&amp;path=selling&amp;sys_id=91afde2f1bcd42107fb443bdcc4bcbc7">BuyICT seller catalogue</a>.</p>'
+      format: safe_html

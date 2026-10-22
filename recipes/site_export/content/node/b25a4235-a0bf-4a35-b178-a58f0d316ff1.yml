@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: b25a4235-a0bf-4a35-b178-a58f0d316ff1
+  bundle: article
+  default_langcode: en
+  depends:
+    e1a3de74-5bd5-41a1-bc83-473465e6b7c4: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Adding caching around GAS calls to Airtable'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/adding-caching-around-gas-calls-airtable
+      langcode: en
+  lead:
+    -
+      value: 'Free Sauce tutorial.'
+      format: basic
+  markup:
+    -
+      value: '<p>Watch on YouTube: <a href="https://www.youtube.com/watch?v=buGoIh3h1g0">Adding caching around GAS calls to Airtable</a></p>'
+      format: safe_html
+  youtube:
+    -
+      entity: e1a3de74-5bd5-41a1-bc83-473465e6b7c4

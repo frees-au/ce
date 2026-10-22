@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 41c4e8de-3bc4-4dcd-9864-cb5e7521fe73
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Decoupled CMS'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/services/decoupled-cms
+      langcode: en
+  lead:
+    -
+      value: '<p>Headless CMS architecture and development with Drupal, Next.js, React, Nuxt, GraphQL and JSON:API. Connect a shared content backend to the frontend experiences your team needs.</p>'
+      format: basic
+  markup:
+    -
+      value: '<h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/druxt">Druxt</a></li><li><a href="/ce/services/drupal-cms">Drupal CMS</a></li><li><a href="/ce/services/cloud-platforms">Cloud Platforms</a></li><li><a href="/ce/services/govcms">GovCMS</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      format: safe_html

@@ -1,0 +1,48 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: c62d62ce-5b35-4480-afa1-0910a1cad0a9
+  bundle: article
+  default_langcode: en
+  depends:
+    c8d34fee-3274-44a5-92a0-9c9f801496c0: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Local hub setup - Debian, Forgejo, Hermes'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/local-hub-setup-debian-forgejo-hermes
+      langcode: en
+  duration:
+    -
+      value: '43 mins'
+  lead:
+    -
+      value: "After many years of running a Macbook (currently Air M3) I'm offloading a bunch of stuff on to a Debian machine at home, and at the same time streamlining some operations."
+      format: basic
+  markup:
+    -
+      value: '<p>Photography: Newtown, Sydney, (c) Simon Hobbs 2024</p>'
+      format: safe_html
+  youtube:
+    -
+      entity: c8d34fee-3274-44a5-92a0-9c9f801496c0

@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 7622b544-0dc6-468a-8e32-f969171ba74a
+  bundle: article
+  default_langcode: en
+  depends:
+    3a64f8cd-9fd0-4e4c-b858-6d4e414051a4: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Add your first Drupal gitlab-ci.yml thru the web UI'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /ce/articles/add-your-first-drupal-gitlab-ciyml-thru-web-ui
+      langcode: en
+  lead:
+    -
+      value: 'Free Sauce tutorial.'
+      format: basic
+  markup:
+    -
+      value: '<p>Watch on YouTube: <a href="https://www.youtube.com/watch?v=m8-Rh5ognXk">Add your first Drupal gitlab-ci.yml thru the web UI</a></p>'
+      format: safe_html
+  youtube:
+    -
+      entity: 3a64f8cd-9fd0-4e4c-b858-6d4e414051a4
