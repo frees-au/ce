@@ -25,6 +25,9 @@ default:
   sticky:
     -
       value: false
+  duration:
+    -
+      value: '.'
   revision_translation_affected:
     -
       value: true

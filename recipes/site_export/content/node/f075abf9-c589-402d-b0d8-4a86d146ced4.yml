@@ -23,6 +23,10 @@ default:
   sticky:
     -
       value: false
+  lead:
+    -
+      value: '.'
+      format: basic
   revision_translation_affected:
     -
       value: true

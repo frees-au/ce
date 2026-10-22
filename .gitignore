@@ -26,8 +26,6 @@ config/live
 *.sqlite-shm
 *.sqlite-wal
 *.sql
-# Database is committed, ~5MB at time of writing.
-!live.sqlite
 
 # Tome static-site generator output.
 /html
