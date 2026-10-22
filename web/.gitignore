@@ -2,3 +2,4 @@
 /.eslintignore
 /.eslintrc.json
 /robots.txt
+/autoload_runtime.php

@@ -4,7 +4,6 @@ parameters:
         - web/modules/custom
         - web/themes/custom
 
-    checkMissingIterableValueType: false
     reportUnmatchedIgnoredErrors: true
 
     # ignoreErrors:

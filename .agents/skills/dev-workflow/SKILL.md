@@ -30,18 +30,9 @@ show the difference between the ./config/live and ./config/sync.
 
 ## Save state
 
-(Codex: the first time you read this make a script in scripts/save-state.sh and replace
-these instructions)
-
-* Config export (verify changes in ./config/live)
-* Verify dirty state of database/live.sqlite
-
-Before committing changes to config and database
-* Truncate tables `config_export` and `config_import`
-* VACUUM database/live.sqlite 
-* Validate the integrity of the database
-* If the database is over 10MB warn the user.
-* Commit db and config.
+* Run `bash scripts/save-state.sh` to export configuration, empty transient
+  config tables when present, compact SQLite, check integrity, and report size.
+* Review the config and database changes before committing them.
 
 ## Finish
 

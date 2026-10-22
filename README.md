@@ -66,6 +66,8 @@ Generates the static export into `html/` at the repo root (gitignored).
 
 @todo - rewire cypress.
 
-ddev composer run-script phpcs -- ./web/modules/contrib/foo_module
-ddev composer run-script phpcbf -- ./web/modules/contrib/foo_module
-ddev composer run-script phpstan -- ./web/modules/contrib/foo_module
+```sh
+composer run-script phpcs
+composer run-script phpcbf
+composer run-script phpstan
+```

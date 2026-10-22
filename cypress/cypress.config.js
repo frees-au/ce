@@ -3,7 +3,7 @@ module.exports = defineConfig({
   video: true,
   e2e: {
     specPattern: "integration/*",
-    baseUrl: "https://fs-web.ddev.site",
+    baseUrl: "http://127.0.0.1:8888",
     fixturesFolder: "fixtures",
     supportFile: false,
   },

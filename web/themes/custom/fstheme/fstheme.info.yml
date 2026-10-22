@@ -2,8 +2,7 @@ name: 'Free Sauce'
 type: theme
 base theme: false
 description: 'Tailwind based theme'
-core: 10.x
-core_version_requirement: ^10
+core_version_requirement: ^10 || ^11
 logo: logo.png
 libraries:
   - fstheme/global-js

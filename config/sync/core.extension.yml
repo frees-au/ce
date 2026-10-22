@@ -11,6 +11,7 @@ module:
   config: 0
   contextual: 0
   datetime: 0
+  drupal_cms_helper: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
