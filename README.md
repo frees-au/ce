@@ -17,6 +17,7 @@ This code base tries to answer the questions:
 * Is Drupal fast with just PHP and SQLite?
 * What if we put the database in git?
 * How good is static site generation?
+* What will the agent do with it?
 
 ## Requirements
 
