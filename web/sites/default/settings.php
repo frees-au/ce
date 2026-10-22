@@ -2,11 +2,7 @@
 
 /**
  * @file
- * Drupal settings entry point.
- *
- * The structure of the settings files is stipulate by Si. Feel free to reach
- * out to discuss. Basically DDev and Lando should just work. Filename structure
- * is foobar.settings.php so they sort with the corresponding service ymls.
+ * Drupal settings.
  *
  * @see https://api.drupal.org/api/drupal/sites!default!default.settings.php/11
  *
@@ -18,31 +14,56 @@
  * @var string $site_path
 */
 
+$here = $app_root . '/' . $site_path;
+
+// These settings would be a security risk in many implementations of Drupal.
+$settings['hash_salt'] = 'n/a';
+$settings['trusted_host_patterns'] = ['.*'];
+
+$settings['update_free_access'] = FALSE;
+$settings['rebuild_access'] = FALSE;
+$settings['file_scan_ignore_directories'] = ['node_modules', 'bower_components',];
+$settings['entity_update_batch_size'] = 50;
+$settings['entity_update_backup'] = TRUE;
+$settings['skip_permissions_hardening'] = TRUE;
+$settings['file_public_path'] = 'sites/default/files';
+$settings['file_private_path'] = 'sites/default/files/private';
+$settings['file_temp_path'] = 'sites/default/files/tmp';
+$settings['container_yamls'][] = "{$here}/services.yml";
+
+// Config runs off disk.
+$settings['config_sync_directory'] = '../config/sync';
+$settings['config_active_directory'] = $app_root . '/../config/live';
+$settings['config_exclude_modules'] = ['devel'];
+require_once "{$here}/inc/ConfigOnDiskFactory.php";
+$settings['bootstrap_config_storage'] = ['Freesau\\Config\\ConfigOnDiskFactory', 'get'];
+
+// Caching runs off disk.
+require_once "{$here}/inc/bootstrap_container_definition.inc";
+$settings['php_storage']['default']['directory'] = "{$app_root}/sites/default/files/php";
+$settings['cache']['default'] = 'cache.backend.php';
+
+// Database is committed and runs of disk.
 $databases['default']['default'] = [
   'driver' => 'sqlite',
   'database' => $app_root . '/../database/live.sqlite',
 ];
 
-$settings['hash_salt'] = 'n/a'; // Overridden on Platform.sh
-$settings['update_free_access'] = FALSE;
-$settings['file_scan_ignore_directories'] = ['node_modules', 'bower_components',];
-$settings['entity_update_batch_size'] = 50;
-$settings['entity_update_backup'] = TRUE;
-$settings['skip_permissions_hardening'] = TRUE; // @see fs_requirements_alter().
-$settings['trusted_host_patterns'] = ['.*']; // Best practice for Platform.sh.
-$settings['file_public_path'] = 'sites/default/files';
-$settings['file_private_path'] = 'sites/default/files/private';
-$settings['file_temp_path'] = '/tmp';
+// Tome builds should pass --uri
+$domain = ($_SERVER['SERVER_NAME'] ?? 'probably-not-tome');
+switch ($domain) {
+  case 'www.frees.au':
+  case 'preview.frees.au':
+    require_once "{$here}/tome.settings.php";
+    $settings['tome_static_directory'] = "../html/{$domain}";
+    break;
+  default:
+    $settings['container_yamls'][] = "{$here}/edit.services.yml";
+    require_once "{$here}/edit.settings.php";
+    break;
+}
 
-$settings['config_sync_directory'] = '../config/active';
-
-$settings['config_exclude_modules'] = [
-  'devel',
-];
-
-include_once $app_root . '/' . $site_path . '/local.settings.php';
-
-// Not in git and knock yourself out.
-if (file_exists($app_root . '/' . $site_path . '/env.settings.php')) {
-  include_once $app_root . '/' . $site_path . '/env.settings.php';
+// Not in git, so knock yourself out.
+if (file_exists("{$here}/env.settings.php")) {
+  include_once "{$here}/env.settings.php";
 }

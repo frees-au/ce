@@ -19,11 +19,17 @@
 default.services.yml
 default.settings.php
 
-# Assets.
+# State
 web/sites/default/files
-# config/live
+config/live
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.sql
+# Database is committed, ~5MB at time of writing.
+!live.sqlite
 
-# Tome static-site generator output (legacy + new build dir).
+# Tome static-site generator output.
 /html
 
 # Development or per platform.
@@ -42,10 +48,5 @@ drush-backups
 /.env
 .DS_Store
 .phpunit.result.cache
-.ci.sqlite
-*.sqlite
-*.sqlite-shm
-*.sqlite-wal
-*.sql
-!live.sqlite
+.sql
 *.zip
