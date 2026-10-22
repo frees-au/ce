@@ -33,13 +33,9 @@ $settings['container_yamls'][] = "{$here}/services.yml";
 
 // Config runs off disk.
 $settings['config_sync_directory'] = '../config/sync';
-$settings['config_active_directory'] = $app_root . '/../config/live';
 $settings['config_exclude_modules'] = ['devel'];
-require_once "{$here}/inc/ConfigOnDiskFactory.php";
-$settings['bootstrap_config_storage'] = ['Freesau\\Config\\ConfigOnDiskFactory', 'get'];
 
 // Caching runs off disk.
-require_once "{$here}/inc/bootstrap_container_definition.inc";
 $settings['php_storage']['default']['directory'] = "{$app_root}/sites/default/files/php";
 $settings['cache']['default'] = 'cache.backend.php';
 

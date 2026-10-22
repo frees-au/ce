@@ -1,4 +1,1 @@
-services:
-  config.storage.active:
-    class: Drupal\Core\Config\FileStorage
-    factory: ['Freesau\Config\ConfigOnDiskFactory', get]
+# tbd
