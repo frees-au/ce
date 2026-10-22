@@ -28,18 +28,28 @@ This code base tries to answer the questions:
 
 ## Build backend
 
-```
-# Build drupal
-composer up
-# Reset config.
-rm config/live/*.yml && cp config/sync/*.yml config/live/
-# Run in foreground
-drush serve
-# Login (switch to different tab)
-drush uli
+Install the backend dependencies, then rebuild the site from committed
+configuration and exported content:
+
+```sh
+composer install
+composer run-script site-import
 ```
 
-## Build Frontend
+The import requires `database/live.sqlite` to be absent or empty; it refuses to
+overwrite an existing database containing tables. It resets `config/live` from
+the committed configuration and imports the exported content and URL aliases.
+
+Start the local site:
+
+```sh
+# Run in foreground
+./vendor/bin/drush serve
+# Login (switch to different tab)
+./vendor/bin/drush uli
+```
+
+## Build frontend
 
 This is a very simple Tailwind theme with no Drupal "base theme" dependencies. 
 
@@ -47,19 +57,21 @@ The theme uses [pnpm](https://pnpm.io/) for frontend dependencies. Install it
 once (e.g. via [corepack](https://nodejs.org/api/corepack.html): `corepack enable`)
 then run the build.
 
+```sh
+composer run-script build-fe
 ```
-pnpm --dir web/themes/custom/fstheme install
-pnpm --dir web/themes/custom/fstheme run build
-pnpm --dir web/themes/custom/fstheme run watch
-```
+
+This installs the theme dependencies, builds the frontend, then watches for
+changes and rebuilds automatically. Leave it running while developing; press
+Ctrl+C to stop.
 
 ## Static Site generation
 
 Generates the static export into `html/` at the repo root (gitignored).
 
 ```
-# Build the static site into ./html/www.foo.com
-./scripts/build-static.sh www.foo.com
+# Build the static site into ./html/www.frees.au
+composer run-script build-fe www.frees.au
 ```
 
 ## Testing

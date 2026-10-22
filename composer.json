@@ -71,11 +71,19 @@
         "sort-packages": true
     },
     "scripts": {
-        "phpstan": "vendor/bin/phpstan analyse --memory-limit=256M",
-        "phpcs": "vendor/bin/phpcs --standard=phpcs.xml",
-        "phpcbf": "vendor/bin/phpcbf --standard=phpcs.xml",
-        "phpunit": "vendor/bin/phpunit",
-        "rector": "vendor/bin/rector --clear-cache --dry-run"
+        "build-fe": [
+            "Composer\\Config::disableProcessTimeout",
+            "pnpm --dir web/themes/custom/fstheme install",
+            "pnpm --dir web/themes/custom/fstheme run build",
+            "pnpm --dir web/themes/custom/fstheme run watch"
+        ],
+        "site-import": "./scripts/site-import.sh",
+        "build-static": "./scripts/build-static.sh",
+        "phpstan": "./vendor/bin/phpstan analyse --memory-limit=256M",
+        "phpcs": "./vendor/bin/phpcs --standard=phpcs.xml",
+        "phpcbf": "./vendor/bin/phpcbf --standard=phpcs.xml",
+        "phpunit": "./vendor/bin/phpunit",
+        "rector": "./vendor/bin/rector --clear-cache --dry-run"
     },
     "extra": {
         "drupal-scaffold": {
