@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 00f8cda3-88a6-49d6-b45b-dd0603fc59c0
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: MYOA3xXbbqjAc3jsMdpE1_2-u_ebOVt2-TYTGRh2jEc.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/MYOA3xXbbqjAc3jsMdpE1_2-u_ebOVt2-TYTGRh2jEc.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 21606
+  status:
+    -
+      value: true

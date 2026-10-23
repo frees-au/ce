@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 8fb04fbb-c570-434c-a946-5e80072d82a5
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 8Zsxs_xxw9TdI3LUogRa0ljxN2D8puhiR89sukYHCto.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/8Zsxs_xxw9TdI3LUogRa0ljxN2D8puhiR89sukYHCto.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 37451
+  status:
+    -
+      value: true

@@ -12,7 +12,7 @@ default:
       value: E12rIf4qsms64EoJkDKcCskcsit2suVYlSg8vtr6jRg.jpg
   uri:
     -
-      value: 'public://oembed_thumbnails/2026-10/E12rIf4qsms64EoJkDKcCskcsit2suVYlSg8vtr6jRg.jpg'
+      value: 'public://oembed_thumbnails/2026-10/E12rIf4qsms64EoJkDKcCskcsit2suVYlSg8vtr6jRg_10.jpg'
   filemime:
     -
       value: image/jpeg

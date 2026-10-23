@@ -8,4 +8,5 @@ cd "$(dirname "$0")/.."
   exit 1
 }
 
+./vendor/bin/drush config:export --yes
 ./vendor/bin/drush site:export "$PWD/recipes/site_export" --overwrite --no-assets "$@"

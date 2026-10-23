@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 13b79ad3-9dcc-42a9-b414-17262107ae51
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: nklHP94bn-h17rpIOGlOvYbbiin4ruMsHtpyhBg3lgg.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/nklHP94bn-h17rpIOGlOvYbbiin4ruMsHtpyhBg3lgg.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 12374
+  status:
+    -
+      value: true

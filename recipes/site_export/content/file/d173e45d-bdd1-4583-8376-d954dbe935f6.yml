@@ -12,7 +12,7 @@ default:
       value: 0eE9sD2zb-bQpE5kj6zJGRWtN63Pj7Tpbdn3zNsB2IA.jpg
   uri:
     -
-      value: 'public://oembed_thumbnails/2026-10/0eE9sD2zb-bQpE5kj6zJGRWtN63Pj7Tpbdn3zNsB2IA.jpg'
+      value: 'public://oembed_thumbnails/2026-10/0eE9sD2zb-bQpE5kj6zJGRWtN63Pj7Tpbdn3zNsB2IA_9.jpg'
   filemime:
     -
       value: image/jpeg
