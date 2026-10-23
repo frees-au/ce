@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 8275b19c-3830-4f06-892a-5e2c218d2b5d
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: CuhpteMEg1ak4RGI2sr_LCG9J9rsR24A8ucMh2ZonA8.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/CuhpteMEg1ak4RGI2sr_LCG9J9rsR24A8ucMh2ZonA8.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 15509
+  status:
+    -
+      value: true

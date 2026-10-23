@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 061f2666-1958-4109-b48e-b94af0c3d758
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 3MT_ll6FMyt404Lf-o9YBVDotlyXNh77mh7Gkc6Y1JI.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/3MT_ll6FMyt404Lf-o9YBVDotlyXNh77mh7Gkc6Y1JI.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 21002
+  status:
+    -
+      value: true

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 895f2a58-4670-4215-93ce-644d9fa3bc41
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 3DictDGi0CWg7NiyW5bgJXcp11TYZw6jhO0LEhsa5XA.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/3DictDGi0CWg7NiyW5bgJXcp11TYZw6jhO0LEhsa5XA.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 16550
+  status:
+    -
+      value: true

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: f9988e82-32cc-4b1a-a395-c5b8d70b270c
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: dl58UwIivrr80Bo-doyeokUC8IJG0dpB7O9KLgFbM0o.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/dl58UwIivrr80Bo-doyeokUC8IJG0dpB7O9KLgFbM0o.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 29118
+  status:
+    -
+      value: true

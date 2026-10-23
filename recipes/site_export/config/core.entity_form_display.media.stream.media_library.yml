@@ -20,6 +20,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_playlist_url: true
   media_oembed_video: true
   path: true
   status: true

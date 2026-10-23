@@ -7,26 +7,22 @@ _meta:
 default:
   revision_uid:
     -
-      target_id: 0
+      target_id: 1
   status:
     -
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
-      value: 'FS eval smoke'
+      value: 'FS eval smoke testing'
   promote:
     -
       value: false
   sticky:
     -
       value: false
-  lead:
-    -
-      value: '.'
-      format: basic
   revision_translation_affected:
     -
       value: true
@@ -34,3 +30,7 @@ default:
     -
       langcode: en
       alias: null
+  lead:
+    -
+      value: '<p>.</p>'
+      format: basic

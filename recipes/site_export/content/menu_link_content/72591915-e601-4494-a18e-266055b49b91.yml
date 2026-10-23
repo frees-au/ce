@@ -26,7 +26,7 @@ default:
       value: false
   rediscover:
     -
-      value: true
+      value: false
   weight:
     -
       value: -50

@@ -134,7 +134,12 @@
         [self showFailure:@"No free local port was found between 8888 and 8999."];
         return;
     }
-    [self showStatus:[NSString stringWithFormat:@"Starting Drupal on port %ld…", (long)port]];
+    NSURL *databaseURL = [repositoryURL URLByAppendingPathComponent:@"database/live.sqlite"];
+    if (![NSFileManager.defaultManager fileExistsAtPath:databaseURL.path]) {
+        [self showStatus:@"Installing Drupal from /recipes/site_export, please standby..."];
+    } else {
+        [self showStatus:[NSString stringWithFormat:@"Starting Drupal on port %ld…", (long)port]];
+    }
 
     NSURL *runtimeDirectory = [NSFileManager.defaultManager.temporaryDirectory
         URLByAppendingPathComponent:[NSString stringWithFormat:@"frees-au-ce-%d", getpid()]

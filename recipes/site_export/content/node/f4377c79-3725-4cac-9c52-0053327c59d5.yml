@@ -25,9 +25,6 @@ default:
   sticky:
     -
       value: false
-  duration:
-    -
-      value: '.'
   revision_translation_affected:
     -
       value: true
@@ -35,6 +32,9 @@ default:
     -
       alias: /ce/articles/adding-ddev-and-installing-drupal-again
       langcode: en
+  duration:
+    -
+      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'

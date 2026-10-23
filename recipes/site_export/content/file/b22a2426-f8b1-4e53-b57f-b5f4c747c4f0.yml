@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: b22a2426-f8b1-4e53-b57f-b5f4c747c4f0
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: qR7eHf7Ikn7AZrBpVgsKdeUWhTmr5DXvVx63zsz0lLg.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/qR7eHf7Ikn7AZrBpVgsKdeUWhTmr5DXvVx63zsz0lLg.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 13253
+  status:
+    -
+      value: true

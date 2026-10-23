@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 653ab1bd-3a41-4eba-ac08-8c33aadac15d
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: X_GM9W8srprXdXFiPRUpjZgS9S_0_16QeIVtVcHZZt0.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/X_GM9W8srprXdXFiPRUpjZgS9S_0_16QeIVtVcHZZt0.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 16918
+  status:
+    -
+      value: true

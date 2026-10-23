@@ -50,4 +50,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_playlist_url: true
   name: true

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 543160de-e6bf-4480-a1d5-025e8e1e871d
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: 4go6hRs5XUiaBc92pxssYBCt3Qk2Cb-K_BZcRU2dnb4.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/4go6hRs5XUiaBc92pxssYBCt3Qk2Cb-K_BZcRU2dnb4.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 14787
+  status:
+    -
+      value: true

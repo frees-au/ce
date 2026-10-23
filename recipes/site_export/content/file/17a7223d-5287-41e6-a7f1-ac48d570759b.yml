@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 17a7223d-5287-41e6-a7f1-ac48d570759b
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: APWfnwG2daFGK_hGVirEQUkWDAp_mGn3FskamaxTo2g.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/APWfnwG2daFGK_hGVirEQUkWDAp_mGn3FskamaxTo2g.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 16397
+  status:
+    -
+      value: true

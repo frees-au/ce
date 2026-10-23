@@ -1,3 +1,8 @@
+label_tag_enabled: true
+label_class_enabled: true
+label_class_select_enabled: false
+label_value_enabled: true
+plural_label_enabled: false
 allowed_tags:
   - div
   - span
@@ -7,8 +12,3 @@ allowed_tags:
   - h5
   - h6
 class_list: ''
-label_tag_enabled: true
-label_class_enabled: true
-label_class_select_enabled: false
-label_value_enabled: true
-plural_label_enabled: false

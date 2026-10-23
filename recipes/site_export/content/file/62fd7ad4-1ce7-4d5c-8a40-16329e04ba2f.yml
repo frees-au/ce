@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 62fd7ad4-1ce7-4d5c-8a40-16329e04ba2f
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: fkgK55IL9egqXXnvqbXvq5UQ2e8NSoGlu1VLV-yp1BU.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/fkgK55IL9egqXXnvqbXvq5UQ2e8NSoGlu1VLV-yp1BU.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 6593
+  status:
+    -
+      value: true

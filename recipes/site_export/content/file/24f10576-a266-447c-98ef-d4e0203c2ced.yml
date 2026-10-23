@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 24f10576-a266-447c-98ef-d4e0203c2ced
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: y3aO-OBsrxopvhmN_N-D7c1HTInDHmRSf83gtAI3nNQ.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/y3aO-OBsrxopvhmN_N-D7c1HTInDHmRSf83gtAI3nNQ.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 11125
+  status:
+    -
+      value: true

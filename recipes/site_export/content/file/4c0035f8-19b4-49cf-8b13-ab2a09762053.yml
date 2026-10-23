@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 4c0035f8-19b4-49cf-8b13-ab2a09762053
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: YDozLrw5QGWHHQcMpjpjvPdgXS7PdMtilzjIy1Na11E.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/YDozLrw5QGWHHQcMpjpjvPdgXS7PdMtilzjIy1Na11E.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 28036
+  status:
+    -
+      value: true

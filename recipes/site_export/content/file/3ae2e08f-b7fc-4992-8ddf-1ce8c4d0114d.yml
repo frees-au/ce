@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 3ae2e08f-b7fc-4992-8ddf-1ce8c4d0114d
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: DxwsvyBCSseribm5IBVNwdcLIQDxdsWNLqqipple8xI.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/2026-10/DxwsvyBCSseribm5IBVNwdcLIQDxdsWNLqqipple8xI.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 22374
+  status:
+    -
+      value: true
