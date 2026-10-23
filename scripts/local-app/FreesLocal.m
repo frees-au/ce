@@ -228,7 +228,7 @@
         return;
     }
     self.supervisor = process;
-    [self pollUntilReadyOnPort:port attemptsRemaining:120];
+    [self pollUntilReadyOnPort:port attemptsRemaining:240];
 }
 
 - (void)pollUntilReadyOnPort:(NSInteger)port attemptsRemaining:(NSInteger)attempts {
@@ -238,7 +238,7 @@
         return;
     }
     if (attempts <= 0) {
-        [self showFailure:[NSString stringWithFormat:@"Drupal did not respond within 30 seconds. Check %@.", self.logFileURL.path]];
+        [self showFailure:[NSString stringWithFormat:@"Drupal did not respond within one minute. Check %@.", self.logFileURL.path]];
         return;
     }
 
@@ -380,7 +380,13 @@
     NSString *text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     if (text.length == 0) return;
 
-    [self.logTextView.textStorage appendAttributedString:[[NSAttributedString alloc] initWithString:text]];
+    NSDictionary<NSAttributedStringKey, id> *attributes = @{
+        NSForegroundColorAttributeName: NSColor.textColor,
+        NSFontAttributeName: [NSFont monospacedSystemFontOfSize:12 weight:NSFontWeightRegular],
+    };
+    NSAttributedString *logText = [[NSAttributedString alloc] initWithString:text
+                                                                  attributes:attributes];
+    [self.logTextView.textStorage appendAttributedString:logText];
     if (self.logTextView.string.length > 200000) {
         [self.logTextView.textStorage deleteCharactersInRange:NSMakeRange(0, self.logTextView.string.length - 200000)];
     }

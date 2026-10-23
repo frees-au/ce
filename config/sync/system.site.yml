@@ -8,7 +8,7 @@ slogan: 'Free as in …'
 page:
   403: ''
   404: ''
-  front: /home-route
+  front: /ce
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
