@@ -75,7 +75,8 @@
             "pnpm --dir web/themes/custom/fstheme install",
             "pnpm --dir web/themes/custom/fstheme run build"
         ],
-        "site-import": "./scripts/site-import.sh",
+        "site-load": "./scripts/site-load.sh",
+        "site-save": "./scripts/site-save.sh",
         "build-static": "./scripts/build-static.sh",
         "phpstan": "./vendor/bin/phpstan analyse --memory-limit=256M",
         "phpcs": "./vendor/bin/phpcs --standard=phpcs.xml",
