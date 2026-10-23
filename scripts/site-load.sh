@@ -31,6 +31,10 @@ PHP
 mkdir -p config/live
 find config/live -type f -name '*.yml' -delete
 
+# These are generated derivatives. Remove thumbnails from the previous site
+# before imported media entities recreate them during installation.
+rm -rf web/sites/default/files/oembed_thumbnails
+
 ./vendor/bin/drush site:install --existing-config -y "$@"
 ./vendor/bin/drush content:import ../recipes/site_export/content
 
