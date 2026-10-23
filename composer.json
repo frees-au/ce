@@ -122,6 +122,9 @@
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
         },
         "patches": {
+            "drush/drush": {
+                "Skip recipe command while Drupal installer storage is active": "config/patches/drush-skip-recipe-command-during-install.patch"
+            },
             "drupal/tome": {
                 "Clear Tome static cache after completing an export": "config/patches/tome-clear-cache-after-export.patch"
             }

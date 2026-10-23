@@ -1,0 +1,21 @@
+--- a/src/Runtime/ServiceManager.php
++++ b/src/Runtime/ServiceManager.php
+@@ -14,5 +14,6 @@
+ use Consolidation\SiteProcess\ProcessManagerAwareInterface;
+ use Drupal\Component\DependencyInjection\ContainerInterface as DrupalContainer;
++use Drupal\Core\Config\StorageCacheInterface;
+ use Drupal\Core\DefaultContent\ContentExportCommand;
+ use Drupal\Core\Recipe\RecipeCommand;
+ use DrupalCodeGenerator\Command\BaseGenerator;
+@@ -359,7 +360,10 @@
+ 
+         // Drupal 11.4+
+         /** @disregard P1009 */
+-        if ($container->has(CommandRecipeCommand::class)) {
++        if (
++            $container->has(CommandRecipeCommand::class) &&
++            $container->get('config.storage') instanceof StorageCacheInterface
++        ) {
+             /** @disregard P1009 */
+             $instances[] = Drupal::service(CommandRecipeCommand::class)->setHelp($help);
+         }

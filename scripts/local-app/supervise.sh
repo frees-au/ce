@@ -66,6 +66,14 @@ save_and_stop() {
 trap stop_server EXIT
 trap save_and_stop INT TERM HUP
 
+if [[ ! -f "$repository/database/live.sqlite" ]]; then
+  printf '\n[%s] Loading site before startup.\n' "$(date '+%Y-%m-%d %H:%M:%S')" >>"$log_file"
+  if ! "$repository/scripts/site-load.sh" >>"$log_file" 2>&1; then
+    printf '[%s] Site load failed; the local server was not started.\n' "$(date '+%Y-%m-%d %H:%M:%S')" >>"$log_file"
+    exit 1
+  fi
+fi
+
 cd "$repository/web" || exit 1
 php -S "127.0.0.1:$port" "$repository/vendor/drush/drush/misc/d8-rs-router.php" >>"$log_file" 2>&1 &
 server_pid=$!

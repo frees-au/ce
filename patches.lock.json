@@ -1,6 +1,18 @@
 {
-    "_hash": "2ea08e2128f57bc4f33d7d58d7e6ae0e970ed33a82b1b00460f2203d9c859f3c",
+    "_hash": "66308c78f4fa6f3170278757679e998cdb92f39479322181d04a16a6164b6d31",
     "patches": {
+        "drush/drush": [
+            {
+                "package": "drush/drush",
+                "description": "Skip recipe command while Drupal installer storage is active",
+                "url": "config/patches/drush-skip-recipe-command-during-install.patch",
+                "sha256": "fdf5e6f01f25b5a982a24c73327fc87914d530ed7edc6eb5c53d2ce83629a041",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
         "drupal/tome": [
             {
                 "package": "drupal/tome",
