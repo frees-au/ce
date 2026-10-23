@@ -16,7 +16,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Digital Analytics and Optimisation'
+      value: 'Data Engineering and Analytics'
   promote:
     -
       value: false
@@ -28,13 +28,13 @@ default:
       value: true
   path:
     -
-      alias: /ce/services/digital-analytics-and-optimisation
+      alias: /ce/services/data-engineering-and-analytics
       langcode: en
   lead:
     -
-      value: '<p>Measurement strategy, KPIs, event schemas, GA4/GTM/Snowplow instrumentation, data validation, dashboards, experimentation, cohort/funnel analysis and improvement prioritisation.</p>'
+      value: '<p>Connect your data, measure what matters and turn reliable information into practical decisions. We bring together data engineering, analytics and reporting, from pipelines and platforms to dashboards and ongoing optimisation.</p>'
       format: basic
   markup:
     -
-      value: '<h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/data-engineering">Data Engineering</a></li><li><a href="/ce/services/govcms">GovCMS</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      value: '<h2>Build a useful data foundation</h2><p>We work with your team to understand the decisions you need to make and the systems that hold the information. We design data architecture, platforms and integration pipelines that bring those sources together into useful, maintainable datasets.</p><p>This can include BigQuery, SQL, Python and dbt modelling, with extract, load and transform workflows suited to your environment. Data quality checks, clear definitions, ownership and governed access help make the results trustworthy and practical to use.</p><h2>Measure what matters</h2><p>We help define a measurement strategy, KPIs and event schemas around your service and business goals. Analytics implementation can include Google Analytics 4, Google Tag Manager and Snowplow, with validation to check that collected data supports the questions you want to answer.</p><h2>Turn information into decisions</h2><p>We build dashboards and reporting that make performance understandable, using tools such as Looker, LookML, Looker Studio and Tableau where they fit. Shared measures and clear reporting help teams explore trends, identify gaps and agree what to do next.</p><h2>Learn and improve</h2><p>We support funnel and cohort analysis, experimentation and improvement prioritisation, connecting analytical findings to practical changes. Working closely with your team, we can help implement those changes, review the results and refine the approach over time.</p><h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/process-automation">Process Automation</a></li><li><a href="/ce/services/govcms">GovCMS</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
       format: safe_html

@@ -219,8 +219,8 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: html_date
-            custom_date_format: ''
+            date_format: custom
+            custom_date_format: 'Y-m-d H:i'
             timezone: ''
             tooltip:
               date_format: long
@@ -296,8 +296,8 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: html_date
-            custom_date_format: ''
+            date_format: custom
+            custom_date_format: 'Y-m-d H:i'
             timezone: ''
             tooltip:
               date_format: long
@@ -403,7 +403,23 @@ display:
           plugin_id: text_custom
           empty: true
           content: 'No content available.'
-      sorts: {  }
+      sorts:
+        changed:
+          id: changed
+          table: node_field_data
+          field: changed
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: changed
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: changed
+          exposed: false
+          granularity: second
       arguments: {  }
       filters:
         title:

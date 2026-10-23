@@ -16,7 +16,7 @@ default:
       target_id: 1
   title:
     -
-      value: Druxt
+      value: 'Headless and Decoupled Solutions'
   promote:
     -
       value: false
@@ -28,13 +28,13 @@ default:
       value: true
   path:
     -
-      alias: /ce/services/druxt
+      alias: /ce/services/headless-and-decoupled-solutions
       langcode: en
   lead:
     -
-      value: '<p>Decoupled Drupal and Nuxt.js development using Druxt. Connect Drupal JSON:API content to Vue components, with support for shared content, multiple sites and consumer-specific branding.</p>'
+      value: '<p>Design and build headless and decoupled solutions that connect flexible front ends to structured content and business systems. Balance the freedom to shape the experience with practical editorial workflows and maintainable delivery.</p>'
       format: basic
   markup:
     -
-      value: '<h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/drupal-cms">Drupal CMS</a></li><li><a href="/ce/services/open-source">Open Source</a></li><li><a href="/ce/services/cloud-platforms">Cloud Platforms</a></li><li><a href="/ce/services/process-automation">Process Automation</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      value: '<h2>Choose the right architecture</h2><p>We help you decide where separating the front end from the content backend will support your goals. That means understanding your audiences, editorial needs, integrations and delivery team before choosing the technology.</p><p>Options include React and Angular front ends, React applications built with Next.js, and Vue/Nuxt experiences. Drupal can provide a structured decoupled backend, while API-first platforms such as Contentful offer another approach to managing and delivering content. We work through the trade-offs with you rather than assuming one stack fits every project.</p><h2>Connect content, people and systems</h2><p>We design content models and API integrations around the experience you want to deliver, including connections to search, identity and existing business systems. Editorial preview, publishing workflows and content reuse belong in the architecture from the start, alongside performance, accessibility and testing.</p><h2>Decoupled Drupal with Druxt</h2><p>Druxt connects Drupal and Vue/Nuxt, using Drupal JSON:API content to support component-based front ends. It provides an option for teams that want Drupal’s content modelling alongside a separate frontend experience, including shared content and different presentation needs across sites.</p><p>Our network includes Druxt creator Stuart Clark, who brings hands-on experience with decoupled Drupal, Vue/Nuxt and React/Next.js. We can explore where Druxt fits your requirements and what the implementation and ongoing maintenance would involve.</p><h2>Build for the long term</h2><p>We work closely with your team from architecture and integration through implementation and delivery. Clear ownership, reusable components, automated checks and practical documentation help keep the solution understandable and maintainable as your content and services evolve.</p><h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/drupal-cms">Drupal CMS</a></li><li><a href="/ce/services/open-source">Open Source</a></li><li><a href="/ce/services/cloud-platforms">Cloud Platforms</a></li><li><a href="/ce/services/process-automation">Process Automation</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
       format: safe_html
