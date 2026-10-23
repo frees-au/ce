@@ -11,6 +11,6 @@ cd "$(dirname "$0")/.."
 ./vendor/bin/drush config:export --yes
 ./vendor/bin/drush site:export "$PWD/recipes/site_export" --overwrite --no-assets "$@"
 # Config is handled in sync and we don't need any duplicated.
-rm -Rf ./recipes/site_export/content/config
+rm -Rf ./recipes/site_export/config
 # Oembed files get doubled up, so until we have files to include, or other dependencies, then we skill all files.
 rm -Rf ./recipes/site_export/content/file
