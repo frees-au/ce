@@ -16,7 +16,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Information Architecture'
+      value: 'Information Architecture and Content Strategy'
   promote:
     -
       value: false
@@ -32,9 +32,9 @@ default:
       langcode: en
   lead:
     -
-      value: '<p>Content types, relationships, taxonomies, editorial permissions and workflows; navigation, tree testing and content discovery.</p>'
+      value: '<p>Drupal information architecture, content strategy and content design, with a focus on usability, readability and accessibility. Restructure and migrate large content datasets, using machine learning to support the process where appropriate.</p>'
       format: basic
   markup:
     -
-      value: '<h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/content-strategy-and-publishing">Content Strategy and Publishing</a></li><li><a href="/ce/services/govcms">GovCMS</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      value: '<h2>Structure content around user needs</h2><p>We help teams plan and improve Drupal content so people can find, understand and use it. Our work brings together information architecture, content strategy and content design, with attention to usability, readability and accessibility.</p><p>We design content types, relationships and taxonomies, along with navigation and content discovery. Content audits, tree testing and usability reviews help assess the structure and guide improvements.</p><h2>Support consistent publishing</h2><p>We help define publishing governance, editorial permissions and workflows, reusable authoring patterns and guidance for editors. This can include content entry in Drupal and editor enablement, so the content strategy is practical to maintain.</p><h2>Restructure and migrate large content datasets</h2><p>We plan and support the move from existing content into new Drupal structures, including mapping content, restructuring datasets, transforming source material and validating the migrated results.</p><p>Where appropriate, we use machine learning to support content classification, identify similar or duplicate material and suggest mappings to new structures. Editorial review and validation remain part of the process to check meaning, accuracy and suitability.</p><h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/content-migration">Content Migration</a></li><li><a href="/ce/services/govcms">GovCMS</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
       format: safe_html

@@ -32,9 +32,9 @@ default:
       langcode: en
   lead:
     -
-      value: '<p>GovCMS SaaS/PaaS and externally hosted Drupal maintenance, triage, security updates, defects, enhancements, releases, reporting and technical account coordination.</p>'
+      value: '<p>Application support from experienced Free Source Network consultants across GovCMS, Upsun (formerly Platform.sh), Acquia, Pantheon and custom cloud providers, with direct relationships and ongoing retainer support.</p>'
       format: basic
   markup:
     -
-      value: '<h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/drupal-devops">Drupal DevOps</a></li><li><a href="/ce/services/govcms">GovCMS</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      value: '<h2>Support across hosting and cloud platforms</h2><p>Free Source Network consultants bring experience across many hosting and cloud platforms, including GovCMS SaaS and PaaS, Upsun (formerly Platform.sh), Acquia, Pantheon and custom cloud providers. We support Drupal applications with maintenance, triage, security updates, defect resolution, enhancements, releases and reporting.</p><h2>Direct, ongoing support</h2><p>Our preferred support model is an ongoing retainer, with close, direct engagement and a one-to-one relationship between client and consultant. Consultants can work within your organisation’s chat channels or in a dedicated chat space we provide for client-consultant contact.</p><p>This keeps day-to-day communication close to the work, with low account-management and coordination overhead. We agree priorities, scope and ways of working with you, so support fits your team and operating environment.</p><h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/drupal-devops">Drupal DevOps</a></li><li><a href="/ce/services/govcms">GovCMS</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
       format: safe_html

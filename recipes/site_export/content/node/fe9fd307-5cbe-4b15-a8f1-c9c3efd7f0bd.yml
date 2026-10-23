@@ -32,9 +32,9 @@ default:
       langcode: en
   lead:
     -
-      value: '<p>Cloud platform consulting across GCP and AWS, including BigQuery analytics, Dataform ELT, Firebase application backends, and Drupal hosting on Acquia Cloud and Lagoon.</p>'
+      value: '<p>Cloud consulting for Google Cloud and AWS, from architecture and solution design to environment reviews, recommendations and implementation support.</p>'
       format: basic
   markup:
     -
-      value: '<h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/drupal-devops">Drupal DevOps</a></li><li><a href="/ce/services/govcms">GovCMS</a></li><li><a href="/ce/services/drupal-cms">Drupal CMS</a></li><li><a href="/ce/services/agent-harness-design">Agent Harness Design</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      value: '<h2>Cloud consulting and delivery</h2><p>Our consultants and contractors can design and build solutions in Google Cloud or AWS, choosing the platform and services that suit your requirements and existing systems.</p><p>We offer cloud architecture and solution design, audits and reviews of existing environments, practical recommendations, and implementation support. We can help you assess what is already in place, plan improvements and carry them through to delivery.</p><h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/drupal-devops">Drupal DevOps</a></li><li><a href="/ce/services/govcms">GovCMS</a></li><li><a href="/ce/services/drupal-cms">Drupal CMS</a></li><li><a href="/ce/services/agent-harness-design">Agent Harness Design</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
       format: safe_html
