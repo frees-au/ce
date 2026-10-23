@@ -8,4 +8,10 @@ cd "$(dirname "$0")/.."
   exit 1
 }
 
-./vendor/bin/drush site:export "$PWD/recipes/site_export" --overwrite --no-assets "$@"
+export_directory="$(mktemp -d "${TMPDIR:-/tmp}/frees-au-ce-site-export.XXXXXX")"
+trap 'rm -rf "$export_directory"' EXIT
+
+./vendor/bin/drush site:export "$export_directory" --no-assets "$@"
+php scripts/prune-exported-oembed-thumbnails.php "$export_directory/content/file"
+mkdir -p recipes/site_export
+rsync -a --delete "$export_directory/" recipes/site_export/
