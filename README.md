@@ -15,7 +15,7 @@ This code base tries to answer the questions:
 
 * How small can Drupal be?
 * Is Drupal fast with just PHP and SQLite?
-* What if we put the database in git?
+* How can we use recipes to remove the need for persistent database?
 * How good is static site generation?
 * What will the agent do with it?
 
@@ -23,22 +23,20 @@ This code base tries to answer the questions:
 
 * SQLite
 * PHP 8.3 (with opcache.enable_cli)
-* php composer
+* php composer to build app
 * node/pnpm to build frontend
 
 ## Build backend
 
 Install the backend dependencies, then rebuild the site from committed
-configuration and exported content:
+configuration and exported content.
+
+You can remove database/live.sqlite first unless its got some that's not exported yet.
 
 ```sh
 composer install
-composer run-script site-import
+composer run-script site-load
 ```
-
-The import requires `database/live.sqlite` to be absent or empty; it refuses to
-overwrite an existing database containing tables. It resets `config/live` from
-the committed configuration and imports the exported content and URL aliases.
 
 Start the local site:
 
