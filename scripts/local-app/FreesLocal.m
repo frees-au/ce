@@ -10,9 +10,13 @@
 @property(nonatomic, strong) WKWebView *webView;
 @property(nonatomic, strong) NSTextField *statusLabel;
 @property(nonatomic, strong) NSProgressIndicator *spinner;
+@property(nonatomic, strong) NSScrollView *logScrollView;
+@property(nonatomic, strong) NSTextView *logTextView;
+@property(nonatomic, strong) NSTimer *logTimer;
 @property(nonatomic, strong) NSTask *supervisor;
 @property(nonatomic, strong) NSURL *pidFileURL;
 @property(nonatomic, strong) NSURL *logFileURL;
+@property(nonatomic) unsigned long long logOffset;
 @property(nonatomic) BOOL quitting;
 @property(nonatomic) BOOL repliedToTermination;
 @end
@@ -102,17 +106,42 @@
     self.statusLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [container addSubview:self.statusLabel];
 
+    self.logTextView = [[NSTextView alloc] init];
+    self.logTextView.editable = NO;
+    self.logTextView.selectable = YES;
+    self.logTextView.richText = NO;
+    self.logTextView.font = [NSFont monospacedSystemFontOfSize:12 weight:NSFontWeightRegular];
+    self.logTextView.textColor = NSColor.secondaryLabelColor;
+    self.logTextView.backgroundColor = NSColor.textBackgroundColor;
+    self.logTextView.textContainerInset = NSMakeSize(10, 10);
+    self.logTextView.verticallyResizable = YES;
+    self.logTextView.horizontallyResizable = NO;
+    self.logTextView.autoresizingMask = NSViewWidthSizable;
+    self.logTextView.textContainer.widthTracksTextView = YES;
+
+    self.logScrollView = [[NSScrollView alloc] init];
+    self.logScrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.logScrollView.borderType = NSBezelBorder;
+    self.logScrollView.hasVerticalScroller = YES;
+    self.logScrollView.autohidesScrollers = YES;
+    self.logScrollView.documentView = self.logTextView;
+    [container addSubview:self.logScrollView];
+
     [NSLayoutConstraint activateConstraints:@[
         [self.webView.leadingAnchor constraintEqualToAnchor:container.leadingAnchor],
         [self.webView.trailingAnchor constraintEqualToAnchor:container.trailingAnchor],
         [self.webView.topAnchor constraintEqualToAnchor:container.topAnchor],
         [self.webView.bottomAnchor constraintEqualToAnchor:container.bottomAnchor],
         [self.spinner.centerXAnchor constraintEqualToAnchor:container.centerXAnchor],
-        [self.spinner.centerYAnchor constraintEqualToAnchor:container.centerYAnchor constant:-16],
+        [self.spinner.topAnchor constraintEqualToAnchor:container.topAnchor constant:60],
         [self.statusLabel.centerXAnchor constraintEqualToAnchor:container.centerXAnchor],
         [self.statusLabel.topAnchor constraintEqualToAnchor:self.spinner.bottomAnchor constant:14],
         [self.statusLabel.leadingAnchor constraintGreaterThanOrEqualToAnchor:container.leadingAnchor constant:30],
         [self.statusLabel.trailingAnchor constraintLessThanOrEqualToAnchor:container.trailingAnchor constant:-30],
+        [self.logScrollView.topAnchor constraintEqualToAnchor:self.statusLabel.bottomAnchor constant:20],
+        [self.logScrollView.leadingAnchor constraintEqualToAnchor:container.leadingAnchor constant:50],
+        [self.logScrollView.trailingAnchor constraintEqualToAnchor:container.trailingAnchor constant:-50],
+        [self.logScrollView.bottomAnchor constraintEqualToAnchor:container.bottomAnchor constant:-50],
     ]];
 
     [self.window makeKeyAndOrderFront:nil];
@@ -163,6 +192,7 @@
                                                  error:nil];
     self.pidFileURL = [runtimeDirectory URLByAppendingPathComponent:@"server.pid"];
     self.logFileURL = [logsDirectory URLByAppendingPathComponent:@"server.log"];
+    [self startLogStreaming];
 
     NSTask *process = [[NSTask alloc] init];
     process.executableURL = supervisorURL;
@@ -319,10 +349,56 @@
     [handle closeFile];
 }
 
+- (void)startLogStreaming {
+    NSDictionary *attributes = [NSFileManager.defaultManager attributesOfItemAtPath:self.logFileURL.path
+                                                                               error:nil];
+    self.logOffset = attributes.fileSize;
+    self.logTextView.string = @"";
+    self.logTimer = [NSTimer scheduledTimerWithTimeInterval:0.2
+                                                     target:self
+                                                   selector:@selector(readNewLogOutput:)
+                                                   userInfo:nil
+                                                    repeats:YES];
+}
+
+- (void)readNewLogOutput:(NSTimer *)timer {
+    NSFileHandle *handle = [NSFileHandle fileHandleForReadingAtPath:self.logFileURL.path];
+    if (!handle) return;
+
+    unsigned long long size = [handle seekToEndOfFile];
+    if (size < self.logOffset) self.logOffset = 0;
+    if (size == self.logOffset) {
+        [handle closeFile];
+        return;
+    }
+
+    [handle seekToFileOffset:self.logOffset];
+    NSData *data = [handle readDataToEndOfFile];
+    self.logOffset += data.length;
+    [handle closeFile];
+
+    NSString *text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    if (text.length == 0) return;
+
+    [self.logTextView.textStorage appendAttributedString:[[NSAttributedString alloc] initWithString:text]];
+    if (self.logTextView.string.length > 200000) {
+        [self.logTextView.textStorage deleteCharactersInRange:NSMakeRange(0, self.logTextView.string.length - 200000)];
+    }
+    [self.logTextView scrollRangeToVisible:NSMakeRange(self.logTextView.string.length, 0)];
+}
+
+- (void)stopLogStreaming {
+    [self readNewLogOutput:self.logTimer];
+    [self.logTimer invalidate];
+    self.logTimer = nil;
+}
+
 - (void)loadSite:(NSURL *)url {
+    [self stopLogStreaming];
     [self.spinner stopAnimation:nil];
     self.spinner.hidden = YES;
     self.statusLabel.hidden = YES;
+    self.logScrollView.hidden = YES;
     self.webView.hidden = NO;
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
     self.window.title = [NSString stringWithFormat:@"frees-au-ce — %@", url.absoluteString];
@@ -333,6 +409,7 @@
 }
 
 - (void)showFailure:(NSString *)message {
+    [self stopLogStreaming];
     [self.spinner stopAnimation:nil];
     self.spinner.hidden = YES;
     self.statusLabel.hidden = NO;
