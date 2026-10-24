@@ -8,6 +8,9 @@ default:
   revision_uid:
     -
       target_id: 1
+  revision_log:
+    -
+      value: 'Expand Frontend and Design Systems service content.'
   status:
     -
       value: true
@@ -32,9 +35,9 @@ default:
       langcode: en
   lead:
     -
-      value: '<p>Drupal themes and reusable frontend components; responsive interfaces, design-system implementation, API-driven applications and design-to-code delivery.</p>'
+      value: '<p>Design systems and component libraries built around Storybook and similar tools. We create reusable, accessible frontend patterns, connect design to code and give teams practical documentation, testing and governance.</p>'
       format: basic
   markup:
     -
-      value: '<h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/decoupled-cms">Decoupled CMS</a></li><li><a href="/ce/services/govcms">GovCMS</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      value: '<h2>Turn interface design into a shared system</h2><p>We help teams move from one-off page designs to a coherent set of reusable components, patterns and design decisions. The work can include foundations such as colour, typography, spacing and responsive behaviour, along with the interface components that bring those foundations to life.</p><p>By aligning designers, developers and content teams around the same vocabulary, a design system makes new work faster to deliver and easier to keep consistent.</p><h2>Build a living component catalogue</h2><p>We use Storybook to develop and document components in isolation, showing their variants, states, content constraints and responsive behaviour. The catalogue becomes a practical place to review work, test edge cases and understand how components should be used.</p><p>Depending on your platform and team, we can also work with similar pattern-library and documentation approaches, including Drupal Single Directory Components and component libraries for React, Vue or other frontend frameworks. We choose an approach that fits the product rather than forcing every system into the same tool.</p><h2>Connect design and implementation</h2><p>We translate design files and prototypes into maintainable frontend code, using shared design tokens and clear component APIs to preserve intent across platforms. We can establish conventions for naming, composition, content, theming and versioning, and help integrate the component library into Drupal themes, decoupled applications or standalone products.</p><p>Documentation covers both the visual result and the practical decisions needed to use a component well, including accessibility expectations, supported content and examples of appropriate combinations.</p><h2>Test quality as the system grows</h2><p>We can add automated accessibility checks, interaction tests and visual regression testing around the component catalogue. These checks complement browser, keyboard and screen-reader review, helping teams catch unintended changes while keeping responsibility for quality visible in everyday development.</p><h2>Create a system people can maintain</h2><p>A useful design system is a product, not just a collection of components. We help define contribution, review and release practices; identify ownership; and create a roadmap that can grow from a focused foundation. We can also audit an existing interface, consolidate duplicated patterns and support designers and developers as they adopt the system.</p><h2>Plan your engagement</h2><p>Start with your products, current design and frontend assets, delivery workflow and the teams who will use the system. We can agree a practical scope, from a component-library foundation or Storybook setup through to a broader design-system programme.</p><h2>Related services</h2><ul><li><a href="/ce/services/ux-and-ui-design">UX and UI Design</a></li><li><a href="/ce/services/web-accessibility">Web Accessibility</a></li><li><a href="/ce/services/decoupled-cms">Decoupled CMS</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
       format: safe_html

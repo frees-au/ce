@@ -8,6 +8,9 @@ default:
   revision_uid:
     -
       target_id: 1
+  revision_log:
+    -
+      value: 'Rename and expand Shopify and ERP service content.'
   status:
     -
       value: true
@@ -16,7 +19,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Ecommerce and Website Operations'
+      value: 'Shopify & ERP Systems'
   promote:
     -
       value: false
@@ -32,9 +35,9 @@ default:
       langcode: en
   lead:
     -
-      value: '<p>WordPress/PHP themes, Shopify, Squarespace/Wix, ACF/Gravity Forms, hosting/DNS/SSL, Git and staging/production operations; catalogue/fulfilment/API automation.</p>'
+      value: '<p>Shopify and ERP consulting grounded in hands-on transformation work. We help connect commerce, point of sale, dispatch, fulfilment and operational data, simplify inherited systems and build a practical path from rescue to reliable day-to-day operation.</p>'
       format: basic
   markup:
     -
-      value: '<h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/process-automation">Process Automation</a></li><li><a href="/ce/services/govcms">GovCMS</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      value: '<h2>Connect commerce with the operation behind it</h2><p>A storefront is only one part of an ecommerce business. Orders, products, inventory, point of sale, dispatch, fulfilment, finance and reporting need clear responsibilities and dependable information flows between systems.</p><p>We help teams understand that operating model, decide where information should be owned and design integrations that support the real work. That can include Shopify and Shopify POS, ERP platforms, fulfilment services, APIs and the automation needed to keep them aligned.</p><h2>Experience from the Diggers Club transformation</h2><p>Our capability draws on lead consultant Simon Hobbs’s transformation rescue and CTO work with the Diggers Club from October 2024 to July 2026. The programme covered ERP simplification, Shopify and point of sale, dispatch and fulfilment, platform consolidation, operational integration, and data services using BigQuery, Dataform and Airbyte.</p><p>This was practical renewal work across commerce and operations, not a storefront project in isolation. It required understanding how technology choices affected the people running the business and creating a more coherent platform around their day-to-day needs.</p><h2>Simplify and rescue ERP environments</h2><p>We can help assess an inherited ERP or integration estate, identify duplicated responsibilities and brittle dependencies, and separate urgent operational risks from longer-term improvement. Our broader experience includes a substantial NetSuite rescue engagement, alongside Shopify integration and operational transformation.</p><p>The aim is not complexity for its own sake. We look for opportunities to reduce unnecessary customisation, make system boundaries explicit and choose maintainable integration patterns. Where change needs to be staged, we help define transition steps, reconciliation checks and ownership so the business can keep operating.</p><h2>Improve fulfilment and operational workflows</h2><p>We work with the teams handling orders, dispatch and customer operations to map what actually happens between a sale and a completed fulfilment. That creates a basis for improving workflows, automating repetitive hand-offs and making exceptions easier to see and resolve.</p><p>Depending on the engagement, this can involve Shopify APIs, ERP interfaces, point-of-sale flows, catalogue automation and connections to specialist fulfilment or business systems.</p><h2>Make operational data useful</h2><p>Commerce and ERP platforms produce valuable data, but reporting becomes difficult when definitions and pipelines are fragmented. We can connect operational sources to a warehouse and establish transformations that make performance, exceptions and business activity easier to understand.</p><p>Our Diggers experience includes BigQuery, Dataform and Airbyte as part of the wider platform transformation. The right reporting and data architecture for another organisation will depend on its systems, scale and existing capability.</p><h2>Plan your engagement</h2><p>Start with the business problem, current platforms and the operational processes that cannot be interrupted. We can scope a focused Shopify or integration project, an ERP review, or a staged rescue and transformation programme with clear priorities and responsibilities.</p><h2>Related services</h2><ul><li><a href="/ce/services/process-automation">Process Automation</a></li><li><a href="/ce/services/data-engineering-and-analytics">Data Engineering and Analytics</a></li><li><a href="/ce/services/cloud-platforms">Cloud Platforms</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
       format: safe_html
