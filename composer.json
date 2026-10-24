@@ -84,6 +84,9 @@
         "phpunit": "./vendor/bin/phpunit",
         "rector": "./vendor/bin/rector --clear-cache --dry-run"
     },
+    "scripts-aliases": {
+        "site-save": ["save"]
+    },
     "extra": {
         "drupal-scaffold": {
             "locations": {
