@@ -8,6 +8,12 @@ cd "$(dirname "$0")/.."
   exit 1
 }
 
+# The search index is client-side, so it is not part of the exported recipe.
+# Rebuild it anyway, so that a saved site is always left fully indexed.
+# shellcheck source=scripts/includes/reindex-search.sh
+source scripts/includes/reindex-search.sh
+reindex_search content
+
 ./vendor/bin/drush config:export --yes
 ./vendor/bin/drush site:export "$PWD/recipes/site_export" --overwrite --no-assets "$@"
 # Config is handled in sync and we don't need any duplicated.

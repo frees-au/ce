@@ -1,0 +1,37 @@
+uuid: e94c3737-4b32-44d4-a6ad-31cd07cb81c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.page.hero
+    - field.field.node.page.layout_builder__layout
+    - field.field.node.page.lead
+    - field.field.node.page.markup
+    - node.type.page
+  module:
+    - text
+id: node.page.search_index
+targetEntityType: node
+bundle: page
+mode: search_index
+content:
+  lead:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  markup:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  hero: true
+  layout_builder__layout: true
+  links: true
+  search_api_excerpt: true

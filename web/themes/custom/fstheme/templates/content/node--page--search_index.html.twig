@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Template for rendering a node in the "Search index" view mode.
+ *
+ * The `content` search_api index stores the rendered output of every node.
+ * This template is what that rendered output comes from, so it is kept to the
+ * node's content only:
+ * - The node title is deliberately left out. It is indexed separately as the
+ *   `search_api_lunr_label` field, where it carries a boost.
+ * - The "Submitted by ... on ..." footer is metadata rather than content.
+ *   Left in, every single document in the index would contain the author name
+ *   and creation date, so a search for either would match the whole site.
+ *
+ * @see node--article--search_index.html.twig
+ * @see \Drupal\search_api\Plugin\search_api\processor\Property\RenderedItemProperty
+ */
+#}
+<div{{ content_attributes }}>
+  {{ content|without('title', 'uid', 'created') }}
+</div>

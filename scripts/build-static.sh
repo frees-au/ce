@@ -8,11 +8,41 @@ cd "$REPO_ROOT"
 
 DOMAIN="${1:-www.frees.au}"
 URI="${TOME_URI:-https://$DOMAIN}"
-ENV=$([[ "$DOMAIN" == "www.frees.au" ]] && echo "www.frees.au" || echo "static-locat-test.frees.au")
+
+# The search index is client-side: the browser downloads JSON shards listed in
+# the page's drupalSettings. The list is built when the page is rendered, so
+# the index has to be complete before Tome renders anything.
+# shellcheck source=scripts/includes/reindex-search.sh
+source scripts/includes/reindex-search.sh
+reindex_search content "$URI"
 
 vendor/bin/drush theme:dev off -vv --uri="$URI"
 vendor/bin/drush cache:rebuild -vv --uri="$URI"
 vendor/bin/drush tome:static -vv --uri="$URI"
+
+# Tome only copies the files it happens to request while rendering, and the
+# search index is fetched by the browser rather than by the exporter. Copy the
+# shards into the export so the static site can serve them.
+#
+# The destination comes from Tome's own static directory rather than from a
+# domain mapping here: settings.php sends www.frees.au and preview.frees.au to
+# separate directories and everything else to the bare html/ directory. Every
+# drush call runs with --uri so that the same settings profile is loaded as
+# the one the export used.
+INDEX_SOURCE="$(vendor/bin/drush php:eval 'print \Drupal::service("file_system")->realpath("public://search-api-js");' --uri="$URI")"
+INDEX_PUBLIC_PATH="$(vendor/bin/drush php:eval 'print \Drupal::service("file_url_generator")->generateString("public://search-api-js");' --uri="$URI")"
+STATIC_DIRECTORY="$(vendor/bin/drush php:eval 'print \Drupal::service("tome_static.generator")->getStaticDirectory();' --uri="$URI")"
+INDEX_DEST="$(realpath -m "$REPO_ROOT/web/$STATIC_DIRECTORY")$INDEX_PUBLIC_PATH"
+
+if [[ -d "$INDEX_SOURCE" ]]; then
+  rm -Rf "$INDEX_DEST"
+  mkdir -p "$INDEX_DEST"
+  cp -R "$INDEX_SOURCE/." "$INDEX_DEST/"
+  echo "✓ Search index copied to $INDEX_DEST"
+else
+  echo "✗ No search index found at $INDEX_SOURCE" >&2
+  exit 1
+fi
 
 # Force drupal to generate aggregated css.
 # curl -s "https://www-edit.frees.au" > /dev/null

@@ -1,0 +1,70 @@
+uuid: 221be5b0-4079-4c05-a65b-6868f515bb2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - search_api.server.lunr
+  module:
+    - node
+    - search_api_lunr
+id: content
+name: Content
+description: 'Indexes the rendered output of every node on the site.'
+read_only: false
+field_settings:
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:node':
+          article: search_index
+          page: search_index
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: search_api_lunr_label
+    boost: 21.0
+    dependencies:
+      module:
+        - node
+  url:
+    label: URI
+    property_path: search_api_url
+    type: search_api_lunr_url
+    configuration:
+      absolute: false
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  html_filter:
+    all_fields: false
+    title: true
+    alt: true
+    tags: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: lunr

@@ -1,0 +1,25 @@
+uuid: 59b3b977-1377-4f27-a933-575a680dc144
+langcode: en
+status: true
+dependencies:
+  module:
+    - fs
+    - system
+  theme:
+    - fstheme
+id: fs_search
+theme: fstheme
+region: content
+weight: 0
+provider: null
+plugin: fs_search
+settings:
+  id: fs_search
+  label: ''
+  label_display: ''
+  provider: fs
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search

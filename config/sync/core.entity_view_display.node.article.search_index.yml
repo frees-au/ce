@@ -1,0 +1,49 @@
+uuid: 105b651a-4a7a-4e1c-b6ab-098860d7ff62
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.article.duration
+    - field.field.node.article.hero
+    - field.field.node.article.lead
+    - field.field.node.article.markup
+    - field.field.node.article.playlist
+    - field.field.node.article.tags
+    - field.field.node.article.youtube
+    - node.type.article
+  module:
+    - text
+id: node.article.search_index
+targetEntityType: node
+bundle: article
+mode: search_index
+content:
+  lead:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  markup:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  tags:
+    type: entity_reference_label
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  duration: true
+  hero: true
+  links: true
+  playlist: true
+  search_api_excerpt: true
+  youtube: true
