@@ -2,6 +2,7 @@
 set -euo pipefail
 
 # Build the Tome static export using the first argument as the domain.
+STATIC_OUTPUT_ROOT="${STATIC_OUTPUT_ROOT:-../ce-web-static}"
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
@@ -12,9 +13,11 @@ URI="${TOME_URI:-https://$DOMAIN}"
 # The search index is client-side: the browser downloads JSON shards listed in
 # the page's drupalSettings. The list is built when the page is rendered, so
 # the index has to be complete before Tome renders anything.
-# shellcheck source=scripts/includes/reindex-search.sh
 source scripts/includes/reindex-search.sh
 reindex_search content "$URI"
+
+ENV=$([[ "$DOMAIN" == "www.frees.au" ]] && echo "www.frees.au" || echo "preview.frees.au")
+export TOME_STATIC_DIRECTORY="${REPO_ROOT}/${STATIC_OUTPUT_ROOT}/${DOMAIN}"
 
 vendor/bin/drush theme:dev off -vv --uri="$URI"
 vendor/bin/drush cache:rebuild -vv --uri="$URI"
@@ -44,9 +47,7 @@ else
   exit 1
 fi
 
-# Force drupal to generate aggregated css.
-# curl -s "https://www-edit.frees.au" > /dev/null
-
 echo
 echo "✓ Static export written"
 echo "  URI: $URI"
+echo "  Directory: $TOME_STATIC_DIRECTORY"

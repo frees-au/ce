@@ -51,7 +51,7 @@ switch ($domain) {
   case 'www.frees.au':
   case 'preview.frees.au':
     require_once "{$here}/tome.settings.php";
-    $settings['tome_static_directory'] = "../html/{$domain}";
+    $settings['tome_static_directory'] = getenv('TOME_STATIC_DIRECTORY') ?: "../html/{$domain}";
     break;
   default:
     $settings['container_yamls'][] = "{$here}/edit.services.yml";
