@@ -35,14 +35,17 @@ You can remove database/live.sqlite first unless its got some that's not exporte
 
 ```sh
 composer install
-composer run-script site-load
+composer run-script build-site
 ```
+
+After a successful build, the command offers to start the local site in the
+foreground and open it in the default browser.
 
 Start the local site:
 
 ```sh
 # Run in foreground
-./vendor/bin/drush serve
+./vendor/bin/drush serve /
 # Login (switch to different tab)
 ./vendor/bin/drush uli
 ```
@@ -69,7 +72,7 @@ Generates the static export into `html/` at the repo root (gitignored).
 
 ```
 # Build the static site into ./html/www.frees.au
-composer run-script build-fe www.frees.au
+composer run-script make-static www.frees.au
 ```
 
 ## Testing

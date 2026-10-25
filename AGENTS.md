@@ -31,7 +31,7 @@ database/live.sqlite    The live database — single SQLite file, committed-frie
 drush/                  Drush config (self.site.yml)
 drush/agent             A place to dump and run custom scripts `drush ev drush/agent/foo.php`
 scripts/                Hermes-managed helper scripts (see scripts/README.md)
-html/*                  Static site generation using ./scripts/build-static.sh www.frees.au
+html/*                  Static site generation using ./scripts/site-generate-static.sh www.frees.au
 ```
 
 ## Proving work and debugging

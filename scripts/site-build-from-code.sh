@@ -80,4 +80,19 @@ PHP
 # instead of the old /home-route controller's hard-coded /node/4 fallback.
 ./vendor/bin/drush config:set system.site page.front /ce -y
 ./vendor/bin/drush cache:rebuild
-echo 'Site installed and content imported. Run ./vendor/bin/drush uli to log in.'
+echo 'Site installed and content imported.'
+
+if [[ -t 0 ]]; then
+  if read -r -p 'Start the local site and open it in your browser? [y/N] ' serve_site; then
+    case "$serve_site" in
+      [yY]|[yY][eE][sS])
+        echo 'Starting the local site in the foreground. Press Ctrl+C to stop it.'
+        exec ./vendor/bin/drush serve /
+        ;;
+    esac
+  else
+    echo
+  fi
+fi
+
+echo 'Run ./vendor/bin/drush serve / to start the site, or ./vendor/bin/drush uli to log in.'

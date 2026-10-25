@@ -35,7 +35,7 @@ save_and_stop() {
   save_status=0
 
   printf '\n[%s] Saving site before shutdown.\n' "$(date '+%Y-%m-%d %H:%M:%S')" >>"$log_file"
-  if "$repository/scripts/site-save.sh" >>"$log_file" 2>&1; then
+  if "$repository/scripts/site-export-to-code.sh" >>"$log_file" 2>&1; then
     :
   else
     save_status=$?
@@ -67,9 +67,9 @@ trap stop_server EXIT
 trap save_and_stop INT TERM HUP
 
 if [[ ! -f "$repository/database/live.sqlite" ]]; then
-  printf '\n[%s] Loading site before startup.\n' "$(date '+%Y-%m-%d %H:%M:%S')" >>"$log_file"
-  if ! "$repository/scripts/site-load.sh" >>"$log_file" 2>&1; then
-    printf '[%s] Site load failed; the local server was not started.\n' "$(date '+%Y-%m-%d %H:%M:%S')" >>"$log_file"
+  printf '\n[%s] Building site from code before startup.\n' "$(date '+%Y-%m-%d %H:%M:%S')" >>"$log_file"
+  if ! "$repository/scripts/site-build-from-code.sh" >>"$log_file" 2>&1; then
+    printf '[%s] Site build failed; the local server was not started.\n' "$(date '+%Y-%m-%d %H:%M:%S')" >>"$log_file"
     exit 1
   fi
 fi

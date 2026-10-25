@@ -7,7 +7,7 @@
 # that exist at page render time, so a rebuild has to finish before the site
 # is rendered or exported.
 #
-# Sourced by site-save.sh and build-static.sh.
+# Sourced by site-export-to-code.sh and site-generate-static.sh.
 
 # Rebuilds the given search_api index completely.
 #

@@ -75,9 +75,9 @@
             "pnpm --dir web/themes/custom/fstheme install",
             "pnpm --dir web/themes/custom/fstheme run build"
         ],
-        "site-load": "./scripts/site-load.sh",
-        "site-save": "./scripts/site-save.sh",
-        "build-static": "./scripts/build-static.sh",
+        "build-site": "./scripts/site-build-from-code.sh",
+        "export-site": "./scripts/site-export-to-code.sh",
+        "make-static": "./scripts/site-generate-static.sh",
         "phpstan": "./vendor/bin/phpstan analyse --memory-limit=256M",
         "phpcs": "./vendor/bin/phpcs --standard=phpcs.xml",
         "phpcbf": "./vendor/bin/phpcbf --standard=phpcs.xml",
@@ -85,7 +85,7 @@
         "rector": "./vendor/bin/rector --clear-cache --dry-run"
     },
     "scripts-aliases": {
-        "site-save": ["save"]
+        "export-site": ["ssave"]
     },
     "extra": {
         "drupal-scaffold": {
