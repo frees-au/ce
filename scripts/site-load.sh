@@ -9,22 +9,33 @@ cd "$(dirname "$0")/.."
 }
 
 mkdir -p database
-if [[ ! -f database/live.sqlite ]]; then
+if [[ -f database/live.sqlite ]]; then
+  if ! read -r -p 'Would you like to back up the previous live database? [y/N] ' backup_database; then
+    echo >&2
+    echo 'No response received. Site load cancelled.' >&2
+    exit 1
+  fi
+
+  case "$backup_database" in
+    [yY]|[yY][eE][sS])
+      backup="database/live-backup-$(date '+%Y%m%d-%H%M%S').sqlite"
+      while [[ -e "$backup" || -e "$backup-wal" || -e "$backup-shm" ]]; do
+        backup="database/live-backup-$(date '+%Y%m%d-%H%M%S')-$RANDOM.sqlite"
+      done
+      mv database/live.sqlite "$backup"
+      [[ ! -e database/live.sqlite-wal ]] || mv database/live.sqlite-wal "$backup-wal"
+      [[ ! -e database/live.sqlite-shm ]] || mv database/live.sqlite-shm "$backup-shm"
+      echo "Previous live database moved to $backup."
+      ;;
+    *)
+      echo 'Site load cancelled; database/live.sqlite was not changed.'
+      exit 1
+      ;;
+  esac
+else
   # SQLite sidecars can remain after the main database is deleted.
   rm -f database/live.sqlite-wal database/live.sqlite-shm
 fi
-# Do not silently reinstall over an existing site. An empty SQLite file can be
-# created by Drush while inspecting an uninstalled site and is safe to use.
-php <<'PHP'
-<?php
-if (is_file('database/live.sqlite')) {
-  $db = new PDO('sqlite:database/live.sqlite');
-  if ($db->query("SELECT COUNT(*) FROM sqlite_master WHERE type = 'table'")->fetchColumn() > 0) {
-    fwrite(STDERR, "database/live.sqlite already contains tables. Remove it before rebuilding.\n");
-    exit(1);
-  }
-}
-PHP
 
 # Active configuration is stored on disk here, so deleting SQLite alone does
 # not give the installer the empty active configuration it requires.

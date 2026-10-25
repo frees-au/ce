@@ -16,7 +16,7 @@ field_settings:
   rendered_item:
     label: 'Rendered HTML output'
     property_path: rendered_item
-    type: text
+    type: search_api_lunr_summary
     configuration:
       roles:
         - anonymous

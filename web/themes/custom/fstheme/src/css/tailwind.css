@@ -85,3 +85,17 @@
     @apply px-6 w-auto sm:mx-auto sm:w-150 md:mx-0 md:w-200 md:pl-24 lg:w-400 lg:pl-48;
   }
 }
+
+@layer components {
+  .search-api-lunr-teaser p {
+    @apply mt-2;
+  }
+
+  .search-api-lunr-pager ul {
+    @apply mt-8 flex flex-wrap items-center gap-2;
+  }
+
+  .search-api-lunr-pager li a {
+    @apply block cursor-pointer px-3 py-2;
+  }
+}

@@ -37,7 +37,7 @@ default:
       value: '50 mins'
   lead:
     -
-      value: '<p>Shopify has powerful live theming tools. So what does that look like hooked up to ChatGPT/Codex?&nbsp;</p>'
+      value: '<p>Shopify has powerful live theming tools. So what does that look like hooked up to ChatGPT/Codex? </p>'
       format: basic
   youtube:
     -

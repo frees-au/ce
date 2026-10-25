@@ -13,7 +13,7 @@ default:
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: Search
@@ -30,3 +30,7 @@ default:
     -
       alias: /search
       langcode: und
+  lead:
+    -
+      value: 'Search articles and pages on frees.au/ce'
+      format: basic
