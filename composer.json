@@ -82,10 +82,18 @@
         "phpcs": "./vendor/bin/phpcs --standard=phpcs.xml",
         "phpcbf": "./vendor/bin/phpcbf --standard=phpcs.xml",
         "phpunit": "./vendor/bin/phpunit",
-        "rector": "./vendor/bin/rector --clear-cache --dry-run"
+        "rector": "./vendor/bin/rector --clear-cache --dry-run",
+        "all-tests": [
+            "@phpstan",
+            "@phpcs",
+            "@phpunit"
+        ]
     },
     "scripts-aliases": {
-        "export-site": ["ssave"]
+        "build-site": ["fsup"],
+        "export-site": ["fsexp"],
+        "make-static": ["fstat"],
+        "all-tests": ["fstest"]
     },
     "extra": {
         "drupal-scaffold": {
