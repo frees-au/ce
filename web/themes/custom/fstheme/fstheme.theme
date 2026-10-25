@@ -5,15 +5,21 @@
  * Free Sauce theme module.
  */
 
-use Drupal\Core\Entity\EntityInterface;
+use Drupal\file\FileInterface;
 use Drupal\media\MediaInterface;
 use Drupal\node\NodeInterface;
+use Drupal\taxonomy\TermInterface;
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * @phpstan-param array<int, string> $hooks
+ * @phpstan-param array<string, mixed> $vars
  */
 function fstheme_theme_suggestions_field_alter(array &$hooks, array $vars): void {
-  switch ($vars['element']['#field_type'] ?? NULL) {
+  $element = $vars['element'] ?? NULL;
+  $field_type = is_array($element) ? ($element['#field_type'] ?? NULL) : NULL;
+  switch ($field_type) {
     case 'string':
     case 'list_string':
     case 'text_long':
@@ -28,7 +34,8 @@ function fstheme_theme_suggestions_field_alter(array &$hooks, array $vars): void
       return;
 
     default:
-      \Drupal::messenger()->addError('Unexpected field type ' . $vars['element']['#field_type'] . ' not sure if to wrap it in a bare template.');
+      $field_type_label = is_string($field_type) ? $field_type : 'unknown';
+      \Drupal::messenger()->addError('Unexpected field type ' . $field_type_label . ' not sure if to wrap it in a bare template.');
       break;
   }
 }
@@ -43,9 +50,14 @@ function fstheme_theme_suggestions_field_alter(array &$hooks, array $vars): void
  *  - sets $youtube_thumbnail to a renderable thumbnail built from the
  *    referenced media's oEmbed-derived `thumbnail` image field. The teaser
  *    template uses this as the cover image instead of a stock fallback.
+ *
+ * @phpstan-param array<string, mixed> $vars
  */
-function fstheme_preprocess_node(&$vars) {
-  $node = $vars['node'];
+function fstheme_preprocess_node(array &$vars): void {
+  $node = $vars['node'] ?? NULL;
+  if ($node instanceof NodeInterface) {
+    $vars['hero_banner'] = _fs_random_stockart();
+  }
   if (!($node instanceof NodeInterface) || $node->bundle() !== 'article') {
     return;
   }
@@ -65,7 +77,7 @@ function fstheme_preprocess_node(&$vars) {
   // oEmbed populates this on save with the YouTube `hqdefault` jpg.
   if ($media->hasField('thumbnail') && !$media->get('thumbnail')->isEmpty()) {
     $image = $media->get('thumbnail')->entity;
-    if ($image instanceof EntityInterface) {
+    if ($image instanceof FileInterface) {
       $vars['youtube_thumbnail'] = [
         '#theme' => 'image_style',
         '#style_name' => 'teaser',
@@ -79,7 +91,10 @@ function fstheme_preprocess_node(&$vars) {
   // Expose the YouTube playlist URL (if any) so the article template can
   // render a "Watch the playlist on YouTube" link below the embed.
   if ($media->hasField('field_playlist_url') && !$media->get('field_playlist_url')->isEmpty()) {
-    $vars['youtube_playlist_url'] = $media->get('field_playlist_url')->getValue()[0];
+    $playlist_urls = $media->get('field_playlist_url')->getValue();
+    if (is_array($playlist_urls) && isset($playlist_urls[0]) && is_array($playlist_urls[0])) {
+      $vars['youtube_playlist_url'] = $playlist_urls[0];
+    }
   }
 
   // Expose any local Playlists-view links so the article (full + teaser)
@@ -87,12 +102,13 @@ function fstheme_preprocess_node(&$vars) {
   // that have at least one taxonomy term in the 'playlist' vocabulary get
   // this — empty otherwise.
   if ($node->hasField('playlist') && !$node->get('playlist')->isEmpty()) {
-    $terms = \Drupal::entityTypeManager()
-      ->getStorage('taxonomy_term')
-      ->loadMultiple(array_column($node->get('playlist')->getValue(), 'target_id'));
     $links = [];
-    foreach ($terms as $term) {
-      if ($term->bundle() !== 'playlist') {
+    $referenced_terms = $node->get('playlist')->referencedEntities();
+    if (!is_iterable($referenced_terms)) {
+      return;
+    }
+    foreach ($referenced_terms as $term) {
+      if (!($term instanceof TermInterface) || $term->bundle() !== 'playlist') {
         continue;
       }
       $links[] = [
@@ -100,7 +116,7 @@ function fstheme_preprocess_node(&$vars) {
         'url'   => '/playlists/' . $term->id(),
       ];
     }
-    if ($links) {
+    if ($links !== []) {
       $vars['article_playlists'] = $links;
     }
   }

@@ -7,28 +7,18 @@
 
 declare(strict_types=1);
 
-use Drupal\node\NodeInterface;
+use Drupal\taxonomy\TermInterface;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_requirements_alter().
+ *
+ * @phpstan-param array<string, mixed> $requirements
  */
 function fs_requirements_alter(array &$requirements): void {
   // Decrease the 'update status' requirement severity from warning to informational.
-  $requirements['update status']['severity'] = REQUIREMENT_INFO;
-}
-
-/**
- * Implements hook_entity_type_storage_load().
- *
- * Stamps every loaded node with a random stockart hero URL so templates can
- * always render a background image. Cards/teasers use it as the fallback
- * cover; page.html.twig uses it on node routes.
- */
-function fs_node_storage_load(array $nodes) {
-  foreach ($nodes as $node) {
-    if ($node instanceof NodeInterface) {
-      $node->hero_banner = _fs_random_stockart();
-    }
+  if (isset($requirements['update status']) && is_array($requirements['update status'])) {
+    $requirements['update status']['severity'] = REQUIREMENT_INFO;
   }
 }
 
@@ -36,13 +26,13 @@ function fs_node_storage_load(array $nodes) {
  * Implements hook_preprocess_page().
  *
  * Exposes a `$page_header_image` for every page route, even those without a
- * node (view pages like /from-the-pen, taxonomy term pages, the homepage
- * redirect). Without this, `node.hero_banner` is null on view routes and the
- * header `<div>` renders with an empty `background-image: url('')` —
- * effectively missing the banner.
+ * node (view pages like /from-the-pen, taxonomy term pages, and the homepage
+ * redirect), so the header always has a background image.
+ *
+ * @phpstan-param array<string, mixed> $vars
  */
 function fs_preprocess_page(array &$vars): void {
-  $vars['page_header_image'] = $vars['node']->hero_banner ?? _fs_random_stockart();
+  $vars['page_header_image'] = _fs_random_stockart();
 }
 
 /**
@@ -63,29 +53,16 @@ function _fs_random_stockart(): string {
  *
  * Example: /playlists/1/videos  →  page title becomes "Vibecoding a
  * Firebase App", not "1".
+ *
+ * @phpstan-param array<int, mixed> $args
  */
-function fs_views_pre_view(\Drupal\views\ViewExecutable $view, $display_id, array &$args): void {
+function fs_views_pre_view(ViewExecutable $view, string $display_id, array &$args): void {
   if ($view->id() !== 'playlists') {
     return;
   }
-  // At pre-view time the contextual-filter argument hasn't been bound yet
-  // ($view->argument is still null) — read directly from $view->args, which
-  // is the array set by the page display when resolving the URL.
-  if (!$view->args) {
-    return;
-  }
-  $tid = (int) ($view->args[0] ?? 0);
-  if (!$tid) {
-    return;
-  }
-  $term = \Drupal::entityTypeManager()
-    ->getStorage('taxonomy_term')
-    ->load($tid);
-  if ($term && $term->bundle() === 'playlist') {
-    // Stash the desired title on the view object itself — NOT build_info,
-    // because execute() rebuilds build_info from scratch. The view object
-    // survives across build()/execute()/render().
-    $view->fs_playlist_title = $term->label();
+  $title = _fs_playlist_title($view);
+  if ($title !== NULL) {
+    $view->setTitle($title);
   }
 }
 
@@ -95,11 +72,32 @@ function fs_views_pre_view(\Drupal\views\ViewExecutable $view, $display_id, arra
  * Counterpart to fs_views_pre_view() — execute() resets the title to the
  * default at runtime, so the override has to land in pre_render.
  */
-function fs_views_pre_render(\Drupal\views\ViewExecutable $view): void {
+function fs_views_pre_render(ViewExecutable $view): void {
   if ($view->id() !== 'playlists') {
     return;
   }
-  if (!empty($view->fs_playlist_title)) {
-    $view->setTitle($view->fs_playlist_title);
+  $title = _fs_playlist_title($view);
+  if ($title !== NULL) {
+    $view->setTitle($title);
   }
+}
+
+/**
+ * Resolves the playlist title from a view's first contextual argument.
+ */
+function _fs_playlist_title(ViewExecutable $view): ?string {
+  $argument = $view->args[0] ?? NULL;
+  if (!is_int($argument) && !is_string($argument)) {
+    return NULL;
+  }
+  $tid = filter_var($argument, FILTER_VALIDATE_INT, ['options' => ['min_range' => 1]]);
+  if ($tid === FALSE) {
+    return NULL;
+  }
+  $term = \Drupal::entityTypeManager()
+    ->getStorage('taxonomy_term')
+    ->load($tid);
+  return $term instanceof TermInterface && $term->bundle() === 'playlist'
+    ? (string) $term->label()
+    : NULL;
 }

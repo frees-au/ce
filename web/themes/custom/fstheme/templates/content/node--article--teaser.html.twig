@@ -2,8 +2,8 @@
   <div class="px-5 pt-4 relative">
     {% if youtube_thumbnail %}
       {{ youtube_thumbnail }}
-    {% elseif node.hero_banner %}
-      <img class="w-full h-full object-cover" src="{{ node.hero_banner }}" />
+    {% elseif hero_banner %}
+      <img class="w-full h-full object-cover" src="{{ hero_banner }}" />
     {% endif %}
     <div class="absolute bottom-4 right-9">
       {% if article_type == 'video' %}
