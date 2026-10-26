@@ -9,6 +9,10 @@
   {{ title_suffix }}
 
   <div{{ content_attributes }}>
-    {{ content }}
+    {{ content.lead }}
+    <div class='fs-prose'>
+      {{ content|without('lead') }}
+    </div>
   </div>
+
 </article>

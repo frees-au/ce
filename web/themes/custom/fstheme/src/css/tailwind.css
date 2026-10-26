@@ -15,6 +15,7 @@
   /* Colours */
   --color-fs-red: #851520;
   --color-fs-red-tint: #B11F24;
+  --color-fs-red-light: #D98B91;
   --color-fs-dark-grey: #BFBFBF;
   --color-fs-light-grey: #F5F5F5;
 
@@ -45,6 +46,56 @@
 }
 
 @layer base {
+  .fs-prose {
+    a {
+      position: relative;
+      text-decoration: none;
+      padding-bottom: 3px;
+    }
+
+    a::before,
+    a::after {
+      content: '';
+      position: absolute;
+      inset-inline: 0;
+      bottom: 1px;
+      height: 5px;
+      background-color: var(--color-fs-red-light);
+      pointer-events: none;
+    }
+
+    a::before {
+      opacity: 0;
+      mask: url('../images/squiggle-hover.svg') repeat-x bottom / 80px 5px;
+      -webkit-mask: url('../images/squiggle-hover.svg') repeat-x bottom / 80px 5px;
+    }
+
+    a::after {
+      opacity: 1;
+      mask: url('../images/squiggle.svg') repeat-x bottom / 80px 5px;
+      -webkit-mask: url('../images/squiggle.svg') repeat-x bottom / 80px 5px;
+    }
+
+    a:hover::before {
+      opacity: 1;
+    }
+
+    a:hover::after {
+      opacity: 0;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      a::before,
+      a::after {
+        transition: opacity 180ms ease-out;
+      }
+
+      a:hover::after {
+        transition-timing-function: ease-in;
+      }
+    }
+  }
+
   h1 {
     @apply font-display text-5xl leading-12 mt-8;
   }
@@ -86,7 +137,6 @@
   /* Used on content in header/main/footer to control content gutter and alignment down the page. */
   .page-default-container-span {
     @apply px-6 w-auto sm:mx-auto sm:w-150 md:mx-0 md:w-200 md:pl-24 lg:w-400 lg:pl-48;
-    border: 1px solid green;
   }
 }
 
