@@ -100,11 +100,6 @@ PHP
 ./vendor/bin/drush cache:rebuild
 echo 'Site installed and content imported.'
 
-if [[ -t 0 ]]; then
-  echo 'User 1 login link:'
-  ./vendor/bin/drush user:login --uid=1 --no-browser user/1
-  echo
-fi
-
-echo 'Start the server with this command:'
+echo 'Login link and serve command...'
+./vendor/bin/drush user:login --uid=1 --no-browser user/1
 echo './vendor/bin/drush serve /'
