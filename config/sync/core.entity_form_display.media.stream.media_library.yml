@@ -21,8 +21,8 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  playlist: true
   media_oembed_video: true
   path: true
+  playlist: true
   status: true
   uid: true

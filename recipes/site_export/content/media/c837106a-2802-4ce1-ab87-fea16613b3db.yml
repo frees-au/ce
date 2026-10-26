@@ -30,11 +30,11 @@ default:
     -
       langcode: en
       alias: null
+  media_oembed_video:
+    -
+      value: 'https://www.youtube.com/watch?v=yOhlnIiR6yE'
   playlist:
     -
       uri: 'https://www.youtube.com/playlist?list=PLGo2CM33WszI'
       title: 'Watch the playlist on YouTube'
       options: {  }
-  media_oembed_video:
-    -
-      value: 'https://www.youtube.com/watch?v=yOhlnIiR6yE'

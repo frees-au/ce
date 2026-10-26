@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Theme implementation for a user profile.
+ *
+ * Available variables:
+ * - content: The rendered user fields.
+ * - attributes: HTML attributes for the container element.
+ * - user: The Drupal user entity.
+ *
+ * @see \Drupal\user\UserThemeHooks::preprocessUser()
+ */
+#}
+<article{{ attributes.addClass('page-default-container-span') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</article>

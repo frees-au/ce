@@ -31,8 +31,8 @@ content:
     region: content
 hidden:
   created: true
-  playlist: true
   name: true
+  playlist: true
   search_api_excerpt: true
   thumbnail: true
   uid: true

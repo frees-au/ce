@@ -38,7 +38,7 @@ default:
   path:
     -
       alias: /ce/search
-      langcode: und
+      langcode: en
   lead:
     -
       value: '<p>Search articles and pages on frees.au/ce</p>'
