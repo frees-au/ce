@@ -15,11 +15,11 @@ provider: null
 plugin: fs_search
 settings:
   id: fs_search
-  label: ''
-  label_display: ''
+  label: Search
+  label_display: '0'
   provider: fs
 visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /search
+    pages: /node/11

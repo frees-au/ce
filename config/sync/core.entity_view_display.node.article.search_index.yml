@@ -14,11 +14,21 @@ dependencies:
     - node.type.article
   module:
     - text
+    - user
 id: node.article.search_index
 targetEntityType: node
 bundle: article
 mode: search_index
 content:
+  duration:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
   lead:
     type: text_default
     label: hidden
@@ -26,24 +36,25 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  markup:
-    type: text_default
-    label: hidden
-    settings: {  }
+  playlist:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
     third_party_settings: {  }
     weight: 1
     region: content
   tags:
     type: entity_reference_label
     label: hidden
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
 hidden:
-  duration: true
   hero: true
   links: true
-  playlist: true
+  markup: true
   search_api_excerpt: true
   youtube: true

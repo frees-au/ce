@@ -1,7 +1,16 @@
 <ul class="lg:flex lg:justify-end lg:gap-8">
   {% for item in items %}
+    {% set is_search = item.url.toString() == '/ce/search' %}
     <li>
-      <a href="{{ item.url }}" class="inline-block py-2 text-3xl leading-8">{{ item.title }}</a>
+      <a href="{{ item.url }}" class="inline-block py-2 text-3xl leading-8">
+        <span{% if is_search %} class="lg:sr-only"{% endif %}>{{ item.title }}</span>
+        {% if is_search %}
+          <svg class="hidden size-8 lg:block" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <circle cx="14" cy="14" r="8" stroke="currentColor" stroke-width="2.5" />
+            <path d="m20 20 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+          </svg>
+        {% endif %}
+      </a>
     </li>
   {% endfor %}
 </ul>

@@ -12,6 +12,7 @@ install:
   - dynamic_page_cache
   - editor
   - field
+  - field_ui
   - file
   - filter
   - image
