@@ -68,7 +68,7 @@ trap save_and_stop INT TERM HUP
 
 if [[ ! -f "$repository/database/live.sqlite" ]]; then
   printf '\n[%s] Building site from code before startup.\n' "$(date '+%Y-%m-%d %H:%M:%S')" >>"$log_file"
-  if ! "$repository/scripts/site-build-from-code.sh" >>"$log_file" 2>&1; then
+  if ! CE_LOCAL_PORT="$port" "$repository/scripts/site-build-from-code.sh" >>"$log_file" 2>&1; then
     printf '[%s] Site build failed; the local server was not started.\n' "$(date '+%Y-%m-%d %H:%M:%S')" >>"$log_file"
     exit 1
   fi

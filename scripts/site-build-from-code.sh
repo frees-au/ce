@@ -3,6 +3,24 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
+local_host=127.0.0.1
+local_port=${CE_LOCAL_PORT:-8888}
+if ! [[ "$local_port" =~ ^[0-9]+$ ]] || (( local_port < 1 || local_port > 65535 )); then
+  echo "Invalid local site port: $local_port" >&2
+  exit 1
+fi
+
+if ! php -r '
+  $socket = @stream_socket_server("tcp://{$argv[1]}:{$argv[2]}", $error_code, $error_message);
+  if (!$socket) {
+    exit(1);
+  }
+  fclose($socket);
+' "$local_host" "$local_port"; then
+  echo "Local site port $local_host:$local_port is already in use, stubbornly assuming you don't want two servers at once." >&2
+  exit 1
+fi
+
 [[ -x vendor/bin/drush && -f config/sync/core.extension.yml && -d recipes/site_export/content ]] || {
   echo 'Install Composer dependencies and ensure config/sync and recipes/site_export/content exist.' >&2
   exit 1
@@ -83,6 +101,10 @@ PHP
 echo 'Site installed and content imported.'
 
 if [[ -t 0 ]]; then
+  echo 'User 1 login link:'
+  ./vendor/bin/drush user:login --uid=1 --no-browser user/1
+  echo
+
   if read -r -p 'Start the local site and open it in your browser? [y/N] ' serve_site; then
     case "$serve_site" in
       [yY]|[yY][eE][sS])
