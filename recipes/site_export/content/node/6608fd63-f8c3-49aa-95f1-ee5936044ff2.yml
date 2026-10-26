@@ -7,6 +7,9 @@ _meta:
   depends:
     b3d82ccd-f066-49be-a8f0-719051dd0a43: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Talking PHPStan with Matt Glaman'
+  created:
+    -
+      value: 1718886563
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

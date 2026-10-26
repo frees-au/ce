@@ -7,6 +7,9 @@ _meta:
   depends:
     3a64f8cd-9fd0-4e4c-b858-6d4e414051a4: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Add your first Drupal gitlab-ci.yml thru the web UI'
+  created:
+    -
+      value: 1712824427
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

@@ -7,6 +7,9 @@ _meta:
   depends:
     4746bb38-9325-4c79-a813-fe90089c48ab: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Xdebug with VS Code'
+  created:
+    -
+      value: 1711415127
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

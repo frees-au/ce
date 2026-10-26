@@ -1,0 +1,5 @@
+services:
+  Drupal\fs_tools\EventSubscriber\PreserveContentDatesSubscriber:
+    tags:
+      - { name: event_subscriber }
+

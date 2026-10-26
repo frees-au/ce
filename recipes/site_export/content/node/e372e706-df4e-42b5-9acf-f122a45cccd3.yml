@@ -7,6 +7,9 @@ _meta:
   depends:
     e5201a47-0bfb-4e11-b1cd-d26be7f77d99: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Setting up the DDEV plugin, tyler36/ddev-xhgui'
+  created:
+    -
+      value: 1717419299
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

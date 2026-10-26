@@ -7,6 +7,9 @@ _meta:
   depends:
     c8d34fee-3274-44a5-92a0-9c9f801496c0: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Local hub setup - Debian, Forgejo, Hermes'
+  created:
+    -
+      value: 1787070253
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

@@ -7,6 +7,9 @@ _meta:
   depends:
     aa70777f-b6a2-484d-9455-5e3b346a26f0: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Adding DDEV and installing Drupal (again)'
+  created:
+    -
+      value: 1694414981
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

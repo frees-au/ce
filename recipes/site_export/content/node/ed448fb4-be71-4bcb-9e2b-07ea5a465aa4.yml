@@ -8,6 +8,9 @@ _meta:
     aff8d46a-eaf1-4aac-bc23-80f92154d551: taxonomy_term
     c837106a-2802-4ce1-ab87-fea16613b3db: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -20,6 +23,12 @@ default:
   title:
     -
       value: 'Rebuilding a vibe code app #1'
+  created:
+    -
+      value: 1786222892
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

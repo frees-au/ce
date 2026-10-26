@@ -7,6 +7,9 @@ _meta:
   depends:
     b49dc419-1581-4f75-9b06-2b8bee0906f8: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: "Time to config:export 'field_' to pasture"
+  created:
+    -
+      value: 1711703861
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

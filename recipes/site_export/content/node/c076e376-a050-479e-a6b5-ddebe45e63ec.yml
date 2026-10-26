@@ -7,6 +7,9 @@ _meta:
   depends:
     c4f42bc5-1d37-46dc-b4f3-91319b325940: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Deciding a structure for sites/default/settings'
+  created:
+    -
+      value: 1694162125
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

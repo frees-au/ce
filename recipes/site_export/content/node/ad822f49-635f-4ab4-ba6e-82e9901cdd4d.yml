@@ -8,6 +8,9 @@ _meta:
     aff8d46a-eaf1-4aac-bc23-80f92154d551: taxonomy_term
     2fc50946-e2e4-4378-a867-2f403f8a9f8e: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -20,6 +23,12 @@ default:
   title:
     -
       value: 'When the customer wants to vibe code your Firebase app'
+  created:
+    -
+      value: 1789459908
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

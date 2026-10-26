@@ -5,6 +5,9 @@ _meta:
   bundle: page
   default_langcode: en
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -20,6 +23,12 @@ default:
   title:
     -
       value: 'Frontend and Design Systems'
+  created:
+    -
+      value: 1792985603
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

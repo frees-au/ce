@@ -5,6 +5,9 @@ _meta:
   bundle: stream
   default_langcode: en
 default:
+  revision_created:
+    -
+      value: 1792985603
   status:
     -
       value: true
@@ -14,6 +17,12 @@ default:
   name:
     -
       value: 'Brogue - Broadsword, Reflection to D14'
+  created:
+    -
+      value: 1792985603
+  changed:
+    -
+      value: 1792985603
   revision_translation_affected:
     -
       value: true

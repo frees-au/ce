@@ -7,6 +7,9 @@ _meta:
   depends:
     a0745fbd-7be1-482e-8327-72d47f071e84: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Reviewing our website codebase, which was open sourced.'
+  created:
+    -
+      value: 1710686738
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

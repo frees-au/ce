@@ -7,6 +7,9 @@ _meta:
   depends:
     5fea1d32-aae4-427e-a259-3aa631af0925: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'BONUS: Docker Compose following the Docker4Drupal setup'
+  created:
+    -
+      value: 1694611098
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

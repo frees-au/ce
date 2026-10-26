@@ -7,6 +7,9 @@ _meta:
   depends:
     9ad4fc96-fe8c-4d01-bc91-ed1d39d12d72: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Building out an initial Drupal composer.ison'
+  created:
+    -
+      value: 1694252140
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

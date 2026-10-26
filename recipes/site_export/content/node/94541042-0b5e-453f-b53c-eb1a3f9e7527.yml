@@ -7,6 +7,9 @@ _meta:
   depends:
     4fa717b2-8f3a-4d69-af71-9141031c9748: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Adding PHPStan to a Drupal project'
+  created:
+    -
+      value: 1709942613
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

@@ -22,6 +22,7 @@ module:
   file: 0
   filter: 0
   fs: 0
+  fs_tools: 0
   gin_login: 0
   gin_toolbar: 0
   image: 0

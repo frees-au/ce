@@ -7,6 +7,9 @@ _meta:
   depends:
     82072b22-6b6d-4597-baf0-b3fc1a32e7f2: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Drupal 10+ project setup - an introduction'
+  created:
+    -
+      value: 1693980087
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

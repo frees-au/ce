@@ -5,6 +5,9 @@ _meta:
   bundle: playlist
   default_langcode: en
 default:
+  revision_created:
+    -
+      value: 1792985603
   status:
     -
       value: true
@@ -14,6 +17,9 @@ default:
   weight:
     -
       value: 0
+  changed:
+    -
+      value: 1792985603
   revision_translation_affected:
     -
       value: true

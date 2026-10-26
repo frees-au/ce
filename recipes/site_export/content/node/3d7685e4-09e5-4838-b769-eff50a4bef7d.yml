@@ -7,6 +7,9 @@ _meta:
   depends:
     0917b250-fa41-4577-88dd-e03248d8dddd: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Local starshot dev - project_browser'
+  created:
+    -
+      value: 1716366842
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

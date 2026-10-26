@@ -7,6 +7,9 @@ _meta:
   depends:
     1b4789a9-86e2-435f-9790-820814d72566: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Manually load some Airtable data from your Google Apps Script'
+  created:
+    -
+      value: 1693129645
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

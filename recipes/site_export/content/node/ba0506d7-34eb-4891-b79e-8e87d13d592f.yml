@@ -7,6 +7,9 @@ _meta:
   depends:
     bc798e51-c640-42af-bbcb-0e44dd6d60e2: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Live theming Shopify with LLM support'
+  created:
+    -
+      value: 1786585180
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: true

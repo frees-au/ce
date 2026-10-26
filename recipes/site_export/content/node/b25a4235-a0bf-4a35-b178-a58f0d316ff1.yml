@@ -7,6 +7,9 @@ _meta:
   depends:
     e1a3de74-5bd5-41a1-bc83-473465e6b7c4: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Adding caching around GAS calls to Airtable'
+  created:
+    -
+      value: 1693475656
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

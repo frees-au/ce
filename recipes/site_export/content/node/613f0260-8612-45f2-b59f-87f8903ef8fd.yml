@@ -8,6 +8,9 @@ _meta:
     aff8d46a-eaf1-4aac-bc23-80f92154d551: taxonomy_term
     a4d3d928-fd11-4796-a6e3-ee8fa5307394: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -20,6 +23,12 @@ default:
   title:
     -
       value: 'Rebuild a vibe coded app in Firebase #4'
+  created:
+    -
+      value: 1787331598
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

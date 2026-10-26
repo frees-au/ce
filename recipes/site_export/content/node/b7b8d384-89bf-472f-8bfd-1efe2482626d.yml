@@ -7,6 +7,9 @@ _meta:
   depends:
     306ae450-3016-4634-88f7-256d1ab8f992: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Store a Google Apps Script in Git with Clasp'
+  created:
+    -
+      value: 1693310165
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

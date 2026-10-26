@@ -7,6 +7,9 @@ _meta:
   depends:
     ca4cd711-3d68-46c5-8d65-a6bde2a393d7: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Drupal modules that provide "repeating field groups"'
+  created:
+    -
+      value: 1713195215
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

@@ -61,6 +61,7 @@ install:
   - tome_static
   - twig_tweak
   - fs
+  - fs_tools
   - claro
   - gin
   - fstheme

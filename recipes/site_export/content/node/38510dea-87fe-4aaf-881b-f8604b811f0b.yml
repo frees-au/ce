@@ -7,6 +7,9 @@ _meta:
   depends:
     7b7dedf4-c41c-4543-abcf-f4154e063592: media
 default:
+  revision_timestamp:
+    -
+      value: 1792985603
   revision_uid:
     -
       target_id: 1
@@ -19,6 +22,12 @@ default:
   title:
     -
       value: 'Adding Lando and installing Drupal'
+  created:
+    -
+      value: 1694332132
+  changed:
+    -
+      value: 1792985603
   promote:
     -
       value: false

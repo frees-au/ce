@@ -5,6 +5,9 @@ _meta:
   bundle: stream
   default_langcode: en
 default:
+  revision_created:
+    -
+      value: 1792985603
   revision_log_message:
     -
       value: 'Refreshed YouTube oEmbed thumbnail via /tmp/refresh-youtube-thumbnails.php'
@@ -17,6 +20,12 @@ default:
   name:
     -
       value: 'Building out an initial Drupal composer.ison'
+  created:
+    -
+      value: 1792985603
+  changed:
+    -
+      value: 1792985603
   revision_translation_affected:
     -
       value: true

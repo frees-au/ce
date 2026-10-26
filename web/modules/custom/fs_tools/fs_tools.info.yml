@@ -1,0 +1,5 @@
+name: FS Tools
+type: module
+description: 'Site-specific development and content portability tools.'
+package: '<marquee style="width: 200px; font: normal normal bold 1.2rem inherit monospace; font-family: monospace, monospace; color: #a71f23">frees.au/ce</marquee>'
+core_version_requirement: ^11

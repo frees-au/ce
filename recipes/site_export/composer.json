@@ -27,6 +27,7 @@
         "drupal/tome": "^1.16.0",
         "drupal/twig_tweak": "^3.4.2",
         "drupal/fs": "*",
+        "drupal/fs_tools": "*",
         "drupal/gin": "^5.0.16",
         "drupal/fstheme": "*"
     }
