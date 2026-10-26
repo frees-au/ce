@@ -7,7 +7,7 @@ _meta:
 default:
   revision_timestamp:
     -
-      value: 1792985603
+      value: 1792989013
   revision_uid:
     -
       target_id: 1
@@ -25,7 +25,7 @@ default:
       value: 1792985603
   changed:
     -
-      value: 1792985603
+      value: 1792989013
   promote:
     -
       value: false
@@ -41,9 +41,9 @@ default:
       langcode: en
   lead:
     -
-      value: '<p>Cloud consulting for Google Cloud and AWS, from architecture and solution design to environment reviews, recommendations and implementation support.</p>'
+      value: '<p>Cloud consulting for Google Cloud and AWS, from architecture and solution design to environment reviews, recommendations and implementation support..</p>'
       format: basic
   markup:
     -
-      value: '<h2>Cloud consulting and delivery</h2><p>Our consultants and contractors can design and build solutions in Google Cloud or AWS, choosing the platform and services that suit your requirements and existing systems.</p><p>We offer cloud architecture and solution design, audits and reviews of existing environments, practical recommendations, and implementation support. We can help you assess what is already in place, plan improvements and carry them through to delivery.</p><h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li><a href="/ce/services/drupal-devops">Drupal DevOps</a></li><li><a href="/ce/services/govcms">GovCMS</a></li><li><a href="/ce/services/drupal-cms">Drupal CMS</a></li><li><a href="/ce/services/agent-harness-design">Agent Harness Design</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
+      value: '<h2>Cloud consulting and delivery</h2><p>Our consultants and contractors can design and build solutions in Google Cloud or AWS, choosing the platform and services that suit your requirements and existing systems.</p><p>We offer cloud architecture and solution design, audits and reviews of existing environments, practical recommendations, and implementation support. We can help you assess what is already in place, plan improvements and carry them through to delivery.</p><h2>Plan your engagement</h2><p>Start with your goals, current systems and delivery constraints. We can agree the scope, priorities and appropriate specialists for your project, including any platform, access or assurance requirements.</p><h2>Related services</h2><ul><li data-list-item-id="edd7f6b744c5c8e7c589e044a1de43b5b"><a href="/ce/services/drupal-devops">Drupal DevOps</a></li><li data-list-item-id="e1b7f17d0057dcdb400c26e0282ee775c"><a href="/ce/services/govcms">GovCMS</a></li><li data-list-item-id="eefacd7ddcc7502f8e5854b583f445358"><a href="/ce/services/drupal-cms">Drupal CMS</a></li><li data-list-item-id="e37250e8ef8e26546bed9050b6e62e714"><a href="/ce/services/agent-harness-design">Agent Harness Design</a></li></ul><p><a href="/ce/services">Explore all services</a></p>'
       format: safe_html

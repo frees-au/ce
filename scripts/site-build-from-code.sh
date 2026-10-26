@@ -67,6 +67,9 @@ rm -rf web/sites/default/files/oembed_thumbnails
 ./vendor/bin/drush site:install --existing-config -y "$@"
 ./vendor/bin/drush content:import ../recipes/site_export/content
 
+# Frontend install
+pnpm --dir web/themes/custom/fstheme ci
+
 # Core's importer ignores the computed path field. Recreate the aliases recorded
 # in the export against the newly assigned entity IDs.
 ./vendor/bin/drush php:eval "$(cat <<'PHP'

@@ -71,11 +71,9 @@
         "sort-packages": true
     },
     "scripts": {
-        "build-fe": [
-            "pnpm --dir web/themes/custom/fstheme install",
-            "pnpm --dir web/themes/custom/fstheme run build"
-        ],
+        "build-frontend": "pnpm --dir web/themes/custom/fstheme run build",
         "build-site": "./scripts/site-build-from-code.sh",
+        "watch-frontend": "./vendor/bin/drush thdev on && pnpm --dir web/themes/custom/fstheme run watch",
         "export-site": "./scripts/site-export-to-code.sh",
         "make-static": "./scripts/site-generate-static.sh",
         "make-static-prod": "./scripts/site-generate-static.sh www.frees.au",
@@ -96,6 +94,8 @@
         ]
     },
     "scripts-aliases": {
+        "build-frontend": ["fsfe"],
+        "watch-frontend": ["fsfew"],
         "build-site": ["fsup"],
         "export-site": ["fsave"],
         "make-static-all": ["fstat"],

@@ -7,13 +7,10 @@ _meta:
 default:
   revision_timestamp:
     -
-      value: 1792985603
+      value: 1792994790
   revision_uid:
     -
       target_id: 1
-  revision_log:
-    -
-      value: 'Rewrite Services page around the Free Source Network approach.'
   status:
     -
       value: true
@@ -28,7 +25,7 @@ default:
       value: 1792985603
   changed:
     -
-      value: 1792985603
+      value: 1792994790
   promote:
     -
       value: false
@@ -44,33 +41,9 @@ default:
       langcode: en
   lead:
     -
-      value: '<p>Free Source is a network of independent consultants and contractors who come together around the problem you need to solve—not a product we need to sell.</p>'
+      value: '<p>Free Sauce is a network of independent consultants and contractors. We come together around the problem you need to solve—not a product we need to sell.</p>'
       format: basic
   markup:
     -
-      value: |-
-        <h2>Independent thinking, shared values</h2>
-        <p>Technology and the industries around it keep moving. Staying useful means moving with them: learning what has changed, recognising what still works, and being willing to question the obvious answer.</p>
-        <p>That is how the Free Source Network works. The people in the network are independent thinkers with different backgrounds and specialities. We are advocates for open source because it gives organisations freedom, transparency and the ability to build on shared work. But we are not here to force every problem into one technology, framework or platform. Sometimes an open-source solution is the best fit. Sometimes the tried-and-true system already in place is the right foundation. Sometimes the answer is a careful combination of both.</p>
-        <p>We start with the outcome you need, the people involved and the reality of your organisation. Then we bring in the right experience, examine the options honestly and help you make choices you can live with. The services below are an entry point into that way of thinking—and a guide to the kinds of people and practical help we can bring to an engagement.</p>
-
-        <h2>When you are shaping a website or digital service</h2>
-        <p>If the challenge begins with content, publishing and how a site should work, our <a href="/ce/services/drupal-cms">Drupal CMS</a> consultants can help with everything from architecture and content models to custom modules, themes and editorial workflows. For Australian government teams, our <a href="/ce/services/govcms">GovCMS</a> experience helps connect that work to the practical constraints and opportunities of the SaaS and PaaS platforms.</p>
-        <p>Drupal is not the only way to organise a digital experience. We can explore a focused <a href="/ce/services/decoupled-cms">Decoupled CMS</a> approach, or look more broadly at <a href="/ce/services/headless-and-decoupled-solutions">Headless and Decoupled Solutions</a> when the frontend, content platform and other business systems need to evolve independently. The point is not to make an architecture fashionable; it is to make it appropriate, understandable and maintainable.</p>
-
-        <h2>When the experience itself needs work</h2>
-        <p>Technology works better when the structure makes sense to the people using it. Our <a href="/ce/services/information-architecture">Information Architecture and Content Strategy</a> work helps teams organise, govern, restructure and migrate content around real user needs. <a href="/ce/services/ux-and-ui-design">UX and UI Design</a> turns research and ideas into journeys, prototypes and interfaces that can be tested before too much is set in stone.</p>
-        <p>When a product has grown beyond one-off screens and inconsistent components, <a href="/ce/services/frontend-and-design-systems">Frontend and Design Systems</a> can create a shared language between design and development. That might mean reusable accessible components, Storybook documentation, testing and governance—or a lighter-weight system that better suits the team maintaining it.</p>
-
-        <h2>When systems and data need to work together</h2>
-        <p>Many difficult projects are integration projects, even when they are described another way. Our <a href="/ce/services/ecommerce-and-website-operations">Shopify and ERP Systems</a> work looks beyond the storefront to orders, inventory, point of sale, fulfilment, finance and the people who keep those processes moving. We help clarify which system owns what, where the hand-offs are failing and what should be simplified before anything new is added.</p>
-        <p><a href="/ce/services/data-engineering-and-analytics">Data Engineering and Analytics</a> connects information from across the organisation and turns it into reporting people can trust and use. <a href="/ce/services/cloud-platforms">Cloud Platforms</a> brings the architecture and implementation experience to build or improve the environments underneath those services, whether the best fit is AWS, Google Cloud or an existing platform.</p>
-        <p>We also work with emerging tools where they solve a real problem. <a href="/ce/services/agent-harness-design">Agent Harness Design</a> is about putting AI agents around useful context, tools and organisational knowledge—not adding a chatbot for the sake of it. We can help work out where an assistant genuinely belongs, connect it safely to existing software and refine it with the people who will use it.</p>
-
-        <h2>When delivery has to keep moving</h2>
-        <p>Good systems need care after launch. Through <a href="/ce/services/application-support">Application Support</a>, an experienced consultant can work directly with your team on maintenance, security updates, incidents, defects, releases and the steady stream of improvements that keep an application useful.</p>
-        <p>Some engagements also need someone to connect the commercial, organisational and technical work. <a href="/ce/services/delivery-and-panel-management">Delivery and Panel Management</a> covers scope, obligations, budgets, risks, reporting, acceptance and escalation, helping clients and specialists stay aligned without adding unnecessary layers between them.</p>
-
-        <h2>Start with the problem</h2>
-        <p>You do not need to arrive knowing which service or technology you need. Tell us what is changing, what is getting in the way and what a good outcome would look like. We will help frame the problem, identify the right people and propose a practical way forward.</p>
+      value: '<h2>Independent thinking, shared values</h2><p>Free Sauce encourages independent thinking, with contractors and consultants of different backgrounds and specialities. We are advocates for open source because it gives organisations freedom, transparency and the ability to build on shared work. We''re not here to force every problem into one technology, framework or platform: open source, SAAS and proprietary systems all have a place, but usually the answer is a careful combination all three.</p><p>We start with the outcome you need, the people involved, and the reality of your organisation. Then we bring in the right experience, examine the options honestly and help you make choices you can live with. The services below are an entry point into that way of thinking—and a guide to the kinds of people and practical help we can bring to an engagement.</p><h2>When you are shaping a website or digital service</h2><p>If the challenge begins with content, publishing and how a site should work, our <a href="/ce/services/drupal-cms">Drupal CMS</a> consultants can help with everything from architecture and content models to custom modules, themes and editorial workflows. For Australian government teams, our <a href="/ce/services/govcms">GovCMS</a>, <a href="https://upsun.com">Upsun</a> or native cloud experience helps connect that work to the practical constraints and opportunities of the SaaS and PaaS platforms.</p><p>Drupal is not the only way to organise a digital experience. We can explore a focused <a href="/ce/services/decoupled-cms">Decoupled CMS</a> approach, or look more broadly at <a href="/ce/services/headless-and-decoupled-solutions">Headless and Decoupled Solutions</a> when the frontend, content platform and other business systems need to evolve independently. The point is not to make an architecture fashionable; it is to make it appropriate, understandable and maintainable.</p><h2>When the experience itself needs work</h2><p>Technology works better when the structure makes sense to the people using it. Our <a href="/ce/services/information-architecture">Information Architecture and Content Strategy</a> work helps teams organise, govern, restructure and migrate content around real user needs. <a href="/ce/services/ux-and-ui-design">UX and UI Design</a> turns research and ideas into journeys, prototypes and interfaces that can be tested before too much is set in stone.</p><p>When a product has grown beyond one-off screens and inconsistent components, <a href="/ce/services/frontend-and-design-systems">Frontend and Design Systems</a> can create a shared language between design and development. That might mean reusable accessible components, Storybook documentation, testing and governance—or a lighter-weight system that better suits the team maintaining it.</p><h2>When systems and data need to work together</h2><p>Many difficult projects are integration projects, even when they are described another way. Our <a href="/ce/services/ecommerce-and-website-operations">Shopify and ERP Systems</a> work looks beyond the storefront to orders, inventory, point of sale, fulfilment, finance and the people who keep those processes moving. We help clarify which system owns what, where the hand-offs are failing and what should be simplified before anything new is added.</p><p><a href="/ce/services/data-engineering-and-analytics">Data Engineering and Analytics</a> connects information from across the organisation and turns it into reporting people can trust and use. <a href="/ce/services/cloud-platforms">Cloud Platforms</a> brings the architecture and implementation experience to build or improve the environments underneath those services, whether the best fit is AWS, Google Cloud or an existing platform.</p><p>We also work with emerging tools where they solve a real problem. <a href="/ce/services/agent-harness-design">Agent Harness Design</a> is about putting AI agents around useful context, tools and organisational knowledge—not adding a chatbot for the sake of it. We can help work out where an assistant genuinely belongs, connect it safely to existing software and refine it with the people who will use it.</p><h2>When delivery has to keep moving</h2><p>Good systems need care after launch. Through <a href="/ce/services/application-support">Application Support</a>, an experienced consultant can work directly with your team on maintenance, security updates, incidents, defects, releases and the steady stream of improvements that keep an application useful.</p><p>Some engagements also need someone to connect the commercial, organisational and technical work. <a href="/ce/services/delivery-and-panel-management">Delivery and Panel Management</a> covers scope, obligations, budgets, risks, reporting, acceptance and escalation, helping clients and specialists stay aligned without adding unnecessary layers between them.</p><h2>Start with the problem</h2><p>You do not need to arrive knowing which service or technology you need. Tell us what is changing, what is getting in the way and what a good outcome would look like. We will help frame the problem, identify the right people and propose a practical way forward.</p>'
       format: safe_html

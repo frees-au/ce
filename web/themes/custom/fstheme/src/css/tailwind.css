@@ -19,8 +19,11 @@
   --color-fs-light-grey: #F5F5F5;
 
   /* Typography */
-  --font-mono: 'Cutive Mono', 'Sans-Serif';
+  --font-display: 'Space Grotesk', 'Sans-Serif';
   --font-sans: 'Open Sans', 'Sans-Serif';
+
+  --text-h2: 2rem;
+  --text-h2--line-height: 2.5rem;
 
   /* Breakpoints — rem units for Tailwind 4 */
   --breakpoint-sm: 32rem;
@@ -43,28 +46,28 @@
 
 @layer base {
   h1 {
-    @apply font-mono text-5xl leading-12 mt-8;
+    @apply font-display text-5xl leading-12 mt-8;
   }
 
   h2 {
-    @apply font-mono text-4xl leading-10 mt-8;
+    @apply font-display text-h2 text-fs-red mt-8;
   }
 
   h3 {
-    @apply font-mono text-3xl leading-10 mt-8;
+    @apply font-display text-3xl leading-10 mt-8;
   }
 
   h4 {
-    @apply font-mono text-2xl leading-9 mt-8;
+    @apply font-display text-2xl leading-9 mt-8;
   }
 
   h5 {
-    @apply font-mono text-xl leading-8 mt-8;
+    @apply font-display text-xl leading-8 mt-8;
   }
 
   @media (width >= 48rem) {
     h1 { @apply text-5xl leading-10; }
-    h2 { @apply text-4xl leading-10; }
+    h2 { @apply text-h2; }
     h3 { @apply text-3xl leading-9; }
     h4 { @apply text-2xl leading-8; }
     h5 { @apply text-xl leading-8; }
@@ -83,6 +86,7 @@
   /* Used on content in header/main/footer to control content gutter and alignment down the page. */
   .page-default-container-span {
     @apply px-6 w-auto sm:mx-auto sm:w-150 md:mx-0 md:w-200 md:pl-24 lg:w-400 lg:pl-48;
+    border: 1px solid green;
   }
 }
 

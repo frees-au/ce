@@ -18,13 +18,13 @@
     </div>
   </div>
   <div class="px-5 py-4 grow flex flex-col justify-between">
-    <div class="mt-4 mb-4 font-mono text-2xl leading-7">
+    <div class="mt-4 mb-4 font-display text-2xl leading-7">
       {{ title_prefix }}
       <a class="after:absolute after:inset-x-0 after:inset-y-0 z-50" href="{{ url }}">{{ label }}</a>
       {{ title_suffix }}
     </div>
     {% if article_playlists %}
-      <div class="mt-2 text-xs leading-5 font-mono text-fs-red-tint">
+      <div class="mt-2 text-xs leading-5 font-display text-fs-red-tint">
         Part of:
         {% for p in article_playlists %}
           <a class="hover:underline" href="{{ p.url }}">{{ p.label }}</a>{% if not loop.last %}, {% endif %}
