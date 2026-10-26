@@ -17,7 +17,7 @@ reindex_search content
 ./vendor/bin/drush config:export --yes
 
 rm -Rf ./recipes/site_export/*
-./vendor/bin/drush site:export "$PWD/recipes/site_export" --overwrite --no-assets "$@"
+./vendor/bin/drush site:export "$PWD/recipes/site_export" --overwrite --no-assets --quiet "$@"
 # Config is handled in sync and we don't need any duplicated.
 rm -Rf ./recipes/site_export/config
 # Oembed files get doubled up, so until we have files to include, or other dependencies, then we skill all files.

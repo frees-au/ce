@@ -23,6 +23,9 @@ vendor/bin/drush theme:dev off -vv --uri="$URI"
 vendor/bin/drush cache:rebuild -vv --uri="$URI"
 vendor/bin/drush tome:static -vv --uri="$URI"
 
+echo "${TOME_STATIC_DIRECTORY}/themes/custom/fstheme/stockart/"
+cp -R web/themes/custom/fstheme/stockart/. "${TOME_STATIC_DIRECTORY}/themes/custom/fstheme/stockart/"
+
 # Tome only copies the files it happens to request while rendering, and the
 # search index is fetched by the browser rather than by the exporter. Copy the
 # shards into the export so the static site can serve them.

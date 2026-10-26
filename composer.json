@@ -75,7 +75,6 @@
         "build-site": "./scripts/site-build-from-code.sh",
         "watch-frontend": "./vendor/bin/drush thdev on && pnpm --dir web/themes/custom/fstheme run watch",
         "export-site": "./scripts/site-export-to-code.sh",
-        "make-static": "./scripts/site-generate-static.sh",
         "make-static-prod": "./scripts/site-generate-static.sh www.frees.au",
         "make-static-preview": "./scripts/site-generate-static.sh preview.frees.au",
         "test-phpstan": "./vendor/bin/phpstan analyse --memory-limit=256M",

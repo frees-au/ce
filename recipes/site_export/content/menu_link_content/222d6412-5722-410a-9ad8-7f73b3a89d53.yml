@@ -32,13 +32,13 @@ default:
       value: false
   weight:
     -
-      value: 5
+      value: -48
   expanded:
     -
       value: false
   changed:
     -
-      value: 1792985603
+      value: 1793013577
   revision_translation_affected:
     -
       value: true
