@@ -78,21 +78,27 @@
         "build-site": "./scripts/site-build-from-code.sh",
         "export-site": "./scripts/site-export-to-code.sh",
         "make-static": "./scripts/site-generate-static.sh",
-        "phpstan": "./vendor/bin/phpstan analyse --memory-limit=256M",
-        "phpcs": "./vendor/bin/phpcs --standard=phpcs.xml",
-        "phpcbf": "./vendor/bin/phpcbf --standard=phpcs.xml",
-        "phpunit": "./vendor/bin/phpunit web/modules/custom",
+        "make-static-prod": "./scripts/site-generate-static.sh www.frees.au",
+        "make-static-preview": "./scripts/site-generate-static.sh preview.frees.au",
+        "test-phpstan": "./vendor/bin/phpstan analyse --memory-limit=256M",
+        "test-phpcs": "./vendor/bin/phpcs --standard=phpcs.xml",
+        "test-phpcbf": "./vendor/bin/phpcbf --standard=phpcs.xml",
+        "test-phpunit": "./vendor/bin/phpunit web/modules/custom",
         "rector": "./vendor/bin/rector --clear-cache --dry-run",
+        "make-static-all": [
+            "@make-static-prod",
+            "@make-static-preview"
+        ],
         "all-tests": [
-            "@phpstan",
-            "@phpcs",
-            "@phpunit"
+            "@test-phpstan",
+            "@test-phpcs",
+            "@test-phpunit"
         ]
     },
     "scripts-aliases": {
         "build-site": ["fsup"],
-        "export-site": ["fsexp"],
-        "make-static": ["fstat"],
+        "export-site": ["fsave"],
+        "make-static-all": ["fstat"],
         "all-tests": ["fstest"]
     },
     "extra": {

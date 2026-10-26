@@ -35,7 +35,12 @@ vendor/bin/drush tome:static -vv --uri="$URI"
 INDEX_SOURCE="$(vendor/bin/drush php:eval 'print \Drupal::service("file_system")->realpath("public://search-api-js");' --uri="$URI")"
 INDEX_PUBLIC_PATH="$(vendor/bin/drush php:eval 'print \Drupal::service("file_url_generator")->generateString("public://search-api-js");' --uri="$URI")"
 STATIC_DIRECTORY="$(vendor/bin/drush php:eval 'print \Drupal::service("tome_static.generator")->getStaticDirectory();' --uri="$URI")"
-INDEX_DEST="$(realpath -m "$REPO_ROOT/web/$STATIC_DIRECTORY")$INDEX_PUBLIC_PATH"
+if [[ "$STATIC_DIRECTORY" == /* ]]; then
+  STATIC_DIRECTORY_PATH="$STATIC_DIRECTORY"
+else
+  STATIC_DIRECTORY_PATH="$REPO_ROOT/web/$STATIC_DIRECTORY"
+fi
+INDEX_DEST="$(cd "$STATIC_DIRECTORY_PATH" && pwd -P)$INDEX_PUBLIC_PATH"
 
 if [[ -d "$INDEX_SOURCE" ]]; then
   rm -Rf "$INDEX_DEST"
