@@ -41,9 +41,6 @@ default:
     -
       alias: /ce/articles/drupal-modules-provide-repeating-field-groups
       langcode: en
-  duration:
-    -
-      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'

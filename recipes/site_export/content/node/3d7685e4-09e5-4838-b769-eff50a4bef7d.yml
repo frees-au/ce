@@ -41,9 +41,6 @@ default:
     -
       alias: /ce/articles/local-starshot-dev-projectbrowser
       langcode: en
-  duration:
-    -
-      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'

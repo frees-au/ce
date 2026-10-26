@@ -41,9 +41,6 @@ default:
     -
       alias: /ce/articles/bonus-docker-compose-following-docker4drupal-setup
       langcode: en
-  duration:
-    -
-      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'

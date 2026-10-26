@@ -41,9 +41,6 @@ default:
     -
       alias: /ce/articles/talking-phpstan-matt-glaman
       langcode: en
-  duration:
-    -
-      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'

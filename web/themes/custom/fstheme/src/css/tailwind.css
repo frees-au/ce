@@ -141,15 +141,16 @@
 }
 
 @layer components {
-  .search-api-lunr-teaser p {
-    @apply mt-2;
-  }
-
-  .search-api-lunr-pager ul {
-    @apply mt-8 flex flex-wrap items-center gap-2;
-  }
-
-  .search-api-lunr-pager li a {
-    @apply block cursor-pointer px-3 py-2;
+  /* Class comes from lunr module */
+  .search-api-lunr-teaser {
+    p {
+      @apply mt-2;
+    }
+    ul {
+      @apply mt-8 flex flex-wrap items-center gap-2;
+    }
+    li a {
+      @apply block cursor-pointer px-3 py-2;
+    }
   }
 }

@@ -41,9 +41,6 @@ default:
     -
       alias: /ce/articles/manually-load-some-airtable-data-your-google-apps-script
       langcode: en
-  duration:
-    -
-      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'

@@ -90,8 +90,8 @@ function fstheme_preprocess_node(array &$vars): void {
 
   // Expose the YouTube playlist URL (if any) so the article template can
   // render a "Watch the playlist on YouTube" link below the embed.
-  if ($media->hasField('field_playlist_url') && !$media->get('field_playlist_url')->isEmpty()) {
-    $playlist_urls = $media->get('field_playlist_url')->getValue();
+  if ($media->hasField('playlist') && !$media->get('playlist')->isEmpty()) {
+    $playlist_urls = $media->get('playlist')->getValue();
     if (is_array($playlist_urls) && isset($playlist_urls[0]) && is_array($playlist_urls[0])) {
       $vars['youtube_playlist_url'] = $playlist_urls[0];
     }

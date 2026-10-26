@@ -30,7 +30,7 @@ default:
     -
       langcode: en
       alias: null
-  field_playlist_url:
+  playlist:
     -
       uri: 'https://www.youtube.com/playlist?list=PLGo2CM33WszI'
       title: 'Watch the playlist on YouTube'

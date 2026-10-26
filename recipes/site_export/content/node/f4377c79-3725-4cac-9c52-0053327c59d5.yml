@@ -41,9 +41,6 @@ default:
     -
       alias: /ce/articles/adding-ddev-and-installing-drupal-again
       langcode: en
-  duration:
-    -
-      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'

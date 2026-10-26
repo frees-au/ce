@@ -41,9 +41,6 @@ default:
     -
       alias: /ce/articles/adding-phpstan-drupal-project
       langcode: en
-  duration:
-    -
-      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'

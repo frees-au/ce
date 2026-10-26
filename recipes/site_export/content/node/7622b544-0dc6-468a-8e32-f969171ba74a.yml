@@ -41,9 +41,6 @@ default:
     -
       alias: /ce/articles/add-your-first-drupal-gitlab-ciyml-thru-web-ui
       langcode: en
-  duration:
-    -
-      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'

@@ -41,9 +41,6 @@ default:
     -
       alias: /ce/articles/xdebug-vs-code
       langcode: en
-  duration:
-    -
-      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'

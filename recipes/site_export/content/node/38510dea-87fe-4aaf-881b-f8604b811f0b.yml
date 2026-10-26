@@ -41,9 +41,6 @@ default:
     -
       alias: /ce/articles/adding-lando-and-installing-drupal
       langcode: en
-  duration:
-    -
-      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'

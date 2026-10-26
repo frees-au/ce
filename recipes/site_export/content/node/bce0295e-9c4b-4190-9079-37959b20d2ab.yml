@@ -41,9 +41,6 @@ default:
     -
       alias: /ce/articles/reviewing-our-website-codebase-which-was-open-sourced
       langcode: en
-  duration:
-    -
-      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'

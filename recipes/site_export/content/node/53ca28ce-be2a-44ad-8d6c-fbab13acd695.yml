@@ -41,9 +41,6 @@ default:
     -
       alias: /ce/articles/run-drupal-core-tests-7mins
       langcode: en
-  duration:
-    -
-      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'

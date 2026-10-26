@@ -41,9 +41,6 @@ default:
     -
       alias: /ce/articles/drupal-10-project-setup-introduction
       langcode: en
-  duration:
-    -
-      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'

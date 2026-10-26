@@ -5,8 +5,8 @@ dependencies:
   module:
     - link
     - media
-id: media.field_playlist_url
-field_name: field_playlist_url
+id: media.playlist
+field_name: playlist
 entity_type: media
 type: link
 settings: {  }

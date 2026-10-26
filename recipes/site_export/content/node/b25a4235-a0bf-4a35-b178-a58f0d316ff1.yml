@@ -41,9 +41,6 @@ default:
     -
       alias: /ce/articles/adding-caching-around-gas-calls-airtable
       langcode: en
-  duration:
-    -
-      value: .
   lead:
     -
       value: 'Free Sauce tutorial.'
