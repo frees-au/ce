@@ -20,15 +20,6 @@ targetEntityType: node
 bundle: article
 mode: search_index
 content:
-  duration:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-      link_rel: canonical
-    third_party_settings: {  }
-    weight: 2
-    region: content
   lead:
     type: text_default
     label: hidden
@@ -36,11 +27,10 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  playlist:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
+  markup:
+    type: text_default
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
@@ -50,11 +40,12 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
 hidden:
+  duration: true
   hero: true
   links: true
-  markup: true
+  playlist: true
   search_api_excerpt: true
   youtube: true

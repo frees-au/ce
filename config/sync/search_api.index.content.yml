@@ -4,6 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.search_index
+    - core.entity_view_mode.node.teaser
+    - field.storage.node.duration
+    - field.storage.node.playlist
+    - field.storage.node.tags
     - search_api.server.lunr
   module:
     - node
@@ -13,10 +17,46 @@ name: Content
 description: 'Indexes the rendered output of every node on the site.'
 read_only: false
 field_settings:
-  rendered_item:
-    label: 'Rendered HTML output'
+  authored:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    boost: 0.0
+    dependencies:
+      module:
+        - node
+  changed:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    boost: 0.0
+    dependencies:
+      module:
+        - node
+  content:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    boost: 0.0
+    dependencies:
+      module:
+        - node
+  duration:
+    label: Duration
+    datasource_id: 'entity:node'
+    property_path: duration
+    type: string
+    boost: 0.0
+    dependencies:
+      config:
+        - field.storage.node.duration
+  indexed:
+    label: 'Indexed content'
     property_path: rendered_item
-    type: search_api_lunr_summary
+    type: string
     configuration:
       roles:
         - anonymous
@@ -24,6 +64,54 @@ field_settings:
         'entity:node':
           article: search_index
           page: search_index
+  nid:
+    label: 'Node ID'
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    boost: 0.0
+    dependencies:
+      module:
+        - node
+  playlist:
+    label: Playlist
+    datasource_id: 'entity:node'
+    property_path: playlist
+    type: integer
+    boost: 0.0
+    dependencies:
+      config:
+        - field.storage.node.playlist
+  published:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    boost: 0.0
+    dependencies:
+      module:
+        - node
+  result:
+    label: 'Rendered teaser'
+    property_path: rendered_item
+    type: search_api_lunr_summary
+    boost: 0.0
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:node':
+          article: teaser
+          page: teaser
+  tags:
+    label: Tags
+    datasource_id: 'entity:node'
+    property_path: tags
+    type: integer
+    boost: 0.0
+    dependencies:
+      config:
+        - field.storage.node.tags
   title:
     label: Title
     datasource_id: 'entity:node'
@@ -53,7 +141,12 @@ processor_settings:
   custom_value: {  }
   entity_type: {  }
   html_filter:
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
     all_fields: false
+    fields:
+      - indexed
     title: true
     alt: true
     tags: {  }

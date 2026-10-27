@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.card
     - field.storage.node.lead
     - node.type.article
   module:
@@ -475,7 +475,8 @@ display:
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: card
       query:
         type: views_query
         options:
@@ -526,8 +527,8 @@ display:
       display_extenders: {  }
       path: from-the-pen/feed
       displays:
-        page_1: page_1
         default: '0'
+        main: main
     cache_metadata:
       max-age: -1
       contexts:
@@ -537,8 +538,8 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.lead'
-  page_1:
-    id: page_1
+  main:
+    id: main
     display_title: 'Articles and videos'
     display_plugin: page
     position: 2
