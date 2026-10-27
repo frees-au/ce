@@ -25,6 +25,8 @@
 
   --text-h2: 2rem;
   --text-h2--line-height: 2.5rem;
+  --text-h3: 1.6rem;
+  --text-h3--line-height: 2rem;
 
   /* Breakpoints — rem units for Tailwind 4 */
   --breakpoint-sm: 32rem;
@@ -56,7 +58,7 @@
   }
 
   h3 {
-    @apply font-display text-3xl leading-10 mt-8;
+    @apply font-display text-h2 text-fs-red-tint leading-10 mt-8;
   }
 
   h4 {
@@ -70,7 +72,7 @@
   @media (width >= 48rem) {
     h1 { @apply text-5xl leading-10; }
     h2 { @apply text-h2; }
-    h3 { @apply text-3xl leading-9; }
+    h3 { @apply text-h3; }
     h4 { @apply text-2xl leading-8; }
     h5 { @apply text-xl leading-8; }
   }

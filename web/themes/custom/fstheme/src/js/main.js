@@ -1,6 +1,17 @@
 import '../css/tailwind.css'
 import '../css/core-fixes.css'
 
+/**
+ * Override search_api_lunr
+ */
+Drupal.theme.searchApiLunrResult = function (document) {
+  return `<div class="search-api-lunr-teaser">
+    <h3 class="mt-4"><a href="${document.getUrl()}">${document.getLabel()}</a></h3>
+    ${document.getSummary()}
+  </div>
+`;
+};
+
 class PrimaryMenu {
 
   primary_menu_wrapper_element;
