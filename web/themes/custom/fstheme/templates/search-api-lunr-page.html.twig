@@ -1,9 +1,9 @@
 <div class="search-api-lunr-page page-default-container-span container-content" data-server="{{ server }}" data-index="{{ index }}">
-  <form class="search-api-js-page__form" id="search-page-form">
-    <div class="form-item">
-      <input id="search-page-input" name="q" class="search-api-js-page__input" type="search" placeholder="Search">
+  <form class="search-api-js-page__form flex items-stretch gap-3" id="search-page-form">
+    <div class="form-item min-w-0 grow">
+      <input id="search-page-input" name="q" class="search-api-js-page__input h-full w-full" type="search" placeholder="Search">
     </div>
-    <input type="submit" value="Search">
+    <button class="inline-flex cursor-pointer items-center border border-fs-red-tint px-6 py-2 font-display text-base leading-6 text-fs-red-tint transition-colors hover:bg-fs-red-tint hover:text-white" type="submit">Search</button>
   </form>
 
   <div class="search-api-js-page__results-container">

@@ -117,4 +117,28 @@
       @apply block cursor-pointer px-3 py-2;
     }
   }
+
+  .search-api-lunr-pager {
+    @apply mt-8;
+
+    ul {
+      @apply flex flex-wrap items-center gap-2;
+    }
+
+    li a {
+      @apply flex min-h-10 min-w-10 cursor-pointer items-center justify-center px-3 py-2 font-display text-lg leading-6;
+    }
+
+    li:not(.active):not(.disabled) a {
+      @apply hover:text-fs-red;
+    }
+
+    li.active a {
+      @apply bg-fs-red text-white;
+    }
+
+    li.disabled a {
+      @apply cursor-default opacity-40;
+    }
+  }
 }
