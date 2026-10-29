@@ -1,0 +1,33 @@
+<article{{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <div{{ content_attributes }}>
+    {{ content.lead }}
+    <div class="long-copy">
+      {{ content|without('lead') }}
+    </div>
+
+    <form
+      class="page-default-container-span mt-8 max-w-220"
+      data-contact-form
+      data-endpoint="https://fs-contact-form-389848027849.australia-southeast1.run.app"
+      data-recaptcha-site-key="6Lcp2QUuAAAAAO8VFhYGRngU_onepgI4TjjFGpAj"
+    >
+      <label class="mt-6 block font-display text-lg" for="contact-name">Name</label>
+      <input class="mt-2 block w-full border-2 border-fs-dark-grey bg-white px-4 py-3 text-base focus:border-fs-red focus:ring-fs-red" id="contact-name" name="name" type="text" autocomplete="name" maxlength="200" required>
+
+      <label class="mt-6 block font-display text-lg" for="contact-email">Email</label>
+      <input class="mt-2 block w-full border-2 border-fs-dark-grey bg-white px-4 py-3 text-base focus:border-fs-red focus:ring-fs-red" id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+
+      <label class="mt-6 block font-display text-lg" for="contact-message">Message</label>
+      <textarea class="mt-2 block min-h-48 w-full resize-y border-2 border-fs-dark-grey bg-white px-4 py-3 text-base focus:border-fs-red focus:ring-fs-red" id="contact-message" name="message" maxlength="5000" aria-describedby="contact-message-hint" required></textarea>
+      <p id="contact-message-hint" class="mt-2 text-sm">Maximum 5,000 characters.</p>
+
+      <div class="mt-6" data-recaptcha-widget></div>
+      <button class="mt-6 bg-fs-red px-6 py-3 font-display text-lg text-white hover:bg-fs-red-tint focus:outline-2 focus:outline-offset-2 focus:outline-fs-red disabled:cursor-wait disabled:opacity-60" type="submit">Send message</button>
+      <noscript><p class="mt-4 text-fs-red">This form requires JavaScript. Please enable it and try again.</p></noscript>
+      <p class="mt-6 min-h-7 font-semibold focus:outline-none" data-contact-status tabindex="-1" aria-live="polite"></p>
+    </form>
+  </div>
+</article>

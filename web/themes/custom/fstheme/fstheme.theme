@@ -41,6 +41,23 @@ function fstheme_theme_suggestions_field_alter(array &$hooks, array $vars): void
 }
 
 /**
+ * Implements hook_theme_suggestions_HOOK_alter() for nodes.
+ *
+ * Give the exported /contact page a dedicated, client-side form template
+ * without coupling the suggestion to a database-specific node ID.
+ *
+ * @phpstan-param array<int, string> $suggestions
+ * @phpstan-param array<string, mixed> $vars
+ */
+function fstheme_theme_suggestions_node_alter(array &$suggestions, array $vars): void {
+  $elements = $vars['elements'] ?? NULL;
+  $node = is_array($elements) ? ($elements['#node'] ?? NULL) : NULL;
+  if ($node instanceof NodeInterface && $node->bundle() === 'page' && $node->toUrl()->toString() === '/ce/contact') {
+    $suggestions[] = 'node__page__contact';
+  }
+}
+
+/**
  * Implements hook_preprocess_node().
  *
  * For article nodes:
