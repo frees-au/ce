@@ -14,7 +14,7 @@ cd "$(dirname "$0")/.."
 # mid-comment by Lunr's summary field and hide the remaining browser-rendered
 # results. Restore the editing mode afterwards, including when indexing fails.
 # shellcheck source=scripts/includes/reindex-search.sh
-source scripts/includes/reindex-search.sh
+source scripts/site-reindex-search.sh
 twig_debug="$(./vendor/bin/drush php:eval 'print !empty(\Drupal::getContainer()->getParameter("twig.config")["debug"]) ? "1" : "0";')"
 if [[ "$twig_debug" == "1" ]]; then
   trap './vendor/bin/drush theme:dev on' EXIT
