@@ -34,12 +34,14 @@
         "drupal/search_api_lunr": "^3.0",
         "drupal/simple_sitemap": "^4.1",
         "drupal/twig_tweak": "^3.4",
-        "drush/drush": "^13",
-        "oomphinc/composer-installers-extender": "^2"
+        "drush/drush": "^13.8",
+        "oomphinc/composer-installers-extender": "^2",
+        "veewee/composer-run-parallel": "^1.5"
     },
     "require-dev": {
         "drupal/coder": "^8.3",
         "drupal/core-dev": "^11",
+        "drupal/devel": "^5.5",
         "drupal/tome": "^1.12",
         "mglaman/phpstan-drupal": "^2",
         "palantirnet/drupal-rector": "^1.1",
@@ -65,16 +67,19 @@
             "oomphinc/composer-installers-extender": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
+            "symfony/runtime": true,
             "tbachert/spi": true,
-            "symfony/runtime": true
+            "veewee/composer-run-parallel": true
         },
         "sort-packages": true
     },
     "scripts": {
         "build-frontend": "pnpm --dir web/themes/custom/fstheme run build",
-        "build-site": "./scripts/site-build-from-code.sh",
-        "watch-frontend": "./vendor/bin/drush thdev on && pnpm --dir web/themes/custom/fstheme run watch",
-        "export-site": "./scripts/site-export-to-code.sh",
+        "build-drupal": "./scripts/site-build-from-code.sh",
+        "editing-theme": "./vendor/bin/drush thdev on && pnpm --dir web/themes/custom/fstheme run watch",
+        "editing-drupal": "FS_DRUPAL_SITE_IS_LOCAL_ONLY=1 ./vendor/bin/drush serve --no-browser",
+        "export-drupal": "./scripts/site-export-to-code.sh",
+        "go-live": "conc 'composer editing-theme' 'composer editing-drupal'",
         "make-static-prod": "./scripts/site-generate-static.sh www.frees.au",
         "make-static-preview": "./scripts/site-generate-static.sh preview.frees.au",
         "test-phpstan": "./vendor/bin/phpstan analyse --memory-limit=256M",
@@ -82,22 +87,24 @@
         "test-phpcbf": "./vendor/bin/phpcbf --standard=phpcs.xml",
         "test-phpunit": "./vendor/bin/phpunit web/modules/custom",
         "rector": "./vendor/bin/rector --clear-cache --dry-run",
-        "make-static-all": [
+        "build-all": [
+            "@build-frontend",
+            "@build-drupal"
+        ],
+        "make-all": [
             "@make-static-prod",
             "@make-static-preview"
         ],
-        "all-tests": [
+        "test-all": [
             "@test-phpstan",
             "@test-phpcs",
             "@test-phpunit"
         ]
     },
     "scripts-aliases": {
-        "build-frontend": ["fsfe"],
-        "watch-frontend": ["fsfew"],
-        "build-site": ["fsup"],
+        "edit-drupal": ["fsedit"],
         "export-site": ["fsave"],
-        "make-static-all": ["fstat"],
+        "make-all": ["fstat"],
         "all-tests": ["fstest"]
     },
     "extra": {

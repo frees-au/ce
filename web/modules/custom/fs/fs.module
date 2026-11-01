@@ -8,6 +8,8 @@
 declare(strict_types=1);
 
 use Drupal\taxonomy\TermInterface;
+use Drupal\user\Entity\User;
+use Drupal\user\OneTimeAuthentication;
 use Drupal\views\ViewExecutable;
 
 /**
@@ -20,6 +22,51 @@ function fs_requirements_alter(array &$requirements): void {
   if (isset($requirements['update status']) && is_array($requirements['update status'])) {
     $requirements['update status']['severity'] = REQUIREMENT_INFO;
   }
+}
+
+/**
+ * Implements hook_page_attachments().
+ *
+ * Redirects anonymous users to the UID 1 one-time login page when the site is
+ * explicitly configured for local-only use and the Devel module is enabled.
+ *
+ * @phpstan-param array<string, mixed> $attachments
+ */
+function fs_page_attachments(array &$attachments): void {
+  $is_local = getenv('FS_DRUPAL_SITE_IS_LOCAL_ONLY') === '1'
+    && \Drupal::moduleHandler()->moduleExists('devel');
+
+  if (!$is_local || \Drupal::currentUser()->isAuthenticated()) {
+    return;
+  }
+
+  $path = \Drupal::request()->getPathInfo();
+  if ($path === '/user' || str_starts_with($path, '/user/')) {
+    return;
+  }
+
+  $account = User::load(1);
+  if ($account === NULL || !$account->isActive()) {
+    return;
+  }
+
+  $url = \Drupal::service(OneTimeAuthentication::class)
+    ->generateOneTimeLoginUrl($account)
+    ->toString();
+
+  if (!isset($attachments['#attached']) || !is_array($attachments['#attached'])) {
+    $attachments['#attached'] = [];
+  }
+  if (!isset($attachments['#attached']['html_head']) || !is_array($attachments['#attached']['html_head'])) {
+    $attachments['#attached']['html_head'] = [];
+  }
+  $attachments['#attached']['html_head'][] = [
+    [
+      '#tag' => 'script',
+      '#value' => 'window.location.replace(' . json_encode($url, JSON_THROW_ON_ERROR) . ');',
+    ],
+    'fs_local_login',
+  ];
 }
 
 /**

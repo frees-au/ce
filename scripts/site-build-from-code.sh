@@ -102,7 +102,3 @@ PHP
 ./vendor/bin/drush config:set system.site page.front /ce -y
 ./vendor/bin/drush cache:rebuild
 echo 'Site installed and content imported.'
-
-echo 'Login link and serve command...'
-./vendor/bin/drush user:login --uid=1 --no-browser user/1
-echo './vendor/bin/drush serve /'

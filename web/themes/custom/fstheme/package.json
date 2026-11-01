@@ -12,13 +12,15 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/postcss": "^4.3.3",
-    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/typography": "^0.5.4",
     "@tailwindcss/vite": "^4.3.3",
-    "swiper": "^11.0.0",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
-    "vite": "^5.0.8"
+    "vite": "^8.3.5"
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true
   }
 }

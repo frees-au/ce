@@ -1,7 +1,5 @@
 # Free Sauce website
 
-**Warning** This site is weird. It has experimental stuff.
-
 This code runs the https://www.frees.au/ce website. This site is a very simple
 business site. I also use it as a scratch pad for videos on the [Free Sauce youtube channel](https://www.youtube.com/@FreeTheSauce).
 
@@ -9,75 +7,115 @@ The Free Sauce logo, brand and assets which ship in this repository are Copyrigh
 Free Sauce 2024-2026. (Copy the theme if you want, but replace the logo and
 company name please!).
 
+## 🚨 Heads up 🚨
+
+You can install a complete website on your personal computer. This repo has
+*everything* needed to duplicate frees.au/ce website.
+
+Would you use this for publicly hosted Drupal website? No! It would fall over.
+
+Can you hack it up and use it for your own *static* website? Yep.
+
 ## Philosophy
 
-This code base tries to answer the questions:
+Aside from, you know, running our business website, this project tries to
+answer the questions:
 
-* How small can Drupal be?
-* Is Drupal fast with just PHP and SQLite?
-* How can we use recipes to remove the need for persistent database?
-* How good is static site generation?
-* What will the agent do with it?
+* How "small" can Drupal be? (Pretty tight.)
+* Is static site good? (Yep.)
+* Is Drupal fast with just PHP and SQLite? (Yes!)
+* Is "always on" PHP hosting dead? (Well...) 
+* What will the agent do with it? (No mistakes?)
 
 ## Requirements
 
-* SQLite
-* PHP 8.3 (with opcache.enable_cli)
-* php composer to build app
-* node/pnpm to build frontend
+It's out of scope of this README to help you run these:
 
-## Build backend
+* PHP 8.3+ ჻ `php --version`
+* PHP Composer 2+ ჻ `composer --version`
+* SQLite 3 ჻ `sqlite3 --version`
+* node 22+ ჻ `node -v`
+* pnpm ჻ `pnpm -v` 
+* [concurrently](https://www.npmjs.com/package/concurrently) ჻ `conc -v`
 
-Install the backend dependencies, then rebuild the site from committed
-configuration and exported content.
+Also recommended:
 
-You can remove database/live.sqlite first unless its got some that's not exported yet.
+* PHP Opcache `$ php -i | grep opcache.enable_cli`
+
+And for hosting:
+
+It's just HTML so anywhere you can host HTML works. There are references
+in the code to Google Cloud static bucket hosting but almost every hosting
+service can handle HTML.
+
+## Development and Editing
+
+### Building
+
+Assuming the dependencies are installed
 
 ```sh
+git clone git@github.com:frees-au/ce.git && cd ce
 composer install
-composer run-script build-site
+
+# Build the tailwind/CSS stuff.
+composer build-frontend
 ```
 
-After a successful build, the command offers to start the local site in the
-foreground and open it in the default browser.
-
-Start the local site:
+Next step will install Drupal, and then import all of the configuration
+and content. It does this with a Drupal [site recipe](https://www.drupal.org/docs/extending-drupal/drupal-recipes)
+which lives in /recipes.
 
 ```sh
-# Run in foreground
-./vendor/bin/drush serve /
-# Login (switch to different tab)
-./vendor/bin/drush uli
+composer build-drupal
 ```
 
-## Build frontend
+### Editing
 
-This is a very simple Tailwind theme with no Drupal "base theme" dependencies. 
-
-The theme uses [pnpm](https://pnpm.io/) for frontend dependencies. Install it
-once (e.g. via [corepack](https://nodejs.org/api/corepack.html): `corepack enable`)
-then run the build.
+If you are only editing the content, then you can run the Drupal website
+using php's built-in server. And then visit https://127.0.0.1:8888. 
 
 ```sh
-composer run-script build-fe
+composer editing-drupal
+# By running this you acknowledge you are running this on your own secure PC.
+./vendor/bin/drush en devel
 ```
 
-This installs the theme dependencies, builds the frontend, then watches for
-changes and rebuilds automatically. Leave it running while developing; press
-Ctrl+C to stop.
+When you [visit the site](https://127.0.0.1:8888) it will log you automatically
+as the superuser user/1.
 
-## Static Site generation
+### Designing
 
-Generates the static export into `html/` at the repo root (gitignored).
+If you want to design the site by editing the theme, or if you use using an LLM
+to develop the site, you should be "watching", ie generating, the CSS. The theme
+uses Tailwind which needs to be compiled, so this command keeps compiling on the
+fly.
 
+```sh
+composer editing-theme
 ```
-# Build the static site into ./html/www.frees.au
-composer run-script make-static www.frees.au
+
+### Saving progress
+
+As you edit the content and configuration of the website (so anytime you save 
+something in Drupal), you should "export" the recipe. This puts it all into
+the code so you can push to Git (or just make a backup).
+
+```sh
+composer export-drupal
+git add . && git commit # etc
 ```
 
-## Testing
+## Topics (wip)
 
-@todo - rewire cypress.
+### Theme
+
+This is an intentionally simple Tailwind theme with limited dependencies. The
+theme uses [pnpm](https://pnpm.io/) for frontend dependencies.
+
+### Testing
+
+@todo - cypress.
 
 ```sh
 composer run-script phpcs
