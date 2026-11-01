@@ -14,8 +14,8 @@
 @theme {
   /* Colours */
   --color-fs-red: #851520;
-  --color-fs-red-tint: color-mix(in srgb, var(--color-fs-red) 85%, white);
-  --color-fs-red-wash: color-mix(in srgb, var(--color-fs-red) 25%, white);
+  --color-fs-red-tint: #671219;
+  --color-fs-red-wash: rgb(133 21 32 / 30%);
   --color-fs-dark-grey: #BFBFBF;
   --color-fs-light-grey: #F5F5F5;
 
@@ -134,7 +134,7 @@
     }
 
     li.active a {
-      @apply bg-fs-red text-white;
+      @apply bg-fs-red-wash text-white;
     }
 
     li.disabled a {
