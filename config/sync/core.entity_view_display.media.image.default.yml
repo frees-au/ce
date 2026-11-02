@@ -6,7 +6,6 @@ dependencies:
     - field.field.media.image.media_image
     - media.type.image
   module:
-    - field_label
     - image
 id: media.image.default
 targetEntityType: media
@@ -18,11 +17,7 @@ content:
     label: hidden
     settings:
       image_style: medium
-    third_party_settings:
-      field_label:
-        label_class: ''
-        label_value: ''
-        label_tag: ''
+    third_party_settings: {  }
     weight: 0
     region: content
 hidden:

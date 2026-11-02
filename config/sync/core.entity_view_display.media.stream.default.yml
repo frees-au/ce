@@ -3,11 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.stream.playlist
     - field.field.media.stream.media_oembed_video
+    - field.field.media.stream.playlist
     - media.type.stream
   module:
-    - field_label
     - media
 id: media.stream.default
 targetEntityType: media
@@ -22,11 +21,7 @@ content:
       max_height: 450
       loading:
         attribute: lazy
-    third_party_settings:
-      field_label:
-        label_class: ''
-        label_value: ''
-        label_tag: ''
+    third_party_settings: {  }
     weight: 0
     region: content
 hidden:

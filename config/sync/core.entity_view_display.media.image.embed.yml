@@ -8,7 +8,6 @@ dependencies:
     - image.style.medium
     - media.type.image
   module:
-    - field_label
     - image
 id: media.image.embed
 targetEntityType: media
@@ -23,11 +22,7 @@ content:
       image_style: medium
       image_loading:
         attribute: lazy
-    third_party_settings:
-      field_label:
-        label_class: ''
-        label_value: ''
-        label_tag: ''
+    third_party_settings: {  }
     weight: 0
     region: content
 hidden:
