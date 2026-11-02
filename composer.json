@@ -74,26 +74,26 @@
         "sort-packages": true
     },
     "scripts": {
-        "build-frontend": "pnpm --dir web/themes/custom/fstheme run build",
+        "build-theme": "pnpm --dir web/themes/custom/fstheme run build",
         "build-drupal": "./scripts/site-build-from-code.sh",
         "editing-theme": "./vendor/bin/drush thdev on && pnpm --dir web/themes/custom/fstheme run watch",
         "editing-drupal": "FS_DRUPAL_SITE_IS_LOCAL_ONLY=1 ./vendor/bin/drush serve --no-browser",
-        "export-drupal": "./scripts/site-export-to-code.sh",
-        "go-live": "conc 'composer editing-theme' 'composer editing-drupal'",
-        "make-static-prod": "./scripts/site-generate-static.sh www.frees.au",
-        "make-static-preview": "./scripts/site-generate-static.sh preview.frees.au",
+        "saving-drupal": "./scripts/site-export-to-code.sh",
+        "editing-all": "conc 'composer editing-theme' 'composer editing-drupal'",
+        "generate-html-prod": "./scripts/site-generate-static.sh www.frees.au",
+        "generate-html-preview": "./scripts/site-generate-static.sh preview.frees.au",
         "test-phpstan": "./vendor/bin/phpstan analyse --memory-limit=256M",
         "test-phpcs": "./vendor/bin/phpcs --standard=phpcs.xml",
         "test-phpcbf": "./vendor/bin/phpcbf --standard=phpcs.xml",
         "test-phpunit": "./vendor/bin/phpunit web/modules/custom",
         "rector": "./vendor/bin/rector --clear-cache --dry-run",
         "build-all": [
-            "@build-frontend",
+            "@build-theme",
             "@build-drupal"
         ],
-        "make-all": [
-            "@make-static-prod",
-            "@make-static-preview"
+        "generate-html": [
+            "@generate-html-prod",
+            "@generate-html-preview"
         ],
         "test-all": [
             "@test-phpstan",

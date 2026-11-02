@@ -50,6 +50,8 @@ service can handle HTML.
 
 ## Development and Editing
 
+![Development flow](frees-au-ce-dev-flow.png)
+
 ### Building
 
 Assuming the dependencies are installed
@@ -59,7 +61,7 @@ git clone git@github.com:frees-au/ce.git && cd ce
 composer install
 
 # Build the tailwind/CSS stuff.
-composer build-frontend
+composer build-theme
 ```
 
 Next step will install Drupal, and then import all of the configuration
@@ -102,7 +104,7 @@ something in Drupal), you should "export" the recipe. This puts it all into
 the code so you can push to Git (or just make a backup).
 
 ```sh
-composer export-drupal
+composer saving-drupal
 git add . && git commit # etc
 ```
 
