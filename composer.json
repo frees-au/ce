@@ -16,7 +16,7 @@
         "drupal/admin_toolbar": "^3",
         "drupal/better_exposed_filters": "^7.0",
         "drupal/ckeditor5_template": "^1.0",
-        "drupal/config_ignore": "^3.2",
+        "drupal/config_ignore": "^3.4",
         "drupal/core-composer-scaffold": "^11",
         "drupal/core-recommended": "^11",
         "drupal/easy_breadcrumb": "^2",
@@ -76,7 +76,7 @@
         "build-drupal": "./scripts/site-build-from-code.sh",
         "editing-theme": "./vendor/bin/drush thdev on && pnpm --dir web/themes/custom/fstheme run watch",
         "editing-drupal": "FS_DRUPAL_SITE_IS_LOCAL_ONLY=1 ./vendor/bin/drush serve --no-browser",
-        "saving-drupal": "./scripts/site-export-to-code.sh",
+        "save-drupal": "./scripts/site-export-to-code.sh",
         "editing-all": "conc 'composer editing-theme' 'composer editing-drupal'",
         "generate-html-prod": "./scripts/site-generate-static.sh www.frees.au",
         "generate-html-preview": "./scripts/site-generate-static.sh preview.frees.au",
@@ -85,11 +85,18 @@
         "test-phpcbf": "./vendor/bin/phpcbf --standard=phpcs.xml",
         "test-phpunit": "./vendor/bin/phpunit web/modules/custom",
         "rector": "./vendor/bin/rector --clear-cache --dry-run",
-        "build-all": [
+        "fsbuild": [
             "@build-theme",
             "@build-drupal"
         ],
-        "generate-html": [
+        "fsedit": [
+            "@editing-theme",
+            "@editing-drupal"
+        ],
+        "fssave": [
+            "@save-drupal"
+        ],
+        "fsgen": [
             "@generate-html-prod",
             "@generate-html-preview"
         ],

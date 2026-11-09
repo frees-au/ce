@@ -8,24 +8,7 @@ cd "$(dirname "$0")/.."
   exit 1
 }
 
-# The search index is client-side, so it is not part of the exported recipe.
-# Rebuild it anyway, so that a saved site is always left fully indexed. Disable
-# Twig debug while rendering the index: its HTML comments can be truncated
-# mid-comment by Lunr's summary field and hide the remaining browser-rendered
-# results. Restore the editing mode afterwards, including when indexing fails.
-# shellcheck source=scripts/includes/reindex-search.sh
-source scripts/site-reindex-search.sh
-twig_debug="$(./vendor/bin/drush php:eval 'print !empty(\Drupal::getContainer()->getParameter("twig.config")["debug"]) ? "1" : "0";')"
-if [[ "$twig_debug" == "1" ]]; then
-  trap './vendor/bin/drush theme:dev on' EXIT
-  ./vendor/bin/drush theme:dev off
-fi
-reindex_search content
-if [[ "$twig_debug" == "1" ]]; then
-  ./vendor/bin/drush theme:dev on
-  trap - EXIT
-fi
-
+./vendor/bin/drush theme:dev off
 ./vendor/bin/drush config:export --yes
 
 rm -Rf ./recipes/site_export/*
@@ -34,3 +17,6 @@ rm -Rf ./recipes/site_export/*
 rm -Rf ./recipes/site_export/config
 # Oembed files get doubled up, so until we have files to include, or other dependencies, then we skill all files.
 rm -Rf ./recipes/site_export/content/file
+
+# Setting generally stays on between saves.
+./vendor/bin/drush theme:dev on

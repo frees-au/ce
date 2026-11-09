@@ -39,11 +39,11 @@ install:
   - admin_toolbar
   - admin_toolbar_tools
   - ckeditor5_template
+  - devel
   - drupal_cms_helper
   - easy_breadcrumb
   - editoria11y
   - field_group
-  - field_label
   - gin_login
   - gin_toolbar
   - jquery_ui
@@ -60,7 +60,6 @@ install:
   - token
   - tome_base
   - tome_static
-  - twig_tweak
   - fs
   - fs_tools
   - claro
