@@ -13,7 +13,7 @@ URI="${TOME_URI:-https://$DOMAIN}"
 # The search index is client-side: the browser downloads JSON shards listed in
 # the page's drupalSettings. The list is built when the page is rendered, so
 # the index has to be complete before Tome renders anything.
-source scripts/includes/reindex-search.sh
+source scripts/site-reindex-search.sh
 reindex_search content "$URI"
 
 ENV=$([[ "$DOMAIN" == "www.frees.au" ]] && echo "www.frees.au" || echo "preview.frees.au")
