@@ -105,7 +105,17 @@
 }
 
 @layer components {
-  /* Class comes from lunr module */
+  /* Comes from search/lunr markup */
+  .ui-autocomplete {
+    @apply z-50 max-h-80 overflow-y-auto border border-gray-300 bg-white shadow-lg;
+  }
+  .ui-autocomplete .ui-menu-item-wrapper {
+    @apply cursor-pointer px-4 py-2;
+  }
+  .ui-autocomplete .ui-state-active {
+    @apply bg-fs-red-wash text-fs-red;
+  }
+
   .search-api-lunr-teaser {
     p {
       @apply mt-2;
