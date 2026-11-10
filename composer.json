@@ -77,7 +77,7 @@
         "build-all": "./scripts/site-build-from-code.sh",
         "edit-theme": "./vendor/bin/drush thdev on && pnpm --dir web/themes/custom/fstheme run watch",
         "edit-drupal": "FS_DRUPAL_SITE_IS_LOCAL_ONLY=1 ./vendor/bin/drush serve --no-browser",
-        "edit-all": "conc 'composer edit-theme' 'composer edit-drupal'",
+        "edit-all": "concurrently --kill-others 'pnpm --dir web/themes/custom/fstheme watch' 'FS_DRUPAL_SITE_IS_LOCAL_ONLY=1 ./vendor/bin/drush serve --no-browser'",
         "save-drupal": "./scripts/site-export-to-code.sh",
         "generate-html-prod": "./scripts/site-generate-static.sh www.frees.au",
         "generate-html-preview": "./scripts/site-generate-static.sh preview.frees.au",
