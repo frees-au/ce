@@ -9,6 +9,8 @@ cd "$(dirname "$0")/.."
 }
 
 ./vendor/bin/drush theme:dev off
+
+source scripts/site-reindex-search.sh
 ./vendor/bin/drush config:export --yes
 
 rm -Rf ./recipes/site_export/*

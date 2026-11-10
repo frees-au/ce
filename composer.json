@@ -69,7 +69,8 @@
             "tbachert/spi": true,
             "veewee/composer-run-parallel": true
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "process-timeout": 0
     },
     "scripts": {
         "build-theme": "pnpm --dir web/themes/custom/fstheme run build",
@@ -99,7 +100,7 @@
         "build-all": ["fs-build"],
         "edit-all": ["fs-edit"],
         "test-all": ["fs-test"],
-        "save-all": ["fs-save"],
+        "save-drupal": ["fs-save"],
         "gen-all": ["fs-gen"]
     },
     "extra": {
